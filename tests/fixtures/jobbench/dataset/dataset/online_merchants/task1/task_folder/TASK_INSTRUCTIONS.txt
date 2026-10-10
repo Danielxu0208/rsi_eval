@@ -1,0 +1,17 @@
+You are the E-commerce Operations Manager for an online fashion boutique. It is January 21, 2024. Your VP of Operations has requested an urgent business intelligence report for an emergency board meeting tomorrow.
+
+Three high-priority customer complaints (INQ-001, INQ-003, INQ-006) have been escalated to executive attention. The board suspects these may indicate systemic supply chain or quality control issues rather than isolated incidents. Your task is to investigate whether these complaints correlate with product performance data and broader customer sentiment patterns.
+
+Cross-reference the escalated inquiries with the Q4 performance metrics to identify anomalous patterns. Analyze the Kaggle "Women's E-Commerce Clothing Reviews" dataset (by nicapotato) to understand common quality complaint patterns in the fashion industry (fabric issues, sizing inconsistencies, construction defects). Using the Shopify Partners sample apparel product CSV from the shopifypartners/product-csvs GitHub repository ("apparel.csv"), examine whether product descriptions (such as design feature language like "distressed" or "ripped hem effect") may contribute to customer expectation mismatches with actual quality defects.
+
+For each escalated complaint, determine the root cause classification: isolated incident requiring standard resolution, symptom of broader product quality issue requiring supplier action, or potential listing accuracy problem requiring content correction.
+
+Create an Excel workbook named "Incident_Analysis_Report.xlsx" containing three sheets. The Executive Summary sheet should present a decision matrix showing each escalated SKU with its verdict, supporting evidence cross-referenced from all data sources, and recommended action priority. The Customer Response Protocols sheet should contain draft response templates for each escalated inquiry that reflect your root cause findings. The Product Risk Dashboard should identify additional products sharing similar risk indicators to the escalated items, with a visualization element.
+
+Based on your analysis, create a formal supplier communication document in PDF format. If systemic quality concerns are identified, draft a Supplier Quality Notice (Supplier_Quality_Notice.pdf) referencing specific defect patterns, quantitative evidence, and corrective action requests with timeline. If no systemic issues are found, create a Quality Assessment Memo (Quality_Assessment_Memo.pdf) explaining your conclusion with supporting data.
+
+Deliverables: Incident_Analysis_Report.xlsx and the appropriate PDF communication document.
+
+Local Reference Files:
+- customer_inquiries.csv
+- product_performance_Q4.csv

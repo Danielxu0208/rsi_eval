@@ -1,0 +1,288 @@
+{
+  "status": "passed",
+  "validated_at": "2026-10-10T06:05:07.694312+00:00",
+  "stage": "final",
+  "built_offline": true,
+  "model_calls": 0,
+  "docker_trials": 0,
+  "core_runtime_dependencies": [],
+  "artifacts": {
+    "wheel": {
+      "path": "dist/drop-frontier/rsi_eval-0.1.0-py3-none-any.whl",
+      "sha256": "2f16abfaa55adb121bc5590f648261b0b4c2bc1eba2ffb1ba3634e1e52879e39",
+      "bytes": 2197257
+    },
+    "sdist": {
+      "path": "dist/drop-frontier/rsi_eval-0.1.0.tar.gz",
+      "sha256": "94fb28f071b896a3b999bc73626e481b83353c42b4fcabbd8b676db37435d1bb",
+      "bytes": 2342020
+    }
+  },
+  "core_only_environment": {
+    "path": ".runtime/drop-frontier-clean",
+    "python": "3.12.15 (main, Oct  3 2026, 00:54:33) [Clang 22.1.3 ]",
+    "prefix": "/Users/danielxu/Desktop/rsi_eval/.runtime/drop-frontier-clean",
+    "import_path": "/Users/danielxu/Desktop/rsi_eval/.runtime/drop-frontier-clean/lib/python3.12/site-packages/rsi_eval/__init__.py",
+    "installed_packages": [
+      "rsi-eval"
+    ],
+    "optional_modules": {
+      "harbor": false,
+      "numpy": false,
+      "pydantic": false,
+      "scipy": false
+    }
+  },
+  "catalog": [
+    {
+      "name": "terminal-bench",
+      "version": "2.0",
+      "task_count": 89
+    },
+    {
+      "name": "terminal-bench",
+      "version": "2.1",
+      "task_count": 89
+    },
+    {
+      "name": "swe-bench-verified",
+      "version": "1",
+      "task_count": 500
+    },
+    {
+      "name": "drop",
+      "version": "1.0-agent",
+      "task_count": 86945
+    },
+    {
+      "name": "engdesign-open",
+      "version": "open-subset-c8ec338-v1",
+      "task_count": 2
+    },
+    {
+      "name": "frontier-eng",
+      "version": "cpu-subset-bafa7d5-v1",
+      "task_count": 2
+    },
+    {
+      "name": "aider-polyglot",
+      "version": "1.0-harbor",
+      "task_count": 225
+    },
+    {
+      "name": "swe-bench-multilingual",
+      "version": "1.0-harbor",
+      "task_count": 300
+    },
+    {
+      "name": "swe-bench-pro",
+      "version": "1.0-harbor",
+      "task_count": 731
+    },
+    {
+      "name": "livecodebench",
+      "version": "release_v1",
+      "task_count": 400
+    },
+    {
+      "name": "mgsm",
+      "version": "1.0-agent",
+      "task_count": 2750
+    }
+  ],
+  "previewed_examples": [
+    {
+      "config": "examples/benchmarks/drop.json",
+      "benchmark": "drop",
+      "version": "1.0-agent",
+      "task_ids": [
+        "dev-f37e81fa-ef7b-4583-b671-762fc433faa9",
+        "dev-ac6ba235-3024-4f63-a6ab-730a14def4cb"
+      ],
+      "selection": "subset",
+      "expected_trials": 2
+    },
+    {
+      "config": "examples/benchmarks/engdesign.json",
+      "benchmark": "engdesign-open",
+      "version": "open-subset-c8ec338-v1",
+      "task_ids": [
+        "AB_01",
+        "XY_01"
+      ],
+      "selection": "subset",
+      "expected_trials": 2
+    },
+    {
+      "config": "examples/benchmarks/frontier-eng.json",
+      "benchmark": "frontier-eng",
+      "version": "cpu-subset-bafa7d5-v1",
+      "task_ids": [
+        "InventoryOptimization/disruption_eoqd",
+        "Robotics/PIDTuning"
+      ],
+      "selection": "subset",
+      "expected_trials": 2
+    },
+    {
+      "config": "examples/benchmarks/livecodebench.json",
+      "benchmark": "livecodebench",
+      "version": "release_v1",
+      "task_ids": [
+        "lcb-codeforces-1873_a",
+        "lcb-leetcode-2727"
+      ],
+      "selection": "subset",
+      "expected_trials": 2
+    },
+    {
+      "config": "examples/benchmarks/mgsm.json",
+      "benchmark": "mgsm",
+      "version": "1.0-agent",
+      "task_ids": [
+        "en-001",
+        "zh-002"
+      ],
+      "selection": "subset",
+      "expected_trials": 2
+    },
+    {
+      "config": "examples/benchmarks/multilingual.json",
+      "benchmark": "swe-bench-multilingual",
+      "version": "1.0-harbor",
+      "task_ids": [
+        "preactjs__preact-3345"
+      ],
+      "selection": "subset",
+      "expected_trials": 1
+    },
+    {
+      "config": "examples/benchmarks/polyglot.json",
+      "benchmark": "aider-polyglot",
+      "version": "1.0-harbor",
+      "task_ids": [
+        "polyglot_python_dot-dsl",
+        "polyglot_go_error-handling"
+      ],
+      "selection": "subset",
+      "expected_trials": 2
+    },
+    {
+      "config": "examples/benchmarks/pro.json",
+      "benchmark": "swe-bench-pro",
+      "version": "1.0-harbor",
+      "task_ids": [
+        "instance_internetarchive__openlibrary-00bec1e7c8f3272c469a58e1377df03f955ed478-v13642507b4fc1f8d234172bf8129942da2c2ca26"
+      ],
+      "selection": "subset",
+      "expected_trials": 1
+    }
+  ],
+  "readme_preview_passed": true,
+  "offline_demo": {
+    "mode": "offline_fixture",
+    "status": "completed",
+    "reward": 0.0,
+    "model_calls": 0
+  },
+  "archive_checks": {
+    "wheel_package_matches_sdist_and_current_implementation": true,
+    "private_runtime_credentials_and_reference_clones_excluded": true,
+    "required_package_files": {
+      "rsi_eval/data/catalog_drop.json": "684495468b60ab890cf6d587dff24cba8fc5768adc26b722e801cb4ef264c64e",
+      "rsi_eval/data/catalog_frontier_eng.json": "aaeff0b8454df3efd2c1c14b01266c5b3bda5eefff1724e92e96667669e78f96",
+      "rsi_eval/materializers/drop.py": "b2f2bdb57ec3ea9c52cc99579c327bfba03c79115b5e54fafdc58f40d1874669",
+      "rsi_eval/materializers/drop_verifier.py": "96686a95f30aa0c137ea1898bfe432d1b89e7cc0932898d94978559b8ded4f7a",
+      "rsi_eval/materializers/frontier_eng.py": "9e3cb9f15d75112e7975f47cc81e24abc4308a4f6c02bed430e3ec8ce900a5d8",
+      "rsi_eval/materializers/frontier_eng_runtime.py": "0361b706b3f1c259c024d519f84e25a91b91656de0439675ac61dde175da52eb"
+    },
+    "drop_scorer_and_fixture_licenses_in_sdist": {
+      "tests/fixtures/drop/b1f372248c17ad12684d344955fbcd98e957e77e/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "tests/fixtures/drop/b1f372248c17ad12684d344955fbcd98e957e77e/sample.json": "766add8bdf1094a7b61ff71e909a9afb74bb59814db00df68e2f850e3d528b64",
+      "tests/fixtures/drop/b1f372248c17ad12684d344955fbcd98e957e77e/data-license.txt": "91ea8537803fce5d9999988c9e83c8d21e0e4feaee09cbfb686470d4d789a10d",
+      "tests/fixtures/drop/b1f372248c17ad12684d344955fbcd98e957e77e/drop.py": "589abfbb8a85760cdb3d30381068acb4545c82076311c2da5a112e283193e0a2"
+    },
+    "wheel_third_party_notices_and_apache_license_present": true,
+    "readme_sha256_at_build": "dbca16cec6c3aca7b8a353422f0292501d6d8a72093cf8be4b81f22db000e64e",
+    "package_file_count": 29,
+    "sdist_file_count": 131,
+    "final_documents": {
+      "README.md": "dbca16cec6c3aca7b8a353422f0292501d6d8a72093cf8be4b81f22db000e64e",
+      "docs/drop.md": "b70ffc590c84dd12343dbd40c095c5d6f962591918f030a117a47483d77e9d8d",
+      "docs/frontier-eng.md": "fbd8eac0c4848d3d9c5a693593cfda214c52781324bbe476b11a8b2dbedde787",
+      "docs/validation-drop-frontier.md": "6b573aba6dd9044cca266aa91e5c0924a7b640994c7d5338c2a28c3d2a0a3fff",
+      "docs/validation-drop-frontier.json": "c0631a0090fde2ca22990b37b4f7416d73388dfdc6d4e370c9738bd2f21f5464"
+    }
+  },
+  "evidence": {
+    "extracted_sdist": ".runtime/drop-frontier-audit/final/source/rsi_eval-0.1.0",
+    "commands": [
+      {
+        "label": "environment",
+        "returncode": 0,
+        "stdout": ".runtime/drop-frontier-audit/final/environment.stdout"
+      },
+      {
+        "label": "catalog",
+        "returncode": 0,
+        "stdout": ".runtime/drop-frontier-audit/final/catalog.stdout"
+      },
+      {
+        "label": "preview-drop",
+        "returncode": 0,
+        "stdout": ".runtime/drop-frontier-audit/final/preview-drop.stdout"
+      },
+      {
+        "label": "preview-engdesign",
+        "returncode": 0,
+        "stdout": ".runtime/drop-frontier-audit/final/preview-engdesign.stdout"
+      },
+      {
+        "label": "preview-frontier-eng",
+        "returncode": 0,
+        "stdout": ".runtime/drop-frontier-audit/final/preview-frontier-eng.stdout"
+      },
+      {
+        "label": "preview-livecodebench",
+        "returncode": 0,
+        "stdout": ".runtime/drop-frontier-audit/final/preview-livecodebench.stdout"
+      },
+      {
+        "label": "preview-mgsm",
+        "returncode": 0,
+        "stdout": ".runtime/drop-frontier-audit/final/preview-mgsm.stdout"
+      },
+      {
+        "label": "preview-multilingual",
+        "returncode": 0,
+        "stdout": ".runtime/drop-frontier-audit/final/preview-multilingual.stdout"
+      },
+      {
+        "label": "preview-polyglot",
+        "returncode": 0,
+        "stdout": ".runtime/drop-frontier-audit/final/preview-polyglot.stdout"
+      },
+      {
+        "label": "preview-pro",
+        "returncode": 0,
+        "stdout": ".runtime/drop-frontier-audit/final/preview-pro.stdout"
+      },
+      {
+        "label": "preview-readme",
+        "returncode": 0,
+        "stdout": ".runtime/drop-frontier-audit/final/preview-readme.stdout"
+      },
+      {
+        "label": "offline-demo",
+        "returncode": 0,
+        "stdout": ".runtime/drop-frontier-audit/final/offline-demo.stdout"
+      }
+    ]
+  },
+  "notes": [
+    "The wheel contains the SDK, catalogs and runtime modules. The source archive also contains examples, integrations and test fixtures.",
+    "All checks use the installed wheel from a clean environment, without PYTHONPATH or user site packages.",
+    "An audit hook rejects network operations and external processes. The offline demo may invoke only its own fake-harbor executable.",
+    "This report is written after artifact creation. The final archive includes the finalized real-run records."
+  ]
+}

@@ -1,0 +1,4094 @@
+[
+  {
+    "name": "terminal-bench",
+    "version": "2.0",
+    "dataset": "terminal-bench/terminal-bench-2",
+    "dataset_ref": "sha256:c6fc2e2382c1dbae99b2d5ecd2f4f4a60c3c01e0d84642d69b4afd92e99d078b",
+    "tasks": [
+      {
+        "id": "adaptive-rejection-sampler",
+        "name": "terminal-bench/adaptive-rejection-sampler",
+        "ref": "sha256:a3cc947ba81ea6be1e7255c7b398a30f8017e280d586c2e09eccfaf67a18d35d",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "bn-fit-modify",
+        "name": "terminal-bench/bn-fit-modify",
+        "ref": "sha256:48b71fbf20c4dfb661fe49d8fb6cfb91417be422c87889dd30110626a1d1f7eb",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "break-filter-js-from-html",
+        "name": "terminal-bench/break-filter-js-from-html",
+        "ref": "sha256:59a2641df9bca789642ad4ab3f5790de5ffed6eb4a594ca7846d26422a55c4a8",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "build-cython-ext",
+        "name": "terminal-bench/build-cython-ext",
+        "ref": "sha256:38e42b5662bb3c6b8610d193d5ef1b47ee3a8f4bd07eb860ceaab17e9406a368",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "build-pmars",
+        "name": "terminal-bench/build-pmars",
+        "ref": "sha256:796773c1d8b991b9b936b3513308b1a4d2ea1772ae9d9b29103f58748d6e2c17",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "build-pov-ray",
+        "name": "terminal-bench/build-pov-ray",
+        "ref": "sha256:b64f3fd6f47dc8848fdd6ce990fbedce9577d97ea4f7fd1c489c42338229d078",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "caffe-cifar-10",
+        "name": "terminal-bench/caffe-cifar-10",
+        "ref": "sha256:d41ec2d7249c3142f0db4f80b04a41c7e8fad1688c78ba3f5e09a7d6671d2697",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "cancel-async-tasks",
+        "name": "terminal-bench/cancel-async-tasks",
+        "ref": "sha256:7c230a29f27c49c2fff88f4721165f4241e456bd87a94cd525be05ae98c6cbbb",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "chess-best-move",
+        "name": "terminal-bench/chess-best-move",
+        "ref": "sha256:b1956d533c003b523a81fabe43de6f7c80b97fddb2c037e65b0cfc94dd1ba22a",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "circuit-fibsqrt",
+        "name": "terminal-bench/circuit-fibsqrt",
+        "ref": "sha256:fe25ab474ba626c4f45f57e757e86f2ad292de80b505e5b7ba0ba76c30d7fcc8",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "cobol-modernization",
+        "name": "terminal-bench/cobol-modernization",
+        "ref": "sha256:0200cda78ffff33320d78d3cdc871e33d5b88f017c8956f4b6e1b6ad21cf9b0d",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "code-from-image",
+        "name": "terminal-bench/code-from-image",
+        "ref": "sha256:6b96c7a7eefcf3e655db93ac5e5278c1d6f0b98c9bf47c2ba03c53e5f157f132",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "compile-compcert",
+        "name": "terminal-bench/compile-compcert",
+        "ref": "sha256:59b8bdc7ad56243291afbc14cc1947d996db745a488ac018be4936643a47a999",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "configure-git-webserver",
+        "name": "terminal-bench/configure-git-webserver",
+        "ref": "sha256:a73cf484283083f52b5d4c07c4a7027111fca3cfa3aaf108235d4aff57ef1d8d",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "constraints-scheduling",
+        "name": "terminal-bench/constraints-scheduling",
+        "ref": "sha256:757c2b9672df2db1ca879878e6c13dcad20222381694a29920eb452276a69d90",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "count-dataset-tokens",
+        "name": "terminal-bench/count-dataset-tokens",
+        "ref": "sha256:c9b237360affc7d6aabb1b910f41b291e578d8952d325641cd53f73e3483c979",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "crack-7z-hash",
+        "name": "terminal-bench/crack-7z-hash",
+        "ref": "sha256:c5b858a93a842b32c06ce0713d82af10102b7c1a3f3b8d6351c1d0ecb4d47dc9",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "custom-memory-heap-crash",
+        "name": "terminal-bench/custom-memory-heap-crash",
+        "ref": "sha256:72cdc9cf98c822a1449935ca32efc6612fe3d14928c9465c11285e95dcdf60cb",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "db-wal-recovery",
+        "name": "terminal-bench/db-wal-recovery",
+        "ref": "sha256:33f5d72ac836c8642d8160f4628352ca0cdf5d17838aae9c3b0db9bc78335825",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "distribution-search",
+        "name": "terminal-bench/distribution-search",
+        "ref": "sha256:0212a95c28e26008f035e4cf39fc45cc69a20b621ae4ef83c1a27c4a0f20ecff",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "dna-assembly",
+        "name": "terminal-bench/dna-assembly",
+        "ref": "sha256:c197faf58db01c8cc55f372463c6d65e243b4bda563173d4b9ca7e4c3a5b4c48",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "dna-insert",
+        "name": "terminal-bench/dna-insert",
+        "ref": "sha256:6e134a226ff852d8bf20f15480c7c1d74e3911d5b458f5cca07aabd23e380f0d",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "extract-elf",
+        "name": "terminal-bench/extract-elf",
+        "ref": "sha256:fe7aa4e037884f0b5d1dd9ea81df2b96b6c31d7d5f9184f1ef2de273614b5ecf",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "extract-moves-from-video",
+        "name": "terminal-bench/extract-moves-from-video",
+        "ref": "sha256:e15a249c82f4068634a136c0641a09feed2c12947e051e6b3c48f21699ed27c5",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "feal-differential-cryptanalysis",
+        "name": "terminal-bench/feal-differential-cryptanalysis",
+        "ref": "sha256:1950b3d2d670a51d83c45394b25450450293b4d15baa133a1490af14b984f149",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "feal-linear-cryptanalysis",
+        "name": "terminal-bench/feal-linear-cryptanalysis",
+        "ref": "sha256:37b3af0f80e6ac42aba08d46dc4600cbd9a1ff0136c10710e6e6269e726fdfc7",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "filter-js-from-html",
+        "name": "terminal-bench/filter-js-from-html",
+        "ref": "sha256:18470eb1fd5611b7c27f69a1ec0f66cfbf95f93c2c295d55709381cf8b7cb3cd",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "financial-document-processor",
+        "name": "terminal-bench/financial-document-processor",
+        "ref": "sha256:415ba44ca6ce86c68ffd3933735282e4e3d1523543a706352f68a22716e6da4f",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "fix-code-vulnerability",
+        "name": "terminal-bench/fix-code-vulnerability",
+        "ref": "sha256:e73a9bc59e041584ecaf1884f01e2b055d824c2f30ada540917e1ce5c4493408",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "fix-git",
+        "name": "terminal-bench/fix-git",
+        "ref": "sha256:66be7179f07f1aa8f0d60f88800a883a68c1ffb7a349aae76aa60fa679485473",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "fix-ocaml-gc",
+        "name": "terminal-bench/fix-ocaml-gc",
+        "ref": "sha256:23621755f7f4ea84bfc67a18ac20f8e9ae05a057212a1dec1a1da6ffa7586e6a",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "gcode-to-text",
+        "name": "terminal-bench/gcode-to-text",
+        "ref": "sha256:a7a2024eee33eba07f9b8fb137c1921c2892ef0a683b87b5984c18f62083fa5d",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "git-leak-recovery",
+        "name": "terminal-bench/git-leak-recovery",
+        "ref": "sha256:7b3743dde329a33de3e684b3490b09077d403f6a9795684e3e8828471e2abf49",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "git-multibranch",
+        "name": "terminal-bench/git-multibranch",
+        "ref": "sha256:03d8f235cc737efc32ed92a11685f93581fe6e1fd4ad14fffaa049d2b59e381a",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "gpt2-codegolf",
+        "name": "terminal-bench/gpt2-codegolf",
+        "ref": "sha256:44f8158b34fd53f27e4eca45a93d466224c7b988f9bb735d2ae89be808249bb0",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "headless-terminal",
+        "name": "terminal-bench/headless-terminal",
+        "ref": "sha256:3c85b2c55da0d404deebd0c18c676d15985d35a1b1dae4ef5221dca5a2e7b282",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "hf-model-inference",
+        "name": "terminal-bench/hf-model-inference",
+        "ref": "sha256:649831c4d9cef15fcbccbdd5639c7d4357b3061a32d9bd449d954d23370880b4",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "install-windows-3-11",
+        "name": "terminal-bench/install-windows-3-11",
+        "ref": "sha256:3fccdcf345cef4dd1a828ad3829024109b163b871b3f39db1af9308a77ee4ce7",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "kv-store-grpc",
+        "name": "terminal-bench/kv-store-grpc",
+        "ref": "sha256:83c7ad30412cc43d9d5f3c590a9154b53a1ed37e8a802bffc45dc64f51a2b427",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "large-scale-text-editing",
+        "name": "terminal-bench/large-scale-text-editing",
+        "ref": "sha256:f1196bcc75f57494f04617c635c7d23a8f231d25e68136dae02615eaa846ad90",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "largest-eigenval",
+        "name": "terminal-bench/largest-eigenval",
+        "ref": "sha256:89ed1e066ddb3e9fb78eae0c7d9b2fcf263af0962bd93b0ee07833248ecd0450",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "llm-inference-batching-scheduler",
+        "name": "terminal-bench/llm-inference-batching-scheduler",
+        "ref": "sha256:432477001faea62e41069e161634f54b35f0bda5077a50470bd89447a342e231",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "log-summary-date-ranges",
+        "name": "terminal-bench/log-summary-date-ranges",
+        "ref": "sha256:bd0eb5e8434840a46c623c8d29c71b4a6d0fc5c7bcbf637b6d1aef36b98f5cc5",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "mailman",
+        "name": "terminal-bench/mailman",
+        "ref": "sha256:b0590a96642e689fc79571934ac533d24cd6de4210a151331ff07def7e8d1d26",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "make-doom-for-mips",
+        "name": "terminal-bench/make-doom-for-mips",
+        "ref": "sha256:fb053a364213e3f952e6f906f4360e59f2a90b0083455e97e42892607dc70cc9",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "make-mips-interpreter",
+        "name": "terminal-bench/make-mips-interpreter",
+        "ref": "sha256:608e82ecd67ce469824a34181b580cbd0e1096cdfc05fe40edda3e6bfada9773",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "mcmc-sampling-stan",
+        "name": "terminal-bench/mcmc-sampling-stan",
+        "ref": "sha256:5f100b4f9abb6c71bc9da13ceb83312331d98e16fff8031b98e152b01527f571",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "merge-diff-arc-agi-task",
+        "name": "terminal-bench/merge-diff-arc-agi-task",
+        "ref": "sha256:da91e751106b20ec871117222f6ade094dc4c23e554f01534c7b205982b133f8",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "model-extraction-relu-logits",
+        "name": "terminal-bench/model-extraction-relu-logits",
+        "ref": "sha256:01c5070dce68bb815b30cf71357050d26d695a79a2292953cc59d03e2795c12b",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "modernize-scientific-stack",
+        "name": "terminal-bench/modernize-scientific-stack",
+        "ref": "sha256:6437119fd47b3d5394594115d3b0bb457bf99f1cce00c17077a47be81e2f8c5b",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "mteb-leaderboard",
+        "name": "terminal-bench/mteb-leaderboard",
+        "ref": "sha256:244bc0c349b5d84b1545620f121056033022caeabea35f7f324a90b84593a43f",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "mteb-retrieve",
+        "name": "terminal-bench/mteb-retrieve",
+        "ref": "sha256:5eed6e5ab80a4e7042f77a6cec8c01dd833a2c9c03a8c7ebdbd0b70f447750a5",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "multi-source-data-merger",
+        "name": "terminal-bench/multi-source-data-merger",
+        "ref": "sha256:3f7ecbb6adc066596d40bb6b98e64e0e1f25eac542dcf5d47fa8bde65df92c5e",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "nginx-request-logging",
+        "name": "terminal-bench/nginx-request-logging",
+        "ref": "sha256:f5eaf57c493462fbeaa8a7b5c4155739ee4ce8e8fab037eae6512788885014f6",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "openssl-selfsigned-cert",
+        "name": "terminal-bench/openssl-selfsigned-cert",
+        "ref": "sha256:43b288549abe880ce4a3c735f30e746c4440c0159c5411e9ae5aafb547ba2d8c",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "overfull-hbox",
+        "name": "terminal-bench/overfull-hbox",
+        "ref": "sha256:984d672ae34ada00db17a8c024110fb3527fbb5bce0844e8c0fd9b4e4d4fdacf",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "password-recovery",
+        "name": "terminal-bench/password-recovery",
+        "ref": "sha256:ee9fe20f22d6f2bcf67b52571ea9ce7a8048bc49dc4f5bb3a78ff40149b0c02c",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "path-tracing",
+        "name": "terminal-bench/path-tracing",
+        "ref": "sha256:6cce7549c4c77218bd118924c0c1db3b0bcc0311bd8124baa6f34c69212376ef",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "path-tracing-reverse",
+        "name": "terminal-bench/path-tracing-reverse",
+        "ref": "sha256:c428e7eec97a4b4cb17de783f3e33a60ab7373c109fdf0970e9f5e7e51a6d1e4",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "polyglot-c-py",
+        "name": "terminal-bench/polyglot-c-py",
+        "ref": "sha256:d8a8f81772559b1c48005a34a0f5717a3cbd1f13afd3dfd68682a46f4260136d",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "polyglot-rust-c",
+        "name": "terminal-bench/polyglot-rust-c",
+        "ref": "sha256:03ff14a88776f5920f5a3c4b1a0ba6d67c391a84b3d88949d0d621a692bd1daa",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "portfolio-optimization",
+        "name": "terminal-bench/portfolio-optimization",
+        "ref": "sha256:9c96b07bff873f828ebf9fa15dd30fb7392a1bdedb395c0b676d3b6c255b44f5",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "protein-assembly",
+        "name": "terminal-bench/protein-assembly",
+        "ref": "sha256:eae346d9f193dd962d66c94e218281f37165a9e7524ec0a7a617c0c68bf136bb",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "prove-plus-comm",
+        "name": "terminal-bench/prove-plus-comm",
+        "ref": "sha256:2c5295786c38135ca86b4b09cab3a82408e25129841f5fc533d31b885f6d737a",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "pypi-server",
+        "name": "terminal-bench/pypi-server",
+        "ref": "sha256:0eeffaeb7bc3b8eb617fb9d01772353c647a63dba61b6d96745fcd13f7f1f297",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "pytorch-model-cli",
+        "name": "terminal-bench/pytorch-model-cli",
+        "ref": "sha256:6b7d27e17bb243d9497f4655ba9db14d9e92bfe94a8fc2ddbc034ed0547f205e",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "pytorch-model-recovery",
+        "name": "terminal-bench/pytorch-model-recovery",
+        "ref": "sha256:3164b409d3d9706c2b9a78966f6a16775229f289f076559c1a60102db820ed95",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "qemu-alpine-ssh",
+        "name": "terminal-bench/qemu-alpine-ssh",
+        "ref": "sha256:5acce5eb7a7bde7918a1ccb4fd7421f4c19f7a9d1bad30b7d77951dc31e32800",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "qemu-startup",
+        "name": "terminal-bench/qemu-startup",
+        "ref": "sha256:e9796833ca178d98500b4146d107d947226485065f5a79a1dff2cdf7430f4f95",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "query-optimize",
+        "name": "terminal-bench/query-optimize",
+        "ref": "sha256:a4802d5a0182e4a648bdab02c37f611dd100aeae6772cffa05b5d9e7072250b3",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "raman-fitting",
+        "name": "terminal-bench/raman-fitting",
+        "ref": "sha256:6b2c34e3c5016c763bf1f2f2a7210ee711565f90b18c09b68f95c0daa9220229",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "regex-chess",
+        "name": "terminal-bench/regex-chess",
+        "ref": "sha256:b91cc4650c743c5b1a569864529335bcb7c3a1aaeb1a6920c37cda369cead9b7",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "regex-log",
+        "name": "terminal-bench/regex-log",
+        "ref": "sha256:72f5f52d6b523a00380cb088fcf0ba83a2e2f7b478fdad6515598ab43584e337",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "reshard-c4-data",
+        "name": "terminal-bench/reshard-c4-data",
+        "ref": "sha256:afae733b4f83b97e0d88220fe51f8eb15adf2515a83ec67f1293a2a15eabe34e",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "rstan-to-pystan",
+        "name": "terminal-bench/rstan-to-pystan",
+        "ref": "sha256:c14ad3926606b96140a60b842cd875268879354512e7457ce9a6101a02d61c15",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "sam-cell-seg",
+        "name": "terminal-bench/sam-cell-seg",
+        "ref": "sha256:a141c1f364a9a69e27545a062f5238a27dfde68dfa0a04921966ada2854bf1db",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "sanitize-git-repo",
+        "name": "terminal-bench/sanitize-git-repo",
+        "ref": "sha256:3cc99805fb56bae9db14851e0e61b75108e851cb6b8bb0a817defd39336f6b4b",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "schemelike-metacircular-eval",
+        "name": "terminal-bench/schemelike-metacircular-eval",
+        "ref": "sha256:3c76b3e2e072f47e2657a8471232bb003657e6ceacedf4b72650ec45daafa072",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "sparql-university",
+        "name": "terminal-bench/sparql-university",
+        "ref": "sha256:c3ce9230a0ec0bd03254cd74449762d5bf2ee140c141e5b1f0f67e3b0e4aa054",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "sqlite-db-truncate",
+        "name": "terminal-bench/sqlite-db-truncate",
+        "ref": "sha256:35f3ced08035d07527d186bdcfd668bb36fbd8996acf02457e08bfa2e0ce40b6",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "sqlite-with-gcov",
+        "name": "terminal-bench/sqlite-with-gcov",
+        "ref": "sha256:b5d64900c45ffba80c48fcfaac97485662de684392f6e1b730f1cc934c28ff2b",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "torch-pipeline-parallelism",
+        "name": "terminal-bench/torch-pipeline-parallelism",
+        "ref": "sha256:a01896bd8d1572bc93d061a43cc45d45d63c51c2ad6541b606a8e3452f77963a",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "torch-tensor-parallelism",
+        "name": "terminal-bench/torch-tensor-parallelism",
+        "ref": "sha256:6446c8219da1b2cde0d6b248b3a6cd2403c22ee2302c280e002e7b6c41f42b1b",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "train-fasttext",
+        "name": "terminal-bench/train-fasttext",
+        "ref": "sha256:19f1d7f8d317edb518d376f8b99a804847a65c6bb07ba126a6a5d8f0c1063639",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "tune-mjcf",
+        "name": "terminal-bench/tune-mjcf",
+        "ref": "sha256:bcf3607c1d4532081055e811b66e5a466a1893ec8bd8f66d5127c8924cfcda24",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "video-processing",
+        "name": "terminal-bench/video-processing",
+        "ref": "sha256:59730f0ccdc323eb45aa433d094cd7c2f29a0084d3670ce7cc93acee9b516ade",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "vulnerable-secret",
+        "name": "terminal-bench/vulnerable-secret",
+        "ref": "sha256:2a8a7b743f4f42fe70c6aadfde5621fceaf8ceb343331586f4479485bc1f8da0",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "winning-avg-corewars",
+        "name": "terminal-bench/winning-avg-corewars",
+        "ref": "sha256:22bacd15f5063699f642a2e2c0a192865eb41924d4b35d8ddabf574debb6773c",
+        "source": "terminal-bench/terminal-bench-2"
+      },
+      {
+        "id": "write-compressor",
+        "name": "terminal-bench/write-compressor",
+        "ref": "sha256:102167adfe1e831e220cf1e045b4b70fb01a816351fa5cc629b61e2f745fbedc",
+        "source": "terminal-bench/terminal-bench-2"
+      }
+    ]
+  },
+  {
+    "name": "terminal-bench",
+    "version": "2.1",
+    "dataset": "terminal-bench/terminal-bench-2-1",
+    "dataset_ref": "sha256:7d7bdc1cbedad549fc1140404bd4dc45e5fd0ea7c4186773687d177ad3a0699a",
+    "tasks": [
+      {
+        "id": "adaptive-rejection-sampler",
+        "name": "terminal-bench/adaptive-rejection-sampler",
+        "ref": "sha256:bcaa2399985cd57666018025846289ab25e193ae0dd8fb7f0ffab2410c24d4de",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "bn-fit-modify",
+        "name": "terminal-bench/bn-fit-modify",
+        "ref": "sha256:b5f9644970c17ad9ddb46b7266f7bcd87c761d77d7e6f55d7cfe7284d5ff66e9",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "break-filter-js-from-html",
+        "name": "terminal-bench/break-filter-js-from-html",
+        "ref": "sha256:678008d1a4fd1e6e1b9b3cc9a327219fe4b410a31eafc52e9099bbf947eea600",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "build-cython-ext",
+        "name": "terminal-bench/build-cython-ext",
+        "ref": "sha256:35dc561790e73f13e59837828ac0863c0893edc6b71d42cf7d58656c843adf12",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "build-pmars",
+        "name": "terminal-bench/build-pmars",
+        "ref": "sha256:63f0449b276f081986740c941ea9372068b310a02b062c1e5e3400f575241893",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "build-pov-ray",
+        "name": "terminal-bench/build-pov-ray",
+        "ref": "sha256:4f08dab602fe2e9e2f42051cc6aef684a88cf2822e8b499b3ca19e670759fddb",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "caffe-cifar-10",
+        "name": "terminal-bench/caffe-cifar-10",
+        "ref": "sha256:7b0045106d7d5af724efe96b610ba64f7893f5c88528401c573c4d47e384e2bf",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "cancel-async-tasks",
+        "name": "terminal-bench/cancel-async-tasks",
+        "ref": "sha256:a3d048d351136e48070696cda8bb79660dfd74db1fea3b6da88559f0332699c1",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "chess-best-move",
+        "name": "terminal-bench/chess-best-move",
+        "ref": "sha256:9ab8e4b3674282e751edafbd9b5bd551fef995fd6601585a2cdb04fd70c520da",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "circuit-fibsqrt",
+        "name": "terminal-bench/circuit-fibsqrt",
+        "ref": "sha256:9bcffe1054bb33249aa578a9a2a74f3c8cca66b0cb7aa1328233f1d31822aae3",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "cobol-modernization",
+        "name": "terminal-bench/cobol-modernization",
+        "ref": "sha256:e03aa03965eee48c9f772d566ff9bcd741fceeac9693123f82a13fdd46be0d88",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "code-from-image",
+        "name": "terminal-bench/code-from-image",
+        "ref": "sha256:ef2907bb300d9b3352410c2a75dbf831278c187c073298371870ea9c83526f78",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "compile-compcert",
+        "name": "terminal-bench/compile-compcert",
+        "ref": "sha256:22bde2a73d62fa46f5ab96f710561a72e8d1aa4266f008605a17f174622ad785",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "configure-git-webserver",
+        "name": "terminal-bench/configure-git-webserver",
+        "ref": "sha256:e3dc712acfecdb1338a889f86c97b37422c3778351253f9aca4236e895fdb36e",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "constraints-scheduling",
+        "name": "terminal-bench/constraints-scheduling",
+        "ref": "sha256:91dd6f87e1ee508328d5aafbd99a6bd1ccc47bc22671b4aaa4060bda492deb53",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "count-dataset-tokens",
+        "name": "terminal-bench/count-dataset-tokens",
+        "ref": "sha256:cd0574ec8281f53854256acc93702ed1441407c0428849e1dd4f27e863c6b08a",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "crack-7z-hash",
+        "name": "terminal-bench/crack-7z-hash",
+        "ref": "sha256:99cbb2269f6bd112d3387fd01cb6900118fe4aded3f75a8d656580a8296a1ae5",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "custom-memory-heap-crash",
+        "name": "terminal-bench/custom-memory-heap-crash",
+        "ref": "sha256:61e021e0304c9818a9be2c9173c8a0938ce5d136e95c5422e099f1fdb2dc080e",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "db-wal-recovery",
+        "name": "terminal-bench/db-wal-recovery",
+        "ref": "sha256:07e9193513bfce038b9f9d84962ecc85683eee0a642d14ee6fb7104b086ddab4",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "distribution-search",
+        "name": "terminal-bench/distribution-search",
+        "ref": "sha256:8787d3004ac4dd9d78f0c14f5b5ef94a4ad3e69d8828d7d35b9fbd7828a69ed1",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "dna-assembly",
+        "name": "terminal-bench/dna-assembly",
+        "ref": "sha256:e41a8e94d86019949b08d3b5f88a85f6d943ba0fd85d5e1d5ebb95cb8f66223f",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "dna-insert",
+        "name": "terminal-bench/dna-insert",
+        "ref": "sha256:37fc023970e3464c1acc31f43e04a0b4b94758130d340788f261f00764d9e530",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "extract-elf",
+        "name": "terminal-bench/extract-elf",
+        "ref": "sha256:1ef31d566be4fe3459d5368621ae7ef7a31b23ef675737e473bbc43c8c7b3fce",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "extract-moves-from-video",
+        "name": "terminal-bench/extract-moves-from-video",
+        "ref": "sha256:168e2b9168511b8f8d32b1697f4703b08626203e7949ad396658f4bef7dee66e",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "feal-differential-cryptanalysis",
+        "name": "terminal-bench/feal-differential-cryptanalysis",
+        "ref": "sha256:8ea56995fcc43fb94f0e4e15adb12dd28836bf3e9c766b2cc7ae78a7ce90341f",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "feal-linear-cryptanalysis",
+        "name": "terminal-bench/feal-linear-cryptanalysis",
+        "ref": "sha256:0f3234c5fde85f9dc610d94cfefd4c892afb75c9e571f21f18fee66972b67332",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "filter-js-from-html",
+        "name": "terminal-bench/filter-js-from-html",
+        "ref": "sha256:2d1496b6fc62adeccdba7a56f4bc24e5ef265840434d2011234ed20b6c240759",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "financial-document-processor",
+        "name": "terminal-bench/financial-document-processor",
+        "ref": "sha256:63dc43a15d9ec401613016e9114d1a93ec860eea63b2db02abfe8060deea30fb",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "fix-code-vulnerability",
+        "name": "terminal-bench/fix-code-vulnerability",
+        "ref": "sha256:d31348aa16b533a15f013420e4d9726dc529e6086adc7d6d48067d22cc18fe71",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "fix-git",
+        "name": "terminal-bench/fix-git",
+        "ref": "sha256:16948b980df9d96de616a205f5acca1c5d395de83ff4f8ffabcafacb93226f2e",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "fix-ocaml-gc",
+        "name": "terminal-bench/fix-ocaml-gc",
+        "ref": "sha256:2031f3d5224b891fe443a31526b569eb756be2f88b663cb025448af9c4f97e2c",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "gcode-to-text",
+        "name": "terminal-bench/gcode-to-text",
+        "ref": "sha256:7dd2af04820e71ecaba96bc493cbffa16317e96816c6c8003385c034adf6c23b",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "git-leak-recovery",
+        "name": "terminal-bench/git-leak-recovery",
+        "ref": "sha256:22a9ec10dbd4cd8b99477b70e1944103775ca41de9b9e0025ec4898cd17bd334",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "git-multibranch",
+        "name": "terminal-bench/git-multibranch",
+        "ref": "sha256:7759a92a373c967dd31535975bad8659410644025673fe62385444fd2605c5fa",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "gpt2-codegolf",
+        "name": "terminal-bench/gpt2-codegolf",
+        "ref": "sha256:fe42af8e9c5aa927c3b680acd08e43032c84088fa9d770b03ce63dbc66fea4e7",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "headless-terminal",
+        "name": "terminal-bench/headless-terminal",
+        "ref": "sha256:203953871ebdae4efbf163af9499849368dab5e219b70d447e5ee9701ad382d9",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "hf-model-inference",
+        "name": "terminal-bench/hf-model-inference",
+        "ref": "sha256:01370f37e61286f920dfca1e471496640ebcc8d06e1cc48d874c790715dbd4ad",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "install-windows-3.11",
+        "name": "terminal-bench/install-windows-3.11",
+        "ref": "sha256:1f1361b0012e1ad24054e7cfc039829459e8ab0631b3573d9b93499bf6b3563e",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "kv-store-grpc",
+        "name": "terminal-bench/kv-store-grpc",
+        "ref": "sha256:973c5d4c111fb61a344457936f1c36400acd2d9e44389e7b319586fe23a7a307",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "large-scale-text-editing",
+        "name": "terminal-bench/large-scale-text-editing",
+        "ref": "sha256:1f1cddc3df15e452fe2d3c6928f6b1e5b5330a7ae67cab373a0d089ea7d334a2",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "largest-eigenval",
+        "name": "terminal-bench/largest-eigenval",
+        "ref": "sha256:1b6f17c344d23e97435ba3fa93400d141f6bb7763ed2014fab418830983791b3",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "llm-inference-batching-scheduler",
+        "name": "terminal-bench/llm-inference-batching-scheduler",
+        "ref": "sha256:a3bf47589118daec5124fe3689b4439802c805b2f4ed9d402a48ae73ca2fea67",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "log-summary-date-ranges",
+        "name": "terminal-bench/log-summary-date-ranges",
+        "ref": "sha256:27b074a2f10fff7606e096f3abd8dced418ad8fda0f53d88acbe477f2d9ceaf6",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "mailman",
+        "name": "terminal-bench/mailman",
+        "ref": "sha256:831b3ed00807153963c05f91599443e4839099521d1d56db811c5547ab280dbe",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "make-doom-for-mips",
+        "name": "terminal-bench/make-doom-for-mips",
+        "ref": "sha256:2d83dd3dee8e0f055e09973934cf0d7e3169a9cd90704cba5c8940b170be9498",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "make-mips-interpreter",
+        "name": "terminal-bench/make-mips-interpreter",
+        "ref": "sha256:41a55da0abec5d7b32a0c2321f8b18e84000ca8074ae62c6874d6ed4a3a1cd3c",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "mcmc-sampling-stan",
+        "name": "terminal-bench/mcmc-sampling-stan",
+        "ref": "sha256:443cd2b94ed797944793e97a56527a5dc0f8ad40f78ed418fe1b2e367cf22546",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "merge-diff-arc-agi-task",
+        "name": "terminal-bench/merge-diff-arc-agi-task",
+        "ref": "sha256:6aab6511a5344ce87698293bb1ce4cc51d9a45f1ad9f0c075d2a83197b36727d",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "model-extraction-relu-logits",
+        "name": "terminal-bench/model-extraction-relu-logits",
+        "ref": "sha256:1ae5045ad68b5d34c3398b612066a07c4a08b6dc330d28868ec4021e17c94b17",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "modernize-scientific-stack",
+        "name": "terminal-bench/modernize-scientific-stack",
+        "ref": "sha256:67a9952aca67df9c70510acf62faea336644a0e9d379f3aaf9df79f14c8fcb12",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "mteb-leaderboard",
+        "name": "terminal-bench/mteb-leaderboard",
+        "ref": "sha256:484f6d7008a05b5b8640fc6618a384b8c9447cd76f85416c8a595028d29bff9c",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "mteb-retrieve",
+        "name": "terminal-bench/mteb-retrieve",
+        "ref": "sha256:fa7c777df6ed8987a2bb144b4b73a1200935bbea69da03a2aaa1dc8aa9bd9dc9",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "multi-source-data-merger",
+        "name": "terminal-bench/multi-source-data-merger",
+        "ref": "sha256:70367c38732e1beda7b229968a48d60242277c2fa4db91339c3f064c4c230d49",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "nginx-request-logging",
+        "name": "terminal-bench/nginx-request-logging",
+        "ref": "sha256:9d1b8bebd989ea0bc8080c3b159480068caf183c5fd61385868b2574b206e097",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "openssl-selfsigned-cert",
+        "name": "terminal-bench/openssl-selfsigned-cert",
+        "ref": "sha256:d4afa2bd2a9ba1420db8d6cfde42ffdb4873ae2d955c35014e8da94444c83302",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "overfull-hbox",
+        "name": "terminal-bench/overfull-hbox",
+        "ref": "sha256:3c3b16e4b2de5fea90ca98db242b155a6843f9cc4dfd00be3479985a34bab4f7",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "password-recovery",
+        "name": "terminal-bench/password-recovery",
+        "ref": "sha256:9b5c6bdce0cf03f075b21f6a7af5030b825ce07d7b16b37610f3964217ab84a4",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "path-tracing",
+        "name": "terminal-bench/path-tracing",
+        "ref": "sha256:cf56094c881a488b27e9f204a638a7e78ed7d55e12dc3064108c93357190314c",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "path-tracing-reverse",
+        "name": "terminal-bench/path-tracing-reverse",
+        "ref": "sha256:035880d7ef5554b217e53a75ce5e87e43193b7a44c30ad17226a6ab10fc11a6c",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "polyglot-c-py",
+        "name": "terminal-bench/polyglot-c-py",
+        "ref": "sha256:25570ccacf63f573a252eaa2a9c62ee8b55f5aa228cc803b5beb39dd6d8afeb7",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "polyglot-rust-c",
+        "name": "terminal-bench/polyglot-rust-c",
+        "ref": "sha256:a33dc72e2278d225513c0724abe2e4539653d5ee7e4c2a90ba2d676586ba9f3d",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "portfolio-optimization",
+        "name": "terminal-bench/portfolio-optimization",
+        "ref": "sha256:d112f8945600f18ec47bbbe76935dc05953173cc3d0a375a7aa2712b091584e4",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "protein-assembly",
+        "name": "terminal-bench/protein-assembly",
+        "ref": "sha256:c491d45acce234e1aa1d44dcc6778c55fcf875e9eb254b8dd3ae5ef58119621b",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "prove-plus-comm",
+        "name": "terminal-bench/prove-plus-comm",
+        "ref": "sha256:d5ae25720df1f7cd619ed8408cda4b87b79a3d8b0ff4f1919e2c96e9547339c2",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "pypi-server",
+        "name": "terminal-bench/pypi-server",
+        "ref": "sha256:1a1e0542f58e2d3362fec17a9bbb98667717d9a4a3e9a4c8413d3150a4fa0ff1",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "pytorch-model-cli",
+        "name": "terminal-bench/pytorch-model-cli",
+        "ref": "sha256:6f11544dcc81a380dc4611902961f5520259c462d9fceb413419d66ab9a96c79",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "pytorch-model-recovery",
+        "name": "terminal-bench/pytorch-model-recovery",
+        "ref": "sha256:2e628841cff93290919172398e573e794f34c95d9382b7425adde4364022decc",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "qemu-alpine-ssh",
+        "name": "terminal-bench/qemu-alpine-ssh",
+        "ref": "sha256:60b7050b0e0aa51641208cf65766743d340e59575db2c4d2f8628240846c2a28",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "qemu-startup",
+        "name": "terminal-bench/qemu-startup",
+        "ref": "sha256:8e58263747da7dc688ad470688fb72825c4ba2c1c40443fa0f52963645bbd999",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "query-optimize",
+        "name": "terminal-bench/query-optimize",
+        "ref": "sha256:169496ea6843cb403b0860132675baf7aa0df0ac8b86221068e27d86395260f4",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "raman-fitting",
+        "name": "terminal-bench/raman-fitting",
+        "ref": "sha256:97ca4025332b20739da553cab0658f2ead925d1b5b3b9b7664dc9eb5e7fbeab7",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "regex-chess",
+        "name": "terminal-bench/regex-chess",
+        "ref": "sha256:e763e0ac1c9759081af0a4a82ba51b8cf9ae5485a93de3bbe42d7d344597bd78",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "regex-log",
+        "name": "terminal-bench/regex-log",
+        "ref": "sha256:802c16cfd132e6c457529cb864be5a757c1b23b6cadc57f2d01983cb0110292a",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "reshard-c4-data",
+        "name": "terminal-bench/reshard-c4-data",
+        "ref": "sha256:a402bbfede73dd04168d697de9b9146026f69e14c8cd333b6a91fc87e44ecd4b",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "rstan-to-pystan",
+        "name": "terminal-bench/rstan-to-pystan",
+        "ref": "sha256:592f15f75751f3c4999c3d05087f2f8b2a4dbaaedbfad5a30ae54058b80b925f",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "sam-cell-seg",
+        "name": "terminal-bench/sam-cell-seg",
+        "ref": "sha256:37c182b91df18b9c2ea2dceda47430bbd585e7880c56fca2f1975907ce0df8ce",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "sanitize-git-repo",
+        "name": "terminal-bench/sanitize-git-repo",
+        "ref": "sha256:6e86297715fae62cd499fbdd27013e11a38d05d7e05b7f661cb50b4ecead128f",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "schemelike-metacircular-eval",
+        "name": "terminal-bench/schemelike-metacircular-eval",
+        "ref": "sha256:58130c2166c3115276dc8592f358e326ff2d81ea852e3d88636c82fd1dff57e6",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "sparql-university",
+        "name": "terminal-bench/sparql-university",
+        "ref": "sha256:02aeca67b6c5b0d2d72c91ab471beb51ded6f42f0dc3dec580e20d489f09a867",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "sqlite-db-truncate",
+        "name": "terminal-bench/sqlite-db-truncate",
+        "ref": "sha256:956f038b479cc3b9b493553b57a60a8ff4154526386c3914c0b99e93e1ab6e87",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "sqlite-with-gcov",
+        "name": "terminal-bench/sqlite-with-gcov",
+        "ref": "sha256:9f9bd57fbf9f4831e9031755e83aea6b9d60d2b2d54e8a12d48cff4dca3c231d",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "torch-pipeline-parallelism",
+        "name": "terminal-bench/torch-pipeline-parallelism",
+        "ref": "sha256:db605337c749a872cea7b5b413429b3915bb4c3efe0f7875f0c46ce81bd8c4fb",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "torch-tensor-parallelism",
+        "name": "terminal-bench/torch-tensor-parallelism",
+        "ref": "sha256:f32ce74a5aeb6638480247ab799fe46127bbee631acdd0921b0f394ec49b3684",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "train-fasttext",
+        "name": "terminal-bench/train-fasttext",
+        "ref": "sha256:460fc0818971ec83545a76805267b65459128fad52e68c26a199a0d74022badb",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "tune-mjcf",
+        "name": "terminal-bench/tune-mjcf",
+        "ref": "sha256:7da0fd3b906624df9eff8829ccd4f19cbb1ba967411b6d64d92b85b2f3fbdfb0",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "video-processing",
+        "name": "terminal-bench/video-processing",
+        "ref": "sha256:d3f02e177b49e5768b6ce6709fc4ae3ef2ce0cdecb63b09fc9b07f9d3ddb7203",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "vulnerable-secret",
+        "name": "terminal-bench/vulnerable-secret",
+        "ref": "sha256:d76dfa9e256487c5542905b892156f694137aeef784e1abf3f41e15a8c946eac",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "winning-avg-corewars",
+        "name": "terminal-bench/winning-avg-corewars",
+        "ref": "sha256:a9f2c630fb7d656e96f3a42ade600a8abcb500631d153d62d5ceb2df073bc256",
+        "source": "terminal-bench/terminal-bench-2-1"
+      },
+      {
+        "id": "write-compressor",
+        "name": "terminal-bench/write-compressor",
+        "ref": "sha256:d9ddd9a8e925e2c566b37b2492cbf995afecefe58874e4043ef78d7f3c892c7e",
+        "source": "terminal-bench/terminal-bench-2-1"
+      }
+    ]
+  },
+  {
+    "name": "swe-bench-verified",
+    "version": "1",
+    "dataset": "swe-bench/swe-bench-verified",
+    "dataset_ref": "sha256:b934b0cc3dc800fe945eaf9f1623329db97ee3133c706d20644524c7759fb341",
+    "tasks": [
+      {
+        "id": "astropy__astropy-12907",
+        "name": "swe-bench/astropy__astropy-12907",
+        "ref": "sha256:ffa0f9b1e9f60875cb046c42c272b0edb869533362d026f1524a4ae216fbd336",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-13033",
+        "name": "swe-bench/astropy__astropy-13033",
+        "ref": "sha256:22856a880a008a8d262c9737a2b912b74407d8297c6f3fbe41549842a3cf5229",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-13236",
+        "name": "swe-bench/astropy__astropy-13236",
+        "ref": "sha256:6a9a1725e274dbe315d2f6fdc9d8fec60a9107b82f730816607a8b8a659fd649",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-13398",
+        "name": "swe-bench/astropy__astropy-13398",
+        "ref": "sha256:fc6abd14e3c4e92b4bee37012a469aaa5f81b5c9b376c7bb003e9a8a64bd0950",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-13453",
+        "name": "swe-bench/astropy__astropy-13453",
+        "ref": "sha256:f06c7db4ac4d3755060cdffda73f9ac5884130be1a70e8c75bfb5070106f1a3f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-13579",
+        "name": "swe-bench/astropy__astropy-13579",
+        "ref": "sha256:3a6351dccb044201ccf19ab71064f851908f7ec8dc2cbadb03dd55cf93767332",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-13977",
+        "name": "swe-bench/astropy__astropy-13977",
+        "ref": "sha256:f3067899e6b8d29612cbf29182f8ec145d5e53d86a089095538655a7dc3161af",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-14096",
+        "name": "swe-bench/astropy__astropy-14096",
+        "ref": "sha256:f7ae035be67b4c2b4df7ceb7de52cd5d0527772e25ea863de25a9f45aa2b2d7f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-14182",
+        "name": "swe-bench/astropy__astropy-14182",
+        "ref": "sha256:93b40be3d250f38be43119cd80b6caab64ac767d310d63593c97afa2ec20a0bd",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-14309",
+        "name": "swe-bench/astropy__astropy-14309",
+        "ref": "sha256:fb9a557761b3d86ac16c6a8844a6f094108e52ac84b665e13e7400c2e357af19",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-14365",
+        "name": "swe-bench/astropy__astropy-14365",
+        "ref": "sha256:58d6aecb1e3c3ac5e8616ed01fbc285992cf43c8f4c5a607cd27178a6d3ac8f5",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-14369",
+        "name": "swe-bench/astropy__astropy-14369",
+        "ref": "sha256:be9e7e6e8df3da78f766e1372cbb122b49d546d3942ed5156af4db525d49633a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-14508",
+        "name": "swe-bench/astropy__astropy-14508",
+        "ref": "sha256:5568a7c9e2827027983263f6c887dd5fde776a0957872610ce8e9036292cb75c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-14539",
+        "name": "swe-bench/astropy__astropy-14539",
+        "ref": "sha256:56c46292a610dbe2dfd2b2415ba016ad15a3711742ec11dba628ebec83edb21f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-14598",
+        "name": "swe-bench/astropy__astropy-14598",
+        "ref": "sha256:cf2939c6c45b169708d5488ea593ba5f48b030657a7e65d3248340f049c38612",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-14995",
+        "name": "swe-bench/astropy__astropy-14995",
+        "ref": "sha256:4dc7e5a9ad7ce8e3538b706dbb3ab1ad2adcdec4552e76681e0be270f0012eb9",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-7166",
+        "name": "swe-bench/astropy__astropy-7166",
+        "ref": "sha256:7aa57030c047be9ef008b4445da42642c7801f739c3a02c7b2b247862fd7bbc4",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-7336",
+        "name": "swe-bench/astropy__astropy-7336",
+        "ref": "sha256:ddaaf10bcb713a1ffbf3e208f48bc499bee76245d2fbde2ae1bd5f852e82f0e5",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-7606",
+        "name": "swe-bench/astropy__astropy-7606",
+        "ref": "sha256:851513b1488a55bbbb5c58782b0ce83862369f5df4ed52f2c8187a8597e0d869",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-7671",
+        "name": "swe-bench/astropy__astropy-7671",
+        "ref": "sha256:bcc8fedcd939eba25131e43da4e94a214b304f51ecf1468edeb5821ae30ad957",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-8707",
+        "name": "swe-bench/astropy__astropy-8707",
+        "ref": "sha256:a326ff1f387c546d3ba139af6cf0714a924334cb5df1595f064306ece9dd7f4f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "astropy__astropy-8872",
+        "name": "swe-bench/astropy__astropy-8872",
+        "ref": "sha256:cc617f7b17c8208db0fa9b86ff2e448acc8ecd8d833e4163b23ecad224cea38c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-10097",
+        "name": "swe-bench/django__django-10097",
+        "ref": "sha256:0336bef1e9b8db2c8aeb1db53b4c0d2aecb790eb91c20e804fd5b3c7f649b199",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-10554",
+        "name": "swe-bench/django__django-10554",
+        "ref": "sha256:b2dcb6cf86f7f47ef67efe2ecf2c76aae93aaa35512735bc040da895a6832bf9",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-10880",
+        "name": "swe-bench/django__django-10880",
+        "ref": "sha256:7d44b4161ca9389bafa77cd495563ab8854d8f3434c9da028bf3875b65bcb448",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-10914",
+        "name": "swe-bench/django__django-10914",
+        "ref": "sha256:1933e1bf7cf16c22e2294ffb307b4591a510520f6cb1193321e4e21e7d6b7ed6",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-10973",
+        "name": "swe-bench/django__django-10973",
+        "ref": "sha256:1934a9158aa576836fc7cca50d09a41e55d011de978f60082696c34c9552a4c9",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-10999",
+        "name": "swe-bench/django__django-10999",
+        "ref": "sha256:381bb3478206f46ab6d3d8985b0d5ea95201995a1b53918d85e7a8329dd90219",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11066",
+        "name": "swe-bench/django__django-11066",
+        "ref": "sha256:69898b45e29e4b3b59919f9583671d956e359b22c1d84cef843018fd209ec3b3",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11087",
+        "name": "swe-bench/django__django-11087",
+        "ref": "sha256:020da8182c61e8e9a777dcc9370ea583b98443fd89e3878fc8747970bf21e062",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11095",
+        "name": "swe-bench/django__django-11095",
+        "ref": "sha256:91960982debd3c60c7d17c9d3b7fd521afff5d50d5ba679edc80bc17b5297591",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11099",
+        "name": "swe-bench/django__django-11099",
+        "ref": "sha256:7d972590a201efeb9d2426c4a7d0fa1f2e6ffd19abb6a6f6574bbd1d38071c4e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11119",
+        "name": "swe-bench/django__django-11119",
+        "ref": "sha256:b29d79c8b81ae8a3aa36e98aafc1fa29042b96b679bf59d7d631268f2aece9fc",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11133",
+        "name": "swe-bench/django__django-11133",
+        "ref": "sha256:5c3de4d3665b922760fe0b2efdbc204477eebf8c0849cf13f8f56f55ceb86687",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11138",
+        "name": "swe-bench/django__django-11138",
+        "ref": "sha256:6a15bfeed02a9f2824c718d741ea12a4b02c9a39e99b59a66994b7d555b68c94",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11141",
+        "name": "swe-bench/django__django-11141",
+        "ref": "sha256:eff97d973b15981c4deaf249831f84f0ec46413be880b826ad157be9ed8aaca1",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11149",
+        "name": "swe-bench/django__django-11149",
+        "ref": "sha256:e4b8a6c2d44b66d07ea007f363f7eac029916e297f57455def591dd7f86b72ad",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11163",
+        "name": "swe-bench/django__django-11163",
+        "ref": "sha256:724a2fb342499a0fcf5b02ae0afba3ea4c693e3c659abaafae5f7790f911708c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11179",
+        "name": "swe-bench/django__django-11179",
+        "ref": "sha256:d7fe3f8ca4af3e8b02039ec60d6ed0063918d804c2f8e023b13df46a317c7a2f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11206",
+        "name": "swe-bench/django__django-11206",
+        "ref": "sha256:c5435a67cf95b4448530cdf83fa7179eb1943b2d012362e26b42a1d4b3cf096a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11211",
+        "name": "swe-bench/django__django-11211",
+        "ref": "sha256:33a48b9b3f01ab32a25c9144e9aaad9b069d5e8b9740f25d260531961e761d13",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11239",
+        "name": "swe-bench/django__django-11239",
+        "ref": "sha256:819d1556cb486d977cce97f98837ce5c753a3cc466bc2fe659c990aaabd25222",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11265",
+        "name": "swe-bench/django__django-11265",
+        "ref": "sha256:65d414ba77c5f984c4fe4d4b8cc680a8982cc96e6e67598c8af61beed03384da",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11276",
+        "name": "swe-bench/django__django-11276",
+        "ref": "sha256:18e46a514fab8d1199b82d8d73c04fb61ee8a30a85146c480dd4e713bf405ad5",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11292",
+        "name": "swe-bench/django__django-11292",
+        "ref": "sha256:6f5c3f1bf400362cff68f7093af3a03a5cd7a1faaf9d0a83c55d4a5d8fd5d93c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11299",
+        "name": "swe-bench/django__django-11299",
+        "ref": "sha256:05c01bf1ec41041d8cba8210a0fd25a3702dce27b643b17b89a21894d8d14378",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11333",
+        "name": "swe-bench/django__django-11333",
+        "ref": "sha256:b1b461a01463a5f8dad80f1b4f37f2965aa93ded43681eb92daf39328084bd74",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11400",
+        "name": "swe-bench/django__django-11400",
+        "ref": "sha256:31d2c83b0a0213bcaa855a8b14451a4b7272891d2228aaa4349fa6afc38d7731",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11433",
+        "name": "swe-bench/django__django-11433",
+        "ref": "sha256:3c394e8918490a1d3959cd143c995520248b664381a2eac58be41f06da9e3e7e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11451",
+        "name": "swe-bench/django__django-11451",
+        "ref": "sha256:93ae4d7c54495626f67255030bafd7e8569f9e41c71a644f71e72bb18acad94c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11477",
+        "name": "swe-bench/django__django-11477",
+        "ref": "sha256:61e59d1413339cf2449c0b61eaa87be1563893a5903e63d43126c3111c0d68cb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11490",
+        "name": "swe-bench/django__django-11490",
+        "ref": "sha256:0e9b31999bd22044bed6b904141ce1df25ab78e61ba5adfb308a622de4c3b4c9",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11532",
+        "name": "swe-bench/django__django-11532",
+        "ref": "sha256:a13612d21e970240d745a5760af9c5e408c3a24e9596523fa492cdee549ded39",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11551",
+        "name": "swe-bench/django__django-11551",
+        "ref": "sha256:32b49a7192ad006afab73492f8952b05517c8c7e2e0e3b0b8eea6d5db77c9f0f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11555",
+        "name": "swe-bench/django__django-11555",
+        "ref": "sha256:dde3df736e619c26aa19cc24ccb65c577964ce426fb84dbc1be4275bf8538682",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11603",
+        "name": "swe-bench/django__django-11603",
+        "ref": "sha256:63b302b224bb84490cff821f24bde817f004f959bdf607e09161d6d34aaa0fa5",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11728",
+        "name": "swe-bench/django__django-11728",
+        "ref": "sha256:51a1e6363f44a8685f69024562181697c8bbdb25e2cada710d8ec03ae1f7e398",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11734",
+        "name": "swe-bench/django__django-11734",
+        "ref": "sha256:31e1dee2a0654111c95ca65404c94f065d1136aafd1aae4c7ed19d80406cec1c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11740",
+        "name": "swe-bench/django__django-11740",
+        "ref": "sha256:9a68dce553204884ae974f001e12a6c49001b9bd73fd472c8f1a94acf4b7451b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11749",
+        "name": "swe-bench/django__django-11749",
+        "ref": "sha256:a423954130d14ddb0ec48647a97a97eaa811c37e5b32200ad0f13a9845e2684b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11790",
+        "name": "swe-bench/django__django-11790",
+        "ref": "sha256:5ac5c8cd33c96f32a8c4ecff0750c092bfbc2cef4e856fd437689ca3f1fa833f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11815",
+        "name": "swe-bench/django__django-11815",
+        "ref": "sha256:26d9cbe452bd9f6a15edd824bdd9b3b478d52a361449a41dd6653e34d0fbddca",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11820",
+        "name": "swe-bench/django__django-11820",
+        "ref": "sha256:46290922d8d8855060ad6abb5ae2401c3ef15215efbf08338b12eb7c51fec9f7",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11848",
+        "name": "swe-bench/django__django-11848",
+        "ref": "sha256:98c39b516c8ce9042a639860292547054e74e205a8b973201f3f6c8e638fd62e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11880",
+        "name": "swe-bench/django__django-11880",
+        "ref": "sha256:706c52849712435e251036e0a5f4978a817484ae53d3b9423802ac8db3ba7f06",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11885",
+        "name": "swe-bench/django__django-11885",
+        "ref": "sha256:0305348b6535e8e3c9dd12575e22e76589c3ff0b07247771d1126520e9586195",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11951",
+        "name": "swe-bench/django__django-11951",
+        "ref": "sha256:dc7b7a12b6c3bb1a2debb8daceee2895255265a1d0fdce20c5d097bf3a282c37",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11964",
+        "name": "swe-bench/django__django-11964",
+        "ref": "sha256:869c718dee0c1df2b40c4d544f70e74b187ba4142923b7c6e4bf39e91c0db37d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-11999",
+        "name": "swe-bench/django__django-11999",
+        "ref": "sha256:f01f205cdb7376a2579e86491b2c0e219da104dc92ff9159032c373e8a8e1967",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12039",
+        "name": "swe-bench/django__django-12039",
+        "ref": "sha256:aa6abe2a9f1afd6c8ed97daa48d336811ec297380c74e023deb6c9958289d106",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12050",
+        "name": "swe-bench/django__django-12050",
+        "ref": "sha256:bff18083ccd9b2baffecadea3bbc3555fbe6997245f8c9b20def663f0c4e7faf",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12125",
+        "name": "swe-bench/django__django-12125",
+        "ref": "sha256:fc1f4d712bff01b6f767c0acf3980fdd8eb0f93009ef8757cedd0d2159dfc784",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12143",
+        "name": "swe-bench/django__django-12143",
+        "ref": "sha256:e0624b02fc221fd4a35c505cab27bb19c67175a5da4eb41dd078abbaf74330f7",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12155",
+        "name": "swe-bench/django__django-12155",
+        "ref": "sha256:7f374b440edb409af770a0f7a88d6827c46cf21846fb4d7df448912287dd1810",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12193",
+        "name": "swe-bench/django__django-12193",
+        "ref": "sha256:8d41577d5369cd530c279c4bfac6f7436daa9fe54e8b97ffec6473335b815a30",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12209",
+        "name": "swe-bench/django__django-12209",
+        "ref": "sha256:c6ff2e49c217eceba1007929364a0e1c1e118c6f06abed9f40a45e2a47c63fe4",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12262",
+        "name": "swe-bench/django__django-12262",
+        "ref": "sha256:a650613f99463aea0fefe97ce9aa497ccd6a2940cbd46294fd89e2da7dcc3d1f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12273",
+        "name": "swe-bench/django__django-12273",
+        "ref": "sha256:35b1a667c2f976d33d0ee00053ebc0353db22d90b61afba1b206e5640a977435",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12276",
+        "name": "swe-bench/django__django-12276",
+        "ref": "sha256:bd3c17e018d194ff3a667acea2492b213a2db12cdb3a7bf6fbb43c7c51bc1342",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12304",
+        "name": "swe-bench/django__django-12304",
+        "ref": "sha256:9dabf4c32cc1f9e81cdef7a2f90e8358db139b7835827d86cf92031dec683004",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12308",
+        "name": "swe-bench/django__django-12308",
+        "ref": "sha256:297cdff2588c2ccbf77f0f310eb630eb077dbd02db8578199a12a0cb1925ce1d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12325",
+        "name": "swe-bench/django__django-12325",
+        "ref": "sha256:407ba85bd55e157f7013a9bae1bbf880c0c86561ddb78d39897552e552bdb7fb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12406",
+        "name": "swe-bench/django__django-12406",
+        "ref": "sha256:69bc7b697d9e6a7441dd5be157c1de472feff791ead7d22efc4d7664986be13e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12419",
+        "name": "swe-bench/django__django-12419",
+        "ref": "sha256:1d79ebe4b681e86a2a740db0687f395adacaa15637f1c876382e5605905871dd",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12663",
+        "name": "swe-bench/django__django-12663",
+        "ref": "sha256:ecc469a63be71cc2c9a601bf4b6ea1c826592f75ea1abc7ca8b9d2123958a30a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12708",
+        "name": "swe-bench/django__django-12708",
+        "ref": "sha256:d96eda2e18dee4526b418d8f18cd69e6db71ccc542b874d3594f02e52cae483e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12713",
+        "name": "swe-bench/django__django-12713",
+        "ref": "sha256:8031bd6560bc2367b19300ab74b5d0af70a36512c0015f5558ae5d1bddc67e7e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12741",
+        "name": "swe-bench/django__django-12741",
+        "ref": "sha256:293299a5d17279e63b07920deee1bd211c962a71babf5245f5dc2c478b2eb059",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12754",
+        "name": "swe-bench/django__django-12754",
+        "ref": "sha256:89b9c024301293b0e26b70c77d2318baf981b82bd98bdea33219ec3efad81937",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12774",
+        "name": "swe-bench/django__django-12774",
+        "ref": "sha256:3e34e0f7ebf68933f86a04c14babbf6e5bdbae16800c4123911f3f9a87001374",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12858",
+        "name": "swe-bench/django__django-12858",
+        "ref": "sha256:77eb07ed567af799859eb84eb8f8d7474c068f3646ddfc236bd53526cb0c96f8",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-12965",
+        "name": "swe-bench/django__django-12965",
+        "ref": "sha256:ff74ac8461d1f45ff11e65eaebd1a526d2480bb80b3586884920fb927afd7e02",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13012",
+        "name": "swe-bench/django__django-13012",
+        "ref": "sha256:9335b527f8dc27f75fc7362f5ff8e5192ace738a5df16cbb55b85141e5b6cc62",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13023",
+        "name": "swe-bench/django__django-13023",
+        "ref": "sha256:0c0861225a94b954b39f27d370e7d6bdd4c6ec18eec1bafef75c7951330c0b64",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13028",
+        "name": "swe-bench/django__django-13028",
+        "ref": "sha256:9e4429fbf8e07445e695d1382baa430b9aed408a6ecd768ba459b6c37ea8e296",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13033",
+        "name": "swe-bench/django__django-13033",
+        "ref": "sha256:244b30541a8accabc62bbf7116f434ae5064dfb20129adb2c28e6db88086ea0f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13089",
+        "name": "swe-bench/django__django-13089",
+        "ref": "sha256:ad3c9a9cadae929c887f2fa4b624264f62c24d7eb62f1f3cf2299abdb99b5332",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13109",
+        "name": "swe-bench/django__django-13109",
+        "ref": "sha256:f6fd5fdb3e057b8ea7a07a1804ac38105fb4c21fa54f604a1b1cc276fb880ba4",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13112",
+        "name": "swe-bench/django__django-13112",
+        "ref": "sha256:8f487da6b4a8836de55de623fee9b0f3d50168c2eec0e9b842599aacc29764fb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13121",
+        "name": "swe-bench/django__django-13121",
+        "ref": "sha256:1026a582cea5082342f08428a048303b82f34cd3be8182f39a2da18492184100",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13128",
+        "name": "swe-bench/django__django-13128",
+        "ref": "sha256:9feda2aa20cd7abb5c0a223c6a41fbbb1ea42cbea4bfb08d1d65213a70f6b9e6",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13158",
+        "name": "swe-bench/django__django-13158",
+        "ref": "sha256:82b3330d0037a089330e76ec3a7764440f2ebe49c42076eaae25557b1086ab9c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13195",
+        "name": "swe-bench/django__django-13195",
+        "ref": "sha256:caeab1af0f5df343febc6636f30bb9c1bde52dc1c77d0537ae556469212e0025",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13212",
+        "name": "swe-bench/django__django-13212",
+        "ref": "sha256:99cc86c367fabe7ea06d98b7dd02b98eb5959ab81130d4263adcc79c8dcf26f3",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13279",
+        "name": "swe-bench/django__django-13279",
+        "ref": "sha256:1c58842e2f3414ed709136b361cf1138b10bea7a1d2171e4fa1b8007f9691859",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13297",
+        "name": "swe-bench/django__django-13297",
+        "ref": "sha256:d40f57f7e67c77a8ed27a156ce511f249d51bcfe2cfb26dd561967a199ab3b7b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13315",
+        "name": "swe-bench/django__django-13315",
+        "ref": "sha256:cfb43134db0e88f5ec27731200934b1887875233399255943dcc80507a1f049d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13343",
+        "name": "swe-bench/django__django-13343",
+        "ref": "sha256:d4bcdf202704d6e938f78bd6dad3ad193012d3f6ae18041a6f3da7df42c98f81",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13344",
+        "name": "swe-bench/django__django-13344",
+        "ref": "sha256:db16b632b4737b3392dfcd4f995605d911e065ad5f0d055bed80a3d0292576b6",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13346",
+        "name": "swe-bench/django__django-13346",
+        "ref": "sha256:66b6861d7d7e370345dbc14afa9136261cea57b5e945230c96eeaea842a1a67c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13363",
+        "name": "swe-bench/django__django-13363",
+        "ref": "sha256:bdbdbc1e01de69c1e5f7081aaaebe3ec2e2e752280ad7b8297021211cf19335c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13401",
+        "name": "swe-bench/django__django-13401",
+        "ref": "sha256:13e4c73a985df1d063bfc72201517e8ddb0fb1aff14aa892b275574ee01f005d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13406",
+        "name": "swe-bench/django__django-13406",
+        "ref": "sha256:7c1d72c52336ece877c31d60253045fa6c2b86caf96f2ff934a608d5f481c39c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13410",
+        "name": "swe-bench/django__django-13410",
+        "ref": "sha256:3d28f166d0c53aaa59f0f8d4b545d95315707a89783f48fc634e38d41079d323",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13417",
+        "name": "swe-bench/django__django-13417",
+        "ref": "sha256:70c4889c750bfce7b98c2c7216f2f88b31303f9a6a613d9084443653c819ffb1",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13449",
+        "name": "swe-bench/django__django-13449",
+        "ref": "sha256:00085734a8acec16be3abc33a4a7207ab96de0f6330004011c218601e74f0027",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13512",
+        "name": "swe-bench/django__django-13512",
+        "ref": "sha256:e661699ea77b772a505c3d649a8aaf874fa16a77b3b1407ef835e6ae68d61b60",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13513",
+        "name": "swe-bench/django__django-13513",
+        "ref": "sha256:8e688daf19d2d74058212f142980c5f8081940bd1ce4c49582b3e827a949fca7",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13516",
+        "name": "swe-bench/django__django-13516",
+        "ref": "sha256:00f013eaef1e4e451eff4c0a0a8a2803236a0ba4f3929ee9f91e7696d9dfe92a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13551",
+        "name": "swe-bench/django__django-13551",
+        "ref": "sha256:bfbdc65069e90ed1b7eee1280b81fe525209560798854621878608cb9a05bd5a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13568",
+        "name": "swe-bench/django__django-13568",
+        "ref": "sha256:41c533d1ed75e329801ed0f09c8f9ea1959829c8164f398b6f3fb6278798c710",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13569",
+        "name": "swe-bench/django__django-13569",
+        "ref": "sha256:8747a648c54e234cc24246c54dfb8f60ecdb7c66e62a006a208dd4f157d6d17b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13590",
+        "name": "swe-bench/django__django-13590",
+        "ref": "sha256:e74571f2db3c7131f1954e3c4fa4dda83cd29762d00cc52ed676e587cbf60e6d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13658",
+        "name": "swe-bench/django__django-13658",
+        "ref": "sha256:be550d45ea9655c486b3bf339ceadb912306a073e6bd3a171b9654d49a19fa5f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13670",
+        "name": "swe-bench/django__django-13670",
+        "ref": "sha256:aff9fd6459573ef94ff88f911edfa31deaa0a2c436015408d4297ea8adcfa36e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13741",
+        "name": "swe-bench/django__django-13741",
+        "ref": "sha256:3d797a9095cb438d932e5cd60e7d789ac5b9ca6ce9fda57c1df8bfd5ca8d10a5",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13786",
+        "name": "swe-bench/django__django-13786",
+        "ref": "sha256:2834c3ab4bcb200fcd6311524801a634c6456c44893a6bd8e9437f166c7dec9e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13794",
+        "name": "swe-bench/django__django-13794",
+        "ref": "sha256:2c9fee9f1578e2b06aedb9df1a74cadd05e16ba654ac3c1cd9b154ea8c58b9da",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13807",
+        "name": "swe-bench/django__django-13807",
+        "ref": "sha256:752f8b5c4d6b427a859a332aad2b67da6f93ced562a71a194fcdc45f16a8e3ca",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13809",
+        "name": "swe-bench/django__django-13809",
+        "ref": "sha256:f82903e5e045e5b53e13e859e2ef5ac70fd6745a3706b3c52e09730690f91be2",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13810",
+        "name": "swe-bench/django__django-13810",
+        "ref": "sha256:b68f3ea38a8be79cebb234e85276c69b9d0df349fd6a056c71b0127a3ca18f33",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13820",
+        "name": "swe-bench/django__django-13820",
+        "ref": "sha256:345fe571131a2eeb09042df8bbd6fba8941a20d22ae82ca37f30a0c55cc67dec",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13821",
+        "name": "swe-bench/django__django-13821",
+        "ref": "sha256:67d4da40e12605db44ed636203535bac6570aa0069d386189b971d9b24ed1dab",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13837",
+        "name": "swe-bench/django__django-13837",
+        "ref": "sha256:ba14e95ab3f1b059476cbdf74d9f4c9a45db5e1399f54646d5726a8292c1523a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13925",
+        "name": "swe-bench/django__django-13925",
+        "ref": "sha256:bd0a994824bdd1c6831bc6505cc20ecb7312c9aa89c06df6223d1c59b256d2cb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13933",
+        "name": "swe-bench/django__django-13933",
+        "ref": "sha256:88997bcc384ef86cf2c6c88f343d65207264519ff642edb9923e37cfad8db33a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-13964",
+        "name": "swe-bench/django__django-13964",
+        "ref": "sha256:6edc4028d124b149f0ca947a96810a722189e1e4be4232e10d7037ef1aa531e9",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14007",
+        "name": "swe-bench/django__django-14007",
+        "ref": "sha256:50c967fefac5dbd6c14d49847323493978a88dff51450fdeffa2584864f57320",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14011",
+        "name": "swe-bench/django__django-14011",
+        "ref": "sha256:737defa393025ad3e353bf0b310731d14c8f4cbf4a48dfbba0bd5828a272a400",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14017",
+        "name": "swe-bench/django__django-14017",
+        "ref": "sha256:2257e07455f6c4744a4fce333f16af765277e42d5c4adc83450b61da8629315c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14034",
+        "name": "swe-bench/django__django-14034",
+        "ref": "sha256:04aa9d27ae5587f7011e82c144dba06f206250501730c3b7f5235a01cc5679a3",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14053",
+        "name": "swe-bench/django__django-14053",
+        "ref": "sha256:bcb295c527c6686dae3db979b4823099818e1b8ecb98439d323a6bfdbe7f5b2f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14089",
+        "name": "swe-bench/django__django-14089",
+        "ref": "sha256:1b466c8d17e9a767e82853994a265ad8a8c9fc17681b4894948c317eafae7061",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14122",
+        "name": "swe-bench/django__django-14122",
+        "ref": "sha256:00f6d6841e97f07be1b72ffa464fc729e23c155a3793dc6b8d0045ab1b8e2c2f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14140",
+        "name": "swe-bench/django__django-14140",
+        "ref": "sha256:2405aa1c550b4404e1d932fec7bd23e533076d1d165f08a0032a7ad52f64c2b3",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14155",
+        "name": "swe-bench/django__django-14155",
+        "ref": "sha256:82acfd4e37edf9da8b25d93a20a8dc0ca7414ff03f4aeeabcd8fa73e18237e14",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14170",
+        "name": "swe-bench/django__django-14170",
+        "ref": "sha256:e574df2c38dab6af9b8a5db2de401eee6a11aa8dff74905f0d365d93b425bd33",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14238",
+        "name": "swe-bench/django__django-14238",
+        "ref": "sha256:fc75079335b65ede8a1659296718cee8ff1059beaec78597be9e8f8edb5d61c3",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14311",
+        "name": "swe-bench/django__django-14311",
+        "ref": "sha256:d3b8fccf97684eac900c42600db127cf0318abb266f5b52e9651db5ea08458b0",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14315",
+        "name": "swe-bench/django__django-14315",
+        "ref": "sha256:8576fc7192f566ede66d31d9b8262ae284131913f58d358ae37c5377789b5c04",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14349",
+        "name": "swe-bench/django__django-14349",
+        "ref": "sha256:447753bca216101bbe2b3c0ff20af77ac708f76d8d9f07706d473a3d69c4e7c3",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14351",
+        "name": "swe-bench/django__django-14351",
+        "ref": "sha256:e37f5181ca798333c7b580db2a1292f972094aadbee0479294d53d43922f4f31",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14373",
+        "name": "swe-bench/django__django-14373",
+        "ref": "sha256:ca925bc8d5023c49149dcf9a093a5c7e1e827ceee4e27e6e7548fed7220cf33f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14376",
+        "name": "swe-bench/django__django-14376",
+        "ref": "sha256:077c37e76f761e6fff00dddf31d1640fa82d13f74f17fb9910da7797d11167e4",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14404",
+        "name": "swe-bench/django__django-14404",
+        "ref": "sha256:c2ec0a4dac8e510e875c37dddc3376aa9ca84d5d82401727259681a1161a5fc7",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14434",
+        "name": "swe-bench/django__django-14434",
+        "ref": "sha256:7135c4efd39477db7deda1a4cd59397c7ba956bd5219da0d9a3cdd708c0a0552",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14493",
+        "name": "swe-bench/django__django-14493",
+        "ref": "sha256:f4425561cf18572dacefaee7e9ec0a4ee9ed1e57341ac4b6bfac8cac6ac2d8b9",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14500",
+        "name": "swe-bench/django__django-14500",
+        "ref": "sha256:efde97c3771597a2a1f01e7e11a0b48d0b9d1fff58721843da506639e5eb4307",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14534",
+        "name": "swe-bench/django__django-14534",
+        "ref": "sha256:65e1598c155daab50bc473b419b4a8edb65e082d85ba408ec652bd17a7e865c9",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14539",
+        "name": "swe-bench/django__django-14539",
+        "ref": "sha256:41997acb219b52a5df7895500f32dac02b88b1e753daa97e426f483e3d90de1e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14559",
+        "name": "swe-bench/django__django-14559",
+        "ref": "sha256:1d922bdc9f2dd4253bbf241d192d824ace3eb081791be4cb041eb7c81bb78130",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14580",
+        "name": "swe-bench/django__django-14580",
+        "ref": "sha256:e98d111b057eaf9cded87e57240f3665b47f74b912e696a7d583b7394614dcfb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14608",
+        "name": "swe-bench/django__django-14608",
+        "ref": "sha256:28e5a95646505e33355490d094a42344ddd6835b382426ae9503cd5b275c984c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14631",
+        "name": "swe-bench/django__django-14631",
+        "ref": "sha256:0f7c532bef88ca607a8c0a5246682738e6d28e42e353dc11d71ce98f627bae82",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14672",
+        "name": "swe-bench/django__django-14672",
+        "ref": "sha256:2554b6c0e5ac45d397ca7172de789c4a892413e546b38423047daa70f4482e3f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14725",
+        "name": "swe-bench/django__django-14725",
+        "ref": "sha256:5ef6f254fc69446310fb63c4659b9eb31a78acea7c96f93f94c2984947a5acc2",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14752",
+        "name": "swe-bench/django__django-14752",
+        "ref": "sha256:0e23722e5172bca4b9e08264530b940ce7ff7d8e3870297aa0406af767b675bb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14765",
+        "name": "swe-bench/django__django-14765",
+        "ref": "sha256:8a767c121186094b80aadabc8bccd7696dbb84de5fd70f027c083cd4bd7418c8",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14771",
+        "name": "swe-bench/django__django-14771",
+        "ref": "sha256:7d77d509b717c161a65fc3ddf06c52b0e8bca4d497afd6b561e1bbc47677afa9",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14787",
+        "name": "swe-bench/django__django-14787",
+        "ref": "sha256:3a98d4e72dd3b0d41003c65478021cd13bb633024c78c00c702fdc9072aebd9b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14792",
+        "name": "swe-bench/django__django-14792",
+        "ref": "sha256:5148dec6b7b2e750266056c0c6166ea379cddfd3b18b84ec2289e5b641a4bf7e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14855",
+        "name": "swe-bench/django__django-14855",
+        "ref": "sha256:bab173068b6b4d060ec80007466b20747dc1254a0adc41b00c07f50ad6a7eb6a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14915",
+        "name": "swe-bench/django__django-14915",
+        "ref": "sha256:00878da7f6653eed1a3b9f072db90499cdc168e7814880974aa3d2d4b089fe94",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-14999",
+        "name": "swe-bench/django__django-14999",
+        "ref": "sha256:d79dd986d453dc1f9bfeb01adc5bc6519f01b8254d89a38b6d8bde57efdda4c7",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15022",
+        "name": "swe-bench/django__django-15022",
+        "ref": "sha256:297aeb635d5bd8c9e68d3e83b8cbbbd17d6a9e0ab9685bcbacaa1448154c69f5",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15037",
+        "name": "swe-bench/django__django-15037",
+        "ref": "sha256:b2e831f9572ac3faf5769b921e222c202d7a26929b57930dd14daa91187c1ae1",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15098",
+        "name": "swe-bench/django__django-15098",
+        "ref": "sha256:e72c3bb51267ee3bd39daf2a7e18de40608147db86b59c1ba4efce01b3a9bb05",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15103",
+        "name": "swe-bench/django__django-15103",
+        "ref": "sha256:49c23e6e94c9e7e511dccd9a50650ea33acae3cbf31eed6a37e68626dc52d350",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15104",
+        "name": "swe-bench/django__django-15104",
+        "ref": "sha256:5b6c22a9b1af844730489ecf48e99c489c6f8102b46ab24cbbed8e94a079e494",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15127",
+        "name": "swe-bench/django__django-15127",
+        "ref": "sha256:ff7b31d18542ae1da8862a154e29043716cb854687e255bdb452e6361d36f787",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15128",
+        "name": "swe-bench/django__django-15128",
+        "ref": "sha256:9c9f1aa6a12f833c29d7e228ff22dd940e3231869b640afa18b78e86db5d184a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15161",
+        "name": "swe-bench/django__django-15161",
+        "ref": "sha256:de861733ddfe3cdefb70d05fe5394b6d432e07f29cf4b26edd87bd38e75e103d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15252",
+        "name": "swe-bench/django__django-15252",
+        "ref": "sha256:fe1cbc7311c3a1a2180fe40c8641d82db4dd981b3f92cad898de5be556c561ee",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15268",
+        "name": "swe-bench/django__django-15268",
+        "ref": "sha256:14da2c689148b7f601bc04aa4d7f35788a428eb1d8bcec7dacc3f0d65d26edd1",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15277",
+        "name": "swe-bench/django__django-15277",
+        "ref": "sha256:d2f20515bfaf0571512ed87f585c4908a9c0f2978c50c2440e3f40e4b66a2769",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15278",
+        "name": "swe-bench/django__django-15278",
+        "ref": "sha256:6a8543b744f44615262456b7d175aed03272322164a51d7860929a9886ef021c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15280",
+        "name": "swe-bench/django__django-15280",
+        "ref": "sha256:73b72bf37c98e9d5634624e8a527729e3e0b9fcce62484f98d5a002d32754a11",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15315",
+        "name": "swe-bench/django__django-15315",
+        "ref": "sha256:e010c906bdb163e5d7ec8b144c36c213bceed9f19a95fff422bb30702141c60f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15368",
+        "name": "swe-bench/django__django-15368",
+        "ref": "sha256:4b0e38ce51c5686a78f2589b4947520703d7d342095890733c9ae078a8b3c0a2",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15375",
+        "name": "swe-bench/django__django-15375",
+        "ref": "sha256:431e1bdcd6d148809a22a137658cd28c9580d506429438630cb2dbb52b0c270a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15380",
+        "name": "swe-bench/django__django-15380",
+        "ref": "sha256:93af3ebd772fc68f92a669edbf467126a27f2bd9ee8ceb62ab8dd0a664829753",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15382",
+        "name": "swe-bench/django__django-15382",
+        "ref": "sha256:1ed65799c870a26452af390f0c644fed0482142a1bfb792eae658d1a8f193e36",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15467",
+        "name": "swe-bench/django__django-15467",
+        "ref": "sha256:4aa36efc663e3b22aceea96d81de3e19e094778f1b5e9a83d3ff74db800de431",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15499",
+        "name": "swe-bench/django__django-15499",
+        "ref": "sha256:f1ee90eac05b0cb6388d56c651e20b93c2ae2c13a1232d35c44f6f736022250a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15503",
+        "name": "swe-bench/django__django-15503",
+        "ref": "sha256:aaf9b8d9e0132ba4248cfe608e5c9c96041a812ed7bef7b0b0322c28d1b20a38",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15525",
+        "name": "swe-bench/django__django-15525",
+        "ref": "sha256:d504ffa48818ee0c76b9bc7e205671461ecfb2d6bbdbe9dc3e4bac403cc62b75",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15554",
+        "name": "swe-bench/django__django-15554",
+        "ref": "sha256:776dc0bd3c7eeccbfbfa93cd97fadd23ef89aaa15357d244aa67530a390ea06c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15561",
+        "name": "swe-bench/django__django-15561",
+        "ref": "sha256:f2d0b377ac481d856aedc5d2601e1079451a2ceeb7d25fb6bd0f9913dfc8e85f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15563",
+        "name": "swe-bench/django__django-15563",
+        "ref": "sha256:4a64fbf37935d53a56815c8bd62786c73eaf0dd36825d754c277f2a49025e988",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15569",
+        "name": "swe-bench/django__django-15569",
+        "ref": "sha256:c60df589320f2ead4f47af9717bb9f9acfece1610871f1968e14a5482c0a92ae",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15572",
+        "name": "swe-bench/django__django-15572",
+        "ref": "sha256:ac0bda2abb61711d326ff79ca3fce6cac6fe7ccc830b0586d8dab811d3989334",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15629",
+        "name": "swe-bench/django__django-15629",
+        "ref": "sha256:023420f5f2ee284341b876a4678873d92f79cf6b48e1892a1ba9582c3a2b16f5",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15695",
+        "name": "swe-bench/django__django-15695",
+        "ref": "sha256:09780d08f2dcea4b3a837ffb1c26ed113786661c11eff6ce03fdc84a15d7b793",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15731",
+        "name": "swe-bench/django__django-15731",
+        "ref": "sha256:7f9b8ea2e13220d1442a37a27dd3e265fab4581fe6b7a85ba3d9c320357567c2",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15732",
+        "name": "swe-bench/django__django-15732",
+        "ref": "sha256:ab6b9f43be8ef3915bc0cd6f70489e641f3f1a8db11f6970767a3ab1d2407a81",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15741",
+        "name": "swe-bench/django__django-15741",
+        "ref": "sha256:27748e17d90d11e84708bc49c3b80ee73e8c4a7e9f94d66159b97c1354b7360e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15814",
+        "name": "swe-bench/django__django-15814",
+        "ref": "sha256:cd0f27943bda58da75b98dce0d69ebb9d40c48146d22b3a37e61e969d766dc15",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15851",
+        "name": "swe-bench/django__django-15851",
+        "ref": "sha256:a78b4bf4bbed5b23a94fee566cb35fd912376231af8959a3a17ee11b3dcdd4ec",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15863",
+        "name": "swe-bench/django__django-15863",
+        "ref": "sha256:2868f9f0390e95291632ba9e82771ab8999c754e72e6f6244fbb80b178afc9bd",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15916",
+        "name": "swe-bench/django__django-15916",
+        "ref": "sha256:8918f36f510b365f2d87f02e7b5ba826f879cebefc38351ef558e8813b47fbda",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15930",
+        "name": "swe-bench/django__django-15930",
+        "ref": "sha256:1005afc5d51336918e8017e44b3de70318ef2d9734867543ca388fe0b57d9f26",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15957",
+        "name": "swe-bench/django__django-15957",
+        "ref": "sha256:40203232e6c27970ab08f7392980681e716631f8520cf04ae4ff853e78b200c5",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15973",
+        "name": "swe-bench/django__django-15973",
+        "ref": "sha256:c61276e08efc1fe85910dfd723145d6cf3f840715261a0db22fdd8170321392d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-15987",
+        "name": "swe-bench/django__django-15987",
+        "ref": "sha256:49eaf4a1e7f85dc840740a13ee5a3594e046866ea32008a96e79816a2ded30cb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16032",
+        "name": "swe-bench/django__django-16032",
+        "ref": "sha256:fbf2a8f3dc8d8d71a761101f9d7dca1e8fe85dd2447d9390e62fd392631530ae",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16082",
+        "name": "swe-bench/django__django-16082",
+        "ref": "sha256:fa6b4bd821420bf641580f2de1529c981158c30724bcbfc80341939185559a4a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16100",
+        "name": "swe-bench/django__django-16100",
+        "ref": "sha256:beb864b0182f1f5ce53c6ff2762c2bd6c4aef6ff048fc0c777b58403972e972e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16116",
+        "name": "swe-bench/django__django-16116",
+        "ref": "sha256:47de21a9c58d3419b46decabdc54a9fd5c792530601246065917edb1a28c7f18",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16136",
+        "name": "swe-bench/django__django-16136",
+        "ref": "sha256:18395be43ea83e4776917bb130fd6355faef807a1029d2419135b8a13aa53095",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16139",
+        "name": "swe-bench/django__django-16139",
+        "ref": "sha256:3049aceb0676997392bf05d876e7d5694ffeb31a0343cace2c920925dc6a328c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16145",
+        "name": "swe-bench/django__django-16145",
+        "ref": "sha256:f072577ec909803b54bd666f0c170a0c02a57fdb743bc98184a53520ec36e4af",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16255",
+        "name": "swe-bench/django__django-16255",
+        "ref": "sha256:8f3456d9b695b50a65cd1bc35f2bdabcdc5670a652b35f41932b05197fa200ec",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16256",
+        "name": "swe-bench/django__django-16256",
+        "ref": "sha256:5d2226f57c9795e8bd8e84626ba2de37eb4c74c2341e2b228eda694af0982210",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16263",
+        "name": "swe-bench/django__django-16263",
+        "ref": "sha256:eb232e8a87281c0efb8b626beb92e7d41701a0108c505e56e434d4f9d6e8012e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16315",
+        "name": "swe-bench/django__django-16315",
+        "ref": "sha256:116a7735b1fcd9d16b4d6ecbd32c78981440f2613f5a27355181cc461298fbbe",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16333",
+        "name": "swe-bench/django__django-16333",
+        "ref": "sha256:9e062916dc627893dbc1f47678aba66d6b13b547b03797d5ce0d351d78fc764c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16429",
+        "name": "swe-bench/django__django-16429",
+        "ref": "sha256:3bd5fb4dcf64a3621a8e3aa632471cc254f4e80e0bf210eda22a76682156d212",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16454",
+        "name": "swe-bench/django__django-16454",
+        "ref": "sha256:e8cf5539ca7307a5cfece91af786a33ef7ba5412e992c72c0ab5a8c912469f05",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16485",
+        "name": "swe-bench/django__django-16485",
+        "ref": "sha256:c0fffcbff1cff5f0c31807156c725e3b0f1c1dec6ef003096fbd0ea9145ee2ad",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16493",
+        "name": "swe-bench/django__django-16493",
+        "ref": "sha256:831d49a095e8f4270324f06443260679591f1ec3e626fa2361dfeef96e6b12ce",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16502",
+        "name": "swe-bench/django__django-16502",
+        "ref": "sha256:3bd56bce2e23a1b722051b9c06dc12af0053cde5e4b13c416be103f22a1e0cae",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16527",
+        "name": "swe-bench/django__django-16527",
+        "ref": "sha256:c5a7b7ace93460d40c7b4429dac1e344f41c00f37f483ad711371d7a4d357b54",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16560",
+        "name": "swe-bench/django__django-16560",
+        "ref": "sha256:8ddc11efd8d76a20477d864cd264f323020de1bc9e8628796144039b109f41a0",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16569",
+        "name": "swe-bench/django__django-16569",
+        "ref": "sha256:62c39629041a5fe8a4e7b076e18f37930f5bae82af036afb2d875cd6b622131b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16595",
+        "name": "swe-bench/django__django-16595",
+        "ref": "sha256:16ca88857e35a3fa7afb994a481a09dbd8d5412ad77ec36a5cb387c0e0dc283b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16612",
+        "name": "swe-bench/django__django-16612",
+        "ref": "sha256:fed1da701d874cc087da6e34486501016d5ab2cb2ba6641b3f59f0cc07ad12c6",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16631",
+        "name": "swe-bench/django__django-16631",
+        "ref": "sha256:ddbddd69769fc9444b708867218271df39763c97f4fb7e4b142e7ba1017f4418",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16642",
+        "name": "swe-bench/django__django-16642",
+        "ref": "sha256:9c3574dd962119c7d4a2d374dfbfc2c818a7679e57470faf771ffd8f4216bc15",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16661",
+        "name": "swe-bench/django__django-16661",
+        "ref": "sha256:1cd4fa435d10d059db4192ea4e85f6e4e587e71c00ac576d9a988fa8e32bd1d5",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16662",
+        "name": "swe-bench/django__django-16662",
+        "ref": "sha256:04a2595e97c2ec0f5a90ada4f81345b9d0fb8d5b7cf2ec9cfbd35d2ff49c7550",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16667",
+        "name": "swe-bench/django__django-16667",
+        "ref": "sha256:87e4e7681279bc6580c1942da7572c13120d0f9ae4c9318e233822537fd31465",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16801",
+        "name": "swe-bench/django__django-16801",
+        "ref": "sha256:39b8ed79de5c2a1eb785e45419bacd5ecbb8981d6e46e4ddd4982f40cac6c9d1",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16819",
+        "name": "swe-bench/django__django-16819",
+        "ref": "sha256:987566157f9ef7ead679c011976df7257cbd8df574a43cd55dd213e81ede01a2",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16877",
+        "name": "swe-bench/django__django-16877",
+        "ref": "sha256:4437733673d0bab84b15924d30812c312f62d75aee0b65de7772b7c9ad772860",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16899",
+        "name": "swe-bench/django__django-16899",
+        "ref": "sha256:e2e0d2d1986e5cde734fa3653ba3dcd600539d8af99713941c8e39dda9891aea",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16901",
+        "name": "swe-bench/django__django-16901",
+        "ref": "sha256:7bed7180a68999e4ed6d20251a7762096e31e1e3d12daf83681791eed78ae238",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16938",
+        "name": "swe-bench/django__django-16938",
+        "ref": "sha256:9cbf9b0948d6670ebe086e76d603221fc1ce6ea4c6da20c00a136890524238a4",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-16950",
+        "name": "swe-bench/django__django-16950",
+        "ref": "sha256:19d59ef2beed7f19d27853767755098156d3acc252d9180b5e2c34847c704022",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-17029",
+        "name": "swe-bench/django__django-17029",
+        "ref": "sha256:bda06f6572d6bbc15c5dffa8dd532f8a2d8a3fb08d5aa8a78e25a18178ba8ed4",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-17084",
+        "name": "swe-bench/django__django-17084",
+        "ref": "sha256:f107d50688a8838b8c18f50ee7e9b61ce83cd6febc2191ab0e27fb68beca8b8d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-17087",
+        "name": "swe-bench/django__django-17087",
+        "ref": "sha256:2461cc6a782e24601cd5f8b8f7d65985f20647a6b3eb367cb1111fb60ac69af6",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-7530",
+        "name": "swe-bench/django__django-7530",
+        "ref": "sha256:f2cf0283106cb745a25f59ee5f556efe1b41acb01da4fad48e39c6b2e370020d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "django__django-9296",
+        "name": "swe-bench/django__django-9296",
+        "ref": "sha256:590eaae3e33a4eb02fbd978265259e2b0d18f536cc2acd3589a4e6a840073ee0",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-13989",
+        "name": "swe-bench/matplotlib__matplotlib-13989",
+        "ref": "sha256:7da8c7eac3abb715f661c890da229f5401d7dc3f4cb578ce37ba8957e1a24a74",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-14623",
+        "name": "swe-bench/matplotlib__matplotlib-14623",
+        "ref": "sha256:97fcd85294cffa89e2a411a4860c2e540c76402b82812d2771c04c4967fafb0d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-20488",
+        "name": "swe-bench/matplotlib__matplotlib-20488",
+        "ref": "sha256:ff0574c413c9ee56efd7d997f28e3009410826cfcc9ca590cfdc15f473f60bf0",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-20676",
+        "name": "swe-bench/matplotlib__matplotlib-20676",
+        "ref": "sha256:38b96533b30953501969bda4276c795b9efd52ec5dbfeb36ce175dcb8d905185",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-20826",
+        "name": "swe-bench/matplotlib__matplotlib-20826",
+        "ref": "sha256:2e441cf795e4be3c7d8ddbd5d95167bc763c54d2e87ac20d313840dd306a8c0d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-20859",
+        "name": "swe-bench/matplotlib__matplotlib-20859",
+        "ref": "sha256:032e242985b5a7b0a029cfbf48ae55b1cea7d5f4d647f19b3b4214cb60390829",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-21568",
+        "name": "swe-bench/matplotlib__matplotlib-21568",
+        "ref": "sha256:06df6436f473de482ec6d06a62d5176e04984fbfe7eef2ef7dc7b5f8b87a8c1f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-22719",
+        "name": "swe-bench/matplotlib__matplotlib-22719",
+        "ref": "sha256:a76a086078aa4406dea3d60a1f694dbf77f1694803c2f5d3afe5f5c668341dae",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-22865",
+        "name": "swe-bench/matplotlib__matplotlib-22865",
+        "ref": "sha256:276d11358ae09b988606e2274ef7eca354be345da9c2b04e48223bac0f363957",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-22871",
+        "name": "swe-bench/matplotlib__matplotlib-22871",
+        "ref": "sha256:99961335354d7e42ef874ac64347244400977773ecd91f7275a54ac987758696",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-23299",
+        "name": "swe-bench/matplotlib__matplotlib-23299",
+        "ref": "sha256:ff8e41e560e746cce295e8522567c8d140c654673048dae1b7ff797e489e80b0",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-23314",
+        "name": "swe-bench/matplotlib__matplotlib-23314",
+        "ref": "sha256:877050ca658068842da0d5f1481045963c2209629279fc67a180cdf2c11c6838",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-23412",
+        "name": "swe-bench/matplotlib__matplotlib-23412",
+        "ref": "sha256:480d919826915fa00d38fdb8d80c2edaacbab73b4704fd97b1a5f030e918e95f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-23476",
+        "name": "swe-bench/matplotlib__matplotlib-23476",
+        "ref": "sha256:be98b68e30f2737176c8c4802f7065f771c878a655d951ffa74a667bf87e483a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-24026",
+        "name": "swe-bench/matplotlib__matplotlib-24026",
+        "ref": "sha256:7440d9f3aa7551af5aeebc00879c884c07111bccb0862fe20e102968316843e2",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-24149",
+        "name": "swe-bench/matplotlib__matplotlib-24149",
+        "ref": "sha256:69e86966c71146eb48dacca1c4fd5bca6e37447c025619e258561439e4a05d94",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-24177",
+        "name": "swe-bench/matplotlib__matplotlib-24177",
+        "ref": "sha256:0fc7cfc02b3fcc3b8778a61c2ceee84387ca8cd1d8268f1eee03855870550bc9",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-24570",
+        "name": "swe-bench/matplotlib__matplotlib-24570",
+        "ref": "sha256:c68ad152da881a683bf8113a448785c0d0922fafc142fd9ff423af586974afb6",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-24627",
+        "name": "swe-bench/matplotlib__matplotlib-24627",
+        "ref": "sha256:881fa31bf0250ac4f80b597f2f9b23d03ff474079435383363a03b34f43d6b65",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-24637",
+        "name": "swe-bench/matplotlib__matplotlib-24637",
+        "ref": "sha256:0ec76449d58393245e562245b00efe4c747de67cf8cac5df9d74f9ce783eabe0",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-24870",
+        "name": "swe-bench/matplotlib__matplotlib-24870",
+        "ref": "sha256:3c63bc359c1098802e1bee2fc49111de604546be8919f0c551ea3360cb222305",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-24970",
+        "name": "swe-bench/matplotlib__matplotlib-24970",
+        "ref": "sha256:5d0a602d976ad8b53cd1d09241d62b68e5412b98dcce88816463507de4f567a2",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-25122",
+        "name": "swe-bench/matplotlib__matplotlib-25122",
+        "ref": "sha256:9199e6e4dae147f40e4da060dd28a7736915b5d523ee59a2a6faa30f765ef36a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-25287",
+        "name": "swe-bench/matplotlib__matplotlib-25287",
+        "ref": "sha256:006d2bd7a0d63bf61f641263b14fb9bbc119e7f7d161cb574165fd1d53cd75ce",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-25311",
+        "name": "swe-bench/matplotlib__matplotlib-25311",
+        "ref": "sha256:a8328a1b3afeb489b53657afb89d1027f6d96aeb26a2c458a5bebb62760996cc",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-25332",
+        "name": "swe-bench/matplotlib__matplotlib-25332",
+        "ref": "sha256:48c934d0c3b5f14aa071bdde431fc0dd2199d61c518669ae15922d7b60670e7f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-25479",
+        "name": "swe-bench/matplotlib__matplotlib-25479",
+        "ref": "sha256:260d8eea5a0b5314665f2e25da7e18566f846ff9442ae52192e8413cded7f777",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-25775",
+        "name": "swe-bench/matplotlib__matplotlib-25775",
+        "ref": "sha256:17fc8a3a3668a3933f09db6f14e8d11dbcef0468a70abec4963cf4e659b54a80",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-25960",
+        "name": "swe-bench/matplotlib__matplotlib-25960",
+        "ref": "sha256:e50b83b27ef4bff7942e6cfad84d10a56e3e1fcc386e67cb725264b40b51c30c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-26113",
+        "name": "swe-bench/matplotlib__matplotlib-26113",
+        "ref": "sha256:be65d29b8030866a84119a80d70432ea08d86bb409c57b6e24b751a1b19fdbf3",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-26208",
+        "name": "swe-bench/matplotlib__matplotlib-26208",
+        "ref": "sha256:d2e43aa82dcca97e0d0568b1e4359b9ebeb761227d55dc5a2dcd0c5c75494d12",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-26291",
+        "name": "swe-bench/matplotlib__matplotlib-26291",
+        "ref": "sha256:74aa0ca7703423da74d2c833508e21b39897d5906cb88bef48579b50057dac24",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-26342",
+        "name": "swe-bench/matplotlib__matplotlib-26342",
+        "ref": "sha256:8cc8a2dcbb9d23dda5b1c7acc82f43df8d098dc23e758e3f86f98e56898e3d6b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "matplotlib__matplotlib-26466",
+        "name": "swe-bench/matplotlib__matplotlib-26466",
+        "ref": "sha256:8303551bc2a3c9a6f4ae6e7eb33f891faaaa8358939c0bc0a054a203e7b90411",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "mwaskom__seaborn-3069",
+        "name": "swe-bench/mwaskom__seaborn-3069",
+        "ref": "sha256:866e82c22b999b2758decdd49bd0fe903aaed14efeee77ffcdd1fdfbedf6c7c4",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "mwaskom__seaborn-3187",
+        "name": "swe-bench/mwaskom__seaborn-3187",
+        "ref": "sha256:67a90ded77e24605bb768e2dd8db5c59f973a9d587858edbf346c9b8033be34b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pallets__flask-5014",
+        "name": "swe-bench/pallets__flask-5014",
+        "ref": "sha256:ec1cbb94086b650e100135585abf431332c601fd9a2fde86ad63aca305940c3c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "psf__requests-1142",
+        "name": "swe-bench/psf__requests-1142",
+        "ref": "sha256:24359408df5948c741ac080425763ca4e1250b0ad1e7079e5f865e10db491fe4",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "psf__requests-1724",
+        "name": "swe-bench/psf__requests-1724",
+        "ref": "sha256:f4facdb05060f6f45b383444f004e54299c663561e7b7bd38f41f75eb310af5c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "psf__requests-1766",
+        "name": "swe-bench/psf__requests-1766",
+        "ref": "sha256:250108c3eddd015064b7aaf2d991e6c31aa2c71366c98cb84b73d3ea68c5a54a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "psf__requests-1921",
+        "name": "swe-bench/psf__requests-1921",
+        "ref": "sha256:e356732450b92b3068135f8d787a23e0bc354ef3baaab62c58e7665241909f4a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "psf__requests-2317",
+        "name": "swe-bench/psf__requests-2317",
+        "ref": "sha256:67792977a270012a8c9ab410edfa926fe2fdcfe0385e8bb2c4141112873c0534",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "psf__requests-2931",
+        "name": "swe-bench/psf__requests-2931",
+        "ref": "sha256:6fbd22672122c6c37e732424f5d11d572263053c673079be9f0295f46857b8b2",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "psf__requests-5414",
+        "name": "swe-bench/psf__requests-5414",
+        "ref": "sha256:17ca012fb9cc497c6e21e8510d21396c972470c868d15d903ea63a7caa5df592",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "psf__requests-6028",
+        "name": "swe-bench/psf__requests-6028",
+        "ref": "sha256:700c19626aecbb9d0d0a18f186ac4383035594abe11a306e17b7b2e3a70f0cf1",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-2905",
+        "name": "swe-bench/pydata__xarray-2905",
+        "ref": "sha256:f7d0ca75b0b255a1b6eaf847e23b5c4996778bb2a3791ca5907d38227b598e23",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-3095",
+        "name": "swe-bench/pydata__xarray-3095",
+        "ref": "sha256:de22655f4ecf072469d2de0e7d9e705df3c8e7d1be817922b884e7dab375ac0b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-3151",
+        "name": "swe-bench/pydata__xarray-3151",
+        "ref": "sha256:ca02b741f56835d7a6df811355b60d0bcf20de19f8630bf6b079ea0c128728c5",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-3305",
+        "name": "swe-bench/pydata__xarray-3305",
+        "ref": "sha256:167c0dc35f32f6003347dca82629af39e4db0d36ab7212450b23a5dd5d72e196",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-3677",
+        "name": "swe-bench/pydata__xarray-3677",
+        "ref": "sha256:7e7960845c0b5891730d2bf28c7c12fd44231891ab88e68a7db68b47ea24440c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-3993",
+        "name": "swe-bench/pydata__xarray-3993",
+        "ref": "sha256:3d98e4da135acbdd3ea0fe0a94c9303a979f159448dc5aa032ef6912deb4c803",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-4075",
+        "name": "swe-bench/pydata__xarray-4075",
+        "ref": "sha256:c220324147fa939ee16611df1e2217b322a1cd3972ff17496a636b48d5e625ba",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-4094",
+        "name": "swe-bench/pydata__xarray-4094",
+        "ref": "sha256:0ad91a58b77e59afff199f7b07f7814fecceb174cf3c4b3686985a4ebe9029eb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-4356",
+        "name": "swe-bench/pydata__xarray-4356",
+        "ref": "sha256:08d82d9ebaff2ef75c2422d459855b71e8653bcb0642336addd8fb42eb276ab7",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-4629",
+        "name": "swe-bench/pydata__xarray-4629",
+        "ref": "sha256:4ddc6b009e99857457ce2c76fd3ca11a456403f5d516cde96e21d824034b4505",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-4687",
+        "name": "swe-bench/pydata__xarray-4687",
+        "ref": "sha256:be6b53c5a55c3caf50154e4942b3030eabecfaafe53b1c97af45f761883b9427",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-4695",
+        "name": "swe-bench/pydata__xarray-4695",
+        "ref": "sha256:6ce3cf2e8234da40ed21ca662bcf627860c8df566b8a99e67091b925dc3b1f3e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-4966",
+        "name": "swe-bench/pydata__xarray-4966",
+        "ref": "sha256:a7363c7d624bee0af63de0a42a837622d4c670f553c81203f8a2f70b0b92ebe8",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-6461",
+        "name": "swe-bench/pydata__xarray-6461",
+        "ref": "sha256:d0e8a70962f77fb786050d74a36b16439fa30db6f3c30269e683ebe91fa446e1",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-6599",
+        "name": "swe-bench/pydata__xarray-6599",
+        "ref": "sha256:13740a73ddb7034fe581a8fdb3e1d572090c90e441dccecfb6be0a40f680f771",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-6721",
+        "name": "swe-bench/pydata__xarray-6721",
+        "ref": "sha256:283c5d408ecefa15f1764fb0b9573c854f5b2c2e5d6b8ca8919bfa8543004ae1",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-6744",
+        "name": "swe-bench/pydata__xarray-6744",
+        "ref": "sha256:39914d5087838e9c74806e714f21408b89e6b95aaf71f072bb2a84a7ca907e4c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-6938",
+        "name": "swe-bench/pydata__xarray-6938",
+        "ref": "sha256:ff007f3880882c3825a2d9f3ad24c98c492bd921078d04bb91dbff661bf74925",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-6992",
+        "name": "swe-bench/pydata__xarray-6992",
+        "ref": "sha256:000126b5cebc23b5737627b404b66c2cd33ac76fd3192ca24d2c2b7d541ea870",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-7229",
+        "name": "swe-bench/pydata__xarray-7229",
+        "ref": "sha256:9a9c8b5d7cd61f072bf78fce0a2a4ededc234aa330d03ce643528064308e0eaa",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-7233",
+        "name": "swe-bench/pydata__xarray-7233",
+        "ref": "sha256:79be08b2991ee888966122d1f62b277a98f6299d4743025e40758f9920cd8947",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pydata__xarray-7393",
+        "name": "swe-bench/pydata__xarray-7393",
+        "ref": "sha256:a1af0a2e49d9e5b87c7392edf89ce993604122c49db61863afbb771011320460",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pylint-dev__pylint-4551",
+        "name": "swe-bench/pylint-dev__pylint-4551",
+        "ref": "sha256:4315af9c212681dca962a5cebb12636dc258de58f3e98246cfa15c1a1399a80b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pylint-dev__pylint-4604",
+        "name": "swe-bench/pylint-dev__pylint-4604",
+        "ref": "sha256:f57c3dff8d0167357523a337ba46f1af64fd8da3b44496ba51f501eb7e58bc1b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pylint-dev__pylint-4661",
+        "name": "swe-bench/pylint-dev__pylint-4661",
+        "ref": "sha256:2d30ffc160e6bde74e460ad482daf7fc29cbca261d502deebc46cdd8806c2058",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pylint-dev__pylint-4970",
+        "name": "swe-bench/pylint-dev__pylint-4970",
+        "ref": "sha256:654b1489f438544d62a1d326ab2f6f69b441b92d48d2ebc0415f626642115c4f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pylint-dev__pylint-6386",
+        "name": "swe-bench/pylint-dev__pylint-6386",
+        "ref": "sha256:c36bae434c6ad0e277fd8db9150e6111fa809ef271607c32867c4280e0887b80",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pylint-dev__pylint-6528",
+        "name": "swe-bench/pylint-dev__pylint-6528",
+        "ref": "sha256:bff3d69e3cd4cac23d34ff77ae2049c78d9765204e216be26424631ed23cfec4",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pylint-dev__pylint-6903",
+        "name": "swe-bench/pylint-dev__pylint-6903",
+        "ref": "sha256:e940f7b89dd2b01d3ab515e59c996411b29a974a0b81c798e264aed67f527559",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pylint-dev__pylint-7080",
+        "name": "swe-bench/pylint-dev__pylint-7080",
+        "ref": "sha256:b8ff68533a0a764863901e1486f82843cd16d34e3855564c35f6068edd5b2448",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pylint-dev__pylint-7277",
+        "name": "swe-bench/pylint-dev__pylint-7277",
+        "ref": "sha256:89c593c3b1f20cedb7e834aeb0631185bc396af110a6e9ce42ebf675dfffb74e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pylint-dev__pylint-8898",
+        "name": "swe-bench/pylint-dev__pylint-8898",
+        "ref": "sha256:a866bcb5fb09675cecf6a8dc7511553a6849cdb4924a9e82ea9b4363b2e103a7",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-10051",
+        "name": "swe-bench/pytest-dev__pytest-10051",
+        "ref": "sha256:83bf1b579f22f16fc9ed002a407b6a84012f575c75d23936162c381917d20d51",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-10081",
+        "name": "swe-bench/pytest-dev__pytest-10081",
+        "ref": "sha256:957727bf3e68a4b5014fa86a84452cba6baea62eb6a0798b18d53079d1095d5f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-10356",
+        "name": "swe-bench/pytest-dev__pytest-10356",
+        "ref": "sha256:980b8d3aad03b755a81512113b4c1fde62c9b5d6ecfb1b76058ac0174d55f64e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-5262",
+        "name": "swe-bench/pytest-dev__pytest-5262",
+        "ref": "sha256:898606b377d073749fadc66446ca8dec62b1a1ef1e29a06a360194b12d32cdf4",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-5631",
+        "name": "swe-bench/pytest-dev__pytest-5631",
+        "ref": "sha256:c74072619f25d2c55a246ae149ff792c0bba18bac232f99abe56c0103f1410cd",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-5787",
+        "name": "swe-bench/pytest-dev__pytest-5787",
+        "ref": "sha256:b182cb4a2048df3d8def9a7c31f2534ed8ce5afa4764e9f02dd4f4620854cd0c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-5809",
+        "name": "swe-bench/pytest-dev__pytest-5809",
+        "ref": "sha256:10049be07d8ac35efe00bb63539692cf83c91d10ab257286890434ce54c06c0d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-5840",
+        "name": "swe-bench/pytest-dev__pytest-5840",
+        "ref": "sha256:ccec542c6d650654b6d8a424aa6921e82744b133018a39f224bf9cbe848ce9fd",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-6197",
+        "name": "swe-bench/pytest-dev__pytest-6197",
+        "ref": "sha256:3d4b5322eb09ce4f68e92ca01056507a5880fe0d4714598999b436da5a8c0b60",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-6202",
+        "name": "swe-bench/pytest-dev__pytest-6202",
+        "ref": "sha256:a1cb01fa500a10ff86cb1381485b2ddb2f93ae13f696feaf1bf1fb52ee663984",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-7205",
+        "name": "swe-bench/pytest-dev__pytest-7205",
+        "ref": "sha256:bb47a53b50f83780cb4d9bf622f8aa27007867af0ef0c7309756ec4e7421f285",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-7236",
+        "name": "swe-bench/pytest-dev__pytest-7236",
+        "ref": "sha256:9e5c26c53d959d695889ffca57f2e95a8eec9118a0e3a42eca54e46fe101ad8a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-7324",
+        "name": "swe-bench/pytest-dev__pytest-7324",
+        "ref": "sha256:9ef3b1386b7267648c3bcf821c0cb589a41984d40f3c67433864d00ee3e4c7d0",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-7432",
+        "name": "swe-bench/pytest-dev__pytest-7432",
+        "ref": "sha256:038c9315530d177d818c6451a2ea96c41b0910691b638aa29adaee0be818ab08",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-7490",
+        "name": "swe-bench/pytest-dev__pytest-7490",
+        "ref": "sha256:54b8bdede24e61d64f43e6dcfee8c5cab7a387dd710d1fbc0bd7320199ec935b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-7521",
+        "name": "swe-bench/pytest-dev__pytest-7521",
+        "ref": "sha256:88b92c3bb7c83b3d6af4c4e3aa56d30bf9f2e129fcdf11250670aa2ad19fc8f2",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-7571",
+        "name": "swe-bench/pytest-dev__pytest-7571",
+        "ref": "sha256:1dd44d359e2e319a75b1e174df2902dbfc2da01262fca57b9acdf26377e12226",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-7982",
+        "name": "swe-bench/pytest-dev__pytest-7982",
+        "ref": "sha256:f3fd7a6bbb8185e3078458975857a6474120829ad4441ccbeeb3d11e59f2fa7a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "pytest-dev__pytest-8399",
+        "name": "swe-bench/pytest-dev__pytest-8399",
+        "ref": "sha256:2be462a03b1062348f0ef483719d249a0374fcdeb9a757e3dbd7e004e8584970",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-10297",
+        "name": "swe-bench/scikit-learn__scikit-learn-10297",
+        "ref": "sha256:99b7fc2ffa0f8b2d2c7e9691991ea3d607899e37203a582b5342e306dfedc090",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-10844",
+        "name": "swe-bench/scikit-learn__scikit-learn-10844",
+        "ref": "sha256:5443a37b69d832d8d76c92eea733be2056b7f9029ee448cd7bd5e4bb981ded43",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-10908",
+        "name": "swe-bench/scikit-learn__scikit-learn-10908",
+        "ref": "sha256:de851308ed703663ff9a9a4d674300ae61b2bc1513caedb5159f6313fe4498c6",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-11310",
+        "name": "swe-bench/scikit-learn__scikit-learn-11310",
+        "ref": "sha256:a33a1c0d0ad0e41bd3e19e003e1447553fc11e78b648a8b0a558a3bd97b66ca1",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-11578",
+        "name": "swe-bench/scikit-learn__scikit-learn-11578",
+        "ref": "sha256:befe1370260f68fdc799a7f87bda3977efe1f4b9bde5542982430ef1c0b396c7",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-12585",
+        "name": "swe-bench/scikit-learn__scikit-learn-12585",
+        "ref": "sha256:25b7276a4046f826857d88f03aac916f06f37a57a813cf6fba74d37d304b498b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-12682",
+        "name": "swe-bench/scikit-learn__scikit-learn-12682",
+        "ref": "sha256:ce776faa8397ee00940e3241f70d5ae80e46e94b5fc931700704a9c8a759b7e1",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-12973",
+        "name": "swe-bench/scikit-learn__scikit-learn-12973",
+        "ref": "sha256:7158f84433d059199bcf3b967abaed4f0ef0437afe41cc516d078c198ecf5747",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-13124",
+        "name": "swe-bench/scikit-learn__scikit-learn-13124",
+        "ref": "sha256:3ceb9b51584f58b029a5851de7b0d4170d3e19b2c44a025fc901014dc1c6de70",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-13135",
+        "name": "swe-bench/scikit-learn__scikit-learn-13135",
+        "ref": "sha256:f4ca12b80f170928229f7f4279ab0f680d06c776313342202610d15c85c7b8c0",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-13142",
+        "name": "swe-bench/scikit-learn__scikit-learn-13142",
+        "ref": "sha256:826f144147244f46cc332c07dd41532dd7d2276900c4c7a3ee60f99dd3d61f22",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-13328",
+        "name": "swe-bench/scikit-learn__scikit-learn-13328",
+        "ref": "sha256:d74d42b713a2df8853b93f7ef16833a12c4ccab6d169178257def7d2be77e3ac",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-13439",
+        "name": "swe-bench/scikit-learn__scikit-learn-13439",
+        "ref": "sha256:a9885c4c22622503967e47b1de44467287e90a8c87a507d8e19d2ff696e904ec",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-13496",
+        "name": "swe-bench/scikit-learn__scikit-learn-13496",
+        "ref": "sha256:c7bae7264c9a44aaf83a110f7434bde6acdad76262c6ec2880395c4d2a83a338",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-13779",
+        "name": "swe-bench/scikit-learn__scikit-learn-13779",
+        "ref": "sha256:3fc49327f0153136bb8f0eb4c78ad8d663c764fa20cb3a6dea7c2a85a1154975",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-14053",
+        "name": "swe-bench/scikit-learn__scikit-learn-14053",
+        "ref": "sha256:420a1de76746898af64a52da43be907bc8af3ac30c6a1be06dc0d41fbf22941b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-14087",
+        "name": "swe-bench/scikit-learn__scikit-learn-14087",
+        "ref": "sha256:6f340ca03390d0ab3c409e06ecb0f6e65943ac4dc7229df556514bbc13f3e44c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-14141",
+        "name": "swe-bench/scikit-learn__scikit-learn-14141",
+        "ref": "sha256:f2609e6dc6ca2935f18bf13d058d3badf8e1a13f10ff0882d65e701b935cf93f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-14496",
+        "name": "swe-bench/scikit-learn__scikit-learn-14496",
+        "ref": "sha256:ffd52293db61f419223477829854de3da788fd931434d1b3bfce06ed7bb26be0",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-14629",
+        "name": "swe-bench/scikit-learn__scikit-learn-14629",
+        "ref": "sha256:9dd46e544b95652c51077436c68e9b53012f97db94ba59e3e7bc092178fb738a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-14710",
+        "name": "swe-bench/scikit-learn__scikit-learn-14710",
+        "ref": "sha256:1ce160417998e94ba2e41c5f5d219d111c110bb1bb2f9ff072185b28d21413eb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-14894",
+        "name": "swe-bench/scikit-learn__scikit-learn-14894",
+        "ref": "sha256:11bc92708850bd4d168b72e1393b3e3a1430bad22ca7fac76300807f0b378717",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-14983",
+        "name": "swe-bench/scikit-learn__scikit-learn-14983",
+        "ref": "sha256:9093f7ed182a9552cce58a0dda0fb0d7f3f34279cc90141e7046c5a0caaf2cdb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-15100",
+        "name": "swe-bench/scikit-learn__scikit-learn-15100",
+        "ref": "sha256:27aa65781b323cb42eb61ea84ced25a211f5900d86d6c13e8aa8155a7eabeb0c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-25102",
+        "name": "swe-bench/scikit-learn__scikit-learn-25102",
+        "ref": "sha256:067150db09190ce5f91b351be3c7dc1c378429e04068c66afc7b24540b1ed1a0",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-25232",
+        "name": "swe-bench/scikit-learn__scikit-learn-25232",
+        "ref": "sha256:477c3b2f38a706be5d89eb15a598b36e88f5bdb964035bbb353dd3e621b14041",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-25747",
+        "name": "swe-bench/scikit-learn__scikit-learn-25747",
+        "ref": "sha256:9d6ea17fc7edacebbd4a870a3288c67aaf9dae0765888d40e2e134b38b0f8672",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-25931",
+        "name": "swe-bench/scikit-learn__scikit-learn-25931",
+        "ref": "sha256:939d88a18a7c84b7ee7456b1800258348d46fe25a63be6f43ae852e7f32dac00",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-25973",
+        "name": "swe-bench/scikit-learn__scikit-learn-25973",
+        "ref": "sha256:5df028a4729cb0402eec70c95987d32ed7d40d63d2461b509bfdc9cfd92d3cbb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-26194",
+        "name": "swe-bench/scikit-learn__scikit-learn-26194",
+        "ref": "sha256:5d71aca357368005f7154b341162eec65fc19a883ff50e63947b61fa68f4ddb9",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-26323",
+        "name": "swe-bench/scikit-learn__scikit-learn-26323",
+        "ref": "sha256:e890db11b5600a0576599838e64566ce966517e7ff8c359553df24dd33c1838a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "scikit-learn__scikit-learn-9288",
+        "name": "swe-bench/scikit-learn__scikit-learn-9288",
+        "ref": "sha256:0c4191b234ff0d9e6fe4d7d6984f7227cf44e356340fc4dc7de8238c04869154",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-10323",
+        "name": "swe-bench/sphinx-doc__sphinx-10323",
+        "ref": "sha256:ddb66ead2b401575950fa7319528b8ac3409ab49ed3295dbe350cc28d7031e6a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-10435",
+        "name": "swe-bench/sphinx-doc__sphinx-10435",
+        "ref": "sha256:77f000264446dbf8fbe41d1f3bcd201f90d91e1dfb8a98c82fe9bc77a8abe747",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-10449",
+        "name": "swe-bench/sphinx-doc__sphinx-10449",
+        "ref": "sha256:0a9cdf8a51693e5ed86f118643a587ba8bf42dca5055520a9ef2523aea286fcc",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-10466",
+        "name": "swe-bench/sphinx-doc__sphinx-10466",
+        "ref": "sha256:295c33af0b8103091c50e9fb1e40330e41cf8f30903e5cf7e081665374cdfb51",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-10614",
+        "name": "swe-bench/sphinx-doc__sphinx-10614",
+        "ref": "sha256:714506a0354ba6ca9f36e058c634912cbd34800c582990508ac2c41ec4e68e62",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-10673",
+        "name": "swe-bench/sphinx-doc__sphinx-10673",
+        "ref": "sha256:9f1b5862aeaadff32a3399fc296b74d9dddcf1abef1af7a2fe4f3f4646424187",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-11445",
+        "name": "swe-bench/sphinx-doc__sphinx-11445",
+        "ref": "sha256:c9c813af8098edbb6a1bbeebf83bad0dcfdc2a545e61a88084f41d014b4e8fcd",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-11510",
+        "name": "swe-bench/sphinx-doc__sphinx-11510",
+        "ref": "sha256:cbbd2ff1704719497b3780acc3bbcb2b73d5a347f979580a55c71d09494be5f0",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-7440",
+        "name": "swe-bench/sphinx-doc__sphinx-7440",
+        "ref": "sha256:9454b221d7b89a39e6c615b647287ad446dedcb3a5b8fff94ad62705c0c8a7df",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-7454",
+        "name": "swe-bench/sphinx-doc__sphinx-7454",
+        "ref": "sha256:55f285a29c173d85088d721d9e97002cf9b37831ebe385ff63826a46b76450f7",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-7462",
+        "name": "swe-bench/sphinx-doc__sphinx-7462",
+        "ref": "sha256:83d4d7119627012a2f570332779052b353d72f67c4ac30da5c6be33dbf36fadf",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-7590",
+        "name": "swe-bench/sphinx-doc__sphinx-7590",
+        "ref": "sha256:9270631c958a8ddc8fa7dcfe130081010783530558e2b688f0594c507c89e483",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-7748",
+        "name": "swe-bench/sphinx-doc__sphinx-7748",
+        "ref": "sha256:32432c636075ae1f288bc427b01604b98a1d78f46e948eb95e834a862a649adc",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-7757",
+        "name": "swe-bench/sphinx-doc__sphinx-7757",
+        "ref": "sha256:6481f1e4783c71c0a39f61e1a23d73358460e6a8188e65fc28b54663c75d99ce",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-7889",
+        "name": "swe-bench/sphinx-doc__sphinx-7889",
+        "ref": "sha256:4337f7c0352ffdf6f506f8973cc304783413b78bf2ce7d60fe9bbf99d0da136b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-7910",
+        "name": "swe-bench/sphinx-doc__sphinx-7910",
+        "ref": "sha256:0547df97840e4ac580d48a5023ec9e0ed5e341bb516a8940d037c36e63a37d17",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-7985",
+        "name": "swe-bench/sphinx-doc__sphinx-7985",
+        "ref": "sha256:2b22f4cf82da6ede92573381b86ca8ffe7f7ea523ee621bf53ff63b822d87d6f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-8035",
+        "name": "swe-bench/sphinx-doc__sphinx-8035",
+        "ref": "sha256:5ca5d500161323b866b7120657ac53b0d34f635b7a9de3b170feef14110456c2",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-8056",
+        "name": "swe-bench/sphinx-doc__sphinx-8056",
+        "ref": "sha256:ef00b92e83be4a6799b9f4abb4d3392b740e764ad0b5e4a1793639de12ac574c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-8120",
+        "name": "swe-bench/sphinx-doc__sphinx-8120",
+        "ref": "sha256:5d0e119cf78fc19750f9979899a3b485b38d1a1e76e5d332449b3887e9da2321",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-8265",
+        "name": "swe-bench/sphinx-doc__sphinx-8265",
+        "ref": "sha256:32fc607c4db6b1cebd248d1db79c1ed46a4b4aa45a9cb0aaad8d80682fb3090f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-8269",
+        "name": "swe-bench/sphinx-doc__sphinx-8269",
+        "ref": "sha256:4f4d3295431fafd9b3f6bfa0839d92d24850fbbcdd0b75d8cb5a5169e84450d7",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-8459",
+        "name": "swe-bench/sphinx-doc__sphinx-8459",
+        "ref": "sha256:dbab88a9ec886fabc3056be196fa2daa8396ccbdd31c741ecee69299c8ede95d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-8475",
+        "name": "swe-bench/sphinx-doc__sphinx-8475",
+        "ref": "sha256:0b7794c976d2ebec7723fb9bb4d75896b030ca94666d1413a719aba5740a6a8d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-8548",
+        "name": "swe-bench/sphinx-doc__sphinx-8548",
+        "ref": "sha256:7d74c572b8baf0331fc89519ed0d92bbea93a4e6aaa0fcc7155120ca672ebc4f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-8551",
+        "name": "swe-bench/sphinx-doc__sphinx-8551",
+        "ref": "sha256:e045bdbc92df00e42a0234d72fcf108a8d1db459f4d579fbdafc8d504e6439e3",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-8593",
+        "name": "swe-bench/sphinx-doc__sphinx-8593",
+        "ref": "sha256:e8b751ed18038c882afff78c7733707961a5aab413f9b415ec35da3ae638ec62",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-8595",
+        "name": "swe-bench/sphinx-doc__sphinx-8595",
+        "ref": "sha256:054bc74db4aebd7193d2fb097d7106689f4214cbbafa1dd0e1c1c956ef59d30e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-8621",
+        "name": "swe-bench/sphinx-doc__sphinx-8621",
+        "ref": "sha256:116b72873f53802bcc4c97a3c464fb1a6c2ac35ce511954368df15bb2e3187cc",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-8638",
+        "name": "swe-bench/sphinx-doc__sphinx-8638",
+        "ref": "sha256:b5079f367cc81cbcfb9c8908e10f8df003e549283ec1a4169ff2b6d04b57a966",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-8721",
+        "name": "swe-bench/sphinx-doc__sphinx-8721",
+        "ref": "sha256:3fdb157144cb47fee2948a8605a3ca2cab4aa128bd512a8a38b30939e8411c5d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-9229",
+        "name": "swe-bench/sphinx-doc__sphinx-9229",
+        "ref": "sha256:9bcf2c35baf9719c6702ccee57bf3d93ab460900be65c00fa0671f3ba50b0879",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-9230",
+        "name": "swe-bench/sphinx-doc__sphinx-9230",
+        "ref": "sha256:a5712649c494b6fad03742fd8ec8a7d611b9c34e8b77a8bd5e4c70f2daffbc0c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-9258",
+        "name": "swe-bench/sphinx-doc__sphinx-9258",
+        "ref": "sha256:f7741185ed20b324d800c08d8574c871d7e0787b28ceaed52019fa7c2633d72e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-9281",
+        "name": "swe-bench/sphinx-doc__sphinx-9281",
+        "ref": "sha256:83999b353a0b3cbeaa0e269721db7cecb080486028e6295ca2bd25918ed7deaa",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-9320",
+        "name": "swe-bench/sphinx-doc__sphinx-9320",
+        "ref": "sha256:a15c71b70063c43c99d1c669fefb93486ad4fee7248a150d77af49ccd528fee5",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-9367",
+        "name": "swe-bench/sphinx-doc__sphinx-9367",
+        "ref": "sha256:dc14714ff191e225b88a881d6ce4a585a064476c8fc1e143d7d7db645ccda03c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-9461",
+        "name": "swe-bench/sphinx-doc__sphinx-9461",
+        "ref": "sha256:ccabfa140221590d82a7d692967cde98ddaaa56a9af8ff46d09f297f4065b294",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-9591",
+        "name": "swe-bench/sphinx-doc__sphinx-9591",
+        "ref": "sha256:c449917ddc4d19f66e5ddd9007854b6f8130b0b3afd130a244b44d776e41700e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-9602",
+        "name": "swe-bench/sphinx-doc__sphinx-9602",
+        "ref": "sha256:663cdbce99d379e1a8aa0d995d64a2c32c18c0e92bd163ab83cce393225b1731",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-9658",
+        "name": "swe-bench/sphinx-doc__sphinx-9658",
+        "ref": "sha256:68e90d0dd7e4b73ae99d8a70cbe4d55ca08acf5039f203e21e3cac4070991e32",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-9673",
+        "name": "swe-bench/sphinx-doc__sphinx-9673",
+        "ref": "sha256:4845bae00d0ef55eed57f7a116d13525f5a19744049baa24fd079473133bc97b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-9698",
+        "name": "swe-bench/sphinx-doc__sphinx-9698",
+        "ref": "sha256:d572d2090018118d26e2a83a8f71bd55f1f053ae2ddcb6f302dc2af8ccaf27d1",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sphinx-doc__sphinx-9711",
+        "name": "swe-bench/sphinx-doc__sphinx-9711",
+        "ref": "sha256:2dcf5b053828df3ded2a42f7a12dbd5831ab01c22ccd31c3044de2aae660cb11",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-11618",
+        "name": "swe-bench/sympy__sympy-11618",
+        "ref": "sha256:84d1f045ea502201d12f823039b68470c1194044cff65b2a3db86162fdef0f96",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-12096",
+        "name": "swe-bench/sympy__sympy-12096",
+        "ref": "sha256:17d3a7e89a7595d56bdac307ec02c43dc054649256cdcc0e8d399315a1d1f1ea",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-12419",
+        "name": "swe-bench/sympy__sympy-12419",
+        "ref": "sha256:d0bc69e48eade62a0d0ef4e999ecbf7ea42335f2e4dbcbb45cc0a374da9a1a3c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-12481",
+        "name": "swe-bench/sympy__sympy-12481",
+        "ref": "sha256:6dde91f8530f3011382e722cb03d479741d061bcdbe03db8f4613518763f444d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-12489",
+        "name": "swe-bench/sympy__sympy-12489",
+        "ref": "sha256:82e7eceab7a373dd3abcbc9bf92deba893c6d93c4a563898feea6b9fa3e0da7d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-13031",
+        "name": "swe-bench/sympy__sympy-13031",
+        "ref": "sha256:2831d990ce9e0a53b12203ea1655834118a46f0b5d04f67fe83499f2bf991e2e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-13091",
+        "name": "swe-bench/sympy__sympy-13091",
+        "ref": "sha256:6e91266b094d2835f1a10223c1f958688e8a27898b0fcb321d4367876c9da6fc",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-13372",
+        "name": "swe-bench/sympy__sympy-13372",
+        "ref": "sha256:b9978fb245bd99ab5135758671ba5c436b4ba38ec5e9d34434007d112af7983a",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-13480",
+        "name": "swe-bench/sympy__sympy-13480",
+        "ref": "sha256:0298c930d679adf4b1f8fe97a202cdeaf28bcc5839fa5ad13a18ac0d9302a188",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-13551",
+        "name": "swe-bench/sympy__sympy-13551",
+        "ref": "sha256:e1e52c4b1a164fd202a60db42d6bf83f6e0a8f05dad78816b34758f7f693a6d9",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-13615",
+        "name": "swe-bench/sympy__sympy-13615",
+        "ref": "sha256:f9ec5f413902f69f5fdf3cfabfc5bbc425095d3020d630dc5cd7ea5ac32fda87",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-13647",
+        "name": "swe-bench/sympy__sympy-13647",
+        "ref": "sha256:78662f21ad8ec44c1f5bf961b15484ddf076f48647b10b51947c9cfbf8d2c827",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-13757",
+        "name": "swe-bench/sympy__sympy-13757",
+        "ref": "sha256:0913953a2cccbd7db4eae1d4c967c43aaa9f713cfb953651560e07f1e7d6f0de",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-13798",
+        "name": "swe-bench/sympy__sympy-13798",
+        "ref": "sha256:96ff127ee9b49dd521e5726ac533bfc9bb716b96c40cf0d0ab9573abd794b22c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-13852",
+        "name": "swe-bench/sympy__sympy-13852",
+        "ref": "sha256:38b169e35d3a06a79da81cae08bdfb9d6f9eacd46f96fadc252fce2fb17218fb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-13877",
+        "name": "swe-bench/sympy__sympy-13877",
+        "ref": "sha256:ac5bca3ef1c356d7cdf378a3d4c23e5ada744820a15d4438ccd55d7a496b5872",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-13878",
+        "name": "swe-bench/sympy__sympy-13878",
+        "ref": "sha256:3115cfaeeba06f3edb434db3cb89e08a1d6fd93d2e51aff9afa47c17a9084745",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-13974",
+        "name": "swe-bench/sympy__sympy-13974",
+        "ref": "sha256:de71bedc26eb51c36d1e27cb2cd2e253f2149579daadf71572cca9cf60afa39f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-14248",
+        "name": "swe-bench/sympy__sympy-14248",
+        "ref": "sha256:4da663fea1752e4b78992499f8ca62cc7c6611022ec8016ec057dbbfa06dd606",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-14531",
+        "name": "swe-bench/sympy__sympy-14531",
+        "ref": "sha256:f8c8b26c793fbd23c1a98a50416a999e245bb80f5e21bf6e61e8952fc7a3e2eb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-14711",
+        "name": "swe-bench/sympy__sympy-14711",
+        "ref": "sha256:192069267af586af6dae07f79f44022c8e6479843110e63f1ffeb5461a3520e8",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-14976",
+        "name": "swe-bench/sympy__sympy-14976",
+        "ref": "sha256:0de75e9611c212e76f3b94251de56127dc833a0b73fc91005e435057c677e0a0",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-15017",
+        "name": "swe-bench/sympy__sympy-15017",
+        "ref": "sha256:28ffa06703ebc13a6d968eea07d63ecb984efc08d06495fb50d14a3defa642d4",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-15345",
+        "name": "swe-bench/sympy__sympy-15345",
+        "ref": "sha256:1364511e93a400652c95d9e615c366a917577750fa0733e7bd7c8aea94ca90ed",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-15349",
+        "name": "swe-bench/sympy__sympy-15349",
+        "ref": "sha256:0f16a908c9b99c79ebe150797e9949ebb8fa2f7ef5c3d816afb8744fb4a8c931",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-15599",
+        "name": "swe-bench/sympy__sympy-15599",
+        "ref": "sha256:a8cc93594a2c0400d64e94f42f4dbe9c492cb0f43e69a2ca3a6c28396f350422",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-15809",
+        "name": "swe-bench/sympy__sympy-15809",
+        "ref": "sha256:14a5cac8ff76197e12c622135313ac72665ee7e633abfbbe329860f94e62a694",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-15875",
+        "name": "swe-bench/sympy__sympy-15875",
+        "ref": "sha256:8e2f9c2f91c3781487f6cfe3ae6a877251e812db579eefe4fb601f4e9bdc6b57",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-15976",
+        "name": "swe-bench/sympy__sympy-15976",
+        "ref": "sha256:49b6b6959df45ed6a2d02e775e6322967c903abc5e3e32b21b951787ad8d758d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-16450",
+        "name": "swe-bench/sympy__sympy-16450",
+        "ref": "sha256:75af59f3ffaa26d4b90f41d9cedec73ad97fddfc4a72eff96cae934b9e068000",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-16597",
+        "name": "swe-bench/sympy__sympy-16597",
+        "ref": "sha256:2c7362019f5f897598164b1d8bbff5eff2ed9a172adbd30333797ddd47a458bb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-16766",
+        "name": "swe-bench/sympy__sympy-16766",
+        "ref": "sha256:4846ea63e5c365772534ef1760b84ef07728558e3a99074b93c93bbfe240d886",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-16792",
+        "name": "swe-bench/sympy__sympy-16792",
+        "ref": "sha256:d01269786761049ced54879e635458daa336f59d0317b25a01eaf337efec661f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-16886",
+        "name": "swe-bench/sympy__sympy-16886",
+        "ref": "sha256:15b612738dbf2fa5b04bca63af1fcec35a1cb82d214d80dfe471885e053e8abe",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-17139",
+        "name": "swe-bench/sympy__sympy-17139",
+        "ref": "sha256:d43c309c79e1a3169e95e314fcbef5bb35f790426950b7dd47a3cfeaac9a808d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-17318",
+        "name": "swe-bench/sympy__sympy-17318",
+        "ref": "sha256:14fa9d53819943e294e69511cd416f7a83f7fc7a5537e6620ff3c1bca0f53629",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-17630",
+        "name": "swe-bench/sympy__sympy-17630",
+        "ref": "sha256:06ce6b7cef7ed8cea23310a72b4837f2e85da6c17b2e76df6193678a382c9b25",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-17655",
+        "name": "swe-bench/sympy__sympy-17655",
+        "ref": "sha256:55cefaf2a0c6f2e7bc3c6b6cdef59dc617d561cfcf84c64ec2b71eed8d327d55",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-18189",
+        "name": "swe-bench/sympy__sympy-18189",
+        "ref": "sha256:cb35122aac4a54886cb9ae7764798d7553f0b6c5aa91ba91b1085c6f796ace31",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-18199",
+        "name": "swe-bench/sympy__sympy-18199",
+        "ref": "sha256:97a8455c1f4af723fbea35d53aa7da9d4069f2155c4eae7da38c16714a474247",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-18211",
+        "name": "swe-bench/sympy__sympy-18211",
+        "ref": "sha256:81d0e463a160262564c82ffc94b6d5b78d40b368e62defffab7b5140a6713fa7",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-18698",
+        "name": "swe-bench/sympy__sympy-18698",
+        "ref": "sha256:067d9c8ca650ecfa461ea232570dcfcd95ba97320b046d3443f4f33b30d72ada",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-18763",
+        "name": "swe-bench/sympy__sympy-18763",
+        "ref": "sha256:3bcb393926fc2c8147b85eb8fcdba65d0633e1e230679edf57b03ecf22e12414",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-19040",
+        "name": "swe-bench/sympy__sympy-19040",
+        "ref": "sha256:b976e511b01e435abdd457d5c3a5b022f6a6c6b8e3f165c19f715eec46d0f804",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-19346",
+        "name": "swe-bench/sympy__sympy-19346",
+        "ref": "sha256:6030f154b5333065fdfd36cf489ef28ee1a89295df1310973f4704ce918c3402",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-19495",
+        "name": "swe-bench/sympy__sympy-19495",
+        "ref": "sha256:685f852fe991117c786f9fd0efe729963f04575b2a4e3eecf4f4d27b3dfd0626",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-19637",
+        "name": "swe-bench/sympy__sympy-19637",
+        "ref": "sha256:3504817abe48cd1f8ca0fbdf9e2adecb9921641e5dc4602a7f2eb919b87ce9eb",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-19783",
+        "name": "swe-bench/sympy__sympy-19783",
+        "ref": "sha256:c4551c134fd3f92c3ef45742579b5129c78215809c94f4d0e31c3ae5367ebec3",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-19954",
+        "name": "swe-bench/sympy__sympy-19954",
+        "ref": "sha256:5f3eabd6a2df0bd226faf4917926b9e5f753f63ad4e247228a354900fd33885c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-20154",
+        "name": "swe-bench/sympy__sympy-20154",
+        "ref": "sha256:253708a90f75178326336ef5712278262600b884d53526de2c32e92741aca47c",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-20428",
+        "name": "swe-bench/sympy__sympy-20428",
+        "ref": "sha256:0b027178f9e537215c67ba961aade2d8053427c1622fe15fafc109bc6a900b30",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-20438",
+        "name": "swe-bench/sympy__sympy-20438",
+        "ref": "sha256:fb3e96e43d300c46f1efa2c9a6b5177ca0b18e8d8f2b64a73cb7f5fdb985632f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-20590",
+        "name": "swe-bench/sympy__sympy-20590",
+        "ref": "sha256:a2109a75732d837a2876796d39921362cb11973cf80532dc5d0009de1d0a6c23",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-20801",
+        "name": "swe-bench/sympy__sympy-20801",
+        "ref": "sha256:07f7a051fac8b473c8f5b51005b56981837aaf862e1292cc739c56a4f01ed72d",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-20916",
+        "name": "swe-bench/sympy__sympy-20916",
+        "ref": "sha256:cc25a4ce8ba9e833280a831cecffb0b5921b7b9532f96fbdd3290325620b11d3",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-21379",
+        "name": "swe-bench/sympy__sympy-21379",
+        "ref": "sha256:778d64519455b695ec968da7dd6c14ab968e4fc998dfdda06ea6348d8784bf9f",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-21596",
+        "name": "swe-bench/sympy__sympy-21596",
+        "ref": "sha256:175ffe5057567bb01174080e199bf08ce58952dd9fbf4dc2f537f1876f0e138b",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-21612",
+        "name": "swe-bench/sympy__sympy-21612",
+        "ref": "sha256:0424d1b1e46cc191bf9ace749362171eeac2b0a71b7dd9cb8195a46c2bc6cab1",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-21847",
+        "name": "swe-bench/sympy__sympy-21847",
+        "ref": "sha256:25cb6b43ee15e6086b7db56c94e30ca8490aa342c9f1d52c4009ed6357e6ebce",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-21930",
+        "name": "swe-bench/sympy__sympy-21930",
+        "ref": "sha256:7bf51188f83dc0a3b591d047b360ddd1759994eea19a20f5215653c3cb19daca",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-22080",
+        "name": "swe-bench/sympy__sympy-22080",
+        "ref": "sha256:80644c1f3dd9e60bd1027c100d868983af336ab8797e254796f27cdc7aea73b6",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-22456",
+        "name": "swe-bench/sympy__sympy-22456",
+        "ref": "sha256:14d24def074e43b6b7c9491608aa12e879ee558cf116195d0d2ae8dbafa93df5",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-22714",
+        "name": "swe-bench/sympy__sympy-22714",
+        "ref": "sha256:4c7f2f4b62ca2510ae4e460cb81e26c9912104fe983688854229065d9942c576",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-22914",
+        "name": "swe-bench/sympy__sympy-22914",
+        "ref": "sha256:1b7b74f8144ff1f8c3488355f6d4798e87756865d65d52fca7acd767c55a6751",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-23262",
+        "name": "swe-bench/sympy__sympy-23262",
+        "ref": "sha256:e1f1d14375efba22c2d3e434c6e49bfac8c653fb4e4ef6b0649d91fa0d4774ec",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-23413",
+        "name": "swe-bench/sympy__sympy-23413",
+        "ref": "sha256:6b75c3b97b844a01d63fd10aceb15168f2d56fb5106e6fc9765ad574b9986413",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-23534",
+        "name": "swe-bench/sympy__sympy-23534",
+        "ref": "sha256:88c1b34e37f97e1d4daefe298eced5ec7733e78624180d79facb11becda5e906",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-23824",
+        "name": "swe-bench/sympy__sympy-23824",
+        "ref": "sha256:6a222d10e9abe38a026c153216c6c7cfcdf10099c2243daa5c2a02f905475dd3",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-23950",
+        "name": "swe-bench/sympy__sympy-23950",
+        "ref": "sha256:f9c42f14ca1021d36ea5bee6c0e5ac64040146c2216741d96d51ebab8acdcc08",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-24066",
+        "name": "swe-bench/sympy__sympy-24066",
+        "ref": "sha256:03a140161f107997bb5c442b093fb689703392510f440413c9c30193bff02df1",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-24213",
+        "name": "swe-bench/sympy__sympy-24213",
+        "ref": "sha256:53507672541afc1ce34865d9db01489ec3e0e498f7ee2d5439b246bcb8fcdac4",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-24443",
+        "name": "swe-bench/sympy__sympy-24443",
+        "ref": "sha256:864bae08dba7af61d3b9ceda1adf84447b743c993cbc43bc986636cd362b9bd6",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-24539",
+        "name": "swe-bench/sympy__sympy-24539",
+        "ref": "sha256:18964b04490ccd5b305b932d60ba3a3a23af70c4ff1161ba3ae3e9c046fb9aec",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-24562",
+        "name": "swe-bench/sympy__sympy-24562",
+        "ref": "sha256:05c5f40d5142349c94188c1a7ab9b75ad99c791c825ad74bdaddb29131306d6e",
+        "source": "swe-bench/swe-bench-verified"
+      },
+      {
+        "id": "sympy__sympy-24661",
+        "name": "swe-bench/sympy__sympy-24661",
+        "ref": "sha256:90665f0b5e9d0a4a8912f844867542db3576b1858e4892fc634aeedc480d7423",
+        "source": "swe-bench/swe-bench-verified"
+      }
+    ]
+  }
+]

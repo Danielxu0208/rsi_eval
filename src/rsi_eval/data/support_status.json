@@ -1,0 +1,1959 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-11",
+  "scope": "Recorded integration evidence on macOS arm64 with Docker/Colima. Catalog coverage, execution prerequisites and observed runs are separate. No full benchmark scores or paper reproduction are claimed. Evidence records retain their original source hashes and historical limits; this index does not assert that every run used the current implementation.",
+  "common_prerequisites": [
+    "Python 3.12 or newer and Harbor 0.18.0 in its execution environment",
+    "Working Docker/Compose with the task image architecture; macOS uses a Linux VM",
+    "Target model access and task-specific assets; subscription access does not supply native judge credentials"
+  ],
+  "evidence": {
+    "validation-meta": {
+      "path": "docs/validation-meta.json",
+      "sha256": "8bab7a92fcad500ee565429277aca32e50492e04583d0de6b996e676b13030d8",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "validation-rrsi": {
+      "path": "docs/validation-rrsi.json",
+      "sha256": "f66b7a49596171aa1e27b8319f3dec45a86845d1ccbdadbe1f9180613b23111e",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "validation-method-expansion": {
+      "path": "docs/validation-method-expansion.json",
+      "sha256": "03566a87ff625688ea07fa117bbc134e7b1b47c546314ce8c4a565e6a6a7da39",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "validation-harnessx-functional-20261010": {
+      "path": "docs/validation/harnessx-functional-20261010.json",
+      "sha256": "6fc41f378937ea0b99d9bcbe360448d5ecba052b4ebc0ce4e500e095723482bb",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "validation-expansion": {
+      "path": "docs/validation-expansion.json",
+      "sha256": "98f579c2d40a2fae6e3677c57a919090100437738cf4f80c14a52cbe65ea006f",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "validation-drop-frontier": {
+      "path": "docs/validation-drop-frontier.json",
+      "sha256": "c0631a0090fde2ca22990b37b4f7416d73388dfdc6d4e370c9738bd2f21f5464",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "validation-oracles": {
+      "path": "docs/validation-oracles.json",
+      "sha256": "ce7160f022b78a4137f572b9d04f7e2df75ab6398cf3bec1743da18eebfcef82",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "validation-full-coverage": {
+      "path": "docs/validation-full-coverage.json",
+      "sha256": "11dc20a1636ee10e08c64912a9da4c6609fbf68da026606ee65e0a87559f402d",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "validation-reasoning-mce-oracle": {
+      "path": "docs/validation-reasoning-mce-oracle.json",
+      "sha256": "eea8e9b2e05d4d3179adddb0a21384d29e94c512c153b6146cbe9137b5c5b9dd",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "data-engdesign-native-validation": {
+      "path": "docs/data/engdesign-native-validation.json",
+      "sha256": "16bbb13a781ed7a680320d6af716ba3845af295d3cd249c4a09fb7b580599c4b",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "frontier-full-coverage": {
+      "path": "docs/frontier-full-coverage.json",
+      "sha256": "494042705333053eef892f1792577e791b3f717ab8b668a8df5e97f1afc4a8a5",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "validation-jobbench": {
+      "path": "docs/validation-jobbench.json",
+      "sha256": "789ef5f32799a68183a6cc34875fd5b754745e64cc2e124b69c9d6e9849043cf",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "validation-harvey-lab": {
+      "path": "docs/validation-harvey-lab.json",
+      "sha256": "2864f1436f3bbb922af37f364ab81eb2405b5bfb7b76625030c7b933feefa6ba",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "validation-apex-worlds-20261011": {
+      "path": "docs/validation/apex-worlds-20261011.json",
+      "sha256": "0b4f071b3d23ea9f1c013b7de661aa2cced7899b4ef0962bd9fee30b44204e06",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "validation-apex-review": {
+      "path": "docs/validation-apex-review.json",
+      "sha256": "6a7fe37b778d8d6a67dedf160593efc1cb6b426d3ff4e7791ce2b4aa642dacc6",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "validation-workspace-runtime": {
+      "path": "docs/validation-workspace-runtime.json",
+      "sha256": "2f7c6956dfde9bc694464d9c7e2c7a458e55f1d4ca9fc06fd580c364f572a4c5",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    },
+    "validation-harnessx-images-20261011": {
+      "path": "docs/validation/harnessx-images-20261011.json",
+      "sha256": "d78de237a4307dc749cb45ff83c8e0ff8cf02921120664010b733662a6024cf8",
+      "availability": "repository summary; referenced raw run logs may remain local"
+    }
+  },
+  "methods": {
+    "meta-harness": {
+      "upstream_commit": "8123ccabe2b19fa1123090b2e5f1bacc20963ce8",
+      "variant": "Codex adaptation",
+      "execution_route": "Codex wrapper through Harbor, including task-provided MCP",
+      "score_rules": {
+        "binary": "native objective",
+        "unit_interval": "explicit binary score mapping required",
+        "heterogeneous": "explicit binary score mapping required"
+      },
+      "selection": "Native validity and selection gates remain mandatory; explicit selection callbacks may choose only eligible measured candidates.",
+      "observations": [
+        {
+          "benchmark": "terminal-bench",
+          "version": "2.0",
+          "stage": "evolve",
+          "status": "observed",
+          "summary": "Two native rounds with two real changed candidates, feedback use and completed benchmark evaluations.",
+          "task_ids": [
+            "extract-elf"
+          ],
+          "evidence": [
+            "validation-meta"
+          ]
+        },
+        {
+          "benchmark": "terminal-bench",
+          "version": "2.1",
+          "stage": "final_test",
+          "status": "observed",
+          "summary": "Selected artifact completed one independent cross-version task trial.",
+          "task_ids": [
+            "extract-elf"
+          ],
+          "evidence": [
+            "validation-meta"
+          ]
+        },
+        {
+          "benchmark": "swe-bench-verified",
+          "version": "1",
+          "stage": "final_test",
+          "status": "observed",
+          "summary": "Selected artifact completed one independent SWE-bench Verified trial.",
+          "task_ids": [
+            "astropy__astropy-12907"
+          ],
+          "evidence": [
+            "validation-meta"
+          ]
+        }
+      ],
+      "input_modalities": {
+        "text": "Supported by the Codex adaptation",
+        "image": "Target-defined; no method-level image transport validation recorded",
+        "audio": "Target-defined; no method-level audio transport validation recorded",
+        "video": "Target-defined; no method-level video transport validation recorded"
+      },
+      "execution_limits": [
+        "The selected target and task tools determine input handling; a Harbor execution adapter does not establish every media capability.",
+        "Native method gates, task budgets and runtime prerequisites remain in force."
+      ],
+      "capability_validation": []
+    },
+    "rrsi": {
+      "upstream_commit": "be50316e1db05914068a973f322770ef08ed7ba1",
+      "variant": "Codex adaptation",
+      "execution_route": "Codex wrapper through Harbor, including task-provided MCP",
+      "score_rules": {
+        "binary": "native objective",
+        "unit_interval": "native score range; caller chooses a meaningful objective",
+        "heterogeneous": "explicit bounded score mapping required"
+      },
+      "selection": "Native validity and selection gates remain mandatory; explicit selection callbacks may choose only eligible measured candidates.",
+      "observations": [
+        {
+          "benchmark": "terminal-bench",
+          "version": "2.1",
+          "stage": "evolve",
+          "status": "observed",
+          "summary": "Two native rounds with two real changed candidates, feedback use and completed benchmark evaluations.",
+          "task_ids": [
+            "extract-elf"
+          ],
+          "evidence": [
+            "validation-rrsi"
+          ]
+        },
+        {
+          "benchmark": "terminal-bench",
+          "version": "2.0",
+          "stage": "final_test",
+          "status": "observed",
+          "summary": "Selected artifact completed one independent cross-version task trial.",
+          "task_ids": [
+            "extract-elf"
+          ],
+          "evidence": [
+            "validation-rrsi"
+          ]
+        },
+        {
+          "benchmark": "swe-bench-verified",
+          "version": "1",
+          "stage": "final_test",
+          "status": "observed",
+          "summary": "Selected artifact completed one independent SWE-bench Verified trial.",
+          "task_ids": [
+            "astropy__astropy-12907"
+          ],
+          "evidence": [
+            "validation-rrsi"
+          ]
+        }
+      ],
+      "input_modalities": {
+        "text": "Supported by the Codex adaptation",
+        "image": "Target-defined; no method-level image transport validation recorded",
+        "audio": "Target-defined; no method-level audio transport validation recorded",
+        "video": "Target-defined; no method-level video transport validation recorded"
+      },
+      "execution_limits": [
+        "The selected target and task tools determine input handling; a Harbor execution adapter does not establish every media capability.",
+        "Native method gates, task budgets and runtime prerequisites remain in force."
+      ],
+      "capability_validation": []
+    },
+    "ahe": {
+      "upstream_commit": "8b2a55d97590363fe50c3cc6b5e833b020a4bb4c",
+      "variant": "Codex adaptation",
+      "execution_route": "Codex wrapper through Harbor, including task-provided MCP",
+      "score_rules": {
+        "binary": "native objective",
+        "unit_interval": "explicit binary score mapping required",
+        "heterogeneous": "explicit binary score mapping required"
+      },
+      "selection": "Native validity and selection gates remain mandatory; explicit selection callbacks may choose only eligible measured candidates.",
+      "observations": [
+        {
+          "benchmark": "terminal-bench",
+          "version": "2.0",
+          "stage": "evolve",
+          "status": "observed",
+          "summary": "Two native decisions completed: one changed prompt and one KEEP. Strict two-change acceptance did not pass.",
+          "task_ids": [
+            "extract-elf"
+          ],
+          "evidence": [
+            "validation-method-expansion"
+          ]
+        },
+        {
+          "benchmark": "terminal-bench",
+          "version": "2.1",
+          "stage": "final_test",
+          "status": "observed",
+          "summary": "Selected artifact completed one independent cross-version task trial.",
+          "task_ids": [
+            "extract-elf"
+          ],
+          "evidence": [
+            "validation-method-expansion"
+          ]
+        }
+      ],
+      "input_modalities": {
+        "text": "Supported by the Codex adaptation",
+        "image": "Target-defined; no method-level image transport validation recorded",
+        "audio": "Target-defined; no method-level audio transport validation recorded",
+        "video": "Target-defined; no method-level video transport validation recorded"
+      },
+      "execution_limits": [
+        "The selected target and task tools determine input handling; a Harbor execution adapter does not establish every media capability.",
+        "Native method gates, task budgets and runtime prerequisites remain in force."
+      ],
+      "capability_validation": []
+    },
+    "harnessx": {
+      "upstream_commit": "915520584c92cc35ed24aef1af17eec1d60c0b01",
+      "variant": "Codex adaptation",
+      "execution_route": "HarnessX native processors/tool loop with Harbor MCP bridge",
+      "score_rules": {
+        "binary": "native objective",
+        "unit_interval": "native score range; caller chooses a meaningful objective",
+        "heterogeneous": "finite score; declare objective and selection for unlike task metrics"
+      },
+      "selection": "Native validity and selection gates remain mandatory; explicit selection callbacks may choose only eligible measured candidates.",
+      "observations": [
+        {
+          "benchmark": "terminal-bench",
+          "version": "2.0",
+          "stage": "evolve",
+          "status": "observed",
+          "summary": "Two native model-driven rounds completed as valid no-ops; history and smoke paths ran. This did not show a model-generated change.",
+          "task_ids": [
+            "extract-elf",
+            "log-summary-date-ranges"
+          ],
+          "evidence": [
+            "validation-method-expansion"
+          ]
+        },
+        {
+          "benchmark": "terminal-bench",
+          "version": "2.1",
+          "stage": "final_test",
+          "status": "observed",
+          "summary": "Selected artifact completed one independent cross-version task trial.",
+          "task_ids": [
+            "extract-elf"
+          ],
+          "evidence": [
+            "validation-method-expansion"
+          ]
+        },
+        {
+          "benchmark": "terminal-bench",
+          "version": "2.0",
+          "stage": "functional_changed_candidate",
+          "status": "observed",
+          "summary": "A hand-authored change passed native gates and a real scored trial; its reminder reached the actual model request. This is separate from the model-driven no-op rounds.",
+          "task_ids": [
+            "log-summary-date-ranges"
+          ],
+          "evidence": [
+            "validation-harnessx-functional-20261010"
+          ]
+        },
+        {
+          "benchmark": "apex-agents",
+          "version": "1.1.1",
+          "stage": "tool_route_only",
+          "status": "observed",
+          "summary": "Read-only MCP discovery/listing and close in one real world, without model calls or paid grading. No method loop or scored trial is established.",
+          "task_ids": [
+            "128-jr-1-f7f95d92"
+          ],
+          "evidence": [
+            "validation-harnessx-functional-20261010"
+          ]
+        }
+      ],
+      "input_modalities": {
+        "text": "Supported by the Codex role transport",
+        "image": "Static PNG, JPEG and WebP through native Codex image attachments; PNG exercised live, format handling checked offline",
+        "audio": "Unsupported; no transcription fallback",
+        "video": "Unsupported"
+      },
+      "execution_limits": [
+        "GIF and animated PNG/WebP are unsupported; rejected media that reaches the provider stops before another model call.",
+        "Transport limits: 20 MiB per image and 64 MiB per turn. The native tool-result budget is 200,000 characters including base64; that stage can remove oversized images with a notice before the provider receives them.",
+        "Remote URLs and local-path media blocks are rejected. Native task MCP images and embedded image resources use the same validated attachment route.",
+        "Native method gates, task budgets and runtime prerequisites remain in force."
+      ],
+      "capability_validation": [
+        {
+          "capability": "static_image_input",
+          "status": "observed",
+          "summary": "A synthetic native HarnessX tool returned two PNG images; two real Codex calls completed the tool-to-image-to-model path. JPEG/WebP parsing and MCP media routes have offline checks.",
+          "scope": "Synthetic transport smoke with zero benchmark calls and zero judge calls; not a scored benchmark pair or method evolution run",
+          "evidence": [
+            "validation-harnessx-images-20261011"
+          ]
+        }
+      ]
+    }
+  },
+  "benchmarks": [
+    {
+      "name": "terminal-bench",
+      "version": "2.0",
+      "catalog_sha256": "d59b68b2b87a2a565fadaa9712e0f96a82531d040697bc6f6d9d9bba15408702",
+      "dataset_ref": "sha256:c6fc2e2382c1dbae99b2d5ecd2f4f4a60c3c01e0d84642d69b4afd92e99d078b",
+      "task_count": 89,
+      "lifecycle": "active",
+      "catalog_scope": "complete-pinned-Harbor-release",
+      "protocol_summary": "Original pinned Harbor task instructions, environment and verifier",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "extract-elf",
+              "log-summary-date-ranges"
+            ],
+            "evidence": [
+              "validation-harnessx-functional-20261010",
+              "validation-meta",
+              "validation-method-expansion",
+              "validation-oracles",
+              "validation-rrsi"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "Native oracle completed with reward 1 on the named task.",
+            "task_ids": [
+              "extract-elf"
+            ],
+            "evidence": [
+              "validation-oracles"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials recorded within method validation; see separate method-stage evidence.",
+            "task_ids": [
+              "extract-elf"
+            ],
+            "evidence": [
+              "validation-meta"
+            ]
+          },
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials recorded within method validation; see separate method-stage evidence.",
+            "task_ids": [
+              "extract-elf"
+            ],
+            "evidence": [
+              "validation-rrsi"
+            ]
+          },
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials recorded within method validation; see separate method-stage evidence.",
+            "task_ids": [
+              "extract-elf",
+              "log-summary-date-ranges"
+            ],
+            "evidence": [
+              "validation-method-expansion"
+            ]
+          },
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials recorded within method validation; see separate method-stage evidence.",
+            "task_ids": [
+              "log-summary-date-ranges"
+            ],
+            "evidence": [
+              "validation-harnessx-functional-20261010"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "terminal-bench",
+      "version": "2.1",
+      "catalog_sha256": "ce3a805da5a35149a6772b879f6220c2f3e3e3485841e8a6917805f43e18c66b",
+      "dataset_ref": "sha256:7d7bdc1cbedad549fc1140404bd4dc45e5fd0ea7c4186773687d177ad3a0699a",
+      "task_count": 89,
+      "lifecycle": "active",
+      "catalog_scope": "complete-pinned-Harbor-release",
+      "protocol_summary": "Original pinned Harbor task instructions, environment and verifier",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "extract-elf"
+            ],
+            "evidence": [
+              "validation-meta",
+              "validation-method-expansion",
+              "validation-oracles",
+              "validation-rrsi"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "Native oracle completed with reward 1 on the named task.",
+            "task_ids": [
+              "extract-elf"
+            ],
+            "evidence": [
+              "validation-oracles"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials recorded within method validation; see separate method-stage evidence.",
+            "task_ids": [
+              "extract-elf"
+            ],
+            "evidence": [
+              "validation-meta"
+            ]
+          },
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials recorded within method validation; see separate method-stage evidence.",
+            "task_ids": [
+              "extract-elf"
+            ],
+            "evidence": [
+              "validation-rrsi"
+            ]
+          },
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials recorded within method validation; see separate method-stage evidence.",
+            "task_ids": [
+              "extract-elf"
+            ],
+            "evidence": [
+              "validation-method-expansion"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "swe-bench-verified",
+      "version": "1",
+      "catalog_sha256": "efcda5c459f45fc06edf20daf47d0bad287f081f8ec9471caf6fba7aa144890b",
+      "dataset_ref": "sha256:b934b0cc3dc800fe945eaf9f1623329db97ee3133c706d20644524c7759fb341",
+      "task_count": 500,
+      "lifecycle": "active",
+      "catalog_scope": "complete-pinned-Harbor-release",
+      "protocol_summary": "Original pinned Harbor task instructions, environment and verifier",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "astropy__astropy-12907"
+            ],
+            "evidence": [
+              "validation-meta",
+              "validation-oracles",
+              "validation-rrsi"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "Native oracle completed with reward 1 on the named task.",
+            "task_ids": [
+              "astropy__astropy-12907"
+            ],
+            "evidence": [
+              "validation-oracles"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials recorded within method validation; see separate method-stage evidence.",
+            "task_ids": [
+              "astropy__astropy-12907"
+            ],
+            "evidence": [
+              "validation-meta"
+            ]
+          },
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials recorded within method validation; see separate method-stage evidence.",
+            "task_ids": [
+              "astropy__astropy-12907"
+            ],
+            "evidence": [
+              "validation-rrsi"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "apex-agents",
+      "version": "1.1.1",
+      "catalog_sha256": "35187bf4f3a73efce7726cd699b05f4902b8b54709d89922e6976eae4fcebc62",
+      "dataset_ref": "mercor/apex-agents-1-1@1.1.1",
+      "task_count": 240,
+      "lifecycle": "active",
+      "catalog_scope": "complete-public-pinned-release",
+      "protocol_summary": "Native APEX-Agents 1.1.1 Harbor tasks: immutable agent/world/verifier images, original MCP environment, rubric grader and snapshot collection. The selected target is an agent variant; no claim of the published reference agent run.",
+      "reward_domain": "unit_interval",
+      "prerequisites": [
+        "Native Vercel AI Gateway judge credentials, plus original world services"
+      ],
+      "limitations": [
+        "31-world health/MCP/snapshot audit is one task per world, without a model or judge. It does not establish 240 scored tasks."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "31/31 worlds: one fixed task each, native healthcheck, 74 MCP tools, read-only listing, initial/final snapshots and cleanup. Audit-only snapshot capture override is recorded.",
+            "task_ids": [
+              "128-jr-1-f7f95d92",
+              "analyze-effect-of-anti-slapp-suit-against-bluelng-on-pre-sui-4b81f3b2",
+              "cw134-aditi-01-6914a79e",
+              "law-world-423-dm-03-726ce1ed",
+              "lawworld417-ab-01-c07832b1",
+              "lawworld433-anb-04-23234013",
+              "shiva-task-01-world-129-fc919d98",
+              "task-5vd1ebb0-c4e34a72",
+              "task-ncwq9a4b-87065bf9",
+              "task-world130-camillemoingeon-3-2f162fcc",
+              "task-ymtecb81-c206b308",
+              "w127-ah-task-7-d04aba36",
+              "world-419-um-01-ddd3e22e",
+              "world-420-lb-02-d6b33bef",
+              "world-421-anb-02-2da2824a",
+              "world112-1-task05-na-cf44bbb8",
+              "world131-ib-05-3c0a977d",
+              "world132-da-task03-3db0b339",
+              "world133-ln-04-009ff905",
+              "world135-sf-task03-5716be6e",
+              "world219-seed-task-06-334dea71",
+              "world221-oa-3-d4497b80",
+              "world223-es-01-4e64f4e3",
+              "world224-hs-02-2ba35245",
+              "world225-km-06-19899d4e",
+              "world226-ta-01-c945f64f",
+              "world227-jz-task03-135a8483",
+              "world228-jk-01-08d7bf2c",
+              "world425-jcf-01-e1dfe9ed",
+              "world431task-el-01-6ec3da62",
+              "world434-ah-01-f0eb6d9f"
+            ],
+            "evidence": [
+              "validation-apex-worlds-20261011"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "blocked",
+            "summary": "Original oracle exists but native grading still needs paid judge access.",
+            "task_ids": [],
+            "evidence": [
+              "validation-apex-review"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "blocked",
+            "summary": "No scored target run: native judge credentials are required. Tool-only probes remain separate.",
+            "task_ids": [],
+            "evidence": [
+              "validation-workspace-runtime"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "drop",
+      "version": "1.0-agent",
+      "catalog_sha256": "18a5df0f3f4730c69515eb05efe3a31aecd7644c581147b84d9b96807c7a41ed",
+      "dataset_ref": "allenai/drop@sha256:39d2278a29fd729de301b111a45f434c24834f40df8f4ff116d864589e3249d6",
+      "task_count": 86945,
+      "lifecycle": "active",
+      "catalog_scope": "complete-public-pinned-release",
+      "protocol_summary": "zero-shot-agent-drop-json-answer",
+      "reward_domain": "unit_interval",
+      "prerequisites": [],
+      "limitations": [
+        "Task-assisted agent protocol with original scoring; no fixed-prompt or published-method score equivalence.",
+        "All 86,945 released train/dev records remain selectable. Nine empty-reference train records retain native zero scoring and have no gold-transport oracle."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "dev-ac6ba235-3024-4f63-a6ab-730a14def4cb",
+              "dev-f37e81fa-ef7b-4583-b671-762fc433faa9"
+            ],
+            "evidence": [
+              "validation-drop-frontier"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "Completed real Harbor reference/scorer transport trials; reference does not imply optimal solutions.",
+            "task_ids": [
+              "dev-ac6ba235-3024-4f63-a6ab-730a14def4cb",
+              "dev-f37e81fa-ef7b-4583-b671-762fc433faa9"
+            ],
+            "evidence": [
+              "validation-drop-frontier"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials; task failure rewards remain valid completed measurements.",
+            "task_ids": [
+              "dev-ac6ba235-3024-4f63-a6ab-730a14def4cb",
+              "dev-f37e81fa-ef7b-4583-b671-762fc433faa9"
+            ],
+            "evidence": [
+              "validation-drop-frontier"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "engdesign-open",
+      "version": "open-subset-c8ec338-v1",
+      "catalog_sha256": "3630cd2c101bdafa19a4ca3fd2471a552f1f355011b8eed2f48c5a7ddb614e32",
+      "dataset_ref": "git:c8ec338cc5f846d792d93728b00c9448111139e5",
+      "task_count": 2,
+      "lifecycle": "legacy-subset",
+      "catalog_scope": "reviewed-open-subset",
+      "protocol_summary": "engdesign-native-verifier",
+      "reward_domain": "binary",
+      "prerequisites": [
+        "Task-specific scientific dependencies, Octave/Verilog and configured Webots assets where required"
+      ],
+      "limitations": [
+        "Legacy subset retained for reproducibility; select the newer full configuration for all released tasks.",
+        "Native grader defects and same-interpreter execution remain recorded; no scoring repairs or new validation claims."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "AB_01",
+              "XY_01"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "Completed real Harbor reference/scorer transport trials; reference does not imply optimal solutions.",
+            "task_ids": [
+              "AB_01",
+              "XY_01"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials; task failure rewards remain valid completed measurements.",
+            "task_ids": [
+              "AB_01",
+              "XY_01"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "engdesign-open",
+      "version": "open-c8ec338-v1",
+      "catalog_sha256": "9e8a16dad46b747053c520d3ce4e151c143ef53204deda94c46882d0fc6cba90",
+      "dataset_ref": "git:c8ec338cc5f846d792d93728b00c9448111139e5",
+      "task_count": 67,
+      "lifecycle": "active",
+      "catalog_scope": "full-upstream-open",
+      "protocol_summary": "engdesign-native-verifier",
+      "reward_domain": "binary",
+      "prerequisites": [
+        "Task-specific scientific dependencies, Octave/Verilog and configured Webots assets where required"
+      ],
+      "limitations": [
+        "Native grader defects and same-interpreter execution remain recorded; no scoring repairs or new validation claims."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "AB_01",
+              "XY_01"
+            ],
+            "evidence": [
+              "validation-full-coverage"
+            ]
+          },
+          {
+            "status": "observed",
+            "summary": "All 67 native graders executed with reference inputs. Native failed verdicts can be legitimate; this is not 67 Harbor agent trials.",
+            "task_ids": [
+              "AB_01",
+              "AB_02",
+              "AB_03",
+              "AM_02",
+              "AM_03",
+              "AV_02",
+              "AV_03",
+              "CY_03",
+              "DL_01",
+              "DL_02",
+              "HC_03",
+              "HJ_01",
+              "JY_01",
+              "JY_02",
+              "JY_03",
+              "KV_02",
+              "KV_03",
+              "LX_02",
+              "NS_PA_SS_02",
+              "NS_PA_SS_03",
+              "NS_PA_SS_04",
+              "NS_PA_SS_05",
+              "NS_PA_SS_06",
+              "NS_PA_SS_07",
+              "NS_PA_SS_08",
+              "NS_PA_SS_09",
+              "NS_PA_SS_10",
+              "RK_01",
+              "RK_02",
+              "RK_03",
+              "RK_04",
+              "RS_01",
+              "RS_02",
+              "RS_03",
+              "WJ_01",
+              "XG_08",
+              "XG_13",
+              "XW_01",
+              "XW_02",
+              "XW_03",
+              "XW_04",
+              "XY_01",
+              "XY_03",
+              "XY_04",
+              "XY_05",
+              "XZ_01",
+              "XZ_02",
+              "XZ_03",
+              "XZ_04",
+              "YJ_01",
+              "YJ_02",
+              "YJ_03",
+              "YX_01",
+              "YX_02",
+              "YX_03",
+              "Yiqi_01",
+              "Yiqi_02",
+              "Yuqi_01",
+              "ZC_02",
+              "ZC_03",
+              "ZH_02",
+              "ZH_03",
+              "ZH_04",
+              "Ziheng_02",
+              "libin2_01",
+              "libin2_02",
+              "libin2_03"
+            ],
+            "evidence": [
+              "data-engdesign-native-validation"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "Completed real Harbor trials on the exact listed tasks; full-profile execution is not inferred.",
+            "task_ids": [
+              "AB_01",
+              "XY_01"
+            ],
+            "evidence": [
+              "validation-full-coverage"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "observed",
+            "summary": "Completed real Harbor trials on the exact listed tasks; full-profile execution is not inferred.",
+            "task_ids": [
+              "XY_01"
+            ],
+            "evidence": [
+              "validation-full-coverage"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "frontier-eng",
+      "version": "cpu-subset-bafa7d5-v1",
+      "catalog_sha256": "85a97bc142377bef1fb1d9529c7d42b4496915db16362d59f6ef7bce0240c46d",
+      "dataset_ref": "git:bafa7d53162a3b1f128fec396bbde22fe972bf24",
+      "task_count": 2,
+      "lifecycle": "legacy-subset",
+      "catalog_scope": "reviewed-cpu-subset",
+      "protocol_summary": "frontier-native-feedback",
+      "reward_domain": "heterogeneous",
+      "prerequisites": [
+        "Task-specific downloaded assets and grader namespace capabilities"
+      ],
+      "limitations": [
+        "Legacy subset retained for reproducibility; select the newer full configuration for all released tasks.",
+        "Native continuous objectives stay per-task; there is no common mean or invented Medal Score."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "InventoryOptimization/disruption_eoqd",
+              "Robotics/PIDTuning"
+            ],
+            "evidence": [
+              "validation-drop-frontier"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "Completed real Harbor reference/scorer transport trials; reference does not imply optimal solutions.",
+            "task_ids": [
+              "InventoryOptimization/disruption_eoqd",
+              "Robotics/PIDTuning"
+            ],
+            "evidence": [
+              "validation-drop-frontier"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials; task failure rewards remain valid completed measurements.",
+            "task_ids": [
+              "InventoryOptimization/disruption_eoqd",
+              "Robotics/PIDTuning"
+            ],
+            "evidence": [
+              "validation-drop-frontier"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "frontier-eng",
+      "version": "v1-bafa7d5",
+      "catalog_sha256": "e1bd8870988b5e4a5bfb13448025c149a9c8c6cb5c53e45be0d628a3c61e561d",
+      "dataset_ref": "git:bafa7d53162a3b1f128fec396bbde22fe972bf24",
+      "task_count": 48,
+      "lifecycle": "active",
+      "catalog_scope": "full-v1-with-additional-engdesign-entry",
+      "protocol_summary": "frontier-native-unified-feedback",
+      "reward_domain": "heterogeneous",
+      "prerequisites": [
+        "Task-specific downloaded assets and grader namespace capabilities",
+        "NVIDIA/CUDA runtime for four full-profile tasks; unavailable on the validation Mac"
+      ],
+      "limitations": [
+        "Native continuous objectives stay per-task; there is no common mean or invented Medal Score. GPU execution remains unverified."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "ComputerSystems/MallocLab",
+              "EnergyStorage/BatteryFastChargingProfile",
+              "InventoryOptimization/joint_replenishment"
+            ],
+            "evidence": [
+              "validation-full-coverage"
+            ]
+          },
+          {
+            "status": "observed",
+            "summary": "44 native CPU grader executions; 43 valid seeds and one native below-threshold seed. Four GPU tasks remain unverified.",
+            "task_ids": [
+              "Astrodynamics/MannedLunarLanding",
+              "ComputerSystems/MallocLab",
+              "Cryptographic/AES-128",
+              "Cryptographic/SHA-256",
+              "Cryptographic/SHA3-256",
+              "EnergyStorage/BatteryFastChargingProfile",
+              "EnergyStorage/BatteryFastChargingSPMe",
+              "EngDesign",
+              "InventoryOptimization/disruption_eoqd",
+              "InventoryOptimization/finite_horizon_dp",
+              "InventoryOptimization/general_meio",
+              "InventoryOptimization/joint_replenishment",
+              "InventoryOptimization/tree_gsm_safety_stock",
+              "JobShop/abz",
+              "JobShop/swv",
+              "JobShop/ta",
+              "Optics/adaptive_fault_tolerant_fusion",
+              "Optics/adaptive_temporal_smooth_control",
+              "Optics/fiber_guardband_spectrum_packing",
+              "Optics/fiber_mcs_power_scheduling",
+              "Optics/fiber_wdm_channel_power_allocation",
+              "Optics/holographic_multifocus_power_ratio",
+              "Optics/holographic_multiplane_focusing",
+              "Optics/phase_dammann_uniform_orders",
+              "Optics/phase_fourier_pattern_holography",
+              "PyPortfolioOpt/robust_mvo_rebalance",
+              "QuantumComputing/task_01_routing_qftentangled",
+              "QuantumComputing/task_02_clifford_t_synthesis",
+              "QuantumComputing/task_03_cross_target_qaoa",
+              "ReactionOptimisation/mit_case1_mixed",
+              "ReactionOptimisation/reizman_suzuki_pareto",
+              "ReactionOptimisation/snar_multiobjective",
+              "Robotics/DynamicObstacleAvoidanceNavigation",
+              "Robotics/PIDTuning",
+              "Robotics/QuadrupedGaitOptimization",
+              "Robotics/RobotArmCycleTimeOptimization",
+              "Robotics/UAVInspectionCoverageWithWind",
+              "SingleCellAnalysis/predict_modality",
+              "StructuralOptimization/ISCSO2015",
+              "StructuralOptimization/ISCSO2023",
+              "StructuralOptimization/PyMOTOSIMPCompliance",
+              "StructuralOptimization/TopologyOptimization",
+              "SustainableDataCenterControl/hand_written_control",
+              "WirelessChannelSimulation/HighReliableSimulation"
+            ],
+            "evidence": [
+              "validation-full-coverage",
+              "frontier-full-coverage"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "Completed real Harbor trials on the exact listed tasks; full-profile execution is not inferred.",
+            "task_ids": [
+              "ComputerSystems/MallocLab",
+              "EnergyStorage/BatteryFastChargingProfile",
+              "InventoryOptimization/joint_replenishment"
+            ],
+            "evidence": [
+              "validation-full-coverage"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "observed",
+            "summary": "Completed real Harbor trials on the exact listed tasks; full-profile execution is not inferred.",
+            "task_ids": [
+              "EnergyStorage/BatteryFastChargingProfile"
+            ],
+            "evidence": [
+              "validation-full-coverage"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "aider-polyglot",
+      "version": "1.0-harbor",
+      "catalog_sha256": "c532dfad38124552f99bcf4bc1ac02467a39fc6520846323f7d7a9428d304442",
+      "dataset_ref": "sha256:01e28d85e46beae5b7e29a29f57cb49d882b5486583d52cec4ee5bf3540a1c84",
+      "task_count": 225,
+      "lifecycle": "active",
+      "catalog_scope": "complete-pinned-Harbor-release",
+      "protocol_summary": "harbor-port",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [
+        "Harbor port preserves tests but does not reproduce Aider's native two-edit retry controller or edit-format metrics."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "polyglot_go_error-handling",
+              "polyglot_python_dot-dsl"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "Completed real Harbor reference/scorer transport trials; reference does not imply optimal solutions.",
+            "task_ids": [
+              "polyglot_go_error-handling",
+              "polyglot_python_dot-dsl"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials; task failure rewards remain valid completed measurements.",
+            "task_ids": [
+              "polyglot_go_error-handling",
+              "polyglot_python_dot-dsl"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "swe-bench-multilingual",
+      "version": "1.0-harbor",
+      "catalog_sha256": "dbc925c97ae8b728446fa44418e5ab07f64116fee2e845c24bb5e4defb8b3326",
+      "dataset_ref": "manifest-sha256:3f6a80369441bf976d4467c6f371d1e75836795ed5d15a41f4a4473eb0e9ed23",
+      "task_count": 300,
+      "lifecycle": "active",
+      "catalog_scope": "complete-pinned-Harbor-release",
+      "protocol_summary": "harbor-port",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [
+        "Pinned Harbor port includes available hints; this is an agent variant with native test grading."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "preactjs__preact-3345"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "Completed real Harbor reference/scorer transport trials; reference does not imply optimal solutions.",
+            "task_ids": [
+              "preactjs__preact-3345"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials; task failure rewards remain valid completed measurements.",
+            "task_ids": [
+              "preactjs__preact-3345"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "swe-bench-pro",
+      "version": "1.0-harbor",
+      "catalog_sha256": "adb69320918fe7a0c3cae4fc48c46edd2f20f9ed28990effa1ead9da48cd5f3e",
+      "dataset_ref": "sha256:88411d32ff27e53a4c1a7e29f0c2aeba180c8e5d60f221cab5ed56325f33549d",
+      "task_count": 731,
+      "lifecycle": "active",
+      "catalog_scope": "complete-pinned-Harbor-release",
+      "protocol_summary": "harbor-port",
+      "reward_domain": "binary",
+      "prerequisites": [
+        "linux/amd64 task images"
+      ],
+      "limitations": [
+        "Harbor port includes declared execution changes, including Jest worker/exit options; no unmodified native-harness claim."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "instance_flipt-io__flipt-a0cbc0cb65ae601270bdbe3f5313e2dfd49c80e4",
+              "instance_internetarchive__openlibrary-00bec1e7c8f3272c469a58e1377df03f955ed478-v13642507b4fc1f8d234172bf8129942da2c2ca26"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "Completed real Harbor reference/scorer transport trials; reference does not imply optimal solutions.",
+            "task_ids": [
+              "instance_flipt-io__flipt-a0cbc0cb65ae601270bdbe3f5313e2dfd49c80e4",
+              "instance_internetarchive__openlibrary-00bec1e7c8f3272c469a58e1377df03f955ed478-v13642507b4fc1f8d234172bf8129942da2c2ca26"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials; task failure rewards remain valid completed measurements.",
+            "task_ids": [
+              "instance_internetarchive__openlibrary-00bec1e7c8f3272c469a58e1377df03f955ed478-v13642507b4fc1f8d234172bf8129942da2c2ca26"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "harvey-lab",
+      "version": "public-a15650f-v1",
+      "catalog_sha256": "1eb588105d737da5089e20a9de5457bbef82a61bba0dd765f409236874ef33ac",
+      "dataset_ref": "harveyai/harvey-labs@a15650fe74bb20b86f160aaabdad75b87a91b6e8",
+      "task_count": 2010,
+      "lifecycle": "active",
+      "catalog_scope": "full-public-pinned-version",
+      "protocol_summary": "harbor-native-lab-dual-judge-v1",
+      "reward_domain": "unit_interval",
+      "prerequisites": [
+        "Native Anthropic and OpenAI judge credentials; default dual-judge protocol"
+      ],
+      "limitations": [
+        "No published gold deliverables. Deterministic judge fixtures do not establish provider scoring."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "All 2,010 tasks materialized and native schemas checked; container grading used declared deterministic responses. No provider judging.",
+            "task_ids": [],
+            "evidence": [
+              "validation-harvey-lab"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "unavailable",
+            "summary": "No published gold deliverable; no passing oracle is invented.",
+            "task_ids": [],
+            "evidence": [
+              "validation-harvey-lab"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "blocked",
+            "summary": "Real end-to-end scoring requires the native judge credentials; no model-scored task completion is recorded.",
+            "task_ids": [],
+            "evidence": [
+              "validation-harvey-lab"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "jobbench",
+      "version": "d43a665-660b33a-v1",
+      "catalog_sha256": "5d4102ba2941a1a0a58727cf0c088b53ab60be91013f4b736185266657794439",
+      "dataset_ref": "JobBench/job-bench@d43a66575635da0d3f6cb9a20976dc1a60f3ffc9",
+      "task_count": 128,
+      "lifecycle": "active",
+      "catalog_scope": "complete-public-pinned-splits",
+      "protocol_summary": "jobbench-native-harbor",
+      "reward_domain": "unit_interval",
+      "prerequisites": [
+        "Native xAI judge credentials; grok-4.3"
+      ],
+      "limitations": [
+        "No published gold deliverables. Empty-output and fixture checks do not establish nonempty paid scoring."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "All 128 tasks materialized; native empty-output and Office extraction/container checks. No nonempty paid judge call.",
+            "task_ids": [],
+            "evidence": [
+              "validation-jobbench"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "unavailable",
+            "summary": "No published gold deliverable; no passing oracle is invented.",
+            "task_ids": [],
+            "evidence": [
+              "validation-jobbench"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "blocked",
+            "summary": "Real end-to-end scoring requires the native judge credentials; no model-scored task completion is recorded.",
+            "task_ids": [],
+            "evidence": [
+              "validation-jobbench"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "livecodebench",
+      "version": "release_v1",
+      "catalog_sha256": "d03d95ded29f905682b0ad43543c7d826a7b7384128536e0a526613d8f2dc60c",
+      "dataset_ref": "hf:livecodebench/code_generation_lite@0fe84c3912ea0c4d4a78037083943e8f0c4dd505:release_v1",
+      "task_count": 400,
+      "lifecycle": "active",
+      "catalog_scope": "complete-public-pinned-release",
+      "protocol_summary": "Original pinned Harbor task instructions, environment and verifier",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [
+        "Complete 400-task candidate set; reference solutions cover only a subset. Repetitions are independent trials."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "lcb-codeforces-1873_a",
+              "lcb-leetcode-2727"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "Completed real Harbor reference/scorer transport trials; reference does not imply optimal solutions.",
+            "task_ids": [
+              "lcb-codeforces-1873_a",
+              "lcb-leetcode-2727"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials; task failure rewards remain valid completed measurements.",
+            "task_ids": [
+              "lcb-codeforces-1873_a",
+              "lcb-leetcode-2727"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mce-finer",
+      "version": "meta-harness-8123cca-v1",
+      "catalog_sha256": "78f7aa2e4dc095acb52e8ccbe14dd718253aa04faa83704c935f17a3f2f77f13",
+      "dataset_ref": "mce-finer@meta-harness-8123cca-v1",
+      "task_count": 400,
+      "lifecycle": "active",
+      "catalog_scope": "all-published-mce-configuration-splits",
+      "protocol_summary": "meta-harness-mce-native-per-record-v1",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [
+        "Task-assisted agent protocol with original scoring; no fixed-prompt or published-method score equivalence."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "test-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "One real Docker gold-answer/reference transport trial, reward 1; not model accuracy.",
+            "task_ids": [
+              "test-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "not_recorded",
+            "summary": "No recorded real execution for this exact configuration.",
+            "task_ids": [],
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "mce-uspto",
+      "version": "meta-harness-8123cca-v1",
+      "catalog_sha256": "9be2312ac848975a8531a174000d26f65c75f2c5d3cb7299026d94cadd681293",
+      "dataset_ref": "mce-uspto@meta-harness-8123cca-v1",
+      "task_count": 180,
+      "lifecycle": "active",
+      "catalog_scope": "all-published-mce-configuration-splits",
+      "protocol_summary": "meta-harness-mce-native-per-record-v1",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [
+        "Task-assisted agent protocol with original scoring; no fixed-prompt or published-method score equivalence."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "test-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "One real Docker gold-answer/reference transport trial, reward 1; not model accuracy.",
+            "task_ids": [
+              "test-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "not_recorded",
+            "summary": "No recorded real execution for this exact configuration.",
+            "task_ids": [],
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "mce-symptom2disease",
+      "version": "meta-harness-8123cca-v1",
+      "catalog_sha256": "eb3f48640b7d100cecaad551b11a7478116a79e137c588bbc8f5c2c62aab4700",
+      "dataset_ref": "mce-symptom2disease@meta-harness-8123cca-v1",
+      "task_count": 462,
+      "lifecycle": "active",
+      "catalog_scope": "all-published-mce-configuration-splits",
+      "protocol_summary": "meta-harness-mce-native-per-record-v1",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [
+        "Task-assisted agent protocol with original scoring; no fixed-prompt or published-method score equivalence."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "test-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "One real Docker gold-answer/reference transport trial, reward 1; not model accuracy.",
+            "task_ids": [
+              "test-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "not_recorded",
+            "summary": "No recorded real execution for this exact configuration.",
+            "task_ids": [],
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "mce-lawbench",
+      "version": "meta-harness-8123cca-v1",
+      "catalog_sha256": "96b06591e5ebb63d02384c55e750d8d8b494a27f1ad3192fa9cfeb272cc94ffb",
+      "dataset_ref": "mce-lawbench@meta-harness-8123cca-v1",
+      "task_count": 350,
+      "lifecycle": "active",
+      "catalog_scope": "all-published-mce-configuration-splits",
+      "protocol_summary": "meta-harness-mce-native-per-record-v1",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [
+        "Task-assisted agent protocol with original scoring; no fixed-prompt or published-method score equivalence."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "test-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "One real Docker gold-answer/reference transport trial, reward 1; not model accuracy.",
+            "task_ids": [
+              "test-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "not_recorded",
+            "summary": "No recorded real execution for this exact configuration.",
+            "task_ids": [],
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "mce-aegis",
+      "version": "meta-harness-8123cca-v1",
+      "catalog_sha256": "6e64675c2fef0f8a3a1730940dcee5ceaa9cc1c8354127ed8fe20a6486a745e6",
+      "dataset_ref": "mce-aegis@meta-harness-8123cca-v1",
+      "task_count": 668,
+      "lifecycle": "active",
+      "catalog_scope": "all-published-mce-configuration-splits",
+      "protocol_summary": "meta-harness-mce-native-per-record-v1",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [
+        "Task-assisted agent protocol with original scoring; no fixed-prompt or published-method score equivalence."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "test-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "One real Docker gold-answer/reference transport trial, reward 1; not model accuracy.",
+            "task_ids": [
+              "test-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "not_recorded",
+            "summary": "No recorded real execution for this exact configuration.",
+            "task_ids": [],
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "mgsm",
+      "version": "1.0-agent",
+      "catalog_sha256": "e9e58ffa6f459af08bdf7ec665b46cbe9175da0c0b36fdd98bcac09633dffdeb",
+      "dataset_ref": "google-research/url-nlp@452a21ad3dae5668c06ceeac21ff073e1e40f9be/mgsm",
+      "task_count": 2750,
+      "lifecycle": "active",
+      "catalog_scope": "complete-public-pinned-release",
+      "protocol_summary": "zero-shot-agent-numeric-answer",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [
+        "Task-assisted agent protocol with original scoring; no fixed-prompt or published-method score equivalence."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "en-001",
+              "zh-002"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "Completed real Harbor reference/scorer transport trials; reference does not imply optimal solutions.",
+            "task_ids": [
+              "en-001",
+              "zh-002"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "observed",
+            "summary": "Completed real Codex target trials; task failure rewards remain valid completed measurements.",
+            "task_ids": [
+              "en-001",
+              "zh-002"
+            ],
+            "evidence": [
+              "validation-expansion"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mmlu",
+      "version": "original-all-splits-v1",
+      "catalog_sha256": "e510e8725923a4836d6e70460176451b810712732124f91ff5e90b3a6c861ee6",
+      "dataset_ref": "mmlu@original-all-splits-v1",
+      "task_count": 115700,
+      "lifecycle": "active",
+      "catalog_scope": "all-public-original-splits",
+      "protocol_summary": "mmlu-agent-choice-5shot-heldout-v1",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [
+        "Task-assisted agent protocol with original scoring; no fixed-prompt or published-method score equivalence."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "test-abstract_algebra-00001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "One real Docker gold-answer/reference transport trial, reward 1; not model accuracy.",
+            "task_ids": [
+              "test-abstract_algebra-00001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "not_recorded",
+            "summary": "No recorded real execution for this exact configuration.",
+            "task_ids": [],
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "gpqa",
+      "version": "main-56686c0-v1",
+      "catalog_sha256": "f41b68eedc0e2e93053584416ad279531bcff0bf1b341939270a3df4cf9a1d5e",
+      "dataset_ref": "gpqa@main-56686c0-v1",
+      "task_count": 448,
+      "lifecycle": "active",
+      "catalog_scope": "complete-public-configuration",
+      "protocol_summary": "gpqa-agent-choice-seed0-v1",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [
+        "Task-assisted agent protocol with original scoring; no fixed-prompt or published-method score equivalence."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "main-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "One real Docker gold-answer/reference transport trial, reward 1; not model accuracy.",
+            "task_ids": [
+              "main-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "not_recorded",
+            "summary": "No recorded real execution for this exact configuration.",
+            "task_ids": [],
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "gpqa",
+      "version": "diamond-56686c0-v1",
+      "catalog_sha256": "d9a33e05239004299522f9c646ac810d44bb12a7b2e362340905d5c28e8221ec",
+      "dataset_ref": "gpqa@diamond-56686c0-v1",
+      "task_count": 198,
+      "lifecycle": "active",
+      "catalog_scope": "complete-public-configuration",
+      "protocol_summary": "gpqa-agent-choice-seed0-v1",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [
+        "Task-assisted agent protocol with original scoring; no fixed-prompt or published-method score equivalence."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "diamond-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "One real Docker gold-answer/reference transport trial, reward 1; not model accuracy.",
+            "task_ids": [
+              "diamond-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "not_recorded",
+            "summary": "No recorded real execution for this exact configuration.",
+            "task_ids": [],
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "gpqa",
+      "version": "extended-56686c0-v1",
+      "catalog_sha256": "503887dadff0fe199ae998196b732c7dbf824abdb98d1afa87bfa285d193c246",
+      "dataset_ref": "gpqa@extended-56686c0-v1",
+      "task_count": 546,
+      "lifecycle": "active",
+      "catalog_scope": "complete-public-configuration",
+      "protocol_summary": "gpqa-agent-choice-seed0-v1",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [
+        "Task-assisted agent protocol with original scoring; no fixed-prompt or published-method score equivalence."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "extended-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "One real Docker gold-answer/reference transport trial, reward 1; not model accuracy.",
+            "task_ids": [
+              "extended-0001"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "not_recorded",
+            "summary": "No recorded real execution for this exact configuration.",
+            "task_ids": [],
+            "evidence": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "arc-agi",
+      "version": "1-public-3990304-v1",
+      "catalog_sha256": "cc727375b9ca7fcdbbee7d318fcb2197a6db2f17975dac2d5e52205ef0104c51",
+      "dataset_ref": "arc-agi@1-public-3990304-v1",
+      "task_count": 800,
+      "lifecycle": "active",
+      "catalog_scope": "all-public-training-and-evaluation",
+      "protocol_summary": "arc-agi-1-exact-three-attempts-v1",
+      "reward_domain": "binary",
+      "prerequisites": [],
+      "limitations": [
+        "Task-assisted agent protocol with original scoring; no fixed-prompt or published-method score equivalence."
+      ],
+      "validation": {
+        "environment": [
+          {
+            "status": "observed",
+            "summary": "Real Harbor execution on these tasks; this does not cover unlisted task environments.",
+            "task_ids": [
+              "evaluation-00576224"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "reference": [
+          {
+            "status": "observed",
+            "summary": "One real Docker gold-answer/reference transport trial, reward 1; not model accuracy.",
+            "task_ids": [
+              "evaluation-00576224"
+            ],
+            "evidence": [
+              "validation-reasoning-mce-oracle"
+            ]
+          }
+        ],
+        "target": [
+          {
+            "status": "not_recorded",
+            "summary": "No recorded real execution for this exact configuration.",
+            "task_ids": [],
+            "evidence": []
+          }
+        ]
+      }
+    }
+  ]
+}

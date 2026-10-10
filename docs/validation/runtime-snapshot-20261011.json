@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "mode": "real-docker-synthetic-task",
+  "model_calls": 0,
+  "judge_calls": 0,
+  "same_images": true,
+  "removed_source_assets": true,
+  "changed_build_argument": true,
+  "rewards": [
+    1.0,
+    1.0
+  ],
+  "date": "2026-10-11",
+  "record": {
+    "path": ".runtime/runtime-snapshot-20261011-07/validation.json",
+    "sha256": "fd4712217270662c6613b775ea8281f54144807dd2716b1bb7a9e5c9e23c8905"
+  },
+  "snapshot_manifest": {
+    "path": ".runtime/runtime-snapshot-20261011-07/snapshot/runtime-snapshot.json",
+    "sha256": "5107fa453a85b566abded41d4e62734521df6c3d70e7c8135622a8ed27050efe"
+  },
+  "execution_identities": {
+    "initial": "342b5ca90b8fc3d7817fb02cd90d0a6ede97d962c8c0ab648c82ec7776b36a14",
+    "replay": "342b5ca90b8fc3d7817fb02cd90d0a6ede97d962c8c0ab648c82ec7776b36a14"
+  },
+  "prior_success": {
+    "status": "passed",
+    "mode": "real-docker-synthetic-task",
+    "model_calls": 0,
+    "judge_calls": 0,
+    "same_images": true,
+    "removed_source_assets": true,
+    "changed_build_argument": true,
+    "rewards": [
+      1.0,
+      1.0
+    ],
+    "date": "2026-10-11",
+    "record": {
+      "path": ".runtime/runtime-snapshot-20261011-06/validation.json",
+      "sha256": "b787597444b35c8db8c06b9223d57290316abe4e3a9d64aa080a277023a5daf4"
+    },
+    "snapshot_manifest": {
+      "path": ".runtime/runtime-snapshot-20261011-06/snapshot/runtime-snapshot.json",
+      "sha256": "27d32f37ed65deef1ea37699e609ae380183841cc45c462149ea4ae4cde72bdc"
+    },
+    "implementation": {
+      "src/rsi_eval/runtime_snapshot.py": "89383f462de97baf8506040fadfd6bfdb9e19281ad60e4dd4c937f871e900340",
+      "src/rsi_eval/runtime_docker.py": "332596a1212b01688f5d005dc93965f2d9c3b238b04fc1a865a8e897759c3043",
+      "scripts/validate_runtime_snapshot.py": "24e6c8f5dd2c6c9c6a29dfcbb652857795ea9c29016d17872c0e3e499cda84fa"
+    }
+  },
+  "scope_note": "This synthetic Docker proof preceded the final native Harbor task-name parsing correction. The separate registry-snapshot-20261011.json proof exercises that correction with the final implementation identity. The synthetic run source identity is recorded above, not inferred from current files."
+}

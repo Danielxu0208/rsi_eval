@@ -1,0 +1,77 @@
+{
+  "rubrics": [
+    {
+      "rubric": "Does the analysis correctly identify that the Dark Denim Top (INQ-003/SKU-007) has the highest return rate (8.2%) and lowest average rating (3.5) among all products, indicating a systemic quality issue?",
+      "weight": 6,
+      "criterion": [
+        "The response must identify SKU-007 (Dark Denim Top) as having an 8.2% return rate, which is the highest in the catalog, and a 3.5 average rating, which is the lowest in the catalog.",
+        "The response must compare these metrics against catalog averages (4.28% return rate, 4.25 rating) to demonstrate that SKU-007 is substantially worse than typical products.",
+        "The response must conclude that these metrics indicate a systemic quality problem rather than an isolated incident.",
+        "The response must explicitly cite these specific numbers from product_performance_Q4.csv as the data source."
+      ]
+    },
+    {
+      "rubric": "Does the analysis identify the Olive Green Jacket (SKU-016) as a high-risk product that shares similar concerning indicators with the escalated Dark Denim Top?",
+      "weight": 10,
+      "criterion": [
+        "The Product Risk Dashboard must identify SKU-016 (Olive Green Jacket) as a high-risk product based on its 7.1% return rate (second highest in catalog) and 3.7 average rating (second lowest).",
+        "The analysis must reference customer inquiry INQ-011 which specifically mentions color discrepancy between the website and actual product.",
+        "The response must identify this pattern as suggesting a potential listing/description accuracy problem, distinguishing it from a pure manufacturing quality issue."
+      ]
+    },
+    {
+      "rubric": "Does the analysis correctly identify the Striped Silk Blouse (SKU-005) as another at-risk product requiring attention based on elevated return rate and below-average rating?",
+      "weight": 6,
+      "criterion": [
+        "The Product Risk Dashboard must include SKU-005 (Striped Silk Blouse) with its 6.3% return rate (third highest in catalog) and 3.9 average rating (third lowest).",
+        "The response must note that this product shows a similar pattern to the problematic Dark Denim Top and warrants monitoring even though no escalated complaints exist."
+      ]
+    },
+    {
+      "rubric": "Does the customer response protocol for INQ-001 (Yellow Wool Jumper) correctly address the delivery issue with appropriate shipping resolution options rather than quality-related remediation?",
+      "weight": 6,
+      "criterion": [
+        "The response template must acknowledge the package delivery discrepancy and offer to investigate with the carrier.",
+        "The response template must provide options for replacement shipment or refund.",
+        "The response template must NOT mention product quality concerns, since the Yellow Wool Jumper has strong customer satisfaction metrics (4.5 rating)."
+      ]
+    },
+    {
+      "rubric": "Does the Supplier Quality Notice reference specific defect patterns from customer feedback related to the Dark Denim Top?",
+      "weight": 6,
+      "criterion": [
+        "The supplier communication must cite color fading after first wash as a specific quality issue reported for the Dark Denim Top (from INQ-003).",
+        "The supplier communication must cite tear/rip near the hem as a specific quality issue (from INQ-003).",
+        "The supplier communication must note that the product description mentions 'ripped hem effect' which may set incorrect customer expectations about intentional distressing vs. quality defects.",
+        "The Supplier Quality Notice must reference these specific feedback patterns rather than only stating generic quality concerns."
+      ]
+    },
+    {
+      "rubric": "Does the Supplier Quality Notice include quantitative evidence showing the Dark Denim Top's 8.2% return rate and 3.5 average rating compared to catalog benchmarks?",
+      "weight": 8,
+      "criterion": [
+        "The supplier communication must state the Dark Denim Top's 8.2% return rate and compare it to the catalog average of 4.28%.",
+        "The supplier communication must state the Dark Denim Top's 3.5 rating and compare it to the catalog average of 4.25.",
+        "The supplier communication must note unit sales of 178 units to establish sufficient sample size.",
+        "These numbers must be accurately extracted from product_performance_Q4.csv."
+      ]
+    },
+    {
+      "rubric": "Does the analysis cross-reference the Dark Denim Top product listing description with the quality complaint to identify potential expectation mismatch?",
+      "weight": 6,
+      "criterion": [
+        "The analysis must examine the Dark Denim Top listing from shopify_apparel_products.csv which describes 'a ripped hem effect' as a design feature.",
+        "The response must evaluate whether this description may contribute to customer confusion about intentional distressing versus actual quality defects when customers experience real tears.",
+        "The analysis should include a recommendation for listing content correction if warranted."
+      ]
+    },
+    {
+      "rubric": "Does the Product Risk Dashboard include a visualization element as specified in the task requirements?",
+      "weight": 10,
+      "criterion": [
+        "Sheet 3 of the Excel workbook must include some form of visualization (chart, conditional formatting, or graphical element) that displays risk indicators across products.",
+        "A simple data table alone without any visual element (such as a risk matrix chart, bar/column chart comparing return rates and ratings, or conditional color coding) is insufficient."
+      ]
+    }
+  ]
+}

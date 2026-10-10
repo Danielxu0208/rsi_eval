@@ -1,0 +1,33 @@
+## Task Description
+Radiomics involves extracting quantitative features from medical images. This task requires calculating statistical and texture features for pixels within a specific polygonal region of interest (ROI) inside a given image patch.
+
+**Given Data:**
+1.  **Image Patch Intensities** (as a 10x10 matrix representing tissue):
+    ```
+    [[15, 18, 20, 23, 26, 29, 32, 35, 38, 41],
+     [17, 20, 23, 26, 29, 32, 35, 38, 41, 44],
+     [19, 22, 25, 28, 31, 34, 37, 40, 43, 46],
+     [21, 24, 27, 30, 33, 36, 39, 42, 45, 48],
+     [23, 26, 29, 32, 35, 38, 41, 44, 47, 50],
+     [25, 28, 31, 34, 37, 40, 43, 46, 49, 52],
+     [27, 30, 33, 36, 39, 42, 45, 48, 51, 54],
+     [29, 32, 35, 38, 41, 44, 47, 50, 53, 56],
+     [31, 34, 37, 40, 43, 46, 49, 52, 55, 58],
+     [33, 36, 39, 42, 45, 48, 51, 54, 57, 60]]
+    ```
+2.  **Polygon ROI Vertices** (defining the boundary within the patch, using 0-based indexing where (0,0) is the top-left pixel):
+    `(2,2), (2,7), (7,7), (7,2)`
+    *(Note: These vertices define the boundary edges of the polygon)*
+
+**Your Task:**
+1.  Identify all pixel coordinates $(row, column)$ that lie strictly *inside* the polygon defined by the given vertices. (Assume integer coordinates represent pixel centers).
+2.  Extract the intensity values of these interior pixels.
+3.  Calculate the following **first-order statistics** for the extracted intensity values:
+    * Mean
+    * Variance (use sample variance, N-1 denominator)
+    * Skewness
+    * Kurtosis (Fisher's definition, i.e., excess kurtosis)
+4.  Construct the Gray-Level Co-occurrence Matrix (GLCM) for the *interior pixels only*, using horizontal adjacency (offset `[0, 1]`, distance=1, angle=0 degrees). Assume pixel intensities are used directly without quantization. The GLCM should only consider pairs where both pixels are inside the polygon. Normalize the GLCM so that its elements sum to 1.
+5.  Calculate the **Contrast** feature from the normalized GLCM using the formula: $Contrast = \sum_{i,j} |i-j|^2 p(i,j)$, where $p(i,j)$ is the normalized GLCM value at intensity level pair $(i,j)$.
+
+Report the calculated float values for Mean, Variance, Skewness, Kurtosis, and GLCM Contrast. Provide numerical results rounded to 4 decimal places.

@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-11",
+  "status": "passed",
+  "validation_kind": "real_docker_build_context_isolation",
+  "model_calls": 0,
+  "judge_calls": 0,
+  "docker_compose_version": "5.5.0",
+  "harbor_version": "0.18.0",
+  "guard_version": "rsi-context-v2",
+  "record": {
+    "path": ".runtime/compose-isolation-v2-delivery/result.json",
+    "sha256": "3024f251545c136abaecb724e75eeba03183d93165b0294576597d2a4e8ea6d7"
+  },
+  "cases": [
+    {
+      "marker": "alpha-bytes",
+      "actual": {
+        "identity": "alpha-bytes",
+        "additional": "alpha-bytes",
+        "runtime": "bound-original-runtime",
+        "env_file": "loaded-env-file",
+        "merged": "overlay",
+        "literal": "$unchanged"
+      },
+      "provenance": {
+        "guard_version": "rsi-context-v2",
+        "applied": true,
+        "status": "isolated",
+        "source_dir": ".runtime/compose-isolation-v2-delivery/case-0/task/environment",
+        "contexts": [
+          {
+            "service": "main",
+            "role": "context",
+            "source_dir": ".runtime/compose-isolation-v2-delivery/case-0/task/environment/worker",
+            "isolated_dir": ".runtime/compose-isolation-v2-delivery/case-0/trial/build-context/compose/context-7b91db7c0d97d624cf3ed0b80409ee300762cb8279079ee164d59fc7d0a8ace6",
+            "sha256": "7b91db7c0d97d624cf3ed0b80409ee300762cb8279079ee164d59fc7d0a8ace6"
+          },
+          {
+            "service": "main",
+            "role": "external_dockerfile",
+            "source_file": ".runtime/compose-isolation-v2-delivery/case-0/build.Dockerfile",
+            "isolated_file": ".runtime/compose-isolation-v2-delivery/case-0/trial/build-context/compose/dockerfile-400af99a92b3205415a1a7f3ab1867d68b34885a49513913ec1178fd844e2c94/build.Dockerfile",
+            "sha256": "400af99a92b3205415a1a7f3ab1867d68b34885a49513913ec1178fd844e2c94",
+            "copied_files": [
+              "build.Dockerfile"
+            ]
+          },
+          {
+            "service": "main",
+            "role": "additional:assets",
+            "source_dir": ".runtime/compose-isolation-v2-delivery/case-0/declared-extra",
+            "isolated_dir": ".runtime/compose-isolation-v2-delivery/case-0/trial/build-context/compose/context-00c6c0a527c64f5186255ae484a0cf3dc40decc3cc67042d75fabf2842dd5c05",
+            "sha256": "00c6c0a527c64f5186255ae484a0cf3dc40decc3cc67042d75fabf2842dd5c05"
+          }
+        ],
+        "runtime_paths": "preserved_from_docker_compose_config",
+        "compose_files": [
+          {
+            "path": ".runtime/harnessx-venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml",
+            "sha256": "e363cbb606a6a2b9781b8e7c26fb31a83140536d4d55c4a3cb937e3d176b762f"
+          },
+          {
+            "path": ".runtime/compose-isolation-v2-delivery/case-0/task/environment/docker-compose.yaml",
+            "sha256": "4cb34e8daac4282ed2030d0a3840a7e825390418a48425a883a4d79e419b4eaf"
+          },
+          {
+            "path": ".runtime/compose-isolation-v2-delivery/case-0/overlay.json",
+            "sha256": "c85bb53e96af9c632c46d570f67778289d4f70c97a882514526f43cb1bce612f"
+          }
+        ]
+      }
+    },
+    {
+      "marker": "bravo-bytes",
+      "actual": {
+        "identity": "bravo-bytes",
+        "additional": "bravo-bytes",
+        "runtime": "bound-original-runtime",
+        "env_file": "loaded-env-file",
+        "merged": "overlay",
+        "literal": "$unchanged"
+      },
+      "provenance": {
+        "guard_version": "rsi-context-v2",
+        "applied": true,
+        "status": "isolated",
+        "source_dir": ".runtime/compose-isolation-v2-delivery/case-1/task/environment",
+        "contexts": [
+          {
+            "service": "main",
+            "role": "context",
+            "source_dir": ".runtime/compose-isolation-v2-delivery/case-1/task/environment/worker",
+            "isolated_dir": ".runtime/compose-isolation-v2-delivery/case-1/trial/build-context/compose/context-3a7b0da2209fa3316b2b43539f6fb8e421f22fac740f879a72473aef5a02c26b",
+            "sha256": "3a7b0da2209fa3316b2b43539f6fb8e421f22fac740f879a72473aef5a02c26b"
+          },
+          {
+            "service": "main",
+            "role": "external_dockerfile",
+            "source_file": ".runtime/compose-isolation-v2-delivery/case-1/build.Dockerfile",
+            "isolated_file": ".runtime/compose-isolation-v2-delivery/case-1/trial/build-context/compose/dockerfile-400af99a92b3205415a1a7f3ab1867d68b34885a49513913ec1178fd844e2c94/build.Dockerfile",
+            "sha256": "400af99a92b3205415a1a7f3ab1867d68b34885a49513913ec1178fd844e2c94",
+            "copied_files": [
+              "build.Dockerfile"
+            ]
+          },
+          {
+            "service": "main",
+            "role": "additional:assets",
+            "source_dir": ".runtime/compose-isolation-v2-delivery/case-1/declared-extra",
+            "isolated_dir": ".runtime/compose-isolation-v2-delivery/case-1/trial/build-context/compose/context-fef7d89cc0b11332b204f933f5f093f5aad075b12a4961f20595c2b3388a2a9a",
+            "sha256": "fef7d89cc0b11332b204f933f5f093f5aad075b12a4961f20595c2b3388a2a9a"
+          }
+        ],
+        "runtime_paths": "preserved_from_docker_compose_config",
+        "compose_files": [
+          {
+            "path": ".runtime/harnessx-venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml",
+            "sha256": "e363cbb606a6a2b9781b8e7c26fb31a83140536d4d55c4a3cb937e3d176b762f"
+          },
+          {
+            "path": ".runtime/compose-isolation-v2-delivery/case-1/task/environment/docker-compose.yaml",
+            "sha256": "b9c038560955cfd667f8c1f4c02f8bbf9eea665000971eb9a487bd5a3c8936bc"
+          },
+          {
+            "path": ".runtime/compose-isolation-v2-delivery/case-1/overlay.json",
+            "sha256": "c85bb53e96af9c632c46d570f67778289d4f70c97a882514526f43cb1bce612f"
+          }
+        ]
+      }
+    }
+  ],
+  "checks": [
+    "same-size/same-mtime hidden bytes",
+    "external Dockerfile",
+    "additional context",
+    "extra Compose override",
+    "original runtime bind",
+    "env_file",
+    "literal dollar",
+    "cleanup",
+    "relative external Dockerfile path",
+    "relative additional context path",
+    "Compose deprecation warning kept separate from JSON"
+  ],
+  "offline": {
+    "passed": 18,
+    "log": ".runtime/compose-isolation-offline-final.log"
+  },
+  "limits": [
+    "No model calls or benchmark score claims.",
+    "Remote Git/URL build contexts and mutable additional image contexts fail explicitly.",
+    "Runtime environment values are not stored in context provenance; normalized Compose input exists only in a short-lived mode-0600 temporary file."
+  ],
+  "source_files": [
+    {
+      "path": "src/rsi_eval/compose_context.py",
+      "sha256": "ad97fac659d81ccbf9795b675be4081d647dd1893b2b16cdb468fdb108adab7b"
+    },
+    {
+      "path": "src/rsi_eval/harbor_docker.py",
+      "sha256": "2e402237ef6c5ac7d8984ed438855390dc93d96f6554861db641c0370c5b48cd"
+    },
+    {
+      "path": "scripts/validate_compose_isolation.py",
+      "sha256": "e4c35e2c2bc192b6f432c7ab8fb1626d35a4c9943fa9d9fc2996708bd33ca62b"
+    },
+    {
+      "path": "src/rsi_eval/runtime_snapshot.py",
+      "sha256": "5ba7f60b9099545fdf57a7366ec0788821110353f961a8f5f1174f83c2437e5a"
+    }
+  ],
+  "prior_attempt": {
+    "path": ".runtime/compose-isolation-v2",
+    "failure": "An initial implementation double-escaped literal dollars. The real container assertion caught it; normalization now retains Compose escaping."
+  },
+  "final_source_validation": {
+    "reason": "Repeated both real Compose cases after source-backed and Harbor registry runtime-image capture hooks were finalized.",
+    "prior_successes": [
+      {
+        "path": ".runtime/compose-isolation-v2-final/result.json",
+        "sha256": "20e732d5d83d34aebd0ea1f86adbe0e3eba645f9be95a4f2a1045181aa23e20f"
+      },
+      {
+        "path": ".runtime/compose-isolation-v2-final-closure/result.json",
+        "sha256": "04b8ae34f310e71b663a36498c0acb611a1ff36d3a1985af927d635308b94ab2"
+      }
+    ],
+    "current_success": {
+      "path": ".runtime/compose-isolation-v2-delivery/result.json",
+      "sha256": "3024f251545c136abaecb724e75eeba03183d93165b0294576597d2a4e8ea6d7"
+    }
+  }
+}

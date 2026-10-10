@@ -1,0 +1,97 @@
+# Tetris Block ROM Analysis
+
+## Background
+You are working with a hardware implementation of a Tetris game. The game uses a ROM (Read-Only Memory) to store the shapes of different Tetris blocks (tetrominoes) in various rotational states. Each tetromino is represented as a 4x4 grid of bits, where '1' indicates a filled cell and '0' indicates an empty cell.
+
+## Font ROM Data
+The ROM contains the following tetromino patterns:
+
+1. I-tetromino (straight piece):
+   - Rotation 0: [[0,0,0,0], [1,1,1,1], [0,0,0,0], [0,0,0,0]]
+   - Rotation 1: [[0,1,0,0], [0,1,0,0], [0,1,0,0], [0,1,0,0]]
+   - Rotation 2: [[0,0,0,0], [0,0,0,0], [1,1,1,1], [0,0,0,0]]
+   - Rotation 3: [[0,0,1,0], [0,0,1,0], [0,0,1,0], [0,0,1,0]]
+
+2. O-tetromino (square piece):
+   - Rotation 0: [[0,0,0,0], [0,1,1,0], [0,1,1,0], [0,0,0,0]]
+   - Rotation 1: [[0,0,0,0], [0,1,1,0], [0,1,1,0], [0,0,0,0]]
+   - Rotation 2: [[0,0,0,0], [0,1,1,0], [0,1,1,0], [0,0,0,0]]
+   - Rotation 3: [[0,0,0,0], [0,1,1,0], [0,1,1,0], [0,0,0,0]]
+
+3. T-tetromino:
+   - Rotation 0: [[0,0,0,0], [0,1,0,0], [1,1,1,0], [0,0,0,0]]
+   - Rotation 1: [[0,0,0,0], [0,1,0,0], [0,1,1,0], [0,1,0,0]]
+   - Rotation 2: [[0,0,0,0], [0,0,0,0], [1,1,1,0], [0,1,0,0]]
+   - Rotation 3: [[0,0,0,0], [0,1,0,0], [1,1,0,0], [0,1,0,0]]
+
+4. L-tetromino:
+   - Rotation 0: [[0,0,0,0], [0,0,1,0], [1,1,1,0], [0,0,0,0]]
+   - Rotation 1: [[0,0,0,0], [0,1,0,0], [0,1,0,0], [0,1,1,0]]
+   - Rotation 2: [[0,0,0,0], [0,0,0,0], [1,1,1,0], [1,0,0,0]]
+   - Rotation 3: [[0,0,0,0], [1,1,0,0], [0,1,0,0], [0,1,0,0]]
+
+5. J-tetromino:
+   - Rotation 0: [[0,0,0,0], [1,0,0,0], [1,1,1,0], [0,0,0,0]]
+   - Rotation 1: [[0,0,0,0], [0,1,1,0], [0,1,0,0], [0,1,0,0]]
+   - Rotation 2: [[0,0,0,0], [0,0,0,0], [1,1,1,0], [0,0,1,0]]
+   - Rotation 3: [[0,0,0,0], [0,1,0,0], [0,1,0,0], [1,1,0,0]]
+
+6. Z-tetromino:
+   - Rotation 0: [[0,0,0,0], [1,1,0,0], [0,1,1,0], [0,0,0,0]]
+   - Rotation 1: [[0,0,0,0], [0,0,1,0], [0,1,1,0], [0,1,0,0]]
+   - Rotation 2: [[0,0,0,0], [0,0,0,0], [1,1,0,0], [0,1,1,0]]
+   - Rotation 3: [[0,0,0,0], [0,1,0,0], [1,1,0,0], [1,0,0,0]]
+
+7. S-tetromino:
+   - Rotation 0: [[0,0,0,0], [0,1,1,0], [1,1,0,0], [0,0,0,0]]
+   - Rotation 1: [[0,0,0,0], [0,1,0,0], [0,1,1,0], [0,0,1,0]]
+   - Rotation 2: [[0,0,0,0], [0,0,0,0], [0,1,1,0], [1,1,0,0]]
+   - Rotation 3: [[0,0,0,0], [1,0,0,0], [1,1,0,0], [0,1,0,0]]
+
+## Task Description
+You are given a SystemVerilog module called `font_rom` that contains the ROM definitions for all seven standard Tetris pieces (I, O, T, L, J, Z, S) in their four possible rotational states. Your task is to:
+
+1. Analyze the ROM content to identify and extract specific tetromino shapes
+2. Generate visual representations of requested tetrominoes
+
+Please analyze the following tetromino:
+Tetromino: I
+Rotation: 1
+
+## Requirements
+1. Extract the bit pattern for a specified tetromino and rotation
+2. Convert the bit pattern to a visual representation using characters (e.g., '#' for filled cells, '.' for empty cells)
+
+## Input Format
+- Tetromino type: specified as a string ('I', 'O', 'T', 'L', 'J', 'Z', 'S')
+- Rotation: specified as an integer (0, 1, 2, 3) representing the rotational state
+
+## Output Format
+Your solution should provide:
+1. The extracted bit pattern as a 4x4 grid
+2. A visual representation of the pattern
+
+## Example Response
+
+Input: Z-tetromino, Rotation 0
+
+Output :
+  "config": {
+    "tetromino_type": "Z",
+    "rotation": 0
+  },
+  "tetromino_pattern": {
+    "bit_grid": [
+      [0, 0, 0, 0],
+      [1, 1, 0, 0],
+      [0, 1, 1, 0],
+      [0, 0, 0, 0]
+    ],
+    "visual": [
+      "....",
+      "##..",
+      ".##.",
+      "...."
+    ]
+  }
+}

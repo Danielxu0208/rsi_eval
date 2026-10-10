@@ -1,0 +1,752 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-10T07:45:55.209561+00:00",
+  "status": "cpu_runtime_validation_complete_gpu_validation_blocked",
+  "scope": "Every public task in the declared pinned profiles; no full model experiment or paper reproduction.",
+  "profiles": [
+    {
+      "name": "terminal-bench",
+      "version": "2.0",
+      "task_count": 89,
+      "lifecycle": "active",
+      "dataset_ref": "sha256:c6fc2e2382c1dbae99b2d5ecd2f4f4a60c3c01e0d84642d69b4afd92e99d078b"
+    },
+    {
+      "name": "terminal-bench",
+      "version": "2.1",
+      "task_count": 89,
+      "lifecycle": "active",
+      "dataset_ref": "sha256:7d7bdc1cbedad549fc1140404bd4dc45e5fd0ea7c4186773687d177ad3a0699a"
+    },
+    {
+      "name": "swe-bench-verified",
+      "version": "1",
+      "task_count": 500,
+      "lifecycle": "active",
+      "dataset_ref": "sha256:b934b0cc3dc800fe945eaf9f1623329db97ee3133c706d20644524c7759fb341"
+    },
+    {
+      "name": "drop",
+      "version": "1.0-agent",
+      "task_count": 86945,
+      "lifecycle": "active",
+      "dataset_ref": "allenai/drop@sha256:39d2278a29fd729de301b111a45f434c24834f40df8f4ff116d864589e3249d6"
+    },
+    {
+      "name": "engdesign-open",
+      "version": "open-subset-c8ec338-v1",
+      "task_count": 2,
+      "lifecycle": "legacy-subset",
+      "dataset_ref": "git:c8ec338cc5f846d792d93728b00c9448111139e5"
+    },
+    {
+      "name": "engdesign-open",
+      "version": "open-c8ec338-v1",
+      "task_count": 67,
+      "lifecycle": "active",
+      "dataset_ref": "git:c8ec338cc5f846d792d93728b00c9448111139e5"
+    },
+    {
+      "name": "frontier-eng",
+      "version": "cpu-subset-bafa7d5-v1",
+      "task_count": 2,
+      "lifecycle": "legacy-subset",
+      "dataset_ref": "git:bafa7d53162a3b1f128fec396bbde22fe972bf24"
+    },
+    {
+      "name": "frontier-eng",
+      "version": "v1-bafa7d5",
+      "task_count": 48,
+      "lifecycle": "active",
+      "dataset_ref": "git:bafa7d53162a3b1f128fec396bbde22fe972bf24"
+    },
+    {
+      "name": "aider-polyglot",
+      "version": "1.0-harbor",
+      "task_count": 225,
+      "lifecycle": "active",
+      "dataset_ref": "sha256:01e28d85e46beae5b7e29a29f57cb49d882b5486583d52cec4ee5bf3540a1c84"
+    },
+    {
+      "name": "swe-bench-multilingual",
+      "version": "1.0-harbor",
+      "task_count": 300,
+      "lifecycle": "active",
+      "dataset_ref": "manifest-sha256:3f6a80369441bf976d4467c6f371d1e75836795ed5d15a41f4a4473eb0e9ed23"
+    },
+    {
+      "name": "swe-bench-pro",
+      "version": "1.0-harbor",
+      "task_count": 731,
+      "lifecycle": "active",
+      "dataset_ref": "sha256:88411d32ff27e53a4c1a7e29f0c2aeba180c8e5d60f221cab5ed56325f33549d"
+    },
+    {
+      "name": "livecodebench",
+      "version": "release_v1",
+      "task_count": 400,
+      "lifecycle": "active",
+      "dataset_ref": "hf:livecodebench/code_generation_lite@0fe84c3912ea0c4d4a78037083943e8f0c4dd505:release_v1"
+    },
+    {
+      "name": "mgsm",
+      "version": "1.0-agent",
+      "task_count": 2750,
+      "lifecycle": "active",
+      "dataset_ref": "google-research/url-nlp@452a21ad3dae5668c06ceeac21ff073e1e40f9be/mgsm"
+    }
+  ],
+  "source_audit": {
+    "path": "docs/coverage-audit-other.json",
+    "sha256": "0ae74e09eef4b224a77975f8f6cd2288a1fa3ccfc752d0a71da6f2b697e5ad98"
+  },
+  "engdesign_native_audit": {
+    "path": "docs/data/engdesign-native-validation.json",
+    "sha256": "16bbb13a781ed7a680320d6af716ba3845af295d3cd249c4a09fb7b580599c4b",
+    "native_completed": 67,
+    "model_calls": 0
+  },
+  "frontier_native_audit": {
+    "path": "docs/frontier-full-coverage.json",
+    "sha256": "494042705333053eef892f1792577e791b3f717ab8b668a8df5e97f1afc4a8a5",
+    "counts": {
+      "native_completed": 40,
+      "native_completed_with_invalid_seed": 1,
+      "completed": 3,
+      "hardware_prerequisite_unavailable": 4
+    }
+  },
+  "gpu_dependency_audit": {
+    "path": "docs/data/frontier-gpu-dependency-validation.json",
+    "sha256": "0d69dbe31f063fc607e2ac4729941fb45a438038889a649c0959f134f65b40c1"
+  },
+  "small_end_to_end_runs": [
+    {
+      "evidence": {
+        "path": "runs/full-coverage-engdesign-oracle-01/result.json",
+        "sha256": "e0c91fc685ba4b0bce110589cb506b2858bf592e5bf0a3693f1d22fd8f07d2c6"
+      },
+      "benchmark": "engdesign-open",
+      "version": "open-c8ec338-v1",
+      "selection": "subset",
+      "target_entrypoint": "oracle",
+      "model": null,
+      "codex_version": null,
+      "reasoning_effort": null,
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "runtime_options": {},
+      "usage": {
+        "elapsed_seconds": 52.099799250019714,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "AB_01",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0,
+            "native_score": 100.0,
+            "confidence": 100.0
+          },
+          "error": null,
+          "verifier_evidence": {
+            "path": "runs/full-coverage-engdesign-oracle-01/native/eval/engdesign-ab-01__2JzFc5R/verifier/verdict.json",
+            "sha256": "cf5aa4c97786a447aa017fab31a098eda6e9b9150d4288454544ca64a4a0e436"
+          },
+          "native_status": "graded",
+          "native_completed": true
+        },
+        {
+          "task_id": "XY_01",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0,
+            "native_score": 100.0,
+            "confidence": 100.0
+          },
+          "error": null,
+          "verifier_evidence": {
+            "path": "runs/full-coverage-engdesign-oracle-01/native/eval/engdesign-xy-01__Lp2q4B3/verifier/verdict.json",
+            "sha256": "4eed58f396ce689d9dcc7425d04abd222db9b24338fdd0c07c6ee28824667bed"
+          },
+          "native_status": "graded",
+          "native_completed": true
+        }
+      ]
+    },
+    {
+      "evidence": {
+        "path": "runs/full-coverage-engdesign-codex-01/result.json",
+        "sha256": "5fc8e0d317f019e171d83d0b3e43bafd95b6c183715f2ba5b569f2d8fd7cd436"
+      },
+      "benchmark": "engdesign-open",
+      "version": "open-c8ec338-v1",
+      "selection": "subset",
+      "target_entrypoint": "rsi_eval.harbor_codex:Agent",
+      "model": "gpt-6-astra",
+      "codex_version": "0.162.0-alpha.2",
+      "reasoning_effort": "medium",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "runtime_options": {},
+      "usage": {
+        "elapsed_seconds": 63.87488091690466,
+        "cost_usd": null,
+        "cost_basis": "subscription_unknown",
+        "input_tokens": 42127,
+        "observed_input_tokens": 42127,
+        "output_tokens": 690,
+        "observed_output_tokens": 690,
+        "cached_input_tokens": 35328,
+        "observed_cached_input_tokens": 35328
+      },
+      "trials": [
+        {
+          "task_id": "XY_01",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0,
+            "native_score": 100.0,
+            "confidence": 100.0
+          },
+          "error": null,
+          "verifier_evidence": {
+            "path": "runs/full-coverage-engdesign-codex-01/native/eval/engdesign-xy-01__kRCoLUJ/verifier/verdict.json",
+            "sha256": "0e3f2665b3b0e34d8773be9979ef73d581669ddcd3d7c549eda26acce725f93f"
+          },
+          "native_status": "graded",
+          "native_completed": true
+        }
+      ]
+    },
+    {
+      "evidence": {
+        "path": "runs/full-coverage-frontier-oracle-03/result.json",
+        "sha256": "910a0af78821963380ec31b67e875f520734d2d74a87fde2b2bc0d98c9c79cc0"
+      },
+      "benchmark": "frontier-eng",
+      "version": "v1-bafa7d5",
+      "selection": "subset",
+      "target_entrypoint": "oracle",
+      "model": null,
+      "codex_version": null,
+      "reasoning_effort": null,
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "runtime_options": {
+        "platform": "linux/arm64",
+        "memory_mb": 4096
+      },
+      "usage": {
+        "elapsed_seconds": 90.65150808310136,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "EnergyStorage/BatteryFastChargingProfile",
+          "status": "completed",
+          "reward": 71.28056205398363,
+          "metrics": {
+            "combined_score": 71.28056205398363,
+            "valid": 1.0,
+            "timeout": 0.0,
+            "runtime_s": 0.08581304550170898,
+            "timeout_budget_s": 300.0,
+            "benchmark_returncode": 0.0,
+            "charge_time_s": 1030.0,
+            "max_temp_c": 26.773809817842665,
+            "max_voltage_v": 4.039859869826093,
+            "plating_loss_ah": 0.0,
+            "aging_loss_ah": 5.889127318490884e-06,
+            "throughput_ah": 2.1050416666666525,
+            "time_score": 0.4256377414503114,
+            "degradation_score": 0.9999469992587225,
+            "thermal_score": 1.0,
+            "voltage_score": 1.0,
+            "soft_temp_violation": 0.0,
+            "soft_voltage_violation": 0.0,
+            "reward": 71.28056205398363,
+            "native_score": 71.28056205398363,
+            "candidate_calls": 1,
+            "feedback_calls": 0,
+            "candidate_budget": 100
+          },
+          "error": null,
+          "verifier_evidence": {
+            "path": "runs/full-coverage-frontier-oracle-03/native/eval/frontier-v1-energystorage-batter__Qk6Buvb/verifier/frontier.json",
+            "sha256": "7f0de52a243ff7b118ffd7ae260990fb644cc1adf014694754516a9ea1cca455"
+          },
+          "protocol_audit": {
+            "candidate_calls": 1,
+            "feedback_calls": 0,
+            "baseline_evaluations": 1,
+            "final_verification_evaluations": 1,
+            "best_index": 0
+          },
+          "candidate_records": [
+            {
+              "kind": "baseline",
+              "candidate_sha256": "fae9f81e7465a2def7010cdaaa90fdc87a0f5d51ec2d4b3cc7d3dfc3910d6a32",
+              "status": "graded"
+            },
+            {
+              "kind": "final",
+              "candidate_sha256": "fae9f81e7465a2def7010cdaaa90fdc87a0f5d51ec2d4b3cc7d3dfc3910d6a32",
+              "status": "graded"
+            }
+          ]
+        },
+        {
+          "task_id": "InventoryOptimization/joint_replenishment",
+          "status": "completed",
+          "reward": 0.3034231848949367,
+          "metrics": {
+            "combined_score": 0.3034231848949367,
+            "valid": 1.0,
+            "timeout": 0.0,
+            "runtime_s": 0.3078882694244385,
+            "timeout_budget_s": 300.0,
+            "benchmark_returncode": 0.0,
+            "eval_returncode": 0.0,
+            "candidate_score": 0.3034231848949367,
+            "reference_score": 0.8243922787656859,
+            "gap_to_reference": 0.5209690938707492,
+            "reward": 0.3034231848949367,
+            "native_score": 0.3034231848949367,
+            "candidate_calls": 1,
+            "feedback_calls": 0,
+            "candidate_budget": 100
+          },
+          "error": null,
+          "verifier_evidence": {
+            "path": "runs/full-coverage-frontier-oracle-03/native/eval/frontier-v1-inventoryoptimizatio__wLd8bwM/verifier/frontier.json",
+            "sha256": "c14182068be1d4f89d8586c2cf70e1843c5045964ce3de30108925ccbf023d93"
+          },
+          "protocol_audit": {
+            "candidate_calls": 1,
+            "feedback_calls": 0,
+            "baseline_evaluations": 1,
+            "final_verification_evaluations": 1,
+            "best_index": 0
+          },
+          "candidate_records": [
+            {
+              "kind": "baseline",
+              "candidate_sha256": "e2778ef35913b6d413caece2e3715a7d16a04e043136dd44c8bbd0ac0b8220ce",
+              "status": "graded"
+            },
+            {
+              "kind": "final",
+              "candidate_sha256": "e2778ef35913b6d413caece2e3715a7d16a04e043136dd44c8bbd0ac0b8220ce",
+              "status": "graded"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "evidence": {
+        "path": "runs/full-coverage-frontier-codex-01/result.json",
+        "sha256": "9df87fcc1d5ecbcf775ee87c537bc264b253312b7761e494ae825d61255a2798"
+      },
+      "benchmark": "frontier-eng",
+      "version": "v1-bafa7d5",
+      "selection": "subset",
+      "target_entrypoint": "rsi_eval.harbor_codex:Agent",
+      "model": "gpt-6-astra",
+      "codex_version": "0.162.0-alpha.2",
+      "reasoning_effort": "medium",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "runtime_options": {
+        "platform": "linux/arm64",
+        "memory_mb": 4096,
+        "agent_timeout_sec": 600
+      },
+      "usage": {
+        "elapsed_seconds": 183.70385691709816,
+        "cost_usd": null,
+        "cost_basis": "subscription_unknown",
+        "input_tokens": 319835,
+        "observed_input_tokens": 319835,
+        "output_tokens": 4578,
+        "observed_output_tokens": 4578,
+        "cached_input_tokens": 292224,
+        "observed_cached_input_tokens": 292224
+      },
+      "trials": [
+        {
+          "task_id": "EnergyStorage/BatteryFastChargingProfile",
+          "status": "completed",
+          "reward": 121.99130299451065,
+          "metrics": {
+            "combined_score": 121.99130299451065,
+            "valid": 1.0,
+            "timeout": 0.0,
+            "runtime_s": 0.08416867256164551,
+            "timeout_budget_s": 300.0,
+            "benchmark_returncode": 0.0,
+            "charge_time_s": 445.0,
+            "max_temp_c": 29.389270649380027,
+            "max_voltage_v": 4.199999878279448,
+            "plating_loss_ah": 8.264331441586264e-06,
+            "aging_loss_ah": 3.915559793469914e-06,
+            "throughput_ah": 2.1123063416666548,
+            "time_score": 1.439913919006408,
+            "degradation_score": 0.9998242817676092,
+            "thermal_score": 1.0,
+            "voltage_score": 1.0,
+            "soft_temp_violation": 0.0,
+            "soft_voltage_violation": 0.0,
+            "reward": 121.99130299451065,
+            "native_score": 121.99130299451065,
+            "candidate_calls": 3,
+            "feedback_calls": 2,
+            "candidate_budget": 100
+          },
+          "error": null,
+          "verifier_evidence": {
+            "path": "runs/full-coverage-frontier-codex-01/native/eval/frontier-v1-energystorage-batter__GbfgZ84/verifier/frontier.json",
+            "sha256": "93a06974b49d7d707ebeacd809a08571c1682b7e5a3787a66e4e25b625e17bf1"
+          },
+          "protocol_audit": {
+            "candidate_calls": 3,
+            "feedback_calls": 2,
+            "baseline_evaluations": 1,
+            "final_verification_evaluations": 1,
+            "best_index": 2
+          },
+          "candidate_records": [
+            {
+              "kind": "baseline",
+              "candidate_sha256": "fae9f81e7465a2def7010cdaaa90fdc87a0f5d51ec2d4b3cc7d3dfc3910d6a32",
+              "status": "graded"
+            },
+            {
+              "kind": "feedback",
+              "candidate_sha256": "642d503cc6a0cb275227ddd5515a549d8de4a52e46f105e81bd248b2cd8f9557",
+              "status": "graded"
+            },
+            {
+              "kind": "feedback",
+              "candidate_sha256": "42a545cd73c4c1c706eeb42975ff38a01a5a337d532c5c45fdbd1c226c45828b",
+              "status": "graded"
+            },
+            {
+              "kind": "final",
+              "candidate_sha256": "42a545cd73c4c1c706eeb42975ff38a01a5a337d532c5c45fdbd1c226c45828b",
+              "status": "graded"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "evidence": {
+        "path": "runs/full-coverage-malloc-oracle-01/result.json",
+        "sha256": "28e90441203f300b66b8480f138c1e165fd20f000a8fcf224caac9724f1a67c6"
+      },
+      "benchmark": "frontier-eng",
+      "version": "v1-bafa7d5",
+      "selection": "subset",
+      "target_entrypoint": "oracle",
+      "model": null,
+      "codex_version": null,
+      "reasoning_effort": null,
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "runtime_options": {
+        "platform": "linux/amd64",
+        "memory_mb": 4096,
+        "cpus": 2,
+        "build_timeout_sec": 1800
+      },
+      "usage": {
+        "elapsed_seconds": 202.08865483407862,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "ComputerSystems/MallocLab",
+          "status": "completed",
+          "reward": 28.145172775318017,
+          "metrics": {
+            "combined_score": 28.145172775318017,
+            "valid": 1.0,
+            "timeout": 0.0,
+            "runtime_s": 4.3699517250061035,
+            "timeout_budget_s": 300.0,
+            "benchmark_returncode": 0.0,
+            "score_100": 28.145172775318017,
+            "score_ratio": 0.28145172775318017,
+            "testcases_passed": 6.0,
+            "testcases_total": 11.0,
+            "testcase_pass_rate": 0.5454545454545454,
+            "errors": 5.0,
+            "util_points": 11.599483421416364,
+            "thru_points": 40.0,
+            "throughput_ops_s": 13978188.774354903,
+            "allocator_runtime_s": 0.004261639398467,
+            "isolated_candidate": 1.0,
+            "reward": 28.145172775318017,
+            "native_score": 28.145172775318017,
+            "candidate_calls": 1,
+            "feedback_calls": 0,
+            "candidate_budget": 100
+          },
+          "error": null,
+          "verifier_evidence": {
+            "path": "runs/full-coverage-malloc-oracle-01/native/eval/frontier-v1-computersystems-mall__87Q9An4/verifier/frontier.json",
+            "sha256": "4e40665ee193170fa847485414be026f645b83754a3331bb097702c5aed468e1"
+          },
+          "protocol_audit": {
+            "candidate_calls": 1,
+            "feedback_calls": 0,
+            "baseline_evaluations": 1,
+            "final_verification_evaluations": 1,
+            "best_index": 0
+          },
+          "candidate_records": [
+            {
+              "kind": "baseline",
+              "candidate_sha256": "7b711c5f3a384ddd8588772568854a1915dc56557b5e4cbac30db229a42040c0",
+              "status": "graded"
+            },
+            {
+              "kind": "final",
+              "candidate_sha256": "7b711c5f3a384ddd8588772568854a1915dc56557b5e4cbac30db229a42040c0",
+              "status": "graded"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "evidence": {
+        "path": "runs/full-coverage-frontier-oracle-04/result.json",
+        "sha256": "cc83f89f4998346ff5b38d0596e84f4ffb2eb3b8aab64f7eea052d09df9643fe"
+      },
+      "benchmark": "frontier-eng",
+      "version": "v1-bafa7d5",
+      "selection": "subset",
+      "target_entrypoint": "oracle",
+      "model": null,
+      "codex_version": null,
+      "reasoning_effort": null,
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "runtime_options": {
+        "platform": "linux/arm64",
+        "memory_mb": 4096
+      },
+      "usage": {
+        "elapsed_seconds": 92.07395004178397,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "EnergyStorage/BatteryFastChargingProfile",
+          "status": "completed",
+          "reward": 71.28056205398363,
+          "metrics": {
+            "combined_score": 71.28056205398363,
+            "valid": 1.0,
+            "timeout": 0.0,
+            "runtime_s": 0.10053062438964844,
+            "timeout_budget_s": 300.0,
+            "benchmark_returncode": 0.0,
+            "charge_time_s": 1030.0,
+            "max_temp_c": 26.773809817842665,
+            "max_voltage_v": 4.039859869826093,
+            "plating_loss_ah": 0.0,
+            "aging_loss_ah": 5.889127318490884e-06,
+            "throughput_ah": 2.1050416666666525,
+            "time_score": 0.4256377414503114,
+            "degradation_score": 0.9999469992587225,
+            "thermal_score": 1.0,
+            "voltage_score": 1.0,
+            "soft_temp_violation": 0.0,
+            "soft_voltage_violation": 0.0,
+            "reward": 71.28056205398363,
+            "native_score": 71.28056205398363,
+            "candidate_calls": 1,
+            "feedback_calls": 0,
+            "candidate_budget": 100
+          },
+          "error": null,
+          "verifier_evidence": {
+            "path": "runs/full-coverage-frontier-oracle-04/native/eval/frontier-v1-energystorage-batter__f6nyqXK/verifier/frontier.json",
+            "sha256": "ce7e9260680f0774b46e7de434ec7b1cfcc5ba6cddd153e14cd1446d6e62fdbc"
+          },
+          "protocol_audit": {
+            "candidate_calls": 1,
+            "feedback_calls": 0,
+            "baseline_evaluations": 1,
+            "final_verification_evaluations": 1,
+            "best_index": 0
+          },
+          "candidate_records": [
+            {
+              "kind": "baseline",
+              "candidate_sha256": "fae9f81e7465a2def7010cdaaa90fdc87a0f5d51ec2d4b3cc7d3dfc3910d6a32",
+              "status": "graded"
+            },
+            {
+              "kind": "final",
+              "candidate_sha256": "fae9f81e7465a2def7010cdaaa90fdc87a0f5d51ec2d4b3cc7d3dfc3910d6a32",
+              "status": "graded"
+            }
+          ]
+        },
+        {
+          "task_id": "InventoryOptimization/joint_replenishment",
+          "status": "completed",
+          "reward": 0.3034231848949367,
+          "metrics": {
+            "combined_score": 0.3034231848949367,
+            "valid": 1.0,
+            "timeout": 0.0,
+            "runtime_s": 0.29549217224121094,
+            "timeout_budget_s": 300.0,
+            "benchmark_returncode": 0.0,
+            "eval_returncode": 0.0,
+            "candidate_score": 0.3034231848949367,
+            "reference_score": 0.8243922787656859,
+            "gap_to_reference": 0.5209690938707492,
+            "reward": 0.3034231848949367,
+            "native_score": 0.3034231848949367,
+            "candidate_calls": 1,
+            "feedback_calls": 0,
+            "candidate_budget": 100
+          },
+          "error": null,
+          "verifier_evidence": {
+            "path": "runs/full-coverage-frontier-oracle-04/native/eval/frontier-v1-inventoryoptimizatio__n75v4tv/verifier/frontier.json",
+            "sha256": "a5e9b036d794bef21064ff0f9360d0689281459e2960e0baa9d30fe9d2496f98"
+          },
+          "protocol_audit": {
+            "candidate_calls": 1,
+            "feedback_calls": 0,
+            "baseline_evaluations": 1,
+            "final_verification_evaluations": 1,
+            "best_index": 0
+          },
+          "candidate_records": [
+            {
+              "kind": "baseline",
+              "candidate_sha256": "e2778ef35913b6d413caece2e3715a7d16a04e043136dd44c8bbd0ac0b8220ce",
+              "status": "graded"
+            },
+            {
+              "kind": "final",
+              "candidate_sha256": "e2778ef35913b6d413caece2e3715a7d16a04e043136dd44c8bbd0ac0b8220ce",
+              "status": "graded"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "codex_cli_calls_in_this_coverage_audit": 2,
+  "subscription_cost_usd": null,
+  "rejected_acceptance_runs": [
+    {
+      "path": "runs/full-coverage-frontier-oracle-01/result.json",
+      "sha256": "109745d853eb4649e99580a7ed4c516bac1c4638a264a3bab19f8404dcd04881",
+      "reason": "Optional native transport discarded metrics/artifacts; repaired and rerun."
+    },
+    {
+      "path": "runs/full-coverage-frontier-oracle-02/result.json",
+      "sha256": "84ce7866e48bf93d6f592a52a75f9bb760749360aefe635487074daf0db49191",
+      "reason": "Native scorer hid nested namespace failure as graded zero measurements. The run's completed flag is not accepted; repaired and rerun."
+    }
+  ],
+  "hardware_evidence": [
+    {
+      "path": ".runtime/full-coverage/hardware-probes.json",
+      "sha256": "95125677c00471f960a44493a16f665071a7b3b0301409420572ea46f5c5b8df"
+    },
+    {
+      "path": ".runtime/full-coverage/amd64-probe/result.json",
+      "sha256": "342020dbe9d62183cdd1bd78903090d234ba2e53141bcefa2051f05dedd74cfe"
+    }
+  ],
+  "no_benchmarks_removed": true,
+  "coverage_limits": [
+    "All public tasks of the 11 active pinned profiles are exposed; two legacy subset profiles remain labeled separately.",
+    "The nine earlier profiles were audited against their complete source releases; this is not a fresh runtime check of every task image.",
+    "All 67 EngDesign native graders executed. Candidate verdicts can legitimately fail.",
+    "All 44 Frontier CPU native graders executed; 43 seeds valid and one native Quantum seed below the original fidelity threshold.",
+    "Four Frontier NVIDIA CUDA tasks have complete routes but lack GPU runtime validation on the current Mac; dependency checks alone are insufficient.",
+    "Recorded native runs retain their actual runtime snapshots; not every image was rebuilt after each compatibility fix.",
+    "No full model scoring experiment or paper-score reproduction was attempted."
+  ],
+  "remaining_tasks": [
+    {
+      "task_id": "Aerodynamics/CarAerodynamicsSensing",
+      "reason": "The current Docker daemon is Linux/aarch64 and has no NVIDIA GPU/CDI runtime. An actual docker run --gpus all probe failed with exit 125 and no known GPU vendor found. Native CUDA execution requires an NVIDIA-enabled Linux/amd64 runtime; dependency audits are recorded separately.",
+      "status": "hardware_prerequisite_unavailable",
+      "next_step": "Install the original native environment and assets on NVIDIA-enabled amd64 Docker; run the native seed through the adapter."
+    },
+    {
+      "task_id": "KernelEngineering/MLA",
+      "reason": "The current Docker daemon is Linux/aarch64 and has no NVIDIA GPU/CDI runtime. An actual docker run --gpus all probe failed with exit 125 and no known GPU vendor found. Native CUDA execution requires an NVIDIA-enabled Linux/amd64 runtime; dependency audits are recorded separately.",
+      "status": "hardware_prerequisite_unavailable",
+      "next_step": "Install the original native environment and assets on NVIDIA-enabled amd64 Docker; run the native seed through the adapter."
+    },
+    {
+      "task_id": "KernelEngineering/TriMul",
+      "reason": "The current Docker daemon is Linux/aarch64 and has no NVIDIA GPU/CDI runtime. An actual docker run --gpus all probe failed with exit 125 and no known GPU vendor found. Native CUDA execution requires an NVIDIA-enabled Linux/amd64 runtime; dependency audits are recorded separately.",
+      "status": "hardware_prerequisite_unavailable",
+      "next_step": "Install the original native environment and assets on NVIDIA-enabled amd64 Docker; run the native seed through the adapter."
+    },
+    {
+      "task_id": "KernelEngineering/FlashAttention",
+      "reason": "The current Docker daemon is Linux/aarch64 and has no NVIDIA GPU/CDI runtime. An actual docker run --gpus all probe failed with exit 125 and no known GPU vendor found. Native CUDA execution requires an NVIDIA-enabled Linux/amd64 runtime; dependency audits are recorded separately.",
+      "status": "hardware_prerequisite_unavailable",
+      "next_step": "Install the original native environment and assets on NVIDIA-enabled amd64 Docker; run the native seed through the adapter."
+    }
+  ],
+  "offline_regression": {
+    "command": ".venv/bin/python -m pytest -q",
+    "evidence": {
+      "path": ".runtime/full-coverage/pytest-final.log",
+      "sha256": "2310fa56661d41ce927fa38a0b31a94679a3c14fe70bcfd58ebfd1935bb1403f"
+    },
+    "summary": "366 passed, 2 skipped, 4 subtests passed in 17.71s",
+    "supplementary_scientific_tests": {
+      "evidence": {
+        "path": ".runtime/full-coverage/pytest-scientific-final.log",
+        "sha256": "23e497488152428cb7a8ffeb717e1c2388b88912d2007542b86de5f7a4e98de3"
+      },
+      "summary": "2 passed in 2.25s",
+      "reason": "Execute both optional scientific native regressions skipped in the main development environment."
+    }
+  }
+}

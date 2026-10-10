@@ -1,0 +1,86 @@
+{
+  "rubrics": [
+    {
+      "rubric": "Does the response present a complete April 30, 2012 bank reconciliation that ties both sides to the same adjusted cash balance?",
+      "weight": 10,
+      "criterion": [
+        "States the April 30 bank statement ending balance as $2,441.50.",
+        "States the April 30 book balance as $1,621.50.",
+        "Shows both adjusted balances at $1,881.50."
+      ]
+    },
+    {
+      "rubric": "Does the response identify the 27-Apr check 0004 for $350 as an outstanding check on the bank side?",
+      "weight": 9,
+      "criterion": [
+        "References the 27-Apr ledger entry for check 0004 to Marketing for $350.",
+        "Notes that no matching $350 check clearance appears on the April bank statement.",
+        "Classifies the item as a timing difference or open reconciling item rather than a book correction."
+      ]
+    },
+    {
+      "rubric": "Does the response detect and correct the duplicate 8-Apr Office Supplies check posting for $350?",
+      "weight": 9,
+      "criterion": [
+        "Identifies that the ledger contains two 8-Apr Office Supplies entries for check 003 at $350 each.",
+        "Notes that the bank statement shows only one $350 check clearing on 8 Apr.",
+        "Treats one $350 book entry as a duplicate posting that should be reversed or added back to cash."
+      ]
+    },
+    {
+      "rubric": "Does the response reverse the 8-Apr $55 Local Grocers cash purchase from the bank-account books?",
+      "weight": 8,
+      "criterion": [
+        "Identifies the 8-Apr Local Grocers entry for $55 in Kitchen Supplies.",
+        "Explains that the separate $200 ATM withdrawal already captured the bank-side cash reduction.",
+        "Adds $55 back to the bank-account books or proposes an equivalent reversing entry."
+      ]
+    },
+    {
+      "rubric": "Does the response reverse the 21-Apr $90 Great Glass Cleaners cash purchase from the bank-account books?",
+      "weight": 8,
+      "criterion": [
+        "Identifies the 21-Apr Great Glass Cleaners entry for $90 in Cleaning.",
+        "Notes that no separate $90 bank transaction appears on the April bank statement.",
+        "Adds $90 back to the bank-account books or proposes an equivalent reversing entry."
+      ]
+    },
+    {
+      "rubric": "Does the response capture the 25-Apr deposit 10001 correction of $50 as a required reduction to book cash?",
+      "weight": 8,
+      "criterion": [
+        "Identifies the 25-Apr bank statement line 'Dep 10001 Correction' for $50.",
+        "Links the correction to the 21-Apr deposit 10001 that was initially recorded at $900.",
+        "Includes a $50 reduction to the books rather than ignoring the correction."
+      ]
+    },
+    {
+      "rubric": "Does the response recognize valid transaction matches that should not be treated as reconciling exceptions?",
+      "weight": 6,
+      "criterion": [
+        "Matches the 9-Apr bank card total of $102.50 to the ledger's $82.50 fuel entry plus $20.00 mobile top-up entry.",
+        "Matches the bank's 8-Apr City Express advertising charge of $220 to the ledger's 9-Apr City Express advertising entry for $220.",
+        "Matches the 30-Apr AirlineOnline bank charge of $280 to the ledger's 30-Apr Airfare entry for $280."
+      ]
+    },
+    {
+      "rubric": "Does the response propose sensible correcting entries using the ledger's existing account names where they fit?",
+      "weight": 5,
+      "criterion": [
+        "Uses Office Supplies when reversing the duplicate $350 check posting.",
+        "Uses Kitchen Supplies when reversing the $55 Local Grocers cash entry.",
+        "Uses Cleaning when reversing the $90 Great Glass Cleaners cash entry.",
+        "Uses Bank Loan or the existing loan account when posting the $110 AMB Loans payment."
+      ]
+    },
+    {
+      "rubric": "Does the response clearly separate items that should be posted now from items that should remain open after the April close?",
+      "weight": 9,
+      "criterion": [
+        "Posts or proposes corrections now for the duplicate $350, the $55 and $90 cash entries, the $10 overdraft fee, the $65 month-end fees, the $110 loan payment, and the $50 deposit correction.",
+        "Leaves check 0004 for $350 open as an outstanding check or timing difference.",
+        "Leaves the $210 Hotel Grande item open for follow-up unless additional support is provided."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-10T08:34:36.263676+00:00",
+  "benchmark": "gdpval",
+  "version": "gold-11e7900-v1",
+  "source_revision": "11e7900cdcac61bc4daf59e65feb238acda98fbf",
+  "source_parquet_sha256": "f8422fab9b21d90c0ee5f0659842ab666d418cb8940842918f9f4b0df7ae0202",
+  "public_task_count": 220,
+  "private_unreleased_task_count": 1100,
+  "occupations": 44,
+  "sectors": 9,
+  "unique_task_ids": 220,
+  "rubrics_parsed": 220,
+  "assets": {
+    "reference_files": {
+      "file_count": 261,
+      "total_bytes": 1656670179,
+      "missing_paths": []
+    },
+    "deliverable_files": {
+      "file_count": 248,
+      "total_bytes": 623241071,
+      "missing_paths": []
+    }
+  },
+  "metadata_export": {
+    "status": "exported_for_external_human_grading",
+    "task_count": 220,
+    "path": ".runtime/gdpval-export-all-metadata-02",
+    "sha256": "7f9546e094cdb9b69ee7d93e61a479dd3408d6251285120bc02184077e5e7dbf"
+  },
+  "actual_download_validation": [
+    {
+      "task_id": "83d10b06-26d1-4636-a32c-23f92c57f30b",
+      "source_reference_count": 1,
+      "source_deliverable_count": 1,
+      "downloaded_assets": [
+        {
+          "path": "reference_files/cc781e4dc0985c8eb327a53ec03b5900/Population v2.xlsx",
+          "size": 61470,
+          "sha256": "e64a9d3ba60bbaecef0e6685a57b618e9b321bcd813c79e4460be36bf8c79fb7",
+          "source_identity": {
+            "size": 61470,
+            "git_blob_sha1": "b37b145893af170d3a0abeef2792f47a888c1a0a"
+          }
+        },
+        {
+          "path": "deliverable_files/2837faa0a7a6a95f40dfbe45bf66c7fb/Sample v2.xlsx",
+          "size": 79328,
+          "sha256": "72b74484e2eeb6bd1a5b5391220a6dea142f3b7fbd6c218490b1aa633dbafcbb",
+          "source_identity": {
+            "size": 79328,
+            "git_blob_sha1": "8cc6c095a2fc5111a546d1dc3832570c47a646d8"
+          }
+        }
+      ]
+    }
+  ],
+  "native_grading": {
+    "status": "blocked",
+    "reason": "Official hosted grading service retired; the published standard requires pairwise human expert preferences. No equivalent native automatic grader is published.",
+    "evidence_urls": [
+      "https://evals.openai.com/gdpval/grading",
+      "https://evals.openai.com/gdpval/leaderboard"
+    ]
+  },
+  "complete_asset_download": false,
+  "model_calls": 0,
+  "scored_tasks": 0,
+  "implementation_sha256": "6a73bcd4bd398c2b72a4f58ec75790addeee274bcd78c1679280b00a61c13613"
+}

@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-11",
+  "status": "passed",
+  "validation_kind": "native_harnessx_image_transport_smoke",
+  "model": "gpt-6-astra",
+  "answer": "red,blue",
+  "native_tool_calls": 1,
+  "model_cli_calls": 2,
+  "judge_calls": 0,
+  "benchmark_calls": 0,
+  "usage": {
+    "input_tokens": 18338,
+    "output_tokens": 48,
+    "cached_input_tokens": 0,
+    "cost_usd": null,
+    "billing": "ChatGPT subscription; dollar cost unknown",
+    "codex_cli_calls": 2
+  },
+  "image_sha256": [
+    "a2ac43ca32083d9cf1f9cc1d065f06de64f8a7b7fc61acd967bce515193cbd11",
+    "6cdbe9c61f32ae173c276ad0e0008807d9cc718a767eaac082e0e3985301beef"
+  ],
+  "record": {
+    "path": ".runtime/harnessx-images-20261011-01/validation.json",
+    "sha256": "3f45f118a043c12603dd2a91ec46ca65cdffb0499d0716b45717a97c6f28eee7"
+  },
+  "attachment_receipt": {
+    "path": ".runtime/harnessx-images-20261011-01/calls/call-00002-a4f0b0e6/images.json",
+    "sha256": "013f978e398283d56e3c4b80403adb19c4bc3d4fd372b7b1b4228c371c86a72a"
+  },
+  "calls": [
+    {
+      "cli_version": "0.162.0-alpha.2",
+      "usage": {
+        "input_tokens": 8977,
+        "cached_input_tokens": 0,
+        "output_tokens": 27
+      },
+      "codex_cli_calls": 1,
+      "record": {
+        "path": ".runtime/harnessx-images-20261011-01/calls/call-00001-fb874c92/result.json",
+        "sha256": "2e212c3a2bd55cf62f9434e376c3c658c433fc8cdcdbdc6d1fda8d31eb0e7e14"
+      },
+      "transport": {
+        "path": ".runtime/harnessx-images-20261011-01/calls/call-00001-fb874c92/transport.json",
+        "sha256": "be44ed78b4097109fb5767028d7c7ebe5795785fc2653be69aa45d09fc5a8df6"
+      }
+    },
+    {
+      "cli_version": "0.162.0-alpha.2",
+      "usage": {
+        "input_tokens": 9361,
+        "cached_input_tokens": 0,
+        "output_tokens": 21
+      },
+      "codex_cli_calls": 1,
+      "record": {
+        "path": ".runtime/harnessx-images-20261011-01/calls/call-00002-a4f0b0e6/result.json",
+        "sha256": "774fabc254430668c6519a3b5b8aa281c0e3c73a45743d15a197b1102cba7c9e"
+      },
+      "transport": {
+        "path": ".runtime/harnessx-images-20261011-01/calls/call-00002-a4f0b0e6/transport.json",
+        "sha256": "2c50dc2fd7b3a11c6a9acf164abc788c267629df5bece127c03a83868b0d20d4"
+      }
+    }
+  ],
+  "source_sha256": {
+    "src/rsi_eval/codex.py": "d615b46ef1212495a231e87cb8dad7308fb4ebfac9dda7f1f09bb04b9b3644f7",
+    "integrations/harnessx/provider.py": "952c4166749a1aeafc07863c7f81a8830dade9dfc1560cfea23453349f085337",
+    "integrations/harnessx/media.py": "834fa558506baec03698d28e691d13b8a32706bd7ace4912b751e942d76a0de7",
+    "integrations/harnessx/task_mcp.py": "97effc4581a9d4afbe379a2c7377479a4550dc493a184c9b8849d9ae136101a0",
+    "scripts/validate_harnessx_images.py": "d5cc88407ded9bec56d7f3bd0569e558a060786ca2eb3d159c9abfa999ef4cfe"
+  },
+  "limits": [
+    "Synthetic native HarnessX tool observations, not a benchmark score or paper reproduction.",
+    "The live run used static PNG; JPEG/WebP format handling and MCP transport have offline checks.",
+    "No Codex tools were enabled. HarnessX executed the single native tool.",
+    "Audio, video and animated inputs are unsupported. Native tool context limits remain in force."
+  ],
+  "official_image_reference": "https://learn.chatgpt.com/docs/cli/reference"
+}

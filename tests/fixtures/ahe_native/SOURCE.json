@@ -1,0 +1,10 @@
+{
+  "url": "https://github.com/china-qijizhifeng/agentic-harness-engineering",
+  "commit": "8b2a55d97590363fe50c3cc6b5e833b020a4bb4c",
+  "files": {
+    "evolve.py": "68a1b3cef899f0939d0c62023958b9bff26bee671c345b79da95cf7883122a32",
+    "LICENSE": "d1404dcdb97e84a6f990ed3d205226d481d2bbb857b13f00585c3b863e217d35",
+    "agents/evolve_agent/evolve_prompt.md": "e9fc0f5df51f4ddc6d07ae44567923f1ab74da33d9757024bed2373f2a319e76",
+    "agents/evolve_agent/skills/agent-debugger-cli/_source/agent_debugger_core/runtime/system_prompt.md": "28fa245b35b8d20089f1422b72008b79ce0122e188f0a9959b4a6aba65b3df3f"
+  }
+}

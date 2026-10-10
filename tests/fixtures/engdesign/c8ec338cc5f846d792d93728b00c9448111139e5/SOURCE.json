@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/AGI4Engineering/EngDesign",
+  "commit": "c8ec338cc5f846d792d93728b00c9448111139e5",
+  "files": {
+    "LICENSE": "8ae649abc522ce0212288dc6cfa255f419e3a494b97fa6b03677161ea7fface6",
+    "EngDesign-Open/AB_01/LLM_prompt.txt": "ac4734abe80d35237ac96a7356084b55885491aff523c71a9a21f21003892b2a",
+    "EngDesign-Open/AB_01/output_structure.py": "bcdaf7d30b2038951562e7e0c8f754f92089c0f035a8453b5f418b03b1ba73a2",
+    "EngDesign-Open/AB_01/evaluate.py": "7986e5f3b167e98825951cbb2b70218d66991a7ac7bd8e23e6b886021aa92c12",
+    "EngDesign-Open/AB_01/domain_topic.txt": "1f00caa516bf2cadff58ab37ddf7871c6a1371d4f46604aac5d058c3396bd528",
+    "EngDesign-Open/XY_01/LLM_prompt.txt": "e7ec8f2bb05edb9410fec108a2a0a872aa0be76a78875cd920259fb761516372",
+    "EngDesign-Open/XY_01/output_structure.py": "364c431dfffd651102993d9ea12326abfcbf8b726ca984e6bdff620c10ce916d",
+    "EngDesign-Open/XY_01/evaluate.py": "82c9797e473cdf7a5183ac16b175b5cc46a189ff6a85387da6361814762d2393",
+    "EngDesign-Open/XY_01/domain_topic.txt": "a0cf57baaecec6e950c9691591dc2fb26dae6436553f54ab743297370a2cbafa",
+    "EngDesign-Open/XY_01/font_rom.sv": "c92479376a157d800cc9424e00f33fffc761578350402742bbd01d860376deeb",
+    "EngDesign-Open/XY_01/font_rom_data.py": "b3aa171608744b52664b00e3038cae44e685aeb7c4a392a624d63dc79f2f8f3d"
+  }
+}

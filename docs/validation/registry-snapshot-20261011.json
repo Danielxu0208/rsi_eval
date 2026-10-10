@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "scope": "real-Harbor-registry-oracle-capture-and-replay",
+  "benchmark": "terminal-bench",
+  "version": "2.0",
+  "task_id": "log-summary-date-ranges",
+  "model_calls": 0,
+  "judge_calls": 0,
+  "initial_used_registry": true,
+  "replay_used_local_frozen_tasks": true,
+  "same_images": true,
+  "rewards": [
+    1.0,
+    1.0
+  ],
+  "date": "2026-10-11",
+  "execution_identity": "7fbaa008b88ec5528c0181c280d3a1751ccc75d9ce20afde173762910342957f",
+  "record": {
+    "path": ".runtime/registry-snapshot-20261011-02/validation.json",
+    "sha256": "da5d87c952d7d78a440d4dd6a4d142b03ec22c83340dd069c0d488d1132e6297"
+  },
+  "snapshot_manifest": {
+    "path": ".runtime/registry-snapshot-20261011-02/snapshot/runtime-snapshot.json",
+    "sha256": "689a74ac5106e0ade7589137df87f49d35ca28a559b8a9ac186ac5b16e98929a"
+  },
+  "initial": {
+    "path": ".runtime/registry-snapshot-20261011-02/initial/result.json",
+    "sha256": "7ea7acab80ab247f857838984e9b69c83dc7f72141274c1472851aa4463ab83c"
+  },
+  "replay": {
+    "path": ".runtime/registry-snapshot-20261011-02/replay/result.json",
+    "sha256": "10cc30ccceb597f2e034e8327d49b53ece2f9ccc061cb9902ef0736d4a32c87c"
+  },
+  "prior_attempt": {
+    "record": {
+      "path": ".runtime/registry-snapshot-20261011.log",
+      "sha256": "aa15c1ec8126d34eb6787d00396b8b89568e64ed043763b692252c929303ae94"
+    },
+    "native_rewards": [
+      1.0,
+      1.0
+    ],
+    "sdk_replay_status": "incomplete",
+    "reason": "Declared native task name differed from copied directory basename; fixed without modifying task files."
+  }
+}

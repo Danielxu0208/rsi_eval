@@ -1,0 +1,29 @@
+DATE,CODE,OTHER PARTY,TRANSACTION DETAILS,MONEY OUT,MONEY IN,BALANCE
+1 Apr 12,DC,From 12345-678-912-2,AMB Internal Transfer,,500.00,500.00
+1 Apr 12,BI,AMB ****2049,Loan Drawdown ,,"1,500.00","2,000.00"
+1 Apr 12,0001,Ch 0001,,125.00,,"1,875.00"
+2 Apr 12 ,BP,To 54321-987-654-0,Mr Landlord,800.00,,"1,075.00"
+3 Apr 12,BP,To 34567-012-987-1,Power Suppl.,110.00,,965.00
+3 Apr 12,BP,To 76543-210-123-5,Telecom,150.00,,815.00
+8 Apr 12,0003,Ch 0003,,350.00,,465.00
+8 Apr 12,ATM,AMB ATM,Withdrawal,200.00,,265.00
+8 Apr 12,DE,The City Express,Advert Lge,220.00,,45.00
+9 Apr 12,POS,BT,*****5024,102.50,,-57.50
+10 Apr 12,OD,Acct Overdraw Fee,,10.00,,-67.50
+21 Apr 12,Dep,Deposit,10001,,900.00,832.50
+23 Apr 12,Dep,Deposit,10002,,980.00,"1,812.50"
+24 Apr 12,Dep,Depost,10003,,"1,100.00","2,912.50"
+25 Apr 12,BI,,Dep 10001 Correction,50.00,,"2,862.50"
+25 Apr 12,DE,A Chapman,Wages,250.00,,"2,612.50"
+26 Apr 12,Dep,Deposit,10004,,325.00,"2,937.50"
+27 Apr 12,Dep,Deposit,10005,,269.00,"3,206.50"
+28 Apr 12,POS,All W/Sale St,*****5024,86.00,,"3,120.50"
+28 Apr 12,Dep,Deposit,10006,,201.00,"3,321.50"
+29 Apr 12,POS,FloralOnline,*****5024,"1,200.00",,"2,121.50"
+29 Apr 12,Dep,Deposit,10007,,665.00,"2,786.50"
+30 Apr 12,POS,AirlineOnline,*****5024,280.00,,"2,506.50"
+30 Apr 12,Dep,Deposit,10008,,110.00,"2,616.50"
+30 Apr 12,Fee,Charges,,35.00,,"2,581.50"
+30 Apr 12,BI,AMB Loans,95621,110.00,,"2,471.50"
+30 Apr 12,Fee,Account Maintenance,,5.00,,"2,466.50"
+30 Apr 12,Fee,Ch Clearance,,25.00,,"2,441.50"

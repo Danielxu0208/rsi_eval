@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/Darwin-Agent/HarnessX",
+  "commit": "915520584c92cc35ed24aef1af17eec1d60c0b01",
+  "files": {
+    "agent.py": {
+      "upstream_path": "harnessx/meta_harness/agent.py",
+      "sha256": "6524015cd2f6c2ec688c3dfcf7cac49440664c04a272f153c111639c4f9f6c20"
+    },
+    "validate_workflow.py": {
+      "upstream_path": "harnessx/meta_harness/validate_workflow.py",
+      "sha256": "29e40531e9382dcda1eb23456f3992ad40e2e575fb0107cb0c88f9d8d041a35d"
+    },
+    "replay.py": {
+      "upstream_path": "harnessx/meta_harness/replay.py",
+      "sha256": "79db29eddb51c8ba969c9ac196eba92eb7694386f1d6ca51da5a0a9b6f8a8db8"
+    },
+    "journal.py": {
+      "upstream_path": "harnessx/meta_harness/journal.py",
+      "sha256": "8f4e0813905e1586828bacde25b3df175656b5ed13f4f0436cd9bd6efe31e17d"
+    }
+  }
+}

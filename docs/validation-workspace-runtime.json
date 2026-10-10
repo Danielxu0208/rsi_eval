@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "scope": "Integration checks, not full model scores or paper reproduction",
+  "host": "macOS Apple Silicon; Colima VZ/Rosetta",
+  "harbor_version": "0.18.0",
+  "catalogs": {
+    "all": 27,
+    "active_evaluation": 24,
+    "grading_blocked": 1,
+    "legacy_subsets": 2,
+    "new_this_expansion": 14
+  },
+  "offline_tests": {
+    "passed": 486,
+    "skipped_main_environment": 2,
+    "subtests_passed": 8,
+    "log_sha256": "bb48172c3051552c0e0e7fc24a370b0c38bfdcbece8e0b0642e95aa3a4c6b848",
+    "skipped_tests_checked_separately": {
+      "command": [
+        ".runtime/engdesign-verify/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_engdesign.py::test_ab_native_oracle_uses_frozen_evaluator_and_keeps_partial_score",
+        "tests/test_engdesign_full.py::test_original_candidate_execution_error_keeps_null_native_score"
+      ],
+      "result": "2 passed in 2.90s",
+      "exit_code": 0,
+      "run_at": "2026-10-10T08:54:06.511482+00:00",
+      "model_calls": 0
+    }
+  },
+  "apex": {
+    "all_packages_downloaded_verified_materialized": 240,
+    "native_schema_validated": 240,
+    "image_manifests_verified": 33,
+    "worlds": 31,
+    "world_runtime_checked": "management-consulting-world-128",
+    "runtime_task": "128-jr-1-f7f95d92",
+    "all_worlds_booted": false,
+    "tool_count": 74,
+    "mcp_tools": {
+      "list_success": true,
+      "write_success": true,
+      "read_success": true,
+      "receipt_present": true,
+      "model_calls": 0
+    },
+    "snapshots": {
+      "initial": {
+        "size": 547465334,
+        "probe_present": false,
+        "probe_contents": null,
+        "sha256": "ce522620e74ea692f4714f09b416d2ff6a3d39da80fcfe0533df3a04d47ba095"
+      },
+      "final": {
+        "size": 547465433,
+        "probe_present": true,
+        "probe_contents": "RSI_NATIVE_SNAPSHOT_CHECK",
+        "sha256": "af2316c940cc4e81d3da6b68f076961b71a78cd8ed92d28da0dfd4c2b4d861a2"
+      },
+      "passed": true
+    },
+    "agent_installer": {
+      "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:9be28bae20bc6027715df7f81e1d725d5c85dd3edd6669f8736a6a575a0bbcc2",
+      "platform": "linux/amd64",
+      "entrypoint": "rsi_eval.harbor_codex.Agent.install",
+      "codex_version_requested": "0.162.0-alpha.2",
+      "model_calls": 0,
+      "auth_files_supplied": false,
+      "status": "passed",
+      "version_output": "codex-cli 0.162.0-alpha.2",
+      "auth_file_absence_checked": true,
+      "cleanup": {
+        "return_code": 0,
+        "stdout": "rsi-apex-agent-install-probe",
+        "stderr": ""
+      },
+      "elapsed_seconds": 47.97915012505837
+    },
+    "native_grader_cli": "Imported and printed help in the pinned linux/amd64 image with networking disabled; paid grading not invoked",
+    "runtime_repair": {
+      "problem": "Eight native MCP service users could not create UV cache inside root-owned image .cache directories",
+      "change": {
+        "UV_NO_CACHE": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "all_240_configurations_verified": true,
+      "permissions_or_tool_commands_changed": false
+    },
+    "disk_repair": {
+      "before_gib": 80,
+      "after_gib": 120,
+      "initial_pull_error": "no space left on device",
+      "retry": "passed"
+    },
+    "paid_native_judge": "blocked: VERCEL_AI_GATEWAY_API_KEY unavailable"
+  },
+  "codex_mcp_transport": {
+    "codex_cli_calls": 2,
+    "attempts": [
+      {
+        "returncode": 0,
+        "seconds": 11.578111834125593,
+        "tool_calls": 0,
+        "usage": [
+          {
+            "input_tokens": 35542,
+            "cached_input_tokens": 33024,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 119,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "received_receipt": false,
+        "cli_version": "codex-cli 0.162.0-alpha.2",
+        "model": "gpt-6-astra",
+        "cost_usd": null,
+        "scope": "One real Codex subscription call against an explicit local test-only MCP server; not an APEX benchmark score."
+      },
+      {
+        "returncode": 0,
+        "seconds": 9.555334291886538,
+        "tool_calls": 1,
+        "usage": [
+          {
+            "input_tokens": 43878,
+            "cached_input_tokens": 38656,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 111,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "received_receipt": true,
+        "cli_version": "codex-cli 0.162.0-alpha.2",
+        "model": "gpt-6-astra",
+        "cost_usd": null,
+        "scope": "One real Codex subscription call against an explicit local test-only MCP server; not an APEX benchmark score.",
+        "previous_attempt": "Tool discovered but required interactive approval; explicit benchmark-server approval fixed this. Prior attempt used35542input/119outputtokens."
+      }
+    ],
+    "actual_apex_model_run": false,
+    "cost_usd": null
+  },
+  "jobbench_report": "validation-jobbench.json",
+  "harvey_report": "validation-harvey-lab.json",
+  "reasoning_mce_source_report": "validation-reasoning-mce-native.json",
+  "reasoning_mce_oracles": "validation-reasoning-mce-oracle.json",
+  "gdpval_report": "validation-gdpval.json",
+  "native_judge_calls": 0,
+  "remaining_blockers": {
+    "jobbench": "JUDGE_API_KEY for original xAI judge",
+    "harvey-lab": "ANTHROPIC_API_KEY and OPENAI_API_KEY for original dual judge",
+    "apex-agents": "VERCEL_AI_GATEWAY_API_KEY for original judge",
+    "gdpval": "Hosted grading retired; official metric requires human expert judgments; no substitute protocol selected"
+  }
+}

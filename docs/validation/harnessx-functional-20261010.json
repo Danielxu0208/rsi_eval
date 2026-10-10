@@ -1,0 +1,211 @@
+{
+  "date": "2026-10-10",
+  "validation_kind": "hand_authored_changed_candidate_functional_check",
+  "model_generated_candidate": false,
+  "status": "completed",
+  "algorithm_generated_changed_candidate_status": "not_observed; prior two native proposer rounds were no-op; this manual functional check does not establish that branch",
+  "model": "gpt-6-astra",
+  "cli_version": "0.162.0-alpha.2",
+  "benchmark": {
+    "name": "terminal-bench",
+    "version": "2.0",
+    "task_ids": [
+      "log-summary-date-ranges"
+    ]
+  },
+  "trial": {
+    "task_id": "log-summary-date-ranges",
+    "status": "completed",
+    "reward": 1.0,
+    "repetition": 0
+  },
+  "full_benchmark_score_claim": false,
+  "score_improvement_claim": false,
+  "gates": [
+    {
+      "phase": "validity",
+      "check": "canonicalize",
+      "ok": true,
+      "reason": "",
+      "findings_path": null
+    },
+    {
+      "phase": "validity",
+      "check": "contract",
+      "ok": true,
+      "reason": "",
+      "findings_path": null
+    },
+    {
+      "phase": "validity",
+      "check": "replay",
+      "ok": true,
+      "reason": "",
+      "findings_path": null
+    },
+    {
+      "phase": "policy",
+      "check": "novelty",
+      "ok": true,
+      "reason": "",
+      "findings_path": null
+    },
+    {
+      "phase": "policy",
+      "check": "evidence",
+      "ok": true,
+      "reason": "",
+      "findings_path": null
+    },
+    {
+      "phase": "advisory",
+      "check": "literals",
+      "ok": true,
+      "reason": "0 finding(s)",
+      "findings_path": "runs/harnessx-changed-functional-20261010-v2/source/_meta_scratch/TASK_SPECIFIC_LITERALS.md"
+    }
+  ],
+  "structural_changes": {
+    "processors_added": [
+      "AcceptanceReminder"
+    ]
+  },
+  "candidate_hash": "6eab33b9d9ac7355f5e1747dd13075ae257bb88320e12f6441b9c499a4d27155",
+  "native_candidate_hashes": [
+    "6eab33b9d9ac7355f5e1747dd13075ae257bb88320e12f6441b9c499a4d27155"
+  ],
+  "candidate_unchanged": true,
+  "marker": "Validation reminder: distinguish internal sanity checks",
+  "marker_requests": [
+    {
+      "path": "runs/harnessx-changed-functional-20261010-v2/evaluation/native/eval/log-summary-date-ranges__9kqQ9mu/agent/codex/call-00001-d7567606/request.txt",
+      "sha256": "7acb97f1a5ce69f2a8bdb0eb6f2daec3399221b146e87867cf779e1fcf756428"
+    }
+  ],
+  "evidence_trajectories": [
+    {
+      "task": "extract-elf",
+      "path": "runs/harnessx-two-task-acceptance/feedback/baseline-b2836823/extract-elf/0/trajectory.md",
+      "sha256": "0c94ee8ea5cb9f9fff8e0bc4e0c7d7274c95fcf2b16ecfb8689b73f3b5a8fd59"
+    },
+    {
+      "task": "log-summary-date-ranges",
+      "path": "runs/harnessx-two-task-acceptance/feedback/baseline-b2836823/log-summary-date-ranges/0/trajectory.md",
+      "sha256": "fd0c479770b799f02b2f220036abe57a98054fcfcfad3a6f4f7579fab80b701a"
+    }
+  ],
+  "smoke_usage": {
+    "codex_cli_calls": 2,
+    "input_tokens": 20604,
+    "output_tokens": 61,
+    "cached_input_tokens": 13824,
+    "cost_usd": null
+  },
+  "target_usage": {
+    "codex_cli_calls": 5,
+    "input_tokens": 61159,
+    "output_tokens": 1442,
+    "cached_input_tokens": 6912,
+    "cost_usd": null
+  },
+  "total_codex_calls": 7,
+  "cost_usd": null,
+  "cost_basis": "ChatGPT subscription; dollar cost unknown",
+  "record": {
+    "path": "runs/harnessx-changed-functional-20261010-v2/result.json",
+    "sha256": "70a821b789e42aac055ddd041587babe15ec590b90ce45331c6e84ade0c423ac"
+  },
+  "initial_rejected_manual_attempt": {
+    "record": {
+      "path": "runs/harnessx-changed-functional-20261010/result.json",
+      "sha256": "d18c15f92ca73770ed366d691a0c5581ac5701f80d0db7ae1124398646eb4ca0"
+    },
+    "status": "failed",
+    "error": "RuntimeError: meta-agent produced runs/harnessx-changed-functional-20261010/source/config.yaml but custom processors violate the hook-mutation contract (1 violation(s)). See runs/harnessx-changed-functional-20261010/source/_meta_scratch/CONTRACT_VIOLATIONS.md.",
+    "model_calls": 0,
+    "retry_change": "Modified the existing last-user message instead of appending a second user message; native hook contract then passed."
+  },
+  "apex_task_mcp": {
+    "first_discovery": {
+      "tools": 48,
+      "record": {
+        "path": ".runtime/method-expansion/harnessx-apex-probe/result.json",
+        "sha256": "fe99af71d944323e06edb1110dfeb4b770d32f11b49b3e360046dec05cea0bfb"
+      }
+    },
+    "read_check": {
+      "status": "read_tool_completed",
+      "tools": 74,
+      "task": "128-jr-1-f7f95d92",
+      "transport": "container-local streamable-http",
+      "readonly_call": {
+        "name": "mcp__world__filesystem_server_list_files_189109906d",
+        "arguments": {
+          "path": "/"
+        },
+        "output": "'Business Unit Assessment Framework (v2).xlsx' (unknown file) 8620 bytes\n'Strategic Options Ratings (v2).xlsx' (unknown file) 13176 bytes\n'0_Project Governance, Mgmt, Comms' (folder)\n'3_Economics and Market' (folder)\n'2_Financials' (folder)\n'1_About Amensa Global' (folder)\n'5_Final Deliverables' (folder)\n'4_Business Unit Assessment' (folder)\n",
+        "error": null
+      },
+      "model_calls": 0,
+      "judge_calls": 0,
+      "lifecycle": {
+        "closed": true,
+        "forced": false
+      },
+      "record": {
+        "path": ".runtime/method-expansion/harnessx-apex-probe/read-result.json",
+        "sha256": "ee1a86fa2c751548e860bce8e1b6edddefb6e54fa68f51f02292fef716b4e828"
+      }
+    },
+    "boot_note": "Probe initially waited only for TCP connectivity, and discovered 48 tools while the world was starting. The second connection discovered 74. Actual Harbor trials use the native world snapshot/readiness healthcheck. This is one world route check, not complete APEX scoring.",
+    "compose_cleanup_log": ".runtime/method-expansion/harnessx-apex-probe/compose-down.log",
+    "compose_cleanup_completed": true
+  },
+  "offline_validation": {
+    "command": "RSI_HARNESSX_CHECKOUT=.runtime/method-sources/harnessx PYTHONPATH=src .runtime/harnessx-venv/bin/python -m pytest -q tests/test_harnessx.py tests/test_harnessx_native.py tests/test_harnessx_mcp.py",
+    "result": "55 passed in 3.11s",
+    "model_calls": 0
+  },
+  "source_files": [
+    {
+      "path": "integrations/harnessx/harbor_agent.py",
+      "sha256": "b51a9ba27cb1ab7148b7b2d42aa2934c642c13cdcda4425fe84fb1caa5d3cbda"
+    },
+    {
+      "path": "integrations/harnessx/task_mcp.py",
+      "sha256": "82ddc55876e071337b1e1ebb4d0600d7ad227bd53929840c12636336063013fa"
+    },
+    {
+      "path": "integrations/harnessx/mcp_worker.py",
+      "sha256": "b275a6503b1914dee0e7d1401e527e4a06fc12e62f0ecc5ea3f678a65f18071a"
+    },
+    {
+      "path": "integrations/harnessx/launcher.py",
+      "sha256": "936e077cb9c4fd35cbeb03cfed94166f1ca9ad64e9efa655e70e555104757efb"
+    }
+  ],
+  "post_live_change": {
+    "description": "A nested finally ensures target token accounting and candidate verification still run if MCP teardown is itself cancelled. The ordinary live execution path is unchanged; a new native regression fixture covers the cancellation path. No extra model calls.",
+    "source": "integrations/harnessx/harbor_agent.py",
+    "delivered_sha256": "167ef7befcc569c75bbfd934d9b5b9a859f7ca8bc9b32691a84b1b4db3193b2c"
+  },
+  "source_change_provenance": {
+    "pre_live": [
+      "The persistent container MCP broker and explicit post-gate score/selection hooks were implemented before the manual functional check.",
+      "The initial hand-authored processor was rejected by the native hook contract with zero model calls. The corrected candidate modifies an existing last-user message when present; all native gates remain enabled.",
+      "MCP spill-file handling was refined and exercised in deterministic tests during this turn. The real TB task has no MCP servers; the APEX read probe used the finished bridge."
+    ],
+    "post_live": [
+      {
+        "description": "A nested finally ensures target token accounting and candidate verification still run if MCP teardown is itself cancelled. The ordinary live execution path is unchanged; a new native regression fixture covers the cancellation path. No extra model calls.",
+        "source": "integrations/harnessx/harbor_agent.py",
+        "delivered_sha256": "167ef7befcc569c75bbfd934d9b5b9a859f7ca8bc9b32691a84b1b4db3193b2c"
+      }
+    ],
+    "source_hash_scope": "source_files contains the files captured by the evidence extract after live runs. It is not an assertion that all files were frozen before every earlier probe. The explicit post_live_change records the later cancellation-accounting adjustment.",
+    "report_source": {
+      "path": ".runtime/usability-revision/harnessx-functional-evidence.json",
+      "sha256": "470c4cc929fea272106168b9382b71c5a614dfe6c39ab17864a292a862904f86"
+    }
+  }
+}

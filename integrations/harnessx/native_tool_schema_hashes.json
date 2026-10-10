@@ -1,0 +1,14 @@
+{
+  "upstream_commit": "915520584c92cc35ed24aef1af17eec1d60c0b01",
+  "schemas_sha256": {
+    "Read": "af937dd23a8372617fc051a830c140ccbb4a89b0d982127966caa74cde7edcab",
+    "Write": "9bc366fa2a2d852a3415e0d5ea9cd7ea3033b04f5ce2037ca90cd5300edc4aa8",
+    "Edit": "3d06e7609e0fdea4a690ed99124b5db5cab33254b74478cd8a5709b264ee4dae",
+    "Glob": "c074d1eb6ada13e0eed8aa5b5636fbe01eeca987dcc3688ce8ae077b63457858",
+    "Grep": "213c149cd9ebc2f04bd70f7453acc68d92f4292d1b5392970bc3fdc758dbaf41",
+    "Bash": "fc8951e994d8917ddf80aa9c0007a69fc2fa60b27d8eac0803220544696addfc",
+    "WebSearch": "c1f918cbd36544097fae246119052806cb075f779042bab9748c3ee736fda90e",
+    "WebFetch": "b2bc4e14629eaf8ef61bda177aa8adbc73be9ff46d060c622432cf57b867a625",
+    "spawn_reflect_worker": "fd9415142d5dd7fe21ca54cb0cccf643ea9c4c7ae1bc79281e6c13d21fcdba94"
+  }
+}
