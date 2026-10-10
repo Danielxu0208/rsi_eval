@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rsi-eval"
+version = "0.1.0"
+description = "A small benchmark evaluation interface for agent self-improvement methods"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+license-files = ["LICENSES/*.txt", "THIRD_PARTY_NOTICES.md"]
+
+[project.optional-dependencies]
+harbor = ["harbor==0.18.0"]
+test = ["pytest>=8", "numpy==2.2.6", "scipy==1.15.3", "pydantic>=2,<3", "PyYAML==6.0.3", "jsonschema>=4,<5"]
+
+[project.scripts]
+rsi-eval = "rsi_eval.cli:main"
+
+[tool.setuptools]
+packages = ["rsi_eval", "rsi_eval.materializers", "integrations", "integrations.meta_harness", "integrations.rrsi", "integrations.rrsi.domain", "integrations.ahe", "integrations.harnessx", "rsi_eval_templates"]
+package-dir = {"rsi_eval" = "src/rsi_eval", "integrations" = "integrations", "rsi_eval_templates" = "templates"}
+
+[tool.setuptools.package-data]
+rsi_eval = ["data/*.json"]
+integrations = ["**/*.json", "**/*.md", "**/*.txt", "**/*.yaml", "**/*.yml"]
+rsi_eval_templates = ["codex_agent/*.py", "codex_agent/*.md", "codex_agent/*.json", "codex_agent/tools/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]

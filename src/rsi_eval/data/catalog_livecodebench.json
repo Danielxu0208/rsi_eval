@@ -1,0 +1,1658 @@
+[
+  {
+    "name": "livecodebench",
+    "version": "release_v1",
+    "dataset_ref": "hf:livecodebench/code_generation_lite@0fe84c3912ea0c4d4a78037083943e8f0c4dd505:release_v1",
+    "materializer": "livecodebench",
+    "source": {
+      "revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+      "dataset": {
+        "url": "https://huggingface.co/datasets/livecodebench/code_generation_lite/resolve/0fe84c3912ea0c4d4a78037083943e8f0c4dd505/test.jsonl",
+        "sha256": "2bd02b38beb48e8c46b5b9987095d999ff38cd8efc255ea5d58974317c48f63f",
+        "size_bytes": 1252609773
+      },
+      "grader": {
+        "revision": "28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24",
+        "utility": {
+          "url": "https://raw.githubusercontent.com/LiveCodeBench/LiveCodeBench/28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24/lcb_runner/evaluation/testing_util.py",
+          "sha256": "b7cb6a8a69807bb868150a61742e25d7bb5328bbe01d514471b6ec43c9fa9ed2"
+        },
+        "license": {
+          "url": "https://raw.githubusercontent.com/LiveCodeBench/LiveCodeBench/28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24/LICENSE",
+          "sha256": "104099948b78ebc36f2e951b3a7973b956adfa7d39aaec0d1512f97a2686d15d"
+        }
+      }
+    },
+    "protocol": {
+      "scenario": "codegeneration",
+      "release_version": "release_v1",
+      "start_date": "2023-05-01T00:00:00",
+      "end_date": "2024-03-31T23:59:59",
+      "language": "python",
+      "submission_path": "/app/solution.py",
+      "per_test_timeout_sec": 6,
+      "agent_timeout_sec": 600,
+      "attempts_per_trial": 1,
+      "feedback": "public examples only during the attempt; one final private-test evaluation",
+      "grader": "official testing_util.run_test",
+      "environment": "python:3.12.10-slim-bookworm@sha256:fd95fa221297a88e1cf49c55ec1828edd7c5a428187e67b5d1805692d11588db; numpy==2.2.6",
+      "test_visibility": "public examples in /app; private tests uploaded only in verifier phase"
+    },
+    "oracle": {
+      "kind": "integration_reference",
+      "supported_task_ids": [
+        "lcb-codeforces-1873_a",
+        "lcb-leetcode-2727"
+      ],
+      "description": "Reviewed general solutions written for integration validation; not upstream canonical solutions."
+    },
+    "aggregation": {
+      "type": "pass_at_k",
+      "k": [
+        1
+      ]
+    },
+    "tasks": [
+      {
+        "id": "lcb-codeforces-1873_a",
+        "record_id": "1873_A"
+      },
+      {
+        "id": "lcb-codeforces-1873_b",
+        "record_id": "1873_B"
+      },
+      {
+        "id": "lcb-codeforces-1873_d",
+        "record_id": "1873_D"
+      },
+      {
+        "id": "lcb-codeforces-1883_b",
+        "record_id": "1883_B"
+      },
+      {
+        "id": "lcb-codeforces-1883_c",
+        "record_id": "1883_C"
+      },
+      {
+        "id": "lcb-codeforces-1899_a",
+        "record_id": "1899_A"
+      },
+      {
+        "id": "lcb-codeforces-1899_b",
+        "record_id": "1899_B"
+      },
+      {
+        "id": "lcb-codeforces-1899_c",
+        "record_id": "1899_C"
+      },
+      {
+        "id": "lcb-codeforces-1899_d",
+        "record_id": "1899_D"
+      },
+      {
+        "id": "lcb-leetcode-2727",
+        "record_id": "2727"
+      },
+      {
+        "id": "lcb-leetcode-2728",
+        "record_id": "2728"
+      },
+      {
+        "id": "lcb-leetcode-2730",
+        "record_id": "2730"
+      },
+      {
+        "id": "lcb-leetcode-2754",
+        "record_id": "2754"
+      },
+      {
+        "id": "lcb-leetcode-2755",
+        "record_id": "2755"
+      },
+      {
+        "id": "lcb-leetcode-2756",
+        "record_id": "2756"
+      },
+      {
+        "id": "lcb-leetcode-2757",
+        "record_id": "2757"
+      },
+      {
+        "id": "lcb-leetcode-2777",
+        "record_id": "2777"
+      },
+      {
+        "id": "lcb-leetcode-2779",
+        "record_id": "2779"
+      },
+      {
+        "id": "lcb-leetcode-2784",
+        "record_id": "2784"
+      },
+      {
+        "id": "lcb-leetcode-2785",
+        "record_id": "2785"
+      },
+      {
+        "id": "lcb-leetcode-2786",
+        "record_id": "2786"
+      },
+      {
+        "id": "lcb-leetcode-2791",
+        "record_id": "2791"
+      },
+      {
+        "id": "lcb-leetcode-2792",
+        "record_id": "2792"
+      },
+      {
+        "id": "lcb-leetcode-2800",
+        "record_id": "2800"
+      },
+      {
+        "id": "lcb-leetcode-2802",
+        "record_id": "2802"
+      },
+      {
+        "id": "lcb-leetcode-2808",
+        "record_id": "2808"
+      },
+      {
+        "id": "lcb-leetcode-2810",
+        "record_id": "2810"
+      },
+      {
+        "id": "lcb-leetcode-2811",
+        "record_id": "2811"
+      },
+      {
+        "id": "lcb-leetcode-2812",
+        "record_id": "2812"
+      },
+      {
+        "id": "lcb-leetcode-2816",
+        "record_id": "2816"
+      },
+      {
+        "id": "lcb-leetcode-2817",
+        "record_id": "2817"
+      },
+      {
+        "id": "lcb-leetcode-2819",
+        "record_id": "2819"
+      },
+      {
+        "id": "lcb-leetcode-2824",
+        "record_id": "2824"
+      },
+      {
+        "id": "lcb-leetcode-2825",
+        "record_id": "2825"
+      },
+      {
+        "id": "lcb-leetcode-2827",
+        "record_id": "2827"
+      },
+      {
+        "id": "lcb-leetcode-2828",
+        "record_id": "2828"
+      },
+      {
+        "id": "lcb-leetcode-2831",
+        "record_id": "2831"
+      },
+      {
+        "id": "lcb-leetcode-2832",
+        "record_id": "2832"
+      },
+      {
+        "id": "lcb-leetcode-2833",
+        "record_id": "2833"
+      },
+      {
+        "id": "lcb-leetcode-2834",
+        "record_id": "2834"
+      },
+      {
+        "id": "lcb-leetcode-2837",
+        "record_id": "2837"
+      },
+      {
+        "id": "lcb-leetcode-2839",
+        "record_id": "2839"
+      },
+      {
+        "id": "lcb-leetcode-2844",
+        "record_id": "2844"
+      },
+      {
+        "id": "lcb-leetcode-2845",
+        "record_id": "2845"
+      },
+      {
+        "id": "lcb-leetcode-2847",
+        "record_id": "2847"
+      },
+      {
+        "id": "lcb-leetcode-2848",
+        "record_id": "2848"
+      },
+      {
+        "id": "lcb-leetcode-2849",
+        "record_id": "2849"
+      },
+      {
+        "id": "lcb-leetcode-2850",
+        "record_id": "2850"
+      },
+      {
+        "id": "lcb-leetcode-2854",
+        "record_id": "2854"
+      },
+      {
+        "id": "lcb-leetcode-2855",
+        "record_id": "2855"
+      },
+      {
+        "id": "lcb-leetcode-2856",
+        "record_id": "2856"
+      },
+      {
+        "id": "lcb-leetcode-2857",
+        "record_id": "2857"
+      },
+      {
+        "id": "lcb-leetcode-2866",
+        "record_id": "2866"
+      },
+      {
+        "id": "lcb-leetcode-2867",
+        "record_id": "2867"
+      },
+      {
+        "id": "lcb-leetcode-2868",
+        "record_id": "2868"
+      },
+      {
+        "id": "lcb-leetcode-2869",
+        "record_id": "2869"
+      },
+      {
+        "id": "lcb-leetcode-2870",
+        "record_id": "2870"
+      },
+      {
+        "id": "lcb-leetcode-2872",
+        "record_id": "2872"
+      },
+      {
+        "id": "lcb-leetcode-2873",
+        "record_id": "2873"
+      },
+      {
+        "id": "lcb-leetcode-2876",
+        "record_id": "2876"
+      },
+      {
+        "id": "lcb-leetcode-2877",
+        "record_id": "2877"
+      },
+      {
+        "id": "lcb-leetcode-2878",
+        "record_id": "2878"
+      },
+      {
+        "id": "lcb-leetcode-2879",
+        "record_id": "2879"
+      },
+      {
+        "id": "lcb-leetcode-2881",
+        "record_id": "2881"
+      },
+      {
+        "id": "lcb-leetcode-2882",
+        "record_id": "2882"
+      },
+      {
+        "id": "lcb-leetcode-2883",
+        "record_id": "2883"
+      },
+      {
+        "id": "lcb-leetcode-2884",
+        "record_id": "2884"
+      },
+      {
+        "id": "lcb-leetcode-2886",
+        "record_id": "2886"
+      },
+      {
+        "id": "lcb-leetcode-2887",
+        "record_id": "2887"
+      },
+      {
+        "id": "lcb-leetcode-2888",
+        "record_id": "2888"
+      },
+      {
+        "id": "lcb-leetcode-2891",
+        "record_id": "2891"
+      },
+      {
+        "id": "lcb-leetcode-2892",
+        "record_id": "2892"
+      },
+      {
+        "id": "lcb-leetcode-2893",
+        "record_id": "2893"
+      },
+      {
+        "id": "lcb-leetcode-2902",
+        "record_id": "2902"
+      },
+      {
+        "id": "lcb-leetcode-2915",
+        "record_id": "2915"
+      },
+      {
+        "id": "lcb-leetcode-2916",
+        "record_id": "2916"
+      },
+      {
+        "id": "lcb-leetcode-2917",
+        "record_id": "2917"
+      },
+      {
+        "id": "lcb-leetcode-2919",
+        "record_id": "2919"
+      },
+      {
+        "id": "lcb-leetcode-2920",
+        "record_id": "2920"
+      },
+      {
+        "id": "lcb-leetcode-2921",
+        "record_id": "2921"
+      },
+      {
+        "id": "lcb-leetcode-2952",
+        "record_id": "2952"
+      },
+      {
+        "id": "lcb-leetcode-2953",
+        "record_id": "2953"
+      },
+      {
+        "id": "lcb-leetcode-2954",
+        "record_id": "2954"
+      },
+      {
+        "id": "lcb-leetcode-2955",
+        "record_id": "2955"
+      },
+      {
+        "id": "lcb-leetcode-2977",
+        "record_id": "2977"
+      },
+      {
+        "id": "lcb-leetcode-2979",
+        "record_id": "2979"
+      },
+      {
+        "id": "lcb-leetcode-2998",
+        "record_id": "2998"
+      },
+      {
+        "id": "lcb-leetcode-2999",
+        "record_id": "2999"
+      },
+      {
+        "id": "lcb-leetcode-3000",
+        "record_id": "3000"
+      },
+      {
+        "id": "lcb-leetcode-3017",
+        "record_id": "3017"
+      },
+      {
+        "id": "lcb-leetcode-3018",
+        "record_id": "3018"
+      },
+      {
+        "id": "lcb-leetcode-3019",
+        "record_id": "3019"
+      },
+      {
+        "id": "lcb-leetcode-3024",
+        "record_id": "3024"
+      },
+      {
+        "id": "lcb-leetcode-3025",
+        "record_id": "3025"
+      },
+      {
+        "id": "lcb-leetcode-3031",
+        "record_id": "3031"
+      },
+      {
+        "id": "lcb-leetcode-3032",
+        "record_id": "3032"
+      },
+      {
+        "id": "lcb-leetcode-3033",
+        "record_id": "3033"
+      },
+      {
+        "id": "lcb-leetcode-3034",
+        "record_id": "3034"
+      },
+      {
+        "id": "lcb-leetcode-3044",
+        "record_id": "3044"
+      },
+      {
+        "id": "lcb-leetcode-3045",
+        "record_id": "3045"
+      },
+      {
+        "id": "lcb-leetcode-3046",
+        "record_id": "3046"
+      },
+      {
+        "id": "lcb-leetcode-3047",
+        "record_id": "3047"
+      },
+      {
+        "id": "lcb-leetcode-3055",
+        "record_id": "3055"
+      },
+      {
+        "id": "lcb-leetcode-3080",
+        "record_id": "3080"
+      },
+      {
+        "id": "lcb-leetcode-3081",
+        "record_id": "3081"
+      },
+      {
+        "id": "lcb-leetcode-3091",
+        "record_id": "3091"
+      },
+      {
+        "id": "lcb-leetcode-3093",
+        "record_id": "3093"
+      },
+      {
+        "id": "lcb-leetcode-3094",
+        "record_id": "3094"
+      },
+      {
+        "id": "lcb-leetcode-3104",
+        "record_id": "3104"
+      },
+      {
+        "id": "lcb-leetcode-3106",
+        "record_id": "3106"
+      },
+      {
+        "id": "lcb-leetcode-3114",
+        "record_id": "3114"
+      },
+      {
+        "id": "lcb-leetcode-3141",
+        "record_id": "3141"
+      },
+      {
+        "id": "lcb-leetcode-3150",
+        "record_id": "3150"
+      },
+      {
+        "id": "lcb-leetcode-3151",
+        "record_id": "3151"
+      },
+      {
+        "id": "lcb-leetcode-3153",
+        "record_id": "3153"
+      },
+      {
+        "id": "lcb-leetcode-3154",
+        "record_id": "3154"
+      },
+      {
+        "id": "lcb-leetcode-3163",
+        "record_id": "3163"
+      },
+      {
+        "id": "lcb-leetcode-3164",
+        "record_id": "3164"
+      },
+      {
+        "id": "lcb-leetcode-3166",
+        "record_id": "3166"
+      },
+      {
+        "id": "lcb-leetcode-3171",
+        "record_id": "3171"
+      },
+      {
+        "id": "lcb-leetcode-3172",
+        "record_id": "3172"
+      },
+      {
+        "id": "lcb-leetcode-3174",
+        "record_id": "3174"
+      },
+      {
+        "id": "lcb-leetcode-3176",
+        "record_id": "3176"
+      },
+      {
+        "id": "lcb-leetcode-3183",
+        "record_id": "3183"
+      },
+      {
+        "id": "lcb-leetcode-3184",
+        "record_id": "3184"
+      },
+      {
+        "id": "lcb-leetcode-3188",
+        "record_id": "3188"
+      },
+      {
+        "id": "lcb-leetcode-3190",
+        "record_id": "3190"
+      },
+      {
+        "id": "lcb-leetcode-3192",
+        "record_id": "3192"
+      },
+      {
+        "id": "lcb-leetcode-3193",
+        "record_id": "3193"
+      },
+      {
+        "id": "lcb-leetcode-3194",
+        "record_id": "3194"
+      },
+      {
+        "id": "lcb-leetcode-3195",
+        "record_id": "3195"
+      },
+      {
+        "id": "lcb-leetcode-3196",
+        "record_id": "3196"
+      },
+      {
+        "id": "lcb-leetcode-3199",
+        "record_id": "3199"
+      },
+      {
+        "id": "lcb-leetcode-3200",
+        "record_id": "3200"
+      },
+      {
+        "id": "lcb-leetcode-3203",
+        "record_id": "3203"
+      },
+      {
+        "id": "lcb-leetcode-3206",
+        "record_id": "3206"
+      },
+      {
+        "id": "lcb-leetcode-3207",
+        "record_id": "3207"
+      },
+      {
+        "id": "lcb-leetcode-3209",
+        "record_id": "3209"
+      },
+      {
+        "id": "lcb-leetcode-3210",
+        "record_id": "3210"
+      },
+      {
+        "id": "lcb-leetcode-3211",
+        "record_id": "3211"
+      },
+      {
+        "id": "lcb-leetcode-3212",
+        "record_id": "3212"
+      },
+      {
+        "id": "lcb-leetcode-3213",
+        "record_id": "3213"
+      },
+      {
+        "id": "lcb-leetcode-3219",
+        "record_id": "3219"
+      },
+      {
+        "id": "lcb-leetcode-3220",
+        "record_id": "3220"
+      },
+      {
+        "id": "lcb-leetcode-3221",
+        "record_id": "3221"
+      },
+      {
+        "id": "lcb-leetcode-3223",
+        "record_id": "3223"
+      },
+      {
+        "id": "lcb-leetcode-3224",
+        "record_id": "3224"
+      },
+      {
+        "id": "lcb-leetcode-3225",
+        "record_id": "3225"
+      },
+      {
+        "id": "lcb-leetcode-3226",
+        "record_id": "3226"
+      },
+      {
+        "id": "lcb-leetcode-3227",
+        "record_id": "3227"
+      },
+      {
+        "id": "lcb-leetcode-3228",
+        "record_id": "3228"
+      },
+      {
+        "id": "lcb-leetcode-3229",
+        "record_id": "3229"
+      },
+      {
+        "id": "lcb-leetcode-3230",
+        "record_id": "3230"
+      },
+      {
+        "id": "lcb-leetcode-3231",
+        "record_id": "3231"
+      },
+      {
+        "id": "lcb-leetcode-3233",
+        "record_id": "3233"
+      },
+      {
+        "id": "lcb-leetcode-3234",
+        "record_id": "3234"
+      },
+      {
+        "id": "lcb-leetcode-3235",
+        "record_id": "3235"
+      },
+      {
+        "id": "lcb-leetcode-3236",
+        "record_id": "3236"
+      },
+      {
+        "id": "lcb-leetcode-3239",
+        "record_id": "3239"
+      },
+      {
+        "id": "lcb-leetcode-3240",
+        "record_id": "3240"
+      },
+      {
+        "id": "lcb-leetcode-3242",
+        "record_id": "3242"
+      },
+      {
+        "id": "lcb-leetcode-3243",
+        "record_id": "3243"
+      },
+      {
+        "id": "lcb-leetcode-3244",
+        "record_id": "3244"
+      },
+      {
+        "id": "lcb-leetcode-3245",
+        "record_id": "3245"
+      },
+      {
+        "id": "lcb-leetcode-3246",
+        "record_id": "3246"
+      },
+      {
+        "id": "lcb-leetcode-3249",
+        "record_id": "3249"
+      },
+      {
+        "id": "lcb-leetcode-3251",
+        "record_id": "3251"
+      },
+      {
+        "id": "lcb-leetcode-3252",
+        "record_id": "3252"
+      },
+      {
+        "id": "lcb-leetcode-3261",
+        "record_id": "3261"
+      },
+      {
+        "id": "lcb-leetcode-3262",
+        "record_id": "3262"
+      },
+      {
+        "id": "lcb-leetcode-3263",
+        "record_id": "3263"
+      },
+      {
+        "id": "lcb-leetcode-3265",
+        "record_id": "3265"
+      },
+      {
+        "id": "lcb-leetcode-3267",
+        "record_id": "3267"
+      },
+      {
+        "id": "lcb-leetcode-3269",
+        "record_id": "3269"
+      },
+      {
+        "id": "lcb-leetcode-3279",
+        "record_id": "3279"
+      },
+      {
+        "id": "lcb-leetcode-3291",
+        "record_id": "3291"
+      },
+      {
+        "id": "lcb-leetcode-3292",
+        "record_id": "3292"
+      },
+      {
+        "id": "lcb-leetcode-3297",
+        "record_id": "3297"
+      },
+      {
+        "id": "lcb-leetcode-3298",
+        "record_id": "3298"
+      },
+      {
+        "id": "lcb-leetcode-3299",
+        "record_id": "3299"
+      },
+      {
+        "id": "lcb-leetcode-3308",
+        "record_id": "3308"
+      },
+      {
+        "id": "lcb-leetcode-3309",
+        "record_id": "3309"
+      },
+      {
+        "id": "lcb-leetcode-3311",
+        "record_id": "3311"
+      },
+      {
+        "id": "lcb-leetcode-3312",
+        "record_id": "3312"
+      },
+      {
+        "id": "lcb-leetcode-3317",
+        "record_id": "3317"
+      },
+      {
+        "id": "lcb-leetcode-3320",
+        "record_id": "3320"
+      },
+      {
+        "id": "lcb-leetcode-3324",
+        "record_id": "3324"
+      },
+      {
+        "id": "lcb-leetcode-3329",
+        "record_id": "3329"
+      },
+      {
+        "id": "lcb-leetcode-3331",
+        "record_id": "3331"
+      },
+      {
+        "id": "lcb-leetcode-3347",
+        "record_id": "3347"
+      },
+      {
+        "id": "lcb-atcoder-abc301_a",
+        "record_id": "abc301_a"
+      },
+      {
+        "id": "lcb-atcoder-abc301_b",
+        "record_id": "abc301_b"
+      },
+      {
+        "id": "lcb-atcoder-abc301_c",
+        "record_id": "abc301_c"
+      },
+      {
+        "id": "lcb-atcoder-abc301_d",
+        "record_id": "abc301_d"
+      },
+      {
+        "id": "lcb-atcoder-abc301_e",
+        "record_id": "abc301_e"
+      },
+      {
+        "id": "lcb-atcoder-abc301_f",
+        "record_id": "abc301_f"
+      },
+      {
+        "id": "lcb-atcoder-abc302_a",
+        "record_id": "abc302_a"
+      },
+      {
+        "id": "lcb-atcoder-abc302_b",
+        "record_id": "abc302_b"
+      },
+      {
+        "id": "lcb-atcoder-abc302_c",
+        "record_id": "abc302_c"
+      },
+      {
+        "id": "lcb-atcoder-abc302_d",
+        "record_id": "abc302_d"
+      },
+      {
+        "id": "lcb-atcoder-abc302_e",
+        "record_id": "abc302_e"
+      },
+      {
+        "id": "lcb-atcoder-abc302_f",
+        "record_id": "abc302_f"
+      },
+      {
+        "id": "lcb-atcoder-abc303_a",
+        "record_id": "abc303_a"
+      },
+      {
+        "id": "lcb-atcoder-abc303_b",
+        "record_id": "abc303_b"
+      },
+      {
+        "id": "lcb-atcoder-abc303_c",
+        "record_id": "abc303_c"
+      },
+      {
+        "id": "lcb-atcoder-abc303_d",
+        "record_id": "abc303_d"
+      },
+      {
+        "id": "lcb-atcoder-abc303_e",
+        "record_id": "abc303_e"
+      },
+      {
+        "id": "lcb-atcoder-abc304_a",
+        "record_id": "abc304_a"
+      },
+      {
+        "id": "lcb-atcoder-abc304_b",
+        "record_id": "abc304_b"
+      },
+      {
+        "id": "lcb-atcoder-abc304_c",
+        "record_id": "abc304_c"
+      },
+      {
+        "id": "lcb-atcoder-abc304_d",
+        "record_id": "abc304_d"
+      },
+      {
+        "id": "lcb-atcoder-abc304_e",
+        "record_id": "abc304_e"
+      },
+      {
+        "id": "lcb-atcoder-abc305_a",
+        "record_id": "abc305_a"
+      },
+      {
+        "id": "lcb-atcoder-abc305_b",
+        "record_id": "abc305_b"
+      },
+      {
+        "id": "lcb-atcoder-abc305_c",
+        "record_id": "abc305_c"
+      },
+      {
+        "id": "lcb-atcoder-abc305_d",
+        "record_id": "abc305_d"
+      },
+      {
+        "id": "lcb-atcoder-abc305_e",
+        "record_id": "abc305_e"
+      },
+      {
+        "id": "lcb-atcoder-abc306_a",
+        "record_id": "abc306_a"
+      },
+      {
+        "id": "lcb-atcoder-abc306_b",
+        "record_id": "abc306_b"
+      },
+      {
+        "id": "lcb-atcoder-abc306_c",
+        "record_id": "abc306_c"
+      },
+      {
+        "id": "lcb-atcoder-abc306_d",
+        "record_id": "abc306_d"
+      },
+      {
+        "id": "lcb-atcoder-abc306_e",
+        "record_id": "abc306_e"
+      },
+      {
+        "id": "lcb-atcoder-abc307_a",
+        "record_id": "abc307_a"
+      },
+      {
+        "id": "lcb-atcoder-abc307_b",
+        "record_id": "abc307_b"
+      },
+      {
+        "id": "lcb-atcoder-abc307_c",
+        "record_id": "abc307_c"
+      },
+      {
+        "id": "lcb-atcoder-abc307_d",
+        "record_id": "abc307_d"
+      },
+      {
+        "id": "lcb-atcoder-abc307_e",
+        "record_id": "abc307_e"
+      },
+      {
+        "id": "lcb-atcoder-abc308_a",
+        "record_id": "abc308_a"
+      },
+      {
+        "id": "lcb-atcoder-abc308_b",
+        "record_id": "abc308_b"
+      },
+      {
+        "id": "lcb-atcoder-abc308_c",
+        "record_id": "abc308_c"
+      },
+      {
+        "id": "lcb-atcoder-abc308_d",
+        "record_id": "abc308_d"
+      },
+      {
+        "id": "lcb-atcoder-abc308_e",
+        "record_id": "abc308_e"
+      },
+      {
+        "id": "lcb-atcoder-abc308_f",
+        "record_id": "abc308_f"
+      },
+      {
+        "id": "lcb-atcoder-abc309_a",
+        "record_id": "abc309_a"
+      },
+      {
+        "id": "lcb-atcoder-abc309_b",
+        "record_id": "abc309_b"
+      },
+      {
+        "id": "lcb-atcoder-abc309_c",
+        "record_id": "abc309_c"
+      },
+      {
+        "id": "lcb-atcoder-abc309_d",
+        "record_id": "abc309_d"
+      },
+      {
+        "id": "lcb-atcoder-abc309_e",
+        "record_id": "abc309_e"
+      },
+      {
+        "id": "lcb-atcoder-abc310_a",
+        "record_id": "abc310_a"
+      },
+      {
+        "id": "lcb-atcoder-abc310_b",
+        "record_id": "abc310_b"
+      },
+      {
+        "id": "lcb-atcoder-abc310_c",
+        "record_id": "abc310_c"
+      },
+      {
+        "id": "lcb-atcoder-abc310_d",
+        "record_id": "abc310_d"
+      },
+      {
+        "id": "lcb-atcoder-abc310_e",
+        "record_id": "abc310_e"
+      },
+      {
+        "id": "lcb-atcoder-abc310_f",
+        "record_id": "abc310_f"
+      },
+      {
+        "id": "lcb-atcoder-abc311_a",
+        "record_id": "abc311_a"
+      },
+      {
+        "id": "lcb-atcoder-abc311_b",
+        "record_id": "abc311_b"
+      },
+      {
+        "id": "lcb-atcoder-abc311_c",
+        "record_id": "abc311_c"
+      },
+      {
+        "id": "lcb-atcoder-abc311_d",
+        "record_id": "abc311_d"
+      },
+      {
+        "id": "lcb-atcoder-abc311_e",
+        "record_id": "abc311_e"
+      },
+      {
+        "id": "lcb-atcoder-abc312_a",
+        "record_id": "abc312_a"
+      },
+      {
+        "id": "lcb-atcoder-abc312_b",
+        "record_id": "abc312_b"
+      },
+      {
+        "id": "lcb-atcoder-abc312_c",
+        "record_id": "abc312_c"
+      },
+      {
+        "id": "lcb-atcoder-abc312_d",
+        "record_id": "abc312_d"
+      },
+      {
+        "id": "lcb-atcoder-abc312_e",
+        "record_id": "abc312_e"
+      },
+      {
+        "id": "lcb-atcoder-abc312_f",
+        "record_id": "abc312_f"
+      },
+      {
+        "id": "lcb-atcoder-abc313_a",
+        "record_id": "abc313_a"
+      },
+      {
+        "id": "lcb-atcoder-abc313_b",
+        "record_id": "abc313_b"
+      },
+      {
+        "id": "lcb-atcoder-abc313_c",
+        "record_id": "abc313_c"
+      },
+      {
+        "id": "lcb-atcoder-abc314_a",
+        "record_id": "abc314_a"
+      },
+      {
+        "id": "lcb-atcoder-abc314_b",
+        "record_id": "abc314_b"
+      },
+      {
+        "id": "lcb-atcoder-abc314_c",
+        "record_id": "abc314_c"
+      },
+      {
+        "id": "lcb-atcoder-abc314_d",
+        "record_id": "abc314_d"
+      },
+      {
+        "id": "lcb-atcoder-abc314_e",
+        "record_id": "abc314_e"
+      },
+      {
+        "id": "lcb-atcoder-abc314_f",
+        "record_id": "abc314_f"
+      },
+      {
+        "id": "lcb-atcoder-abc315_a",
+        "record_id": "abc315_a"
+      },
+      {
+        "id": "lcb-atcoder-abc315_b",
+        "record_id": "abc315_b"
+      },
+      {
+        "id": "lcb-atcoder-abc315_c",
+        "record_id": "abc315_c"
+      },
+      {
+        "id": "lcb-atcoder-abc315_d",
+        "record_id": "abc315_d"
+      },
+      {
+        "id": "lcb-atcoder-abc315_e",
+        "record_id": "abc315_e"
+      },
+      {
+        "id": "lcb-atcoder-abc315_f",
+        "record_id": "abc315_f"
+      },
+      {
+        "id": "lcb-atcoder-abc318_a",
+        "record_id": "abc318_a"
+      },
+      {
+        "id": "lcb-atcoder-abc318_b",
+        "record_id": "abc318_b"
+      },
+      {
+        "id": "lcb-atcoder-abc318_c",
+        "record_id": "abc318_c"
+      },
+      {
+        "id": "lcb-atcoder-abc318_d",
+        "record_id": "abc318_d"
+      },
+      {
+        "id": "lcb-atcoder-abc318_e",
+        "record_id": "abc318_e"
+      },
+      {
+        "id": "lcb-atcoder-abc319_b",
+        "record_id": "abc319_b"
+      },
+      {
+        "id": "lcb-atcoder-abc319_c",
+        "record_id": "abc319_c"
+      },
+      {
+        "id": "lcb-atcoder-abc319_d",
+        "record_id": "abc319_d"
+      },
+      {
+        "id": "lcb-atcoder-abc319_e",
+        "record_id": "abc319_e"
+      },
+      {
+        "id": "lcb-atcoder-abc320_a",
+        "record_id": "abc320_a"
+      },
+      {
+        "id": "lcb-atcoder-abc320_b",
+        "record_id": "abc320_b"
+      },
+      {
+        "id": "lcb-atcoder-abc320_c",
+        "record_id": "abc320_c"
+      },
+      {
+        "id": "lcb-atcoder-abc320_d",
+        "record_id": "abc320_d"
+      },
+      {
+        "id": "lcb-atcoder-abc320_e",
+        "record_id": "abc320_e"
+      },
+      {
+        "id": "lcb-atcoder-abc321_a",
+        "record_id": "abc321_a"
+      },
+      {
+        "id": "lcb-atcoder-abc321_b",
+        "record_id": "abc321_b"
+      },
+      {
+        "id": "lcb-atcoder-abc321_c",
+        "record_id": "abc321_c"
+      },
+      {
+        "id": "lcb-atcoder-abc321_d",
+        "record_id": "abc321_d"
+      },
+      {
+        "id": "lcb-atcoder-abc321_e",
+        "record_id": "abc321_e"
+      },
+      {
+        "id": "lcb-atcoder-abc322_a",
+        "record_id": "abc322_a"
+      },
+      {
+        "id": "lcb-atcoder-abc322_b",
+        "record_id": "abc322_b"
+      },
+      {
+        "id": "lcb-atcoder-abc322_c",
+        "record_id": "abc322_c"
+      },
+      {
+        "id": "lcb-atcoder-abc322_d",
+        "record_id": "abc322_d"
+      },
+      {
+        "id": "lcb-atcoder-abc322_e",
+        "record_id": "abc322_e"
+      },
+      {
+        "id": "lcb-atcoder-abc323_a",
+        "record_id": "abc323_a"
+      },
+      {
+        "id": "lcb-atcoder-abc323_b",
+        "record_id": "abc323_b"
+      },
+      {
+        "id": "lcb-atcoder-abc323_c",
+        "record_id": "abc323_c"
+      },
+      {
+        "id": "lcb-atcoder-abc323_d",
+        "record_id": "abc323_d"
+      },
+      {
+        "id": "lcb-atcoder-abc323_e",
+        "record_id": "abc323_e"
+      },
+      {
+        "id": "lcb-atcoder-abc324_a",
+        "record_id": "abc324_a"
+      },
+      {
+        "id": "lcb-atcoder-abc324_b",
+        "record_id": "abc324_b"
+      },
+      {
+        "id": "lcb-atcoder-abc324_c",
+        "record_id": "abc324_c"
+      },
+      {
+        "id": "lcb-atcoder-abc324_d",
+        "record_id": "abc324_d"
+      },
+      {
+        "id": "lcb-atcoder-abc324_e",
+        "record_id": "abc324_e"
+      },
+      {
+        "id": "lcb-atcoder-abc324_f",
+        "record_id": "abc324_f"
+      },
+      {
+        "id": "lcb-atcoder-abc325_a",
+        "record_id": "abc325_a"
+      },
+      {
+        "id": "lcb-atcoder-abc325_b",
+        "record_id": "abc325_b"
+      },
+      {
+        "id": "lcb-atcoder-abc325_c",
+        "record_id": "abc325_c"
+      },
+      {
+        "id": "lcb-atcoder-abc325_d",
+        "record_id": "abc325_d"
+      },
+      {
+        "id": "lcb-atcoder-abc325_e",
+        "record_id": "abc325_e"
+      },
+      {
+        "id": "lcb-atcoder-abc325_f",
+        "record_id": "abc325_f"
+      },
+      {
+        "id": "lcb-atcoder-abc326_a",
+        "record_id": "abc326_a"
+      },
+      {
+        "id": "lcb-atcoder-abc326_b",
+        "record_id": "abc326_b"
+      },
+      {
+        "id": "lcb-atcoder-abc326_c",
+        "record_id": "abc326_c"
+      },
+      {
+        "id": "lcb-atcoder-abc326_d",
+        "record_id": "abc326_d"
+      },
+      {
+        "id": "lcb-atcoder-abc326_e",
+        "record_id": "abc326_e"
+      },
+      {
+        "id": "lcb-atcoder-abc327_a",
+        "record_id": "abc327_a"
+      },
+      {
+        "id": "lcb-atcoder-abc327_b",
+        "record_id": "abc327_b"
+      },
+      {
+        "id": "lcb-atcoder-abc327_c",
+        "record_id": "abc327_c"
+      },
+      {
+        "id": "lcb-atcoder-abc327_d",
+        "record_id": "abc327_d"
+      },
+      {
+        "id": "lcb-atcoder-abc327_e",
+        "record_id": "abc327_e"
+      },
+      {
+        "id": "lcb-atcoder-abc328_a",
+        "record_id": "abc328_a"
+      },
+      {
+        "id": "lcb-atcoder-abc328_b",
+        "record_id": "abc328_b"
+      },
+      {
+        "id": "lcb-atcoder-abc328_c",
+        "record_id": "abc328_c"
+      },
+      {
+        "id": "lcb-atcoder-abc328_d",
+        "record_id": "abc328_d"
+      },
+      {
+        "id": "lcb-atcoder-abc328_e",
+        "record_id": "abc328_e"
+      },
+      {
+        "id": "lcb-atcoder-abc329_a",
+        "record_id": "abc329_a"
+      },
+      {
+        "id": "lcb-atcoder-abc329_b",
+        "record_id": "abc329_b"
+      },
+      {
+        "id": "lcb-atcoder-abc329_c",
+        "record_id": "abc329_c"
+      },
+      {
+        "id": "lcb-atcoder-abc329_d",
+        "record_id": "abc329_d"
+      },
+      {
+        "id": "lcb-atcoder-abc329_e",
+        "record_id": "abc329_e"
+      },
+      {
+        "id": "lcb-atcoder-abc329_f",
+        "record_id": "abc329_f"
+      },
+      {
+        "id": "lcb-atcoder-abc330_a",
+        "record_id": "abc330_a"
+      },
+      {
+        "id": "lcb-atcoder-abc330_b",
+        "record_id": "abc330_b"
+      },
+      {
+        "id": "lcb-atcoder-abc330_c",
+        "record_id": "abc330_c"
+      },
+      {
+        "id": "lcb-atcoder-abc330_d",
+        "record_id": "abc330_d"
+      },
+      {
+        "id": "lcb-atcoder-abc330_e",
+        "record_id": "abc330_e"
+      },
+      {
+        "id": "lcb-atcoder-abc331_a",
+        "record_id": "abc331_a"
+      },
+      {
+        "id": "lcb-atcoder-abc331_b",
+        "record_id": "abc331_b"
+      },
+      {
+        "id": "lcb-atcoder-abc331_c",
+        "record_id": "abc331_c"
+      },
+      {
+        "id": "lcb-atcoder-abc331_d",
+        "record_id": "abc331_d"
+      },
+      {
+        "id": "lcb-atcoder-abc331_e",
+        "record_id": "abc331_e"
+      },
+      {
+        "id": "lcb-atcoder-abc332_a",
+        "record_id": "abc332_a"
+      },
+      {
+        "id": "lcb-atcoder-abc332_b",
+        "record_id": "abc332_b"
+      },
+      {
+        "id": "lcb-atcoder-abc332_c",
+        "record_id": "abc332_c"
+      },
+      {
+        "id": "lcb-atcoder-abc332_d",
+        "record_id": "abc332_d"
+      },
+      {
+        "id": "lcb-atcoder-abc333_a",
+        "record_id": "abc333_a"
+      },
+      {
+        "id": "lcb-atcoder-abc333_b",
+        "record_id": "abc333_b"
+      },
+      {
+        "id": "lcb-atcoder-abc333_c",
+        "record_id": "abc333_c"
+      },
+      {
+        "id": "lcb-atcoder-abc333_d",
+        "record_id": "abc333_d"
+      },
+      {
+        "id": "lcb-atcoder-abc333_e",
+        "record_id": "abc333_e"
+      },
+      {
+        "id": "lcb-atcoder-abc334_a",
+        "record_id": "abc334_a"
+      },
+      {
+        "id": "lcb-atcoder-abc334_b",
+        "record_id": "abc334_b"
+      },
+      {
+        "id": "lcb-atcoder-abc334_c",
+        "record_id": "abc334_c"
+      },
+      {
+        "id": "lcb-atcoder-abc334_d",
+        "record_id": "abc334_d"
+      },
+      {
+        "id": "lcb-atcoder-abc334_e",
+        "record_id": "abc334_e"
+      },
+      {
+        "id": "lcb-atcoder-abc335_a",
+        "record_id": "abc335_a"
+      },
+      {
+        "id": "lcb-atcoder-abc335_b",
+        "record_id": "abc335_b"
+      },
+      {
+        "id": "lcb-atcoder-abc335_c",
+        "record_id": "abc335_c"
+      },
+      {
+        "id": "lcb-atcoder-abc335_d",
+        "record_id": "abc335_d"
+      },
+      {
+        "id": "lcb-atcoder-abc336_a",
+        "record_id": "abc336_a"
+      },
+      {
+        "id": "lcb-atcoder-abc336_b",
+        "record_id": "abc336_b"
+      },
+      {
+        "id": "lcb-atcoder-abc336_c",
+        "record_id": "abc336_c"
+      },
+      {
+        "id": "lcb-atcoder-abc336_d",
+        "record_id": "abc336_d"
+      },
+      {
+        "id": "lcb-atcoder-abc337_a",
+        "record_id": "abc337_a"
+      },
+      {
+        "id": "lcb-atcoder-abc337_b",
+        "record_id": "abc337_b"
+      },
+      {
+        "id": "lcb-atcoder-abc337_c",
+        "record_id": "abc337_c"
+      },
+      {
+        "id": "lcb-atcoder-abc337_d",
+        "record_id": "abc337_d"
+      },
+      {
+        "id": "lcb-atcoder-abc337_e",
+        "record_id": "abc337_e"
+      },
+      {
+        "id": "lcb-atcoder-abc338_a",
+        "record_id": "abc338_a"
+      },
+      {
+        "id": "lcb-atcoder-abc338_b",
+        "record_id": "abc338_b"
+      },
+      {
+        "id": "lcb-atcoder-abc338_c",
+        "record_id": "abc338_c"
+      },
+      {
+        "id": "lcb-atcoder-abc338_d",
+        "record_id": "abc338_d"
+      },
+      {
+        "id": "lcb-atcoder-abc338_e",
+        "record_id": "abc338_e"
+      },
+      {
+        "id": "lcb-atcoder-abc338_f",
+        "record_id": "abc338_f"
+      },
+      {
+        "id": "lcb-atcoder-abc339_a",
+        "record_id": "abc339_a"
+      },
+      {
+        "id": "lcb-atcoder-abc339_b",
+        "record_id": "abc339_b"
+      },
+      {
+        "id": "lcb-atcoder-abc339_c",
+        "record_id": "abc339_c"
+      },
+      {
+        "id": "lcb-atcoder-abc339_d",
+        "record_id": "abc339_d"
+      },
+      {
+        "id": "lcb-atcoder-abc340_a",
+        "record_id": "abc340_a"
+      },
+      {
+        "id": "lcb-atcoder-abc340_b",
+        "record_id": "abc340_b"
+      },
+      {
+        "id": "lcb-atcoder-abc340_c",
+        "record_id": "abc340_c"
+      },
+      {
+        "id": "lcb-atcoder-abc340_d",
+        "record_id": "abc340_d"
+      },
+      {
+        "id": "lcb-atcoder-abc340_e",
+        "record_id": "abc340_e"
+      },
+      {
+        "id": "lcb-atcoder-abc341_a",
+        "record_id": "abc341_a"
+      },
+      {
+        "id": "lcb-atcoder-abc341_b",
+        "record_id": "abc341_b"
+      },
+      {
+        "id": "lcb-atcoder-abc341_c",
+        "record_id": "abc341_c"
+      },
+      {
+        "id": "lcb-atcoder-abc341_d",
+        "record_id": "abc341_d"
+      },
+      {
+        "id": "lcb-atcoder-abc341_e",
+        "record_id": "abc341_e"
+      },
+      {
+        "id": "lcb-atcoder-abc341_f",
+        "record_id": "abc341_f"
+      },
+      {
+        "id": "lcb-atcoder-abc342_a",
+        "record_id": "abc342_a"
+      },
+      {
+        "id": "lcb-atcoder-abc342_b",
+        "record_id": "abc342_b"
+      },
+      {
+        "id": "lcb-atcoder-abc342_c",
+        "record_id": "abc342_c"
+      },
+      {
+        "id": "lcb-atcoder-abc342_d",
+        "record_id": "abc342_d"
+      },
+      {
+        "id": "lcb-atcoder-abc342_e",
+        "record_id": "abc342_e"
+      },
+      {
+        "id": "lcb-atcoder-abc343_a",
+        "record_id": "abc343_a"
+      },
+      {
+        "id": "lcb-atcoder-abc343_b",
+        "record_id": "abc343_b"
+      },
+      {
+        "id": "lcb-atcoder-abc343_c",
+        "record_id": "abc343_c"
+      },
+      {
+        "id": "lcb-atcoder-abc343_d",
+        "record_id": "abc343_d"
+      },
+      {
+        "id": "lcb-atcoder-abc343_e",
+        "record_id": "abc343_e"
+      }
+    ]
+  }
+]

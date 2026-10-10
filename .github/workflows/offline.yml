@@ -1,0 +1,69 @@
+name: offline
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      LITELLM_LOCAL_MODEL_COST_MAP: 'True'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e '.[test,harbor]'
+      - name: Fetch pinned upstream reference code
+        run: |
+          git clone https://github.com/stanford-iris-lab/meta-harness.git meta-harness
+          git -C meta-harness checkout 8123ccabe2b19fa1123090b2e5f1bacc20963ce8
+          git clone https://github.com/google-research/rrsi.git rrsi
+          git -C rrsi checkout be50316e1db05914068a973f322770ef08ed7ba1
+      - run: python -m pytest -q
+      - run: python scripts/update_support_status.py --check
+      - run: python examples/offline_demo.py
+  wheel:
+    name: Installed core and packaged resources
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install build
+      - run: python -m build
+      - name: Verify wheel outside the source tree without optional dependencies
+        run: |
+          python -m venv "$RUNNER_TEMP/rsi-core"
+          "$RUNNER_TEMP/rsi-core/bin/python" -m pip install --no-deps dist/*.whl
+          cd "$RUNNER_TEMP"
+          "$RUNNER_TEMP/rsi-core/bin/rsi-eval" list --json
+          "$RUNNER_TEMP/rsi-core/bin/rsi-eval" status --benchmark terminal-bench@2.0 --method rrsi --json
+          "$RUNNER_TEMP/rsi-core/bin/rsi-eval" method list
+          "$RUNNER_TEMP/rsi-core/bin/rsi-eval" method test --help
+          "$RUNNER_TEMP/rsi-core/bin/rsi-eval" experiment import --help
+          "$RUNNER_TEMP/rsi-core/bin/rsi-eval" runtime capture --help
+          "$RUNNER_TEMP/rsi-core/bin/python" - <<'PY'
+          from rsi_eval.methods import METHODS
+          from rsi_eval.resources import codex_template, integration_resource
+          assert (codex_template() / "agent.py").is_file()
+          assert set(METHODS) == {"meta-harness", "rrsi", "ahe", "harnessx"}
+          for spec in METHODS.values():
+              assert integration_resource(spec["module"], spec["example"]).is_file()
+          PY
+          "$RUNNER_TEMP/rsi-core/bin/python" "$GITHUB_WORKSPACE/examples/offline_demo.py"
+  harnessx-native:
+    name: Optional HarnessX runtime
+    runs-on: ubuntu-latest
+    env:
+      LITELLM_LOCAL_MODEL_COST_MAP: 'True'
+      RSI_HARNESSX_CHECKOUT: .runtime/ci-harnessx
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install optional runtime in its own job
+        run: python -m pip install -e '.[test]' -r integrations/harnessx/requirements.txt
+      - name: Prepare pinned public HarnessX source
+        run: python -m integrations.harnessx prepare --checkout "$RSI_HARNESSX_CHECKOUT"
+      - name: Exercise native workflow and task MCP bridge without model calls
+        run: python -m pytest -q tests/test_harnessx.py tests/test_harnessx_native.py tests/test_harnessx_mcp.py tests/test_harnessx_portability.py

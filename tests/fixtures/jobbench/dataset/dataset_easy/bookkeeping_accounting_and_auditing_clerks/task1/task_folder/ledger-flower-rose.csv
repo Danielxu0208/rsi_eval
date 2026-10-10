@@ -1,0 +1,29 @@
+Date,Details,Ref,Account,Money In,Money Out,Bank Balance
+1-Apr-12, Personal funds deposited,Transfer in,Capital,500.00,,500.00
+1-Apr-12, Loan from AMB,Loan,Bank Loan,"1,500.00",,"2,000.00"
+1-Apr-12,The City Express - Shop Assistant,Ch 0001,Advertising,,125.00,"1,875.00"
+2-Apr-12,Mr Landlord,Bank transfer,Rent,,800.00,"1,075.00"
+3-Apr-12,Power Supply Co - Connect power,Bill Payment,Power,,110.00,965.00
+3-Apr-12,Telecom - Phone/broadbank install,Bill Payment,Telephone - Landline,,150.00,815.00
+8-Apr-12,Office Supplies Inc. - Cash machine,Ch 003,Office Supplies,,350.00,465.00
+8-Apr-12,Office Supplies Inc. - Petty cash box,Ch 003,Office Supplies,,350.00,115.00
+8-Apr-12,Cash box float and cash machine,Cash withdrawal,Cash,,200.00,(85.00)
+8-Apr-12,"Local Grocers - tea, coffee, milk",Cash,Kitchen Supplies,,55.00,(140.00)
+9-Apr-12,The City Express - Grand Opening,Bank transfer,Advertising,,220.00,(360.00)
+9-Apr-12,BT Fuel Station - Fuel,bank card,Vehicle Costs,,82.50,(442.50)
+9-Apr-12,BT Fuel Station - Phone Top-Up,bank card,Telephone - Mobile,,20.00,(462.50)
+21-Apr-12,Great Glass Cleaners - Window cleaning,Cash,Cleaning,,90.00,(552.50)
+21-Apr-12,Money from grand opening sales ,Deposit,Sales,900.00,,347.50
+23-Apr-12,Bank deposit,Deposit,Sales,980.00,,"1,327.50"
+24-Apr-12,Bank deposit,Deposit,Sales,"1,100.00",,"2,427.50"
+25-Apr-12,Wages - Alice,Bank transfer,Wages Expenses,,250.00,"2,177.50"
+26-Apr-12,Bank deposit,Deposit,Sales,325.00,,"2,502.50"
+27-Apr-12,Bank deposit,Deposit,Sales,269.00,,"2,771.50"
+27-Apr-12,Signwriting on vehicle - City Signwriters,Ch 0004,Marketing,,350.00,"2,421.50"
+28-Apr-12,All Wholesale Stationers,Bank card,Stationery,,86.00,"2,335.50"
+28-Apr-12,Bank deposit,Deposit,Sales,201.00,,"2,536.50"
+29-Apr-12,Purchases - floral supplies,Bank transfer,Stock Purchases,,"1,200.00","1,336.50"
+29-Apr-12,Hotel Grande - accommodation and meals,Bank card,Travel Costs,,210.00,"1,126.50"
+29-Apr-12,Bank deposit,Deposit,Sales,665.00,,"1,791.50"
+30-Apr-12,Airfare,DC,Travel Costs,,280.00,"1,511.50"
+30-Apr-12,Bank deposit,Deposit,Sales,110.00,,"1,621.50"

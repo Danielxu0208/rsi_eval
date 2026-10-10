@@ -1,0 +1,180 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.5228920141164687 -0.5800081356561211 -0.6246394993481706 4.784396651657472
+  position -24.923416016240427 -15.86980776668673 82.27805548757286
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DEF WHITE_ZONE Solid {
+  translation 0.11 7.12 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 10 15 0.1
+      }
+    }
+  ]
+  name "floor"
+  boundingObject Box {
+    size 10 15 0.1
+  }
+}
+DEF RED_ZONE Solid {
+  translation 0.11 22.11 0
+  children [
+    Shape {
+      appearance DEF red PBRAppearance {
+        baseColor 0.666667 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 10 15 0.1
+      }
+    }
+  ]
+  name "floor(1)"
+  boundingObject Box {
+    size 10 15 0.1
+  }
+}
+DEF GREEN_ZONE Solid {
+  translation 12.63 24.61 0
+  rotation 0 0 1 -1.5707953071795862
+  children [
+    Shape {
+      appearance DEF green PBRAppearance {
+        baseColor 0 0.333333 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 10 15 0.1
+      }
+    }
+  ]
+  name "floor(2)"
+  boundingObject Box {
+    size 10 15 0.1
+  }
+}
+DEF OBSTACLE_2 Solid {
+  translation -0.41 4.78 0.5
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.6
+      }
+      geometry Box {
+        size 1 1 1
+      }
+    }
+  ]
+  name "obstacle_4"
+  boundingObject Box {
+    size 1 1 1
+  }
+}
+DEF OBSTACLE_3 Solid {
+  translation 1.58 11.04 0.5
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.6
+      }
+      geometry Box {
+        size 1 1 1
+      }
+    }
+  ]
+  name "obstacle_5"
+  boundingObject Box {
+    size 1 1 1
+  }
+}
+DEF OBSTACLE_1 Solid {
+  translation 3.24 21.69 0.5
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.6
+      }
+      geometry Box {
+        size 1 1 1
+      }
+    }
+  ]
+  name "obstacle_5(1)"
+  boundingObject Box {
+    size 1 1 1
+  }
+}
+DEF OBSTACLE_4 Solid {
+  translation -1.76 18.4 0.5
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.6
+      }
+      geometry Box {
+        size 1 1 1
+      }
+    }
+  ]
+  name "obstacle_5(3)"
+  boundingObject Box {
+    size 1 1 1
+  }
+}
+DEF OBSTACLE_5 Solid {
+  translation 13.45 24.52 0.5
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.6
+      }
+      geometry Box {
+        size 1 1 1
+      }
+    }
+  ]
+  name "obstacle_5(2)"
+  boundingObject Box {
+    size 1 1 1
+  }
+}
+Robot {
+  translation 0 0 0.5
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Sphere {
+        radius 0.5
+        subdivision 2
+      }
+    }
+  ]
+  boundingObject Sphere {
+    radius 0.5
+  }
+  controller "robot_controller"
+  supervisor TRUE
+}

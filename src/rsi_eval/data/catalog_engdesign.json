@@ -1,0 +1,2188 @@
+[
+  {
+    "name": "engdesign-open",
+    "version": "open-subset-c8ec338-v1",
+    "dataset_ref": "git:c8ec338cc5f846d792d93728b00c9448111139e5",
+    "materializer": "engdesign",
+    "source": {
+      "repository": "https://github.com/AGI4Engineering/EngDesign",
+      "commit": "c8ec338cc5f846d792d93728b00c9448111139e5",
+      "files": {
+        "LICENSE": "8ae649abc522ce0212288dc6cfa255f419e3a494b97fa6b03677161ea7fface6",
+        "EngDesign-Open/AB_01/LLM_prompt.txt": "ac4734abe80d35237ac96a7356084b55885491aff523c71a9a21f21003892b2a",
+        "EngDesign-Open/AB_01/output_structure.py": "bcdaf7d30b2038951562e7e0c8f754f92089c0f035a8453b5f418b03b1ba73a2",
+        "EngDesign-Open/AB_01/evaluate.py": "7986e5f3b167e98825951cbb2b70218d66991a7ac7bd8e23e6b886021aa92c12",
+        "EngDesign-Open/AB_01/domain_topic.txt": "1f00caa516bf2cadff58ab37ddf7871c6a1371d4f46604aac5d058c3396bd528",
+        "EngDesign-Open/XY_01/LLM_prompt.txt": "e7ec8f2bb05edb9410fec108a2a0a872aa0be76a78875cd920259fb761516372",
+        "EngDesign-Open/XY_01/output_structure.py": "364c431dfffd651102993d9ea12326abfcbf8b726ca984e6bdff620c10ce916d",
+        "EngDesign-Open/XY_01/evaluate.py": "82c9797e473cdf7a5183ac16b175b5cc46a189ff6a85387da6361814762d2393",
+        "EngDesign-Open/XY_01/domain_topic.txt": "a0cf57baaecec6e950c9691591dc2fb26dae6436553f54ab743297370a2cbafa",
+        "EngDesign-Open/XY_01/font_rom.sv": "c92479376a157d800cc9424e00f33fffc761578350402742bbd01d860376deeb",
+        "EngDesign-Open/XY_01/font_rom_data.py": "b3aa171608744b52664b00e3038cae44e685aeb7c4a392a624d63dc79f2f8f3d"
+      }
+    },
+    "coverage": {
+      "scope": "reviewed-open-subset",
+      "upstream_open_task_count": 67,
+      "supported_task_count": 2,
+      "unsupported_task_ids": [
+        "AB_02",
+        "AB_03",
+        "AM_02",
+        "AM_03",
+        "AV_02",
+        "AV_03",
+        "CY_03",
+        "DL_01",
+        "DL_02",
+        "HC_03",
+        "HJ_01",
+        "JY_01",
+        "JY_02",
+        "JY_03",
+        "KV_02",
+        "KV_03",
+        "LX_02",
+        "NS_PA_SS_02",
+        "NS_PA_SS_03",
+        "NS_PA_SS_04",
+        "NS_PA_SS_05",
+        "NS_PA_SS_06",
+        "NS_PA_SS_07",
+        "NS_PA_SS_08",
+        "NS_PA_SS_09",
+        "NS_PA_SS_10",
+        "RK_01",
+        "RK_02",
+        "RK_03",
+        "RK_04",
+        "RS_01",
+        "RS_02",
+        "RS_03",
+        "WJ_01",
+        "XG_08",
+        "XG_13",
+        "XW_01",
+        "XW_02",
+        "XW_03",
+        "XW_04",
+        "XY_03",
+        "XY_04",
+        "XY_05",
+        "XZ_01",
+        "XZ_02",
+        "XZ_03",
+        "XZ_04",
+        "YJ_01",
+        "YJ_02",
+        "YJ_03",
+        "YX_01",
+        "YX_02",
+        "YX_03",
+        "Yiqi_01",
+        "Yiqi_02",
+        "Yuqi_01",
+        "ZC_02",
+        "ZC_03",
+        "ZH_02",
+        "ZH_03",
+        "ZH_04",
+        "Ziheng_02",
+        "libin2_01",
+        "libin2_02",
+        "libin2_03"
+      ],
+      "unsupported_reason": "Not yet adapted: task assets, dependencies and evaluator isolation require individual review."
+    },
+    "protocol": {
+      "name": "engdesign-native-verifier",
+      "version": "json-deliverable-v1",
+      "primary_metric": "official evaluate_llm_response passed flag; mean across trials",
+      "additional_metrics": [
+        "native_score",
+        "confidence"
+      ],
+      "grader": "Unmodified upstream output_structure.py and evaluate_llm_response; no model judge.",
+      "submission": "/workspace/output.json validated by upstream Response_structure",
+      "missing_or_invalid_submission": "failed task, reward 0; no invented native score",
+      "verifier_failure": "missing reward and preserved error; never a task failure score",
+      "agent_interface": "Harbor agent, final JSON deliverable; upstream direct model caller is replaced.",
+      "budgets": {
+        "agent_timeout_sec": 600,
+        "verifier_timeout_sec": 120
+      },
+      "known_upstream_limits": [
+        "AB_01 uses pixel centers at index + 0.5 in its frozen verifier; its prose and solution.txt disagree on ROI boundaries.",
+        "XY_01 verifies the pattern for the submitted config; it does not separately enforce the prompt-requested I tetromino at rotation 1."
+      ]
+    },
+    "tasks": [
+      {
+        "id": "AB_01",
+        "record_id": "AB_01",
+        "domain": "Computer Vision / Medical Image Processing",
+        "title": "Radiomics feature extraction"
+      },
+      {
+        "id": "XY_01",
+        "record_id": "XY_01",
+        "domain": "Digital Design",
+        "title": "Tetris block ROM analysis"
+      }
+    ],
+    "lifecycle": "legacy-subset"
+  },
+  {
+    "name": "engdesign-open",
+    "version": "open-c8ec338-v1",
+    "dataset_ref": "git:c8ec338cc5f846d792d93728b00c9448111139e5",
+    "materializer": "engdesign",
+    "source": {
+      "repository": "https://github.com/AGI4Engineering/EngDesign",
+      "commit": "c8ec338cc5f846d792d93728b00c9448111139e5",
+      "files": {
+        "LICENSE": "8ae649abc522ce0212288dc6cfa255f419e3a494b97fa6b03677161ea7fface6",
+        "EngDesign-Open/AB_01/LLM_prompt.txt": "ac4734abe80d35237ac96a7356084b55885491aff523c71a9a21f21003892b2a",
+        "EngDesign-Open/AB_01/output_structure.py": "bcdaf7d30b2038951562e7e0c8f754f92089c0f035a8453b5f418b03b1ba73a2",
+        "EngDesign-Open/AB_01/evaluate.py": "7986e5f3b167e98825951cbb2b70218d66991a7ac7bd8e23e6b886021aa92c12",
+        "EngDesign-Open/AB_01/domain_topic.txt": "1f00caa516bf2cadff58ab37ddf7871c6a1371d4f46604aac5d058c3396bd528",
+        "EngDesign-Open/AB_02/output_structure.py": "859d756016ac70ab0947621076daf2ae47784f85219d6e4c4c660aed1f70d40c",
+        "EngDesign-Open/AB_02/images/8_of_hearts.png": "24692660396da722a4240b5dc64cc2fd9782806390acef3a45c2b8514b31e762",
+        "EngDesign-Open/AB_02/images/ground_truth_mask.png": "2cd2522aced9c2ff77379faf5261d47dbe19ac5fb18ddafef5f980cedc9021fd",
+        "EngDesign-Open/AB_02/LLM_prompt.txt": "e403cff4f7629570a8bc1dbabca52b1fcc52048bc9d59024070d8cbf00488954",
+        "EngDesign-Open/AB_02/evaluate.py": "514e54393b72d829f52e224bf71417363612aca84e8dec95a59349d61a629048",
+        "EngDesign-Open/AB_02/domain_topic.txt": "6f73bf47961a4931a323d04847559fd8da25747dbfa752f3e3c7be32823257e7",
+        "EngDesign-Open/AB_03/output_structure.py": "50b636344a5d14b4f6bab61ea9b0b1b127e7fdec554373564633dd3d4a8a3346",
+        "EngDesign-Open/AB_03/images/ground_truth_visualization.png": "57c4c2c4e3d353c3cbd4e7118499655356688547fa712987d8c1d0b93dd2a835",
+        "EngDesign-Open/AB_03/images/test_shape.png": "e3c9c158cdbe4bb5790b3d14c0062d1ce9d48035b485442b9a3a75e810a14741",
+        "EngDesign-Open/AB_03/LLM_prompt.txt": "011c9d2c466ff4a195d0b59a3e7b4a2d21e5c450a60d34d84ec844467a7e8d1a",
+        "EngDesign-Open/AB_03/evaluate.py": "577e4cc9e67f0f86efcd087dd6faf236e6b6d7d4357f90b4ba2319764a3810a5",
+        "EngDesign-Open/AB_03/domain_topic.txt": "19cd8dcb2d1fb41427f9a80617b1b13c7cb51c0bc9fab63503a14f78d942495f",
+        "EngDesign-Open/AM_02/output_structure.py": "3f07c0262419e4031aad73138c953d1dd7967c3a39bd0a71222cf6a39f67036f",
+        "EngDesign-Open/AM_02/grid.py": "bcb952de7c2c07e3a988e61f44134c3a1045c49cdc52aea7f914ce505d555024",
+        "EngDesign-Open/AM_02/LLM_prompt.txt": "dd05947c180be41af6ff724f905369406b4ed054d47695a5e6f2b502dc0a1e0d",
+        "EngDesign-Open/AM_02/evaluate.py": "33dbf4cc84e7fe7f9b002f9bea915ecd7889f75d3ac9cb4512e143135b212ebc",
+        "EngDesign-Open/AM_02/domain_topic.txt": "2de5c58353b97c22d9ce1bbaf39b10a48e6bfbe4f43e42a3c02054e40432d65d",
+        "EngDesign-Open/AM_03/output_structure.py": "9b8e57faeaf999c06ed35507ecdb62c8403fa0c919d97666b6af784a4f21bccc",
+        "EngDesign-Open/AM_03/grid.py": "3d3ebd9d6ef091b8e61f048e7b4bd5a8b1f704f646dca8e5f90b77dc39c5f916",
+        "EngDesign-Open/AM_03/LLM_prompt.txt": "a1a8624564dc78bc44d731ab8335780ed0d254fb5f2145b6b0b10e38c6a39c6a",
+        "EngDesign-Open/AM_03/evaluate.py": "c75eb0bfd66f38237f1a7a54c154101c46e69064f21d37a9cd08f209e0e0c0cc",
+        "EngDesign-Open/AM_03/domain_topic.txt": "e3c4951d19515df72aa3a6e6f0822ccceac67eea2d10a60179a6be92a3d715b4",
+        "EngDesign-Open/AV_02/LLM_prompt.txt": "0ebb86974dfcc931a7037431325925b7dbf2282f005fff9bd70401be719562ba",
+        "EngDesign-Open/AV_02/output_structure.py": "31013da02fa2307f367692a8fcd6c22379a46ca36968a41a56edbb973a2794bf",
+        "EngDesign-Open/AV_02/evaluate.py": "c58be9f36fbf9f32fe3fd3b46fdb71ef9397f03443ac23b2c4489f19a8889727",
+        "EngDesign-Open/AV_02/domain_topic.txt": "2fdcad3f51743690fbf46123d31032f4932ccf3182ad950a65306feec677bd50",
+        "EngDesign-Open/AV_03/LLM_prompt.txt": "5a2729bb935e634d986eb002381ecc676941dc884f8386821be17e19902344fc",
+        "EngDesign-Open/AV_03/output_structure.py": "400c513eef2f9167975be1cea6b47fa61fbaf495cd3a21c053b87125214c93d8",
+        "EngDesign-Open/AV_03/evaluate.py": "1dc91fd0bb0cd665d3161eb6dc0689544979d07350f532ac187d8aca455e4cbc",
+        "EngDesign-Open/AV_03/domain_topic.txt": "8b972279d63eb201e11877c5e95762fec41602eb711a5863e0beb84a52568e1f",
+        "EngDesign-Open/CY_03/LLM_prompt.txt": "7266e4b6051002810cb6b7edf96ee1edb3282c599f4ea0e4cbfb520648199277",
+        "EngDesign-Open/CY_03/output_structure.py": "97ff6f9bb05cccfbc196d73075c070d5ddb3c708d7fdf2c99a41bb9620240232",
+        "EngDesign-Open/CY_03/evaluate.py": "0327e3bdea6f59f946e86b26110b281dde4d0de8f32daaea815fdb1ccd203169",
+        "EngDesign-Open/CY_03/domain_topic.txt": "01542f6772020c97ecc1c80707194e922d7defbe9fed43ef7ee64bbc2cc2e70d",
+        "EngDesign-Open/DL_01/output_structure.py": "0a915f15338152219a4f15b8e601225551b2459e0ebff1a67371347d19e015e2",
+        "EngDesign-Open/DL_01/LLM_prompt.txt": "6d364ab016da3de181368f1a35df4cae5d85f2b446e09a6727f8b8c1e72d3305",
+        "EngDesign-Open/DL_01/evaluate.py": "27a274b03c011b57c90c9e3a2a2c8d12a7b8dc0db2e3894447d3c9a29cb27418",
+        "EngDesign-Open/DL_01/images/ssd_hardware.png": "6b7ea462657c184bc936028285a770c0555ffa5f0c7dd61bbe7a390f0c52f726",
+        "EngDesign-Open/DL_01/domain_topic.txt": "2749f6762880fa47df96e76b8ed1b85ca30af8a3f2cfea23265556b4480f65ef",
+        "EngDesign-Open/DL_02/output_structure.py": "45209434a65905b8487d31707658cab648c85c4165490ad4e07ed9b7da237c4a",
+        "EngDesign-Open/DL_02/LLM_prompt.txt": "18a3b543656042f50a5470cfecd75d5795c1aceac56ef496b0edc831fb42c73d",
+        "EngDesign-Open/DL_02/evaluate.py": "68ed3150746683163dfacc082e7b4f4df7641946c73fbbb35e1d2cf9b2a8d0d0",
+        "EngDesign-Open/DL_02/images/ssd_hardware.png": "6b7ea462657c184bc936028285a770c0555ffa5f0c7dd61bbe7a390f0c52f726",
+        "EngDesign-Open/DL_02/domain_topic.txt": "2749f6762880fa47df96e76b8ed1b85ca30af8a3f2cfea23265556b4480f65ef",
+        "EngDesign-Open/HC_03/LLM_prompt.txt": "7e0b78a64230f60a5fd3935a268163cbb5b657da3f7f8b18e5cc60f9398d8cbe",
+        "EngDesign-Open/HC_03/output_structure.py": "4f2135dd39e1ee2011e6c86e798bc2222b21695038101a61850c699110824ef4",
+        "EngDesign-Open/HC_03/evaluate.py": "f4ad762e4ec676e3b80386d432e841aa25354a4e3d6a6d0b544fa1c201bd12ee",
+        "EngDesign-Open/HC_03/domain_topic.txt": "6a77a8696cc5dc379c5c92c9bdd4fc27feb3728c630a76ed357694fc9611acbe",
+        "EngDesign-Open/HJ_01/output_structure.py": "a6fc38787309326cf54c9ac88977634af91ef420cb5608ea6a78b959a62c31ef",
+        "EngDesign-Open/HJ_01/s1.py": "3c07991597b1e9bba0479056eced928a047335a39165f928bf637e00c3f90e46",
+        "EngDesign-Open/HJ_01/LLM_prompt.txt": "b67d21ebc18f60a8b8fa01ca2977440b4af2eb18c8cb07f7f6838bce9fbc23bd",
+        "EngDesign-Open/HJ_01/evaluate.py": "f27192a58843cd27cee8432c83bc5c1ead710856ef4b6bc40dfb002273aeda42",
+        "EngDesign-Open/HJ_01/domain_topic.txt": "bb5d39457bb4bb0430b5ac29007b6eec4ec558cbe9b2115db1aaf091f9291848",
+        "EngDesign-Open/JY_01/LLM_prompt.txt": "160935d8567421babf8bd9b5ffae6a64e05f7f22945b4e22fb70a3d259cdc601",
+        "EngDesign-Open/JY_01/output_structure.py": "1f0b225af584595eaf57266051bcc8400761963af32d9908b9f72b925431ad9a",
+        "EngDesign-Open/JY_01/evaluate.py": "c6f8c1601068aad6277a6152e4d000c2e5ed9f4deb35e9e1174cab01c270d484",
+        "EngDesign-Open/JY_01/domain_topic.txt": "896369210f5c72fbe261d15a88ad4ad9e3ed04cc1748dd4c0bda7bf2a7d10a25",
+        "EngDesign-Open/JY_02/domain.txt": "1849cb3513748ce7a0e04bb6194b3c0d9e30b342e914b02c2529d9dbd30780a9",
+        "EngDesign-Open/JY_02/output_structure.py": "388348f9273c1628199ef92cbdfea5f1964769d8a2d0bb76697899b1f18cb338",
+        "EngDesign-Open/JY_02/input.npy": "259a5489c661d344813b0fc283e8d3c10d982c29d128401f98f7894106a13c89",
+        "EngDesign-Open/JY_02/LLM_prompt.txt": "dddc52414d2d53c4f5b7c14dff075e9f422d16afc8d6b9ba3f1ff3ac68d73035",
+        "EngDesign-Open/JY_02/evaluate.py": "08f42172fb44224e0a78a75ccf5d33f8f93ca35edcd288644c397c7d64cb796f",
+        "EngDesign-Open/JY_03/LLM_prompt.txt": "a1c766000287beb9dffa01baa338f8abd098e15e3417171151448a1ea7132e57",
+        "EngDesign-Open/JY_03/90.npy": "b40de6312e65f0c09cd4b83b22448a4697b88d3e0cb6c50ecf71b1fa402d3314",
+        "EngDesign-Open/JY_03/output_structure.py": "e3c5e5f180c724b544c00d09ea613a34f59c8a8e6895cf8877fe7949c3f2134a",
+        "EngDesign-Open/JY_03/domain.txt": "8e4cf972ad83b754728023045eb7cb8e0c7046c7c231200186045ace1f049200",
+        "EngDesign-Open/JY_03/0.npy": "cac4d0bf2f7390a1d57b0a206743f2e40a82bc6f8f154951333a82b265da7d3a",
+        "EngDesign-Open/JY_03/checkerboard.npy": "5910758de6cc4930f84bad2bb596f2aa8d345134ff4e002a89d8a4607a23ce32",
+        "EngDesign-Open/JY_03/45.npy": "9acc0ff8ec3038bf10294b28a2e64ebb8e2877433a396113c51235c23691ac92",
+        "EngDesign-Open/JY_03/evaluate.py": "cd7e5b395bbc761bbc2c37287e27fee78690291e5b9ade6503456d604fe32553",
+        "EngDesign-Open/JY_03/135.npy": "0317ecde83acfa2ec891cd07c6187547273082bec199df41d5f13fcb78c88cfc",
+        "EngDesign-Open/KV_02/images/SOCplot.png": "5442f3f5bf6add5bb3a2b01d74c76dd70df3b655e306dacc3f5141c07ae625c8",
+        "EngDesign-Open/KV_02/output_structure.py": "121fdf018057430667ff16fb389b95cb9791a9c92ea86e9f0f3b9039a196facb",
+        "EngDesign-Open/KV_02/images/image1.png": "3c4f2cd8983b1ac116d8510c03167fd77688552bfe425a5d15665ae9c6632bac",
+        "EngDesign-Open/KV_02/LLM_prompt.txt": "31375838498e815cf040d74443138dcc4667f5cbcb78b5e1d79d8d30600fab90",
+        "EngDesign-Open/KV_02/evaluate.py": "927531e735c919b272de66e13bdc0dac9c6bb5293423f55114590219414054d4",
+        "EngDesign-Open/KV_03/output_structure.py": "4c021dc44ae8bd1f7091a95e705090bd061249bb27a7e7498f8f10d346dba2f1",
+        "EngDesign-Open/KV_03/images/zoomed.png": "2707898912a2da29aaea7ea1b07cca4ffe52e69e9b7ab395bfa4f2dd41b66e22",
+        "EngDesign-Open/KV_03/images/original.png": "ecf466ea6d1b44ed031053ce3918c7a5ba93380cbe3c49179816f7ca5b4585bf",
+        "EngDesign-Open/KV_03/LLM_prompt.txt": "0c70364fbd6fda3bc517e87f5d3c0979d6cc7f41b0748b0248c4c37c2ed79bb0",
+        "EngDesign-Open/KV_03/evaluate.py": "1406ab5faf3d1fdee9bd81575526f998a33b172b39518cd8089dce6aef5f6e0f",
+        "EngDesign-Open/LX_02/output_structure.py": "ef14f96024f9aae3508e5f38c2b3707dc03dad8489a10b725f54b73c0c05c231",
+        "EngDesign-Open/LX_02/evaluate_controller.m": "ebf26d0454e72e359a8cd2d016e8160b178fa69b3e3fcfc2179ea5e4be31bd1b",
+        "EngDesign-Open/LX_02/LLM_prompt.txt": "273329802420b730bb861cc1a332b4fe37bdd05aeeae03fa82f1a721b7ab4911",
+        "EngDesign-Open/LX_02/evaluate.py": "b8f43c3b2b733af27c62ab06efb2cb9d898ad0eae4cf5741b602abfd30058c10",
+        "EngDesign-Open/LX_02/domain_topic.txt": "82f428d34acaee9a2a0bf26c29d7d2a77becd1607f1b728481c5a96683fdb14b",
+        "EngDesign-Open/NS_PA_SS_02/output_structure.py": "96dcdc2f4f96475d26cde2297b664a1f1395253302091f6c1a3b5f9fc966c3a0",
+        "EngDesign-Open/NS_PA_SS_02/LLM_prompt.txt": "f70736f28bd8c3a5aab2228d753a7845b60312515acf58953d9714762c409b53",
+        "EngDesign-Open/NS_PA_SS_02/tb.sv": "21dce6692d41731d2bd877fd9d23c5f59de09bfcb4167b3bc5426f92c0e0610e",
+        "EngDesign-Open/NS_PA_SS_02/evaluate.py": "f3d2c6ed442b209487d909e5aa214d8282fcb82c8b047c0697a4241a423b502f",
+        "EngDesign-Open/NS_PA_SS_02/domain_topic.txt": "00c31a30d6b550d6c1279514d2c5e6aae1f0fa32aab850b512043d0259bb1964",
+        "EngDesign-Open/NS_PA_SS_03/output_structure.py": "5fd19007c25f223fa91aa6ab6e161aafe6d74ebeddfddad0ac1d2c7ed44a3d53",
+        "EngDesign-Open/NS_PA_SS_03/LLM_prompt.txt": "2e71cce72caac4a76e9b98c7bc13da35ca8f677b40577748b778f63bdd979858",
+        "EngDesign-Open/NS_PA_SS_03/tb.sv": "e059e39da576fb8d2060f3311b2bfa4ac4835591989417cc917cb96bedfba4a7",
+        "EngDesign-Open/NS_PA_SS_03/evaluate.py": "f08def74acafafb45dde84a09d63ffb46c0a0592937877696e89c0ecb78317ad",
+        "EngDesign-Open/NS_PA_SS_03/domain_topic.txt": "23738ed8c282ad66c44ebe4e90ecaf3c4e340e4128873c8a5c699bedc9fae33a",
+        "EngDesign-Open/NS_PA_SS_04/output_structure.py": "c7e9ea3b9a9cf9a49406ee83f529ac86db0512e7412181b94219adf5960fb274",
+        "EngDesign-Open/NS_PA_SS_04/LLM_prompt.txt": "bde1a54502134c93659440bb82479bfce4b433099406298ca1ffc5da46ad437e",
+        "EngDesign-Open/NS_PA_SS_04/tb.sv": "1a091eca8aba4975bf25b771638a1a02401244545bd3390ebac38dd55db36b55",
+        "EngDesign-Open/NS_PA_SS_04/evaluate.py": "78f717d602f7c91d1beb8a42e7cd687be79db910e0bdedf8cbfcec64f89dfbd1",
+        "EngDesign-Open/NS_PA_SS_04/domain_topic.txt": "ee85c6e5f9a92959528607e1cebe851e2712af19f0191e9fc3a0ce750587e8e4",
+        "EngDesign-Open/NS_PA_SS_05/output_structure.py": "c7e9ea3b9a9cf9a49406ee83f529ac86db0512e7412181b94219adf5960fb274",
+        "EngDesign-Open/NS_PA_SS_05/LLM_prompt.txt": "c140606b4b939f716d354dbb830a31e889aaf6e069b145d35fd1219862454706",
+        "EngDesign-Open/NS_PA_SS_05/tb.sv": "cf76108e5c8b48d3275f32f4689d9bbfe60174f9ba91a7d874086d710e16d531",
+        "EngDesign-Open/NS_PA_SS_05/evaluate.py": "78f717d602f7c91d1beb8a42e7cd687be79db910e0bdedf8cbfcec64f89dfbd1",
+        "EngDesign-Open/NS_PA_SS_05/domain_topic.txt": "c62938e7a471d6640c439d70cc73eb8bd17985dd1617dfc4d3c1f3d807d04937",
+        "EngDesign-Open/NS_PA_SS_06/output_structure.py": "900a86cad30837fe0c1dd9d6e06e4953d356daf1a406ee39c8aa76753bbab23c",
+        "EngDesign-Open/NS_PA_SS_06/LLM_prompt.txt": "13c51985007170f5370baf351814e213358ad91798d5df3edca9e15bcdff3068",
+        "EngDesign-Open/NS_PA_SS_06/tb.sv": "8abef6291b16e774064afc4c3c736cb5ced59fc74caa186732e22d5dc6419435",
+        "EngDesign-Open/NS_PA_SS_06/evaluate.py": "78f717d602f7c91d1beb8a42e7cd687be79db910e0bdedf8cbfcec64f89dfbd1",
+        "EngDesign-Open/NS_PA_SS_06/domain_topic.txt": "a2ae9e77701a94d8e1367c7a74ae8b3c5a4cf7fe09ef61341bb32a2d7de14a4d",
+        "EngDesign-Open/NS_PA_SS_07/output_structure.py": "c7e9ea3b9a9cf9a49406ee83f529ac86db0512e7412181b94219adf5960fb274",
+        "EngDesign-Open/NS_PA_SS_07/LLM_prompt.txt": "abf60d7d93781d7b4d7f75123e9329b9055c1abcc93ca277080e936ec4f8f0db",
+        "EngDesign-Open/NS_PA_SS_07/tb.sv": "8cd99e943a7420c69914aaa6e9d4e1c5100a8ed56ab26f44e2499b1da60c5c3f",
+        "EngDesign-Open/NS_PA_SS_07/evaluate.py": "78f717d602f7c91d1beb8a42e7cd687be79db910e0bdedf8cbfcec64f89dfbd1",
+        "EngDesign-Open/NS_PA_SS_07/domain_topic.txt": "f1510a7ec9ab868910ca4571ac04956f946c6ed20ef14c75a0ad4f5bf2498161",
+        "EngDesign-Open/NS_PA_SS_08/output_structure.py": "900a86cad30837fe0c1dd9d6e06e4953d356daf1a406ee39c8aa76753bbab23c",
+        "EngDesign-Open/NS_PA_SS_08/LLM_prompt.txt": "5707ed46c39bfcf7ad2cbfe1dc5e4a4913e49840efcabf04a22ea71c312761cc",
+        "EngDesign-Open/NS_PA_SS_08/tb.sv": "c97c09d289b8b10dfcbd596d446cf2588cfcfa54667bc5019e33e2ffc1baceec",
+        "EngDesign-Open/NS_PA_SS_08/evaluate.py": "78f717d602f7c91d1beb8a42e7cd687be79db910e0bdedf8cbfcec64f89dfbd1",
+        "EngDesign-Open/NS_PA_SS_08/domain_topic.txt": "80a3911048b4ced202bde582358444437730c47c28e9d1a0483ff0c88a180f71",
+        "EngDesign-Open/NS_PA_SS_09/output_structure.py": "900a86cad30837fe0c1dd9d6e06e4953d356daf1a406ee39c8aa76753bbab23c",
+        "EngDesign-Open/NS_PA_SS_09/LLM_prompt.txt": "93af98448358d13964208a8eab76374b845c3e944455189dca72320b9648ee24",
+        "EngDesign-Open/NS_PA_SS_09/tb.sv": "70f636046ed044ceb4e212a3835a553f27c79b967d154a5574e45070b2fae52b",
+        "EngDesign-Open/NS_PA_SS_09/evaluate.py": "78f717d602f7c91d1beb8a42e7cd687be79db910e0bdedf8cbfcec64f89dfbd1",
+        "EngDesign-Open/NS_PA_SS_09/domain_topic.txt": "247ab2f02289a71b109ea5ba839f385294ef4fa2ea1af23a5b55a36ce5f2a69a",
+        "EngDesign-Open/NS_PA_SS_10/output_structure.py": "c7e9ea3b9a9cf9a49406ee83f529ac86db0512e7412181b94219adf5960fb274",
+        "EngDesign-Open/NS_PA_SS_10/LLM_prompt.txt": "107f58db38adc8d8b84743da1e2d5bf983f73d5a959b906a32d8700563163e6c",
+        "EngDesign-Open/NS_PA_SS_10/tb.sv": "934a1f159642c7f16ebb011dfc2feba7a25687be5cdca50e4a257bdd1fac2000",
+        "EngDesign-Open/NS_PA_SS_10/evaluate.py": "78f717d602f7c91d1beb8a42e7cd687be79db910e0bdedf8cbfcec64f89dfbd1",
+        "EngDesign-Open/NS_PA_SS_10/domain_topic.txt": "c59dcc45619778001027d665a0470e41c80ab9c65af8456741617b50cd79b90f",
+        "EngDesign-Open/RK_01/LLM_prompt.txt": "2adc1952a9265ea1f9ee51d252b31c74ea9883c927f41474dcde4623e0b36833",
+        "EngDesign-Open/RK_01/output_structure.py": "9b958e67ac79b80762a6be779da531fa81be4ee8d63d3723f7ff2c94f33cbd3b",
+        "EngDesign-Open/RK_01/evaluate.py": "a235835dd07ab6304883aced28d79cde37c2b0bbf5eb57b3bd674fbe5f4c0d3f",
+        "EngDesign-Open/RK_01/domain_topic.txt": "62fd5eb6c5c59b465f6beef83b78e2b517cde522b4196886d19c3144ea0d458d",
+        "EngDesign-Open/RK_02/LLM_prompt.txt": "10daf5da5b55253c2becf1a3859143c0e92a12d71ee47afb875d4de459ca2d4c",
+        "EngDesign-Open/RK_02/output_structure.py": "9b958e67ac79b80762a6be779da531fa81be4ee8d63d3723f7ff2c94f33cbd3b",
+        "EngDesign-Open/RK_02/evaluate.py": "e48fd468962c7828cd8670f1d226fc136e4ae42b1e22e95a87604a5f822b4aa3",
+        "EngDesign-Open/RK_02/domain_topic.txt": "62fd5eb6c5c59b465f6beef83b78e2b517cde522b4196886d19c3144ea0d458d",
+        "EngDesign-Open/RK_03/LLM_prompt.txt": "d458a1a2089b35d139c9bb61e36d8828e242d7f50e6107e6d228cb0dca8fa383",
+        "EngDesign-Open/RK_03/output_structure.py": "9b958e67ac79b80762a6be779da531fa81be4ee8d63d3723f7ff2c94f33cbd3b",
+        "EngDesign-Open/RK_03/evaluate.py": "8192a7b8ab513f506e676a1751cc2495ac122396f35c8d0c6db6504300f5a419",
+        "EngDesign-Open/RK_03/domain_topic.txt": "62fd5eb6c5c59b465f6beef83b78e2b517cde522b4196886d19c3144ea0d458d",
+        "EngDesign-Open/RK_04/LLM_prompt.txt": "94507d5f9bb1429362ad9b32cef733099eb92f5e808e13ae2f162830641fb1b1",
+        "EngDesign-Open/RK_04/output_structure.py": "838567b5641aada453ef2955472a9f3b9a4a95292547fd11eec1e0803111baf9",
+        "EngDesign-Open/RK_04/evaluate.py": "792d828a8c3ba13cba8bda84ee2b7fa266ba9063a2e976e1abd8e681714f08d7",
+        "EngDesign-Open/RK_04/domain_topic.txt": "62fd5eb6c5c59b465f6beef83b78e2b517cde522b4196886d19c3144ea0d458d",
+        "EngDesign-Open/RS_01/PostProc.py": "392fb2c4a4317c23474c7d97bc2b5d466a85e4c590dcc834e5658b127785c115",
+        "EngDesign-Open/RS_01/SetupFileLoader.py": "8e110554e1fa60e47d61399fecf7fc0763a5a172e7155073fd40ee44869e50d9",
+        "EngDesign-Open/RS_01/files/SetupFile.json": "7ed771e1d0da6bbab6cf11a2ab2b21ddaffdc28c8716a0e7883765d075a19b9f",
+        "EngDesign-Open/RS_01/RunOpenLapSim.py": "0ee3e24fdb899f568db5927c93904d9d36d381b5eba2eecfff2f112daf4ed9ff",
+        "EngDesign-Open/RS_01/domain_topic.txt": "6838e1109d4fac3804d6778789f71356c23e2e7b1e5b0441e1781ae2435eacb3",
+        "EngDesign-Open/RS_01/AccEnvCalc.py": "9c223ca46d322ca7ab033e274b37bda6ee13c27958aa349c796a84442b43adc4",
+        "EngDesign-Open/RS_01/output_structure.py": "2aff52430f6995ba980b9eeaae9f9de0844176b2649b4650028e25ab278f5e42",
+        "EngDesign-Open/RS_01/LapTimeSimCalc.py": "d57638b22038c8f10a2a5ac974c717d26efc323de2379414c9b78dd66c7bbe01",
+        "EngDesign-Open/RS_01/LLM_prompt.txt": "2c988b7ece6345d390bb081c380dd2d63c109bb69cb0f15f4166d9110d3e6177",
+        "EngDesign-Open/RS_01/evaluate.py": "3eef7f7671b398e9734d9e3146828e70e3a60f8a0293c2eed697870ab25e782d",
+        "EngDesign-Open/RS_01/files/TrackFile.txt": "a9def9ccef596204c9d0525f810e894d880533fec13c318a4eaa535422568994",
+        "EngDesign-Open/RS_02/AccEnvCalc.py": "9c223ca46d322ca7ab033e274b37bda6ee13c27958aa349c796a84442b43adc4",
+        "EngDesign-Open/RS_02/output_structure.py": "ab56a2037622c0c4013349a289597518fe1f1c0f0ee62ab09626a96e0bcebf58",
+        "EngDesign-Open/RS_02/SetupFileLoader.py": "8e110554e1fa60e47d61399fecf7fc0763a5a172e7155073fd40ee44869e50d9",
+        "EngDesign-Open/RS_02/evaluate.py": "54282773e8bfd514d54e2a0539a32a36664729f253132f4e926a10315b22d58b",
+        "EngDesign-Open/RS_02/LLM_prompt.txt": "4c5a86920e822259c4d914b16e62d0dd4e2cfec51d7c70f1b3dc4780d40274e7",
+        "EngDesign-Open/RS_02/files/SetupFile.json": "7ed771e1d0da6bbab6cf11a2ab2b21ddaffdc28c8716a0e7883765d075a19b9f",
+        "EngDesign-Open/RS_02/FullCarAcc.py": "9f7210605a090325be16aa4d4d609a27cc3aee6e034dabafd9b2c94dd1564374",
+        "EngDesign-Open/RS_02/domain_topic.txt": "42626f1f817745945e9a6657f8ea76ede5a6ff862556219cafdf069f34f6cc36",
+        "EngDesign-Open/RS_03/CorAcc.py": "2c85c20c97fba5fd0e2da5e6adc07cd1c3f3f28c4c8a832b4ad2e2736b3aa57c",
+        "EngDesign-Open/RS_03/AccEnvCalc.py": "9c223ca46d322ca7ab033e274b37bda6ee13c27958aa349c796a84442b43adc4",
+        "EngDesign-Open/RS_03/output_structure.py": "3719c57c060e62ba16c51dbf90dff48dcd892d8cd0106dfa12e1155df7821012",
+        "EngDesign-Open/RS_03/SetupFileLoader.py": "8e110554e1fa60e47d61399fecf7fc0763a5a172e7155073fd40ee44869e50d9",
+        "EngDesign-Open/RS_03/evaluate.py": "e1734fb954a549962bb028a66318a92841cd525d2c3806f9f6157b5af48ed39f",
+        "EngDesign-Open/RS_03/LLM_prompt.txt": "b5e3ecbad772af91c30e97fb06d638a0b04df261b58a55bcad621f77dd296cc6",
+        "EngDesign-Open/RS_03/files/SetupFile.json": "7ed771e1d0da6bbab6cf11a2ab2b21ddaffdc28c8716a0e7883765d075a19b9f",
+        "EngDesign-Open/RS_03/domain_topic.txt": "709a816558f825e03ebf0a1f3697eca460e93db68258ad8d0f5f29b63f1f2e5c",
+        "EngDesign-Open/WJ_01/output_structure.py": "fba6daaf5c173dc72965493394037eff1aada80f5dab603303aadc7296adc31e",
+        "EngDesign-Open/WJ_01/images/noisy_image_s&p.png": "add4371bd266986a372545c7426badfce262e22f04dae89b417e935959e8804f",
+        "EngDesign-Open/WJ_01/original_image.png": "7e497501a28bcf9a353ccadf6eb9216bf098ac32888fb542fb9bfe71d486761f",
+        "EngDesign-Open/WJ_01/LLM_prompt.txt": "ae7c9b8c728e258566970de3ce81401f1e3810d61cb867f330d7d8f784201b6f",
+        "EngDesign-Open/WJ_01/evaluate.py": "d33b7b8e27266d9b800b66deda9753b1e7431b6b7ba501a751d05e1c2b0e8375",
+        "EngDesign-Open/WJ_01/domain_topic.txt": "48ee7a7b9f8963e623e3d0fce5f9e91faaabedae5a117f7ffb4ee3790dcdbd71",
+        "EngDesign-Open/XG_08/images/MF1.png": "7ddb5286c1fe9fda97c081e69bc49a365c6b27e3b4b377b7aaa7ee9b51d38822",
+        "EngDesign-Open/XG_08/images/MF3.png": "b18fe028bea93130d3aaee5130d7db74679e3bd4a639730bc45964fd3bdb6e89",
+        "EngDesign-Open/XG_08/images/MF8.png": "9bda106a7c05de2b79b9141eb4874b76dd20b90eceb3fd61ab24f1f0c36e86cc",
+        "EngDesign-Open/XG_08/images/MF4.png": "82730d89a06b6d141f0e3b756f712bf4b9a1c98a43af89bf8a448c7f563bfeeb",
+        "EngDesign-Open/XG_08/images/MF5.png": "bec8341416eb557763960d3a4c6c9d8e1198db082f00a9b8cb2c313c227db9ec",
+        "EngDesign-Open/XG_08/images/MF6.png": "0057b02ea8f1f18f63240b904e47d686068db655b08629fcf1571550f2670313",
+        "EngDesign-Open/XG_08/images/MF7.png": "96c3e33f304f44e23f2f87065d2ccc766530d498d92b8db1370b9ba600026671",
+        "EngDesign-Open/XG_08/domain_topic.txt": "e7dc2e7d19982d63fddf44d4c70f1573132c64b1a7ea53f06ac79881b5b364ee",
+        "EngDesign-Open/XG_08/output_structure.py": "2b2ab4682fc4dcab0e8ba8d5e356619eae14d8fb950165c4f7e65ba556bc4709",
+        "EngDesign-Open/XG_08/images/MF2.png": "64a24835e23fe5d45e1faf9fa35bf16ee58df81602f0f40068b0bfbd43c14c32",
+        "EngDesign-Open/XG_08/LLM_prompt.txt": "525a89b70dd6b57d346462cf6b847d52ef57f7c53fe0145285b7276147f6e30d",
+        "EngDesign-Open/XG_08/evaluate.py": "33de23ed1533c87865bb61e48cb46774009b85e84a8402c09a6a1ad560d171e5",
+        "EngDesign-Open/XG_13/output_structure.py": "9a30a00802c645eee4352b017548d683ddd1dd24a0ed3632cd0ab9fdda898587",
+        "EngDesign-Open/XG_13/images/pid_mass_spring_damp.png": "42be1c25bc24d3d028741d723a3346f95c3314d77b5ab652029e1776668a0bd9",
+        "EngDesign-Open/XG_13/LLM_prompt.txt": "562d4f941d6550fb3473beb7709d18d41f7d852daea1724b4267221824cba6e4",
+        "EngDesign-Open/XG_13/evaluate.py": "cb168b449605658e2930cd53e9ab688bb77b62815fe3e8b67ab9586dd66c1246",
+        "EngDesign-Open/XG_13/domain_topic.txt": "a4124d49fd4d4a927ee9e7a7de74ca9eb4aefeaa76b138204410bc11fcfab454",
+        "EngDesign-Open/XW_01/output_structure.py": "3f56623076cd2912203cfe76ae9c16e4dc6d93872f7d33321a41424f563cbe1b",
+        "EngDesign-Open/XW_01/solution.py": "788576a49181875c4406cf47ffd8b73eab2023b082abd6c9435322b75c824d60",
+        "EngDesign-Open/XW_01/LLM_prompt.txt": "15ea2260ea8131361f603ccdb0196e22b48ce0eb3b25404b55a29cb4db3ca97d",
+        "EngDesign-Open/XW_01/evaluate.py": "639335b723785ad9c1c76d0b35f210312b3a954e53489b25407f41fa37c15739",
+        "EngDesign-Open/XW_01/domain_topic.txt": "fa26e128bb285b60232bff787153bfab811543112be99822a59a2597e649f676",
+        "EngDesign-Open/XW_02/output_structure.py": "21a0a1828e1d418540f469bb92f64e760903e9ed6fd39f20b66b6d7096e9e7b7",
+        "EngDesign-Open/XW_02/solution.py": "a3d48ef889d840bdf3ff07f1adc3d39bc8f25351d2af0e9624a7ead40dea616b",
+        "EngDesign-Open/XW_02/LLM_prompt.txt": "43dc3df785b5f552fe17cd925876707915c38d7eba46da123b208cb7ef4830a6",
+        "EngDesign-Open/XW_02/evaluate.py": "a0492620ce52190239bcbee91a5912b058ef0b810a85e484f64e8b23f60603da",
+        "EngDesign-Open/XW_02/domain_topic.txt": "fa26e128bb285b60232bff787153bfab811543112be99822a59a2597e649f676",
+        "EngDesign-Open/XW_03/output_structure.py": "e2000c04872f4b399f1c8a0cb19b52a9d36ba60405822fa727edd74f9f2e34e6",
+        "EngDesign-Open/XW_03/solution.py": "f4e49388c5a91fc3dc81efd8ae45412fb2cda2573b208effdd3cc2d68e135bbe",
+        "EngDesign-Open/XW_03/LLM_prompt.txt": "4ef1b910b5d922b6f2092f5e16ee8573c0df2809bf1dc40fb8be1a041cc44413",
+        "EngDesign-Open/XW_03/evaluate.py": "5f8fd4d18a088b6cca7a7903af004e50cde7e16c24b74727db507579aab4a7ad",
+        "EngDesign-Open/XW_03/domain_topic.txt": "fa26e128bb285b60232bff787153bfab811543112be99822a59a2597e649f676",
+        "EngDesign-Open/XW_04/output_structure.py": "9959641fb6b77641f81461c9bce6cc26981e9d77a4fc0d75e38f367ce9a42916",
+        "EngDesign-Open/XW_04/solution.py": "d22b45e7efc64e9f5883da40fe91657d394c191a77965c48b3935679667a813e",
+        "EngDesign-Open/XW_04/LLM_prompt.txt": "0220397d63bf1f9a5c9fefc7694e149ab1e9dccb0738a7ed720a4aafa043d62c",
+        "EngDesign-Open/XW_04/evaluate.py": "bc5ce02c6394ee72ed55ae26a119ecf1ecbe6443dfed7ec20e7db066546872af",
+        "EngDesign-Open/XW_04/domain_topic.txt": "fa26e128bb285b60232bff787153bfab811543112be99822a59a2597e649f676",
+        "EngDesign-Open/XY_01/font_rom_data.py": "b3aa171608744b52664b00e3038cae44e685aeb7c4a392a624d63dc79f2f8f3d",
+        "EngDesign-Open/XY_01/output_structure.py": "364c431dfffd651102993d9ea12326abfcbf8b726ca984e6bdff620c10ce916d",
+        "EngDesign-Open/XY_01/font_rom.sv": "c92479376a157d800cc9424e00f33fffc761578350402742bbd01d860376deeb",
+        "EngDesign-Open/XY_01/LLM_prompt.txt": "e7ec8f2bb05edb9410fec108a2a0a872aa0be76a78875cd920259fb761516372",
+        "EngDesign-Open/XY_01/evaluate.py": "82c9797e473cdf7a5183ac16b175b5cc46a189ff6a85387da6361814762d2393",
+        "EngDesign-Open/XY_01/domain_topic.txt": "a0cf57baaecec6e950c9691591dc2fb26dae6436553f54ab743297370a2cbafa",
+        "EngDesign-Open/XY_03/hex_driver.sv": "730fa08a8d1e66b61441f7056f58597e2863357e40d14bf6a571ee9bf61770a9",
+        "EngDesign-Open/XY_03/output_structure.py": "cf24caf4f608291ee850ff9fdc98c12e3e56104aca146c94135d75b804f7926b",
+        "EngDesign-Open/XY_03/LLM_prompt.txt": "1eeda26ec77fa6cabe03fb4fbd7ddc54a4cd8f8c5f0f09cc27fcfb2d811929ca",
+        "EngDesign-Open/XY_03/evaluate.py": "34dab2e381541a5cb9caa1f6c7b8e828e0b2dc0fa80f906d7d5b8bef3cb00897",
+        "EngDesign-Open/XY_03/domain_topic.txt": "0b344f8089994e6e2c49f073074be7624fe67e0e7828a65c1e6fd9dfa5b8d35e",
+        "EngDesign-Open/XY_04/Color_Mapper.sv": "3a61451984386afb4c073ff734dbc3419526f56f0d3ba36c448362b700f1eec0",
+        "EngDesign-Open/XY_04/output_structure.py": "9e0c415b26937f556f118c73884aedd0ea1babb1766a57da10d5d1bffe0de555",
+        "EngDesign-Open/XY_04/LLM_prompt.txt": "310e11b6298e87fed07e284c744e3384bb7d3f7506d88b165b0a79af959e8c3b",
+        "EngDesign-Open/XY_04/evaluate.py": "57b4b4c0d31c55b84c5263dbe4d4ab6721003e28dac98951b54c54289c877abf",
+        "EngDesign-Open/XY_04/domain_topic.txt": "ea4dd1cad1ffd675c4a24be893addc05268644b7a54cc3584c055e0db1067064",
+        "EngDesign-Open/XY_05/LLM_prompt.txt": "fa1a0c3810081d6d6d9158d7c6cf405b74d30537f46d5a61bd337f1ae5dfd45e",
+        "EngDesign-Open/XY_05/output_structure.py": "278453f2813def72aec6e1f59f18a3e69285c251aee45f27af3e5338baf67a04",
+        "EngDesign-Open/XY_05/evaluate.py": "4a8142cf99c942c6d1a492cb8a6730db32b1f07ce59550de8ea3da062dbb2db6",
+        "EngDesign-Open/XY_05/domain_topic.txt": "316a936497ffa307ba8fa2ed42afeb5bcaecdd28c876d09bc562d5a2a6b0e0e1",
+        "EngDesign-Open/XZ_01/LLM_prompt.txt": "9af3d173d7028ea6927c51af9a60b73eeb801849a808a20b02c7c2b099649bbf",
+        "EngDesign-Open/XZ_01/output_structure.py": "45e46cd73759b00235f65d0b82f0215cd101f10d922887fd27d4780d87e7d3cc",
+        "EngDesign-Open/XZ_01/evaluate.py": "d7b91375f8dc5ab12d016a91b700f23b515e98f729651a1602dd3a1a622ee161",
+        "EngDesign-Open/XZ_01/domain_topic.txt": "b7cfd629e142868f34ed1af4c460672ff2068f1d00159845f6fc6c5048ec0c74",
+        "EngDesign-Open/XZ_02/LLM_prompt.txt": "85413d9a853497efb13b579264317c3493ec407f0f7ec20239e64373cd20f622",
+        "EngDesign-Open/XZ_02/output_structure.py": "a90019a17f3af4aac96cdc05ae77ba1ed789a910641df8af917ca9e6d45b38f9",
+        "EngDesign-Open/XZ_02/evaluate.py": "587f4854e1b3d01fcf9f5eebb42061e3ead97762424d31340069ca049afcdf0b",
+        "EngDesign-Open/XZ_02/domain_topic.txt": "3f61338f956114d52a4c15025c86a69475ca6d6cbe0f66f1757e5641c2418e3c",
+        "EngDesign-Open/XZ_03/output_structure.py": "c0395a37d40a9c31573181c76b65599042bedac9c6032c4177e523d70d102b02",
+        "EngDesign-Open/XZ_03/worlds/construction_site.wbt": "516ca1ef7214cdb9be0e7c2f5d0625a22710c30d59dff880cbf211e7bc3bdeb1",
+        "EngDesign-Open/XZ_03/LLM_prompt.txt": "ae306f9f48fd487ba834d5e3c586811fef3f9bba3a86149f17a576cd15e58329",
+        "EngDesign-Open/XZ_03/evaluate.py": "101110819652904dcd707f17e5c241f37025b08f4ac066d429664bd5f3c2ebb1",
+        "EngDesign-Open/XZ_03/controllers/robot_controller/robot_controller.py": "fe300dac960caac7484a82e9600b7a1f451f0b551a8e86075c979392ca1d8c1a",
+        "EngDesign-Open/XZ_03/domain_topic.txt": "b7cfd629e142868f34ed1af4c460672ff2068f1d00159845f6fc6c5048ec0c74",
+        "EngDesign-Open/XZ_04/worlds/construction_site.wbt": "400bc355156641283eefaf0025a09382fd539b28861fb789e02dc518538df29f",
+        "EngDesign-Open/XZ_04/output_structure.py": "985c328ebb5981d3469f4d5fe29f9199779207dcfbad504d514869923536f655",
+        "EngDesign-Open/XZ_04/controllers/robot_controller/ss/robot_controller copy.py": "624cf4d00805a24d8e9976a16aaf15a22234c95cf8506ee5710a648de535e1e9",
+        "EngDesign-Open/XZ_04/LLM_prompt.txt": "281b21794cbd9c212b0dbe08a11ba36ce81c080f7673b1a17f9ac2e0e64b2f36",
+        "EngDesign-Open/XZ_04/evaluate.py": "da5452c9ed8a8d4431ef8751d64cf51aaf2ce30928f1b87e9b2f8aae1068acd0",
+        "EngDesign-Open/XZ_04/controllers/robot_controller/robot_controller.py": "babdf2b7cadd8cbf5853245ec3ecffc3376d75dcfdceb3d36a20e1df8fd877c5",
+        "EngDesign-Open/XZ_04/domain_topic.txt": "4acf2d217c829f0b274725a8ae40df18bb7fe1fdc46a70d411810694e03c46a8",
+        "EngDesign-Open/YJ_01/LLM_prompt.txt": "d82830535ae18c44a8000ce41a306d4147bbfa00fdfb1e6bb80eecbed6b2e2ae",
+        "EngDesign-Open/YJ_01/output_structure.py": "b78e3523622ccc0dcfbe73dd533de364b799a5734d5aa4b101bb835df477e62d",
+        "EngDesign-Open/YJ_01/evaluate.py": "cca57eb1db843ad893aa6c2c499cf5a45e54949f1f96b83e6ea3839a49ae771b",
+        "EngDesign-Open/YJ_01/domain_topic.txt": "590b4ee7162484ae42a06aa20162c7b6602c0f744b3b25c7d0348064f8c7fc25",
+        "EngDesign-Open/YJ_02/constraints.py": "c874f3972defbfc53a81fd85c5ba4a05782a1f56aa1a63670a7a2a193f8da65f",
+        "EngDesign-Open/YJ_02/domain_topic.txt": "590b4ee7162484ae42a06aa20162c7b6602c0f744b3b25c7d0348064f8c7fc25",
+        "EngDesign-Open/YJ_02/output_structure.py": "5c5feca9552995a0139517cb50fb5a5f208c564342c416ebb52bb8073692bc28",
+        "EngDesign-Open/YJ_02/fesolvers.py": "ed5f6851678cfa6a728e86452afc2bf4ebb6002f27efe36e5521597e6056d516",
+        "EngDesign-Open/YJ_02/plotting.py": "f5ff184c5164cd29254a5fd1bb8ae138573cca944c8d6020262135e44c42a9ed",
+        "EngDesign-Open/YJ_02/loads.py": "8adb5f48b7ab08c6c6268f643519ec9940e817bb806e6b51256fef5d11c8726c",
+        "EngDesign-Open/YJ_02/topopt.py": "29aa0751ec8bc3c8b59c0593e4b27466ff5dfd3c3717d29098e05169cd1d9f9f",
+        "EngDesign-Open/YJ_02/LLM_prompt.txt": "323b3f6eb3ee779f98436d418095fc16cd60034b15cb3be4962286ccb0702617",
+        "EngDesign-Open/YJ_02/evaluate.py": "1e8f3dd33b1033c7b0316c542ebd400cc630a018406d10ffa9286f80c4732399",
+        "EngDesign-Open/YJ_03/Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(-1,1).csv": "2de7ec0c5e6e513e2a040df022409dcdbe7e3c5ce14ab8df1a238aacca34ae40",
+        "EngDesign-Open/YJ_03/Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(1,1).csv": "f9f9abf5e5eb5f72d19222d413a955f478f474c14e7f32c8da802c28ada8023d",
+        "EngDesign-Open/YJ_03/constraints.py": "48a32a1e3210ce3bed1eeae4851fbdbb19950361352eaf023e89a721ec4504cb",
+        "EngDesign-Open/YJ_03/Stiffness Matrices/Stiffness_Linear_PlaneStress.csv": "fc3a650c7f42a86f48f1a8f35b33a67ee2b62751008c31986d69b4a086c0baef",
+        "EngDesign-Open/YJ_03/output_structure.py": "74a555899897854a8a12d5ecc8ed0010a88cce01f2328c9642d2d20a1ee009ba",
+        "EngDesign-Open/YJ_03/Stiffness Matrices/element_stiffness.py": "bcf43f45f7c1896361b15757a70cf466418ef79e62cae437bec833366126493d",
+        "EngDesign-Open/YJ_03/topopt.py": "f5df2ecc26bf4f0b48f76415c478d575f1c6204ef773a456be88d27468447809",
+        "EngDesign-Open/YJ_03/evaluate.py": "01127816ab651179a48fc1465ce62dfff13d82cd5b709887f93536bf9f7c474d",
+        "EngDesign-Open/YJ_03/Stiffness Matrices/Stiffness_Cubic_PlaneStress.csv": "e1cd8bb2b4e834064b68eba492e4909e15a6c4dce39b51752046c2280c83e55f",
+        "EngDesign-Open/YJ_03/Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(1,-1).csv": "bae8fb1ea9fe98c855e24e5d55160d252c9ad5629b44eb9285b710e3d0f28670",
+        "EngDesign-Open/YJ_03/domain_topic.txt": "0b47c9987c9a8a8bf8082404051130124592e69bcc1be396e16f985e04c22076",
+        "EngDesign-Open/YJ_03/plotting.py": "512d99c716320a9d209a3d2db6297ad76d52ff927d24a48ed0f0c6fa92610d76",
+        "EngDesign-Open/YJ_03/fesolvers.py": "c19f3e8f9c45a14d2cc773158bc27c81535106ed30cebf3259c5ca3bb70e9796",
+        "EngDesign-Open/YJ_03/Stiffness Matrices/Stiffness_Linear_PlaneStress_Enriched(-1,-1).csv": "478d7ad9e1d1e80fe9dc0b8fe3199ecb5fa1b4d2df82dca6df9f513e6b5744ec",
+        "EngDesign-Open/YJ_03/loads.py": "876606cef95d57e77e5c1874659be3cb971753f17f1bbbcee4409102d6b8cdc7",
+        "EngDesign-Open/YJ_03/Stiffness Matrices/element_stiffness_enriched.py": "02556531f6c3d6672495ebbd78cae38e61db1b5ea6a24e62f5cb356f1e5e932d",
+        "EngDesign-Open/YJ_03/LLM_prompt.txt": "53d95af97bd24365e2f7b8e2eff711b7c836fca98355a27bafa110b2711d50ce",
+        "EngDesign-Open/YJ_03/Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(-1,-1).csv": "a870b78798156b64509e8d69cc8018f5e923f8edf730d711409b1bb8bc31f92b",
+        "EngDesign-Open/YX_01/LLM_prompt.txt": "0df6575da5af4d30a7d81985b9ea322514c365c8442f5ab2053becf41b569ad9",
+        "EngDesign-Open/YX_01/output_structure.py": "a601613fdcedd802bdca63d2801a0b93502946cccfd29c782eec232d222618e4",
+        "EngDesign-Open/YX_01/evaluate.py": "714bb6ac1d3719e1a834181b70bfaf0d0c2984b2abd8ca21c5f2bdcbb4633745",
+        "EngDesign-Open/YX_01/domain_topic.txt": "545703df70c2ab396ba55868549b9d397ffb8a48c7ffa0a0aa50600f9a1192a6",
+        "EngDesign-Open/YX_02/LLM_prompt.txt": "81ef59fca421cf923a635e45bd7ee9ef45d6e3990288aa6249e89c79b48cfb45",
+        "EngDesign-Open/YX_02/output_structure.py": "d407579e55b8a0b674c8ade5d6e1af69a5d201df8315181a7f26b6aa070127f8",
+        "EngDesign-Open/YX_02/evaluate.py": "5384c5d1cebb08cff376d99b2d5ec419f7ad3ea00f64a19c1d37e840b42c09b8",
+        "EngDesign-Open/YX_02/domain_topic.txt": "6eaa7bc7295b5c185f540db16cb2705499b71274c5a486406cf5fe062fc04be2",
+        "EngDesign-Open/YX_03/LLM_prompt.txt": "269a1f6fed38bbac77d0d50b74e49f97a5fd2b4421ed000105b6318deeff7ec5",
+        "EngDesign-Open/YX_03/output_structure.py": "8bfc47ea8745dbdc276cb5ea6a53cc0f7c3de8833062101079857e1ab7a691bd",
+        "EngDesign-Open/YX_03/evaluate.py": "34eed02b0b817ddc1c7760ad7d2b153e72c8eb12f57e8767076f6bfac9db58d6",
+        "EngDesign-Open/YX_03/domain_topic.txt": "2ad1850ed6ef7ebca99ac39ebb9cfefe938b7119965219d1c53ea3b856821a92",
+        "EngDesign-Open/Yiqi_01/t10_predictor.py": "cb1857057ea684ac3fe282046d141efdae37027f5aa9c06ca0e7d401576b819c",
+        "EngDesign-Open/Yiqi_01/t10_OpPartitionSearch.py": "98aa378cbdad39c2719e17f77b91313a21ad1b5f1a47acb25bece49ffc37211d",
+        "EngDesign-Open/Yiqi_01/tsim_simple.py": "f6c7b027e4e5a34a6d456c863670be5181727a6258c692ea94fd5b793e50f6c1",
+        "EngDesign-Open/Yiqi_01/images/figure.png": "6a5a0892faf8d541a6c6ca79d996ab2f954cf0ab42e5faa3af0ec579013561c0",
+        "EngDesign-Open/Yiqi_01/domain_topic.txt": "b53903b4219b0a01901501ec2c658c33d402c0d2fbc787000538b5a57170c2d2",
+        "EngDesign-Open/Yiqi_01/output_structure.py": "c81fe9df279eee9a976354c764f1f51768a24f5961bfc1dcb3c92706b53f9f16",
+        "EngDesign-Open/Yiqi_01/tsim_components/utils.py": "ed2787759307a2dd7d5ee6c79106c424161b33ebbadaf92ea0a46226fc8770f0",
+        "EngDesign-Open/Yiqi_01/tsim_components/noc.py": "5c93ce8179941ad649273e3c96fc557e6ebe1350245fe7e8964106f18ea0743b",
+        "EngDesign-Open/Yiqi_01/t10_TensorExpression.py": "e59ee3f49ab5d43639fd9045a9d016033e36b148150bedc5e9ea901871d00a04",
+        "EngDesign-Open/Yiqi_01/LLM_prompt.txt": "7c77b56fe356d3156ec48cb3854250ac9f1877aa1336bd712b0d9c776f7ea017",
+        "EngDesign-Open/Yiqi_01/evaluate.py": "8935e38aec114a2b749e8ff07b3cda68cfcdbf5a6c6853d6c2ee0307a3f070c6",
+        "EngDesign-Open/Yiqi_01/tsim_components/comp.py": "0a837904598496f9543593c8e80f9f7aa1ed7cbbf51e293d99cef8199ef24e63",
+        "EngDesign-Open/Yiqi_02/t10_predictor.py": "cb1857057ea684ac3fe282046d141efdae37027f5aa9c06ca0e7d401576b819c",
+        "EngDesign-Open/Yiqi_02/t10_OpPartitionSearch.py": "98aa378cbdad39c2719e17f77b91313a21ad1b5f1a47acb25bece49ffc37211d",
+        "EngDesign-Open/Yiqi_02/tsim_simple.py": "9a5d354c82377d426b97d776978de09f39d8a20a49923e58dec338903fecebaa",
+        "EngDesign-Open/Yiqi_02/images/figure.png": "6a5a0892faf8d541a6c6ca79d996ab2f954cf0ab42e5faa3af0ec579013561c0",
+        "EngDesign-Open/Yiqi_02/domain_topic.txt": "b53903b4219b0a01901501ec2c658c33d402c0d2fbc787000538b5a57170c2d2",
+        "EngDesign-Open/Yiqi_02/output_structure.py": "c81fe9df279eee9a976354c764f1f51768a24f5961bfc1dcb3c92706b53f9f16",
+        "EngDesign-Open/Yiqi_02/tsim_components/utils.py": "ed2787759307a2dd7d5ee6c79106c424161b33ebbadaf92ea0a46226fc8770f0",
+        "EngDesign-Open/Yiqi_02/tsim_components/noc.py": "5c93ce8179941ad649273e3c96fc557e6ebe1350245fe7e8964106f18ea0743b",
+        "EngDesign-Open/Yiqi_02/t10_TensorExpression.py": "e59ee3f49ab5d43639fd9045a9d016033e36b148150bedc5e9ea901871d00a04",
+        "EngDesign-Open/Yiqi_02/LLM_prompt.txt": "0f2ef144e9cfe566928d12c8eb172716bf3e0d134e9e8ab3c51c2731d2c6fc6d",
+        "EngDesign-Open/Yiqi_02/evaluate.py": "bac2b361169c51dd15c9be0b87880bdd3cb1781e6abb2494afc726ce455d504b",
+        "EngDesign-Open/Yiqi_02/tsim_components/comp.py": "0a837904598496f9543593c8e80f9f7aa1ed7cbbf51e293d99cef8199ef24e63",
+        "EngDesign-Open/Yuqi_01/output_structure.py": "d5c7640b0184fa9a65c83b81f0d1e04d400210ada1d9b97c928e3afeff28efb0",
+        "EngDesign-Open/Yuqi_01/llama3_1-405b_5p_inference_prefill.json": "757da325cda1f27356670d9739aa674efa08918b124e854c0f2b88fbcdde8c16",
+        "EngDesign-Open/Yuqi_01/llama3_1-405b_5p_inference_decode.json": "e1fe46421bac7c0085e3ee8176b21b35472b1f101d82aab896e1a39358330a41",
+        "EngDesign-Open/Yuqi_01/LLM_prompt.txt": "9e1023ada1ad339c9e0a398ad37ad8dbadad079d4c5bfe955110711f25b9d8ee",
+        "EngDesign-Open/Yuqi_01/evaluate.py": "caa10a6d8fc63ff7631245aa6edf59002966a8d61fe401eee6edee829bfbafc9",
+        "EngDesign-Open/Yuqi_01/domain_topic.txt": "69c4043a31bc07e0c5179657868c1410be12b0f18af52d279fecd95174af1d5d",
+        "EngDesign-Open/ZC_02/output_structure.py": "25fdc2f296cb9adeb73fd58c8a843e46f84e2f6731f5c7c10a9e9407918c8412",
+        "EngDesign-Open/ZC_02/verifyalpha.m": "68f6d2c8afbd9e09732c8967b70e6e6d96df9753df10cf6c27810c4da0501343",
+        "EngDesign-Open/ZC_02/LLM_prompt.txt": "fac532cdaf84601ce0b76417ab3d40debd72c5032b0f6b8eb7cb71bbb38dcd2d",
+        "EngDesign-Open/ZC_02/evaluate.py": "82e2b3556294565f0a64cebb87e63a35d6f5e93b77c86b9af2c5f0f1d0273bd4",
+        "EngDesign-Open/ZC_02/domain_topic.txt": "d8132b6159cd36d9c98def34a4e425b1a665cbd7f0a1b8fc920c5bfa3b550418",
+        "EngDesign-Open/ZC_03/verifybounds.m": "1eb2f17d71607e9dbdb9947dadc120c5ccb1ab8b745e1ab11351f6deeed8ebb8",
+        "EngDesign-Open/ZC_03/output_structure.py": "7b9083594c9e45b874ec81e7e24e34ed9553ef4897aaf3448887f9642cc5f52e",
+        "EngDesign-Open/ZC_03/LLM_prompt.txt": "b601c0efb8d0f8ec1e1ba1f884104b90882d07dd348d0b06bd8c7191e9a3ad96",
+        "EngDesign-Open/ZC_03/evaluate.py": "a8f92f5c05e428c31d733ec1fe9b7d6e46e824edd509953de28970fbc7a9f151",
+        "EngDesign-Open/ZC_03/domain_topic.txt": "b959a0ccd20321879e99dbe56a316e2d07df9dd4f7d89a66e8d90c2a0f146aac",
+        "EngDesign-Open/ZH_02/LLM_prompt.txt": "0f64dccfb1ee2ef07a5e1dfbca1ee973539d663b58e633d49fe1618a3751e3f9",
+        "EngDesign-Open/ZH_02/output_structure.py": "f9abe500ab5ba8f0f5759525edc86c6b5abcae14531e9853cf6fd67ece69cf58",
+        "EngDesign-Open/ZH_02/evaluate.py": "b3891578802d629b63d2e4e54a214ead5b64e81abf4e9ee325a7db00c0bad207",
+        "EngDesign-Open/ZH_02/domain_topic.txt": "103a7b5c86cc0bad1ff9be74365ac154ec46c86fc760213de3beb561aacd7ab7",
+        "EngDesign-Open/ZH_03/LLM_prompt.txt": "122e7324726c4c83e84a254a4fb6ecc74f738642f7b7e2de16071fd4ca545b17",
+        "EngDesign-Open/ZH_03/output_structure.py": "b43d7b6d0bc9b62b8da36c3ad78ea636db74fe54cf08ef94b33b1023fc9a7734",
+        "EngDesign-Open/ZH_03/evaluate.py": "221dc52b0cd213925ee6ea60f6e2330cd92c430f1f2479de3d802e04aadd74fe",
+        "EngDesign-Open/ZH_03/domain_topic.txt": "24c6a6e3e7eee615b1a3d0fc66f07258ec3d348518acfdf5a882018fa78e0b37",
+        "EngDesign-Open/ZH_04/LLM_prompt.txt": "daced7f94363e13d55c7eddfc19a39cd14736ca3c68db6d3278421341402b67a",
+        "EngDesign-Open/ZH_04/output_structure.py": "3e0eef1b687dc6b0b8c7b39b3711e534203897d210fc3c09a7b0da031dbc026c",
+        "EngDesign-Open/ZH_04/evaluate.py": "5ed7c062a14a55c83261e7a4510937a2533c1a9bf1bdc4eec2244d56e0eed9f5",
+        "EngDesign-Open/ZH_04/domain_topic.txt": "0e708472011a550d8879e89f48b96b4ef13331208db6d41a11f6172fc2b83a84",
+        "EngDesign-Open/Ziheng_02/evaluate_robot.m": "85b7b07ae49275ce943b3336fc793c765bbc4edbe8f626da752a98f40898970b",
+        "EngDesign-Open/Ziheng_02/output_structure.py": "90238eb115b752665e42df1c3dfdba1418cf1de9f4997a703818aa39a122aeb2",
+        "EngDesign-Open/Ziheng_02/LLM_prompt.txt": "5cc6a3aec6170c05708bffe671b522f43db7fdbe9e03d960a26d8843554c669a",
+        "EngDesign-Open/Ziheng_02/evaluate.py": "2e4dccb7cae978e8945eefd6ceb2fb96bd20abe5a89f03b1b0640139db624f30",
+        "EngDesign-Open/Ziheng_02/domain_topic.txt": "00c025991164f1864709cee35f28c17e0fb8b37a78e8a64c0666009b4b711492",
+        "EngDesign-Open/libin2_01/LLM_prompt.txt": "1ee585a0d50831448a803c4cef909086d562db1ed5fbe28b6c80b3f7ec4c78d2",
+        "EngDesign-Open/libin2_01/output_structure.py": "a4353898a6f2616c0988f9d9f289a512235013ec02d9f1de488d16bd4245630b",
+        "EngDesign-Open/libin2_01/evaluate.py": "03ef0ef83469d4c01a26f8931e842d408dc6a2bf2e03ff5b9eabbd9bbc7597b3",
+        "EngDesign-Open/libin2_01/domain_topic.txt": "c8a819ff21247071fd1e4d88207bc2c582452d060141befc8e2ddb40d0afa7c5",
+        "EngDesign-Open/libin2_02/LLM_prompt.txt": "fb62fe18267a1c3bbc371e24ec8602ad7f8ebf46ba40a7dfa4ca9057dcd38b89",
+        "EngDesign-Open/libin2_02/output_structure.py": "b5906ccadf9d4e598dfa45bea04eeecec5a8535d91bed2e7502552745d917e9f",
+        "EngDesign-Open/libin2_02/evaluate.py": "c07c7fa1a80cf4bdd78a44f1e82ab25108e72350dc628af57d46634ea22b882b",
+        "EngDesign-Open/libin2_02/domain_topic.txt": "721073cd46693b58ba92fb0bbfca9b3fb04aa896a1143e237b562bdcc629864a",
+        "EngDesign-Open/libin2_03/LLM_prompt.txt": "13a941e0ddd2d0a6103e0915563971ed651518e3d081fb5b935f11d7fbb297bc",
+        "EngDesign-Open/libin2_03/output_structure.py": "511e8e45a62cd042ba80d484534c0d43d5cac0aa97791686f378dd7210312c07",
+        "EngDesign-Open/libin2_03/evaluate.py": "ac924dcf91425b29f764ba690b723b570bc444f2d139303638ac9de2e199658f",
+        "EngDesign-Open/libin2_03/domain_topic.txt": "75d7b8f7c2b6dfbf8c225cabecfdc65dc102ef95f87b1115fa3d94299d43fb6f",
+        "EngDesign-Open/DL_01/simulation_results/ground_truth.json": "9ea928748a07c34573c0472f0b705383e666f4be72260aa2cce00cccc0c20b34",
+        "EngDesign-Open/DL_02/simulation_results/ground_truth_layout.json": "fa772d8f79e63559be672547cd7716358c1671e6b690133d603e52e9607766c3",
+        "EngDesign-Open/YX_01/solution.txt": "ec30f36fc68453ab4c397f449a24c67853ce01bbb148228ed6bdce3d1e88fff1"
+      },
+      "simulator_assets": {
+        "repository": "https://github.com/cyberbotics/webots",
+        "commit": "c6793d8f7230a311c4bc2a3101d9f1a8bc0aa01b",
+        "release": "R2025a",
+        "license_url": "https://cyberbotics.com/webots_assets_license",
+        "files": {
+          "projects/objects/backgrounds/protos/TexturedBackground.proto": "8ea2ec89cbec31d1c62d11d7548271f072273ba89873800d5842d67140e97c64",
+          "projects/objects/backgrounds/protos/TexturedBackgroundLight.proto": "103b96d670659ecb54974a76c731374e384cef0a4a053b9b090742f1dbb9041e",
+          "projects/default/worlds/textures/cubic/mountains_back.jpg": "3e7992243a6cdbcea93b9be2c6ff795117f5de1d1ac4a58a817d0493702c5650",
+          "projects/default/worlds/textures/cubic/mountains_back.hdr": "86487374bf4f44ae5406e02ab577c5c65177b4598c9bb1b7471611b7c6235104",
+          "projects/default/worlds/textures/cubic/mountains_bottom.jpg": "dab398a830d90303b6f6564e43c5da8ca969f5686c5af036a0c7566f40f708c9",
+          "projects/default/worlds/textures/cubic/mountains_bottom.hdr": "261b4c8941c1ac409c1d24b81b042481b49ab54c72e533fb3e5b58f503e97366",
+          "projects/default/worlds/textures/cubic/mountains_front.jpg": "a9af978e54b75e696e08a7b42dbe0e4406a7979d09a650f46740ae59593a6d6b",
+          "projects/default/worlds/textures/cubic/mountains_front.hdr": "8ddb2bb7db3968d2341ff8684691ab48899c058f728bc8445e66beae10044a2c",
+          "projects/default/worlds/textures/cubic/mountains_left.jpg": "74e642490d4327fe3f526baaedfc4c73bde7ca5a94cdc422476b4024e3a026b1",
+          "projects/default/worlds/textures/cubic/mountains_left.hdr": "01a576c90f6f73c6373ed8eee42ba9c81542be4f0b65510920f01a0229b1a8b9",
+          "projects/default/worlds/textures/cubic/mountains_right.jpg": "1b650b4984c16007a45cd90f83a1c1d3a572451e80413e4abb6a56ec053497ef",
+          "projects/default/worlds/textures/cubic/mountains_right.hdr": "91cc406d56b3a0773e2ef91d0c8ca4e2412ea74d1cc9442a08a866b6fc65ecfb",
+          "projects/default/worlds/textures/cubic/mountains_top.jpg": "90ae5a9d6ecce742a08afa604988876a33a8a664ac120d33c8f358741e172559",
+          "projects/default/worlds/textures/cubic/mountains_top.hdr": "ad20354918869f20a5b2bc27d757b3556020bb74be2d6e5f680f75b17fa69cd3"
+        }
+      }
+    },
+    "coverage": {
+      "scope": "full-upstream-open",
+      "upstream_open_task_count": 67,
+      "catalog_task_count": 67,
+      "supported_task_count": 67
+    },
+    "protocol": {
+      "name": "engdesign-native-verifier",
+      "version": "json-deliverable-full-v1",
+      "primary_metric": "native passed flag",
+      "additional_metrics": [
+        "native_score",
+        "confidence"
+      ],
+      "submission": "/workspace/output.json validated by untouched upstream Response_structure",
+      "grader": "Unchanged upstream evaluate_llm_response in a separate grader container; original same-interpreter candidate execution remains a native limitation.",
+      "runtime_dependencies": "Task-specific Python scientific libraries; Octave; Icarus Verilog; configurable Webots image for XZ_03/XZ_04",
+      "budgets": {
+        "agent_timeout_sec": 600,
+        "verifier_timeout_sec": 900
+      },
+      "notes": [
+        "Every upstream open task is selectable. Runtime requirements are checked explicitly; missing infrastructure is never recorded as a wrong answer.",
+        "Published native grader defects are documented per task; scoring rules are not silently repaired.",
+        "AB_02 and AB_03 omit reference images from agent inputs; the upstream generic image collector also includes those images. Native graders still receive them.",
+        "XZ_03/XZ_04 resolve the two R2025a background PROTO URIs to identical pinned local simulator assets for offline verification; original and patched world hashes are recorded.",
+        "Native failed verdicts with null score or confidence retain those unknown values in verdict.json; reward.json contains only known numeric metrics."
+      ]
+    },
+    "oracle": {
+      "kind": "integration_reference",
+      "supported_task_ids": [
+        "AB_01",
+        "XY_01"
+      ],
+      "description": "Existing reviewed verifier references for AB_01 and XY_01 only; normal candidate evaluation covers every catalog task."
+    },
+    "tasks": [
+      {
+        "id": "AB_01",
+        "record_id": "AB_01",
+        "domain": "Computer Vision - Medical Image Processing (Quantitative Radiomics)",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "AB_02",
+        "record_id": "AB_02",
+        "domain": "Computer Vision - Segmentation",
+        "runtime_family": "python",
+        "public_files": [
+          "images/8_of_hearts.png",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "images/8_of_hearts.png",
+          "images/ground_truth_mask.png",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "images/8_of_hearts.png",
+          "images/ground_truth_mask.png",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "AB_03",
+        "record_id": "AB_03",
+        "domain": "Computer Vision - shape analysis",
+        "runtime_family": "python",
+        "public_files": [
+          "images/test_shape.png",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "images/ground_truth_visualization.png",
+          "images/test_shape.png",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "images/ground_truth_visualization.png",
+          "images/test_shape.png",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "AM_02",
+        "record_id": "AM_02",
+        "domain": "Multi-Agent Dynamic Path planning",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "grid.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "grid.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "AM_03",
+        "record_id": "AM_03",
+        "domain": "Multi-Goal Dynamic Path planning",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "grid.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "grid.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "AV_02",
+        "record_id": "AV_02",
+        "domain": "Digital Signal Processing - IIR filter design",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "AV_03",
+        "record_id": "AV_03",
+        "domain": "Digital Signal Processing - Anti-Aliasing system design",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "CY_03",
+        "record_id": "CY_03",
+        "domain": "Main domain topic: Operating system\nSub-topic: VirtIO Block Device Driver",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "DL_01",
+        "record_id": "DL_01",
+        "domain": "Hardware Design: Software-Defined Solid-State Drive Design",
+        "runtime_family": "python",
+        "public_files": [
+          "images/ssd_hardware.png",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "images/ssd_hardware.png",
+          "output_structure.py",
+          "simulation_results/ground_truth.json"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "images/ssd_hardware.png",
+          "output_structure.py",
+          "simulation_results/ground_truth.json"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "DL_02",
+        "record_id": "DL_02",
+        "domain": "Hardware Design: Software-Defined Solid-State Drive Design",
+        "runtime_family": "python",
+        "public_files": [
+          "images/ssd_hardware.png",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "images/ssd_hardware.png",
+          "output_structure.py",
+          "simulation_results/ground_truth_layout.json"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "images/ssd_hardware.png",
+          "output_structure.py",
+          "simulation_results/ground_truth_layout.json"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "HC_03",
+        "record_id": "HC_03",
+        "domain": "Machine Learning: Polynomial Fitting",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "HJ_01",
+        "record_id": "HJ_01",
+        "domain": "Robotics and Computer vision",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "s1.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "s1.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "JY_01",
+        "record_id": "JY_01",
+        "domain": "Computer vision- Polarization",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "JY_02",
+        "record_id": "JY_02",
+        "domain": "computer vision edge detection",
+        "runtime_family": "python",
+        "public_files": [
+          "input.npy",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "input.npy",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain.txt",
+          "evaluate.py",
+          "input.npy",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "JY_03",
+        "record_id": "JY_03",
+        "domain": "computer vision polarization interpolation",
+        "runtime_family": "python",
+        "public_files": [
+          "checkerboard.npy",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "0.npy",
+          "135.npy",
+          "45.npy",
+          "90.npy",
+          "checkerboard.npy",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "0.npy",
+          "135.npy",
+          "45.npy",
+          "90.npy",
+          "LLM_prompt.txt",
+          "checkerboard.npy",
+          "domain.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "KV_02",
+        "record_id": "KV_02",
+        "domain": "Engineering",
+        "runtime_family": "python",
+        "public_files": [
+          "images/SOCplot.png",
+          "images/image1.png",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "images/SOCplot.png",
+          "images/image1.png",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "evaluate.py",
+          "images/SOCplot.png",
+          "images/image1.png",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "KV_03",
+        "record_id": "KV_03",
+        "domain": "Engineering",
+        "runtime_family": "python",
+        "public_files": [
+          "images/original.png",
+          "images/zoomed.png",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "images/original.png",
+          "images/zoomed.png",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "evaluate.py",
+          "images/original.png",
+          "images/zoomed.png",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "LX_02",
+        "record_id": "LX_02",
+        "domain": "Main domain: control systems\nSub-topic: control in magnetic levitation systems such as maglev train",
+        "runtime_family": "octave",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "evaluate_controller.m",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "evaluate_controller.m",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "NS_PA_SS_02",
+        "record_id": "NS_PA_SS_02",
+        "domain": "Digital Logic / Sequential Circuits\nGray Code Sequence Generator in Verilog",
+        "runtime_family": "iverilog",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "NS_PA_SS_03",
+        "record_id": "NS_PA_SS_03",
+        "domain": "Main domain: Digital Design  \nSub-topic: Programmable bitwidth register file",
+        "runtime_family": "iverilog",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "NS_PA_SS_04",
+        "record_id": "NS_PA_SS_04",
+        "domain": "Main domain: Digital Design  \nSub-topic: Shift Registers",
+        "runtime_family": "iverilog",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "NS_PA_SS_05",
+        "record_id": "NS_PA_SS_05",
+        "domain": "Main domain: Digital Design  \nSub-topic: Bubble Sort",
+        "runtime_family": "iverilog",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "NS_PA_SS_06",
+        "record_id": "NS_PA_SS_06",
+        "domain": "Main domain: Digital Design  \nSub-topic: Dot Product",
+        "runtime_family": "iverilog",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "NS_PA_SS_07",
+        "record_id": "NS_PA_SS_07",
+        "domain": "Main domain: Digital Design  \nSub-topic: Flip Flop Array",
+        "runtime_family": "iverilog",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "NS_PA_SS_08",
+        "record_id": "NS_PA_SS_08",
+        "domain": "Main domain: Digital Design  \nSub-topic: Programmable Sequence Detector",
+        "runtime_family": "iverilog",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "NS_PA_SS_09",
+        "record_id": "NS_PA_SS_09",
+        "domain": "Main domain: Digital Design  \nSub-topic: Gray Code to Binary",
+        "runtime_family": "iverilog",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "NS_PA_SS_10",
+        "record_id": "NS_PA_SS_10",
+        "domain": "Main domain: Digital Design  \nSub-topic: Divisibility by 5",
+        "runtime_family": "iverilog",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "tb.sv"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "RK_01",
+        "record_id": "RK_01",
+        "domain": "structural engineering: topology optimization",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "RK_02",
+        "record_id": "RK_02",
+        "domain": "structural engineering: topology optimization",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "RK_03",
+        "record_id": "RK_03",
+        "domain": "structural engineering: topology optimization",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "RK_04",
+        "record_id": "RK_04",
+        "domain": "structural engineering: topology optimization",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "RS_01",
+        "record_id": "RS_01",
+        "domain": "Topic: Automobile Engineering\nSub-topic: Lap Time and Top speed Calculation",
+        "runtime_family": "python",
+        "public_files": [
+          "files/SetupFile.json",
+          "files/TrackFile.txt",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "AccEnvCalc.py",
+          "LapTimeSimCalc.py",
+          "PostProc.py",
+          "RunOpenLapSim.py",
+          "SetupFileLoader.py",
+          "evaluate.py",
+          "files/SetupFile.json",
+          "files/TrackFile.txt",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "AccEnvCalc.py",
+          "LLM_prompt.txt",
+          "LapTimeSimCalc.py",
+          "PostProc.py",
+          "RunOpenLapSim.py",
+          "SetupFileLoader.py",
+          "domain_topic.txt",
+          "evaluate.py",
+          "files/SetupFile.json",
+          "files/TrackFile.txt",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "RS_02",
+        "record_id": "RS_02",
+        "domain": "Topic: Automobile Engineering\nSub-topic: Calculating maximum acceleration and deceleration of the car.",
+        "runtime_family": "python",
+        "public_files": [
+          "files/SetupFile.json",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "AccEnvCalc.py",
+          "FullCarAcc.py",
+          "SetupFileLoader.py",
+          "evaluate.py",
+          "files/SetupFile.json",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "AccEnvCalc.py",
+          "FullCarAcc.py",
+          "LLM_prompt.txt",
+          "SetupFileLoader.py",
+          "domain_topic.txt",
+          "evaluate.py",
+          "files/SetupFile.json",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "RS_03",
+        "record_id": "RS_03",
+        "domain": "Topic: Automobile Engineering\nSub-topic: Maximum Force on Neck while Cornering",
+        "runtime_family": "python",
+        "public_files": [
+          "files/SetupFile.json",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "AccEnvCalc.py",
+          "CorAcc.py",
+          "SetupFileLoader.py",
+          "evaluate.py",
+          "files/SetupFile.json",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "AccEnvCalc.py",
+          "CorAcc.py",
+          "LLM_prompt.txt",
+          "SetupFileLoader.py",
+          "domain_topic.txt",
+          "evaluate.py",
+          "files/SetupFile.json",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "WJ_01",
+        "record_id": "WJ_01",
+        "domain": "Main Domain Topic: Image Processing\nSub-Topic: Image Denoising Using Filter Design and LLM-generated Pipelines",
+        "runtime_family": "python",
+        "public_files": [
+          "images/noisy_image_s&p.png",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "images/noisy_image_s&p.png",
+          "original_image.png",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "images/noisy_image_s&p.png",
+          "original_image.png",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "XG_08",
+        "record_id": "XG_08",
+        "domain": "Automation Engineering: Build Fuzzy Inference System for Tipping Problem",
+        "runtime_family": "python",
+        "public_files": [
+          "images/MF1.png",
+          "images/MF2.png",
+          "images/MF3.png",
+          "images/MF4.png",
+          "images/MF5.png",
+          "images/MF6.png",
+          "images/MF7.png",
+          "images/MF8.png",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "images/MF1.png",
+          "images/MF2.png",
+          "images/MF3.png",
+          "images/MF4.png",
+          "images/MF5.png",
+          "images/MF6.png",
+          "images/MF7.png",
+          "images/MF8.png",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "images/MF1.png",
+          "images/MF2.png",
+          "images/MF3.png",
+          "images/MF4.png",
+          "images/MF5.png",
+          "images/MF6.png",
+          "images/MF7.png",
+          "images/MF8.png",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "XG_13",
+        "record_id": "XG_13",
+        "domain": "PID Controller Design",
+        "runtime_family": "python",
+        "public_files": [
+          "images/pid_mass_spring_damp.png",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "images/pid_mass_spring_damp.png",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "images/pid_mass_spring_damp.png",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "XW_01",
+        "record_id": "XW_01",
+        "domain": "operating system - virtual filesystem",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "solution.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "solution.py"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "XW_02",
+        "record_id": "XW_02",
+        "domain": "operating system - virtual filesystem",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "solution.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "solution.py"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "XW_03",
+        "record_id": "XW_03",
+        "domain": "operating system - virtual filesystem",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "solution.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "solution.py"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "XW_04",
+        "record_id": "XW_04",
+        "domain": "operating system - virtual filesystem",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "solution.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "solution.py"
+        ],
+        "executes_candidate_code": true
+      },
+      {
+        "id": "XY_01",
+        "record_id": "XY_01",
+        "domain": "Digital Design\nTetris ROM Analysis",
+        "runtime_family": "python",
+        "public_files": [
+          "font_rom.sv",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "font_rom.sv",
+          "font_rom_data.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "font_rom.sv",
+          "font_rom_data.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "XY_03",
+        "record_id": "XY_03",
+        "domain": "Digital Design\nFPGA Display Interface",
+        "runtime_family": "python",
+        "public_files": [
+          "hex_driver.sv",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "hex_driver.sv",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "hex_driver.sv",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "XY_04",
+        "record_id": "XY_04",
+        "domain": "Domain: Digital Hardware Design\nTopic: Color Mapping for Display Systems",
+        "runtime_family": "python",
+        "public_files": [
+          "Color_Mapper.sv",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "Color_Mapper.sv",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "Color_Mapper.sv",
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "XY_05",
+        "record_id": "XY_05",
+        "domain": "Domain: Computer Architecture\nSubdomain: CPU Control Logic, Instruction Control Signals",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "XZ_01",
+        "record_id": "XZ_01",
+        "domain": "Robotics: Path Planning in Construction Site",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "XZ_02",
+        "record_id": "XZ_02",
+        "domain": "Robotics: Path Planning in Construction Site",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "XZ_03",
+        "record_id": "XZ_03",
+        "domain": "Robotics: Path Planning in Construction Site",
+        "runtime_family": "webots",
+        "public_files": [
+          "output_structure.py",
+          "worlds/construction_site.wbt"
+        ],
+        "grader_files": [
+          "controllers/robot_controller/robot_controller.py",
+          "evaluate.py",
+          "output_structure.py",
+          "worlds/construction_site.wbt"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "controllers/robot_controller/robot_controller.py",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "worlds/construction_site.wbt"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "XZ_04",
+        "record_id": "XZ_04",
+        "domain": "Robotics: Trajectory Planning in Construction Site",
+        "runtime_family": "webots",
+        "public_files": [
+          "output_structure.py",
+          "worlds/construction_site.wbt"
+        ],
+        "grader_files": [
+          "controllers/robot_controller/robot_controller.py",
+          "controllers/robot_controller/ss/robot_controller copy.py",
+          "evaluate.py",
+          "output_structure.py",
+          "worlds/construction_site.wbt"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "controllers/robot_controller/robot_controller.py",
+          "controllers/robot_controller/ss/robot_controller copy.py",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "worlds/construction_site.wbt"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "YJ_01",
+        "record_id": "YJ_01",
+        "domain": "Computational Mechanics: 2D Structural Topology Optimization for Compliance Minimization",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "YJ_02",
+        "record_id": "YJ_02",
+        "domain": "Computational Mechanics: 2D Structural Topology Optimization for Compliance Minimization",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "constraints.py",
+          "evaluate.py",
+          "fesolvers.py",
+          "loads.py",
+          "output_structure.py",
+          "plotting.py",
+          "topopt.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "constraints.py",
+          "domain_topic.txt",
+          "evaluate.py",
+          "fesolvers.py",
+          "loads.py",
+          "output_structure.py",
+          "plotting.py",
+          "topopt.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "YJ_03",
+        "record_id": "YJ_03",
+        "domain": "Computational Mechanics: 2D Structural Topology Optimization for Stress Intensity Factor Minimization",
+        "runtime_family": "python",
+        "public_files": [
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress.csv",
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(-1,-1).csv",
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(-1,1).csv",
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(1,-1).csv",
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(1,1).csv",
+          "Stiffness Matrices/Stiffness_Linear_PlaneStress.csv",
+          "Stiffness Matrices/Stiffness_Linear_PlaneStress_Enriched(-1,-1).csv",
+          "Stiffness Matrices/element_stiffness.py",
+          "Stiffness Matrices/element_stiffness_enriched.py",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress.csv",
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(-1,-1).csv",
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(-1,1).csv",
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(1,-1).csv",
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(1,1).csv",
+          "Stiffness Matrices/Stiffness_Linear_PlaneStress.csv",
+          "Stiffness Matrices/Stiffness_Linear_PlaneStress_Enriched(-1,-1).csv",
+          "Stiffness Matrices/element_stiffness.py",
+          "Stiffness Matrices/element_stiffness_enriched.py",
+          "constraints.py",
+          "evaluate.py",
+          "fesolvers.py",
+          "loads.py",
+          "output_structure.py",
+          "plotting.py",
+          "topopt.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress.csv",
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(-1,-1).csv",
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(-1,1).csv",
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(1,-1).csv",
+          "Stiffness Matrices/Stiffness_Cubic_PlaneStress_Enriched(1,1).csv",
+          "Stiffness Matrices/Stiffness_Linear_PlaneStress.csv",
+          "Stiffness Matrices/Stiffness_Linear_PlaneStress_Enriched(-1,-1).csv",
+          "Stiffness Matrices/element_stiffness.py",
+          "Stiffness Matrices/element_stiffness_enriched.py",
+          "constraints.py",
+          "domain_topic.txt",
+          "evaluate.py",
+          "fesolvers.py",
+          "loads.py",
+          "output_structure.py",
+          "plotting.py",
+          "topopt.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "YX_01",
+        "record_id": "YX_01",
+        "domain": "Automotive Engineering: Path Planning",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "solution.txt"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "solution.txt"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "YX_02",
+        "record_id": "YX_02",
+        "domain": "Automotive Engineering: Engine Control and Calibration",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "YX_03",
+        "record_id": "YX_03",
+        "domain": "Radar Engineering: Modeling Radar Detectability Factors",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "Yiqi_01",
+        "record_id": "Yiqi_01",
+        "domain": "Computer Science: Tiling and Communication Optimizations for Inter-core Connected AI Chips",
+        "runtime_family": "python",
+        "public_files": [
+          "images/figure.png",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "images/figure.png",
+          "output_structure.py",
+          "t10_OpPartitionSearch.py",
+          "t10_TensorExpression.py",
+          "t10_predictor.py",
+          "tsim_components/comp.py",
+          "tsim_components/noc.py",
+          "tsim_components/utils.py",
+          "tsim_simple.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "images/figure.png",
+          "output_structure.py",
+          "t10_OpPartitionSearch.py",
+          "t10_TensorExpression.py",
+          "t10_predictor.py",
+          "tsim_components/comp.py",
+          "tsim_components/noc.py",
+          "tsim_components/utils.py",
+          "tsim_simple.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "Yiqi_02",
+        "record_id": "Yiqi_02",
+        "domain": "Computer Science: Tiling and Communication Optimizations for Inter-core Connected AI Chips",
+        "runtime_family": "python",
+        "public_files": [
+          "images/figure.png",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "images/figure.png",
+          "output_structure.py",
+          "t10_OpPartitionSearch.py",
+          "t10_TensorExpression.py",
+          "t10_predictor.py",
+          "tsim_components/comp.py",
+          "tsim_components/noc.py",
+          "tsim_components/utils.py",
+          "tsim_simple.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "images/figure.png",
+          "output_structure.py",
+          "t10_OpPartitionSearch.py",
+          "t10_TensorExpression.py",
+          "t10_predictor.py",
+          "tsim_components/comp.py",
+          "tsim_components/noc.py",
+          "tsim_components/utils.py",
+          "tsim_simple.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "Yuqi_01",
+        "record_id": "Yuqi_01",
+        "domain": "Computer Science, Computer Architecture, Machine Learning Accelerator, Neural Processing Unit",
+        "runtime_family": "python",
+        "public_files": [
+          "llama3_1-405b_5p_inference_decode.json",
+          "llama3_1-405b_5p_inference_prefill.json",
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "llama3_1-405b_5p_inference_decode.json",
+          "llama3_1-405b_5p_inference_prefill.json",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "llama3_1-405b_5p_inference_decode.json",
+          "llama3_1-405b_5p_inference_prefill.json",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "ZC_02",
+        "record_id": "ZC_02",
+        "domain": "Main domain: Control theory\nSub domain: Robust control theory",
+        "runtime_family": "octave",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "verifyalpha.m"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "verifyalpha.m"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "ZC_03",
+        "record_id": "ZC_03",
+        "domain": "Main domain: Online decision making\nSub domain: Multi-armed bandits",
+        "runtime_family": "octave",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py",
+          "verifybounds.m"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py",
+          "verifybounds.m"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "ZH_02",
+        "record_id": "ZH_02",
+        "domain": "Aerospace Engineering: Thermal Protection Design for Atmospheric Reentry",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "ZH_03",
+        "record_id": "ZH_03",
+        "domain": "Mechanical Engineering: Electric Scooter Sizing and Performance Evaluation",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "ZH_04",
+        "record_id": "ZH_04",
+        "domain": "Mechanical Engineering: Underwater Glider Design and Energy-Constrained Mission Planning",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "Ziheng_02",
+        "record_id": "Ziheng_02",
+        "domain": "Introduction for Robotics: Inverse Kinematics",
+        "runtime_family": "octave",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "evaluate_robot.m",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "evaluate_robot.m",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "libin2_01",
+        "record_id": "libin2_01",
+        "domain": "Main domain topic: Operating system\nSub-topic: Virtual Memory",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "libin2_02",
+        "record_id": "libin2_02",
+        "domain": "Main domain topic: Operating system\nSub-topic: Multi-threading",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      },
+      {
+        "id": "libin2_03",
+        "record_id": "libin2_03",
+        "domain": "Main domain topic: Operating system\nSub-topic: File System",
+        "runtime_family": "python",
+        "public_files": [
+          "output_structure.py"
+        ],
+        "grader_files": [
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "source_files": [
+          "LLM_prompt.txt",
+          "domain_topic.txt",
+          "evaluate.py",
+          "output_structure.py"
+        ],
+        "executes_candidate_code": false
+      }
+    ]
+  }
+]

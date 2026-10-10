@@ -1,0 +1,1307 @@
+{
+  "checks": {
+    "tasks": 240,
+    "file_tasks": 34,
+    "answer_tasks": 206,
+    "mcp_configs": 240,
+    "sidecar_artifact_configs": 34
+  },
+  "issues": [],
+  "mcp_atif_parser_probe": "passed",
+  "scope": "Static all240 nativeconfiguration compatibility and synthetic Codex-to-ATIF-to-native transport; not actualworldstartup or paidjudge",
+  "harbor_version": "0.18.0",
+  "image_audit": {
+    "checked_at": "2026-10-10T08:48:44.531433+00:00",
+    "total_immutable_image_digests": 33,
+    "world_image_digests": 31,
+    "shared_agent_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:9be28bae20bc6027715df7f81e1d725d5c85dd3edd6669f8736a6a575a0bbcc2",
+    "shared_verifier_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:19f9601e17b39a6c8c20a86971c296a915600e3cdd127c35957704cdd80591b2",
+    "all_registry_manifests_available": true,
+    "all_platforms": "linux/amd64",
+    "method": "docker manifest inspect --verbose; manifest metadata only, no image layers pulled",
+    "all_task_and_grader_world_ids_match": 240,
+    "file_task_world_mappings": [
+      {
+        "task": "world133-ln-04-009ff905",
+        "task_id": "task_009ff905dc2644e9b17bccabfaa73613",
+        "world_id": "world_02ce2dd092de4afb9342b753b5f9026d",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:ea918fdc2bf44a5f974e286853e429b774960ba3085c7013f3a4311a3aa443be"
+      },
+      {
+        "task": "world425-jcf-03-09bdbd1a",
+        "task_id": "task_09bdbd1ad83b417197be27d03453cb83",
+        "world_id": "world_a52c1271b072453383ffe7e216e33d0c",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:bab7bd77a3f27a77001bc9aa3d366970fb896b61d4cb07190eaae242da69fe8f"
+      },
+      {
+        "task": "task-yhzc9d1a-531a5446",
+        "task_id": "task_531a5446cf37498ea22ee650c80920b0",
+        "world_id": "world_a922ae91ac0f4a1d8ecbb6e35c01e9e5",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f1671d9cb86ea7a30f5a4a6971a6a4087c07d3a763f219d6f2b22f067649ff1f"
+      },
+      {
+        "task": "world135-sf-task03-5716be6e",
+        "task_id": "task_5716be6e3ea7405f8be3c6423a806c5d",
+        "world_id": "world_ea7d8cd8fb8c4da2bc0fdbfe83984963",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:3eab4ff7e3ef3b4cdb8cc0c35cad7d98f751a7b1e9ca1af814a340b4b8fb6f63"
+      },
+      {
+        "task": "world226-td-03-a329bd13",
+        "task_id": "task_a329bd13cce0498baf1280503ada3dc9",
+        "world_id": "world_6773bae985ac499d8269e5b2ac837f05",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:24ca41f65a8be5157620f4440610eb71a8c51a98f7b7e8fa230280b54c3d28e3"
+      },
+      {
+        "task": "world224-jr-02-a4bb5a54",
+        "task_id": "task_a4bb5a54ec8e42a487d9efcd3fc88feb",
+        "world_id": "world_a957c01e08e340899f314d5235e559e2",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:417e7ea39d03dd6791c8cc9305243cd564fa0d6ec9ad6411022d1a14a41bb3d0"
+      },
+      {
+        "task": "world224-hs-02-2ba35245",
+        "task_id": "task_2ba352455b0846e0a315a96336a5fa08",
+        "world_id": "world_a957c01e08e340899f314d5235e559e2",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:417e7ea39d03dd6791c8cc9305243cd564fa0d6ec9ad6411022d1a14a41bb3d0"
+      },
+      {
+        "task": "world431task-el-01-6ec3da62",
+        "task_id": "task_6ec3da621abe41fd9cac65add2a4ee44",
+        "world_id": "world_87ba2a78e0ed40399f77d57db40ce7ff",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:aaa2801a53f38c369dd6f0d147472473a5b19475ee74d009c16ec429dbe62b2e"
+      },
+      {
+        "task": "world225-rl-task04-04cd11af",
+        "task_id": "task_04cd11afdf504ff5bb5630ddde101ed9",
+        "world_id": "world_48c823b39afa48f5840b50ce105a4af2",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:eb9df82aede2360cfd9bed1daedb994c06e19d5953c6556a44d1d5e351b3f904"
+      },
+      {
+        "task": "world425-tas-02-ac7e521e",
+        "task_id": "task_ac7e521e2d9a41fd9970ea790db3d712",
+        "world_id": "world_a52c1271b072453383ffe7e216e33d0c",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:bab7bd77a3f27a77001bc9aa3d366970fb896b61d4cb07190eaae242da69fe8f"
+      },
+      {
+        "task": "world225-km-06-19899d4e",
+        "task_id": "task_19899d4eb7cd45f1a4705d9fd4f30659",
+        "world_id": "world_48c823b39afa48f5840b50ce105a4af2",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:eb9df82aede2360cfd9bed1daedb994c06e19d5953c6556a44d1d5e351b3f904"
+      },
+      {
+        "task": "world425-tas-05-2c185600",
+        "task_id": "task_2c1856003b3644c29de569749afc1425",
+        "world_id": "world_a52c1271b072453383ffe7e216e33d0c",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:bab7bd77a3f27a77001bc9aa3d366970fb896b61d4cb07190eaae242da69fe8f"
+      },
+      {
+        "task": "world425-jcf-01-e1dfe9ed",
+        "task_id": "task_e1dfe9eda1b24d22a2e79de9b6c835a5",
+        "world_id": "world_a52c1271b072453383ffe7e216e33d0c",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:bab7bd77a3f27a77001bc9aa3d366970fb896b61d4cb07190eaae242da69fe8f"
+      },
+      {
+        "task": "world225-rl-task01-45ba9aaf",
+        "task_id": "task_45ba9aafcc2c4bed9e2a9f48bd8b85ff",
+        "world_id": "world_48c823b39afa48f5840b50ce105a4af2",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:eb9df82aede2360cfd9bed1daedb994c06e19d5953c6556a44d1d5e351b3f904"
+      },
+      {
+        "task": "world224-hs-10-4f232c35",
+        "task_id": "task_4f232c358ade48f0aaf859b477c07d33",
+        "world_id": "world_a957c01e08e340899f314d5235e559e2",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:417e7ea39d03dd6791c8cc9305243cd564fa0d6ec9ad6411022d1a14a41bb3d0"
+      },
+      {
+        "task": "world226-ta-01-c945f64f",
+        "task_id": "task_c945f64f276542ea8b30908db037df19",
+        "world_id": "world_6773bae985ac499d8269e5b2ac837f05",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:24ca41f65a8be5157620f4440610eb71a8c51a98f7b7e8fa230280b54c3d28e3"
+      },
+      {
+        "task": "world223-es-01-4e64f4e3",
+        "task_id": "task_4e64f4e364cf498c925ef60eccec6903",
+        "world_id": "world_8cbe51a9ad3d41448bf9b97b68e5fbb2",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f2c18cb49bc56c9b7b9482001cbc57f773278a39e824620dca4138b23b7df4de"
+      },
+      {
+        "task": "task-awys8050-cd3c370b",
+        "task_id": "task_cd3c370bc1fa48c6ad639b183151d354",
+        "world_id": "world_a922ae91ac0f4a1d8ecbb6e35c01e9e5",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f1671d9cb86ea7a30f5a4a6971a6a4087c07d3a763f219d6f2b22f067649ff1f"
+      },
+      {
+        "task": "world219-seed-task-06-334dea71",
+        "task_id": "task_334dea7120aa4c4aa61a3894a3b16ca8",
+        "world_id": "world_dab2734c80974d28ae9e2729488ddd40",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:bac5432ba9590c3796116b3c414243266c07f7ce44c226c85af0c50f9c49700c"
+      },
+      {
+        "task": "world219-seed-task-09-ff-9da08494",
+        "task_id": "task_9da08494f5a548aaab8f8a451fa66c52",
+        "world_id": "world_dab2734c80974d28ae9e2729488ddd40",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:bac5432ba9590c3796116b3c414243266c07f7ce44c226c85af0c50f9c49700c"
+      },
+      {
+        "task": "world133-ln-05-b989446d",
+        "task_id": "task_b989446d49804f09af88764780ac4e31",
+        "world_id": "world_02ce2dd092de4afb9342b753b5f9026d",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:ea918fdc2bf44a5f974e286853e429b774960ba3085c7013f3a4311a3aa443be"
+      },
+      {
+        "task": "world131-ib-05-3c0a977d",
+        "task_id": "task_3c0a977da4b448d48863c5d248670a7b",
+        "world_id": "world_9461094512de43bb9bd62db53b9d313f",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:148d6a46c34b9f1b40266067dd22da5850145e1e8cfdf1b6531d8cbce5885b0f"
+      },
+      {
+        "task": "task-5vd1ebb0-c4e34a72",
+        "task_id": "task_c4e34a72bf5d4b73a30db7cf75234d40",
+        "world_id": "world_a922ae91ac0f4a1d8ecbb6e35c01e9e5",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f1671d9cb86ea7a30f5a4a6971a6a4087c07d3a763f219d6f2b22f067649ff1f"
+      },
+      {
+        "task": "world228-jk-01-08d7bf2c",
+        "task_id": "task_08d7bf2c3aac4022b125c80fc6b6c4ec",
+        "world_id": "world_4cc0a2905f154dd59dcdd6aca95ff9d5",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:ec49e2ac8c7a4443f4f76a832db2f49715fe9c06bfc419fb69f13a6d9c89ceab"
+      },
+      {
+        "task": "world226-td-01-eb948f85",
+        "task_id": "task_eb948f8583dc4261bb2f042a8692ca66",
+        "world_id": "world_6773bae985ac499d8269e5b2ac837f05",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:24ca41f65a8be5157620f4440610eb71a8c51a98f7b7e8fa230280b54c3d28e3"
+      },
+      {
+        "task": "world223-ob-04-c69e2b2a",
+        "task_id": "task_c69e2b2ad393456e940c5f86796293ce",
+        "world_id": "world_8cbe51a9ad3d41448bf9b97b68e5fbb2",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f2c18cb49bc56c9b7b9482001cbc57f773278a39e824620dca4138b23b7df4de"
+      },
+      {
+        "task": "world226-td-02-02f66e09",
+        "task_id": "task_02f66e099e264563b792d42e597f2b57",
+        "world_id": "world_6773bae985ac499d8269e5b2ac837f05",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:24ca41f65a8be5157620f4440610eb71a8c51a98f7b7e8fa230280b54c3d28e3"
+      },
+      {
+        "task": "world221-oa-3-d4497b80",
+        "task_id": "task_d4497b80bc014c59b787f7fcee6ab1c0",
+        "world_id": "world_aad4f5dbec7d4b0a99a4a234528a03ce",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:6f701086a272048ec054fe803dbf258297df47e3ee62191349f58c31cd6970e5"
+      },
+      {
+        "task": "world228-sm-task02-b0448b54",
+        "task_id": "task_b0448b54a301438ebbe48f92275ebf64",
+        "world_id": "world_4cc0a2905f154dd59dcdd6aca95ff9d5",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:ec49e2ac8c7a4443f4f76a832db2f49715fe9c06bfc419fb69f13a6d9c89ceab"
+      },
+      {
+        "task": "world223-es-02-965b01c7",
+        "task_id": "task_965b01c74286470dab87302c03a57734",
+        "world_id": "world_8cbe51a9ad3d41448bf9b97b68e5fbb2",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f2c18cb49bc56c9b7b9482001cbc57f773278a39e824620dca4138b23b7df4de"
+      },
+      {
+        "task": "world221-tr-01-d4fc3833",
+        "task_id": "task_d4fc3833f7ba4f04bbf2f7ec3574a0bd",
+        "world_id": "world_aad4f5dbec7d4b0a99a4a234528a03ce",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:6f701086a272048ec054fe803dbf258297df47e3ee62191349f58c31cd6970e5"
+      },
+      {
+        "task": "world224-hs-11-7bf318b0",
+        "task_id": "task_7bf318b0d8b24fd484fed46688e78c33",
+        "world_id": "world_a957c01e08e340899f314d5235e559e2",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:417e7ea39d03dd6791c8cc9305243cd564fa0d6ec9ad6411022d1a14a41bb3d0"
+      },
+      {
+        "task": "task-acg14a6c-c782f25e",
+        "task_id": "task_c782f25e2ed64fa297ede51268231085",
+        "world_id": "world_a922ae91ac0f4a1d8ecbb6e35c01e9e5",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f1671d9cb86ea7a30f5a4a6971a6a4087c07d3a763f219d6f2b22f067649ff1f"
+      },
+      {
+        "task": "lawworld433-anb-04-23234013",
+        "task_id": "task_2323401315a04c9ab83c43e3eedb8ab1",
+        "world_id": "world_48bc027e1b2f47a9946b13fcd72df2a8",
+        "world_image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f7470483d7f002e3fa0860c7983d9c9e4bc26533b4d5fa13d835a42454dc1d83"
+      }
+    ],
+    "worlds": {
+      "world_078a3672973d4f44b412fd9e006a77a2": {
+        "slug": "management-consulting-world-127-benchmark--(world_078a3672973d4f44b412fd9e006a77a2)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:e2c69b1e5686572341a96deed6251767bbd5785c40f2e56104a97fb7fd20c119"
+        ],
+        "tasks": [
+          "world-127-am-task-02-ec3c5eb0",
+          "w127-ah-task-7-d04aba36",
+          "world127-am-task03-cab85eb0",
+          "world-127-hlv-task-04-31c097b3",
+          "world-127-hlv-task-03-de0803e6",
+          "world127-ak-task03-09619393",
+          "world-127-hlv-task-01-37bd2041",
+          "world-127-tj-task-2-0-2a1410cf",
+          "world-127-ah-task-2-fe2ade3d",
+          "world-127-tj-task-4-0-bbc81ebc",
+          "world-127-tj-task-1-0-078e2b30"
+        ]
+      },
+      "world_8aa2e6c2d7494113bbf087a9f7490810": {
+        "slug": "law-world-421-benchmark--(world_8aa2e6c2d7494113bbf087a9f7490810)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:6ea1eba4213bbb2e13a295915106819688e8eb3e04a834e46e8012a7820c2762"
+        ],
+        "tasks": [
+          "world421-tg-02-f7dea046",
+          "world421-tg-03-860d1b66",
+          "world421-oo-02-13543200",
+          "world421-ap-02-930732dc",
+          "world-421-oo-01-9398ad52",
+          "world-421-anb-02-2da2824a",
+          "world421-el-03-abf41e5b"
+        ]
+      },
+      "world_f830dafda9244f8eb358dc389b0b2b94": {
+        "slug": "law-world-416-benchmark--(world_f830dafda9244f8eb358dc389b0b2b94)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:39ab57f8871ddc9277528912092fa60b794fa371347660057f152f89cc302b92"
+        ],
+        "tasks": [
+          "world416-js-01-44b9046f",
+          "world416-js-02-029d3e95",
+          "task-ymtecb81-c206b308",
+          "world416-tk-02-9ff1dc24"
+        ]
+      },
+      "world_aad4f5dbec7d4b0a99a4a234528a03ce": {
+        "slug": "investment-banking-world-221-benchmark--(world_aad4f5dbec7d4b0a99a4a234528a03ce)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:6f701086a272048ec054fe803dbf258297df47e3ee62191349f58c31cd6970e5"
+        ],
+        "tasks": [
+          "world221-oa-2-44073f52",
+          "world221-oa-8-67be0af1",
+          "world221-oa-4-7d9c6888",
+          "world221-oa-9-f98a186a",
+          "world221-tr-10-39f4923f",
+          "world221-hy-01-e2ae04a7",
+          "world221-oa-3-d4497b80",
+          "world221-tr-01-d4fc3833",
+          "world-221-hy-05-fa5120b0"
+        ]
+      },
+      "world_48c823b39afa48f5840b50ce105a4af2": {
+        "slug": "investment-banking-world-225-benchmark--(world_48c823b39afa48f5840b50ce105a4af2)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:eb9df82aede2360cfd9bed1daedb994c06e19d5953c6556a44d1d5e351b3f904"
+        ],
+        "tasks": [
+          "world-225-je-01-70449b2d",
+          "world225-rl-task04-04cd11af",
+          "world225-dk-02-1f9714bb",
+          "world225-km-06-19899d4e",
+          "world225-mb-03-9e4a1b17",
+          "world225-rl-task01-45ba9aaf",
+          "world225-dk-01-013dab88",
+          "world225-av-02-55d8f94f",
+          "world-225-je-06-d1f7e2bc",
+          "world225-rl-task02-56fc4617",
+          "world225-nb-04-ad89d7af"
+        ]
+      },
+      "world_be480063c3c94e26a04a08b0fc64d8f3": {
+        "slug": "management-consulting-world-129-benchmark--(world_be480063c3c94e26a04a08b0fc64d8f3)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f1cf84aff4a083e3c00e20a45fdc781fb6a24a7afb3283cb80b867ebd2fd77bf"
+        ],
+        "tasks": [
+          "task-4-c12de7ba",
+          "sp-task-02-world-129-7c901287",
+          "world-129-cy-task-6-13a7957a",
+          "world-129-cy-task-3-2bcdc3db",
+          "world-129-cy-task-5-f9ad7ab3",
+          "task-o88f1452-c5369dfe",
+          "sp-task-03-world-129-13560b57",
+          "shiva-task-01-world-129-fc919d98",
+          "task-14-24dc5ca2"
+        ]
+      },
+      "world_8cbe51a9ad3d41448bf9b97b68e5fbb2": {
+        "slug": "investment-banking-world-223-benchmark--(world_8cbe51a9ad3d41448bf9b97b68e5fbb2)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f2c18cb49bc56c9b7b9482001cbc57f773278a39e824620dca4138b23b7df4de"
+        ],
+        "tasks": [
+          "world223-av-03-5e929377",
+          "world223-smn-02-088bee6c",
+          "world223-smn-04-c38a392f",
+          "world223-es-05-e6fedd35",
+          "world223-av-01-abaf6982",
+          "world223-smn-05-b00d08c1",
+          "world223-es-01-4e64f4e3",
+          "world223-smn-08-a0a05e88",
+          "world223-ob-04-c69e2b2a",
+          "world223-es-02-965b01c7",
+          "world-223-ae-task-01-0e08a3d7",
+          "world223-av-04-3397c759"
+        ]
+      },
+      "world_444990f2d95b430895c716e221ad486e": {
+        "slug": "law-world-423-benchmark--(world_444990f2d95b430895c716e221ad486e)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:e2b62976202f9a3484fc898efb2a1047134dd77cde472658be5fdd92feaabcad"
+        ],
+        "tasks": [
+          "world423-js-02-28821806",
+          "law-world-423-dm-03-726ce1ed",
+          "world423-dpm-02-4263f118",
+          "task-seed-13-f7969453",
+          "world423-js-03-ee6e557e",
+          "world423-dpm-01-178fcb61",
+          "law-world-423-dm-04-1a9a5de6",
+          "world423-js-01-9efac80a"
+        ]
+      },
+      "world_3d8830f685594021bd1dcec2d19f3246": {
+        "slug": "investment-banking-world-227-benchmark--(world_3d8830f685594021bd1dcec2d19f3246)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:4a71f0a2ba8cdf8898bf34b8d934d7147206cedc09ed6d36f6169f0620cac8f6"
+        ],
+        "tasks": [
+          "world227-tg-02-04c3b6c7",
+          "world227-sk-task03-8ad609bc",
+          "world227-jz-task03-135a8483",
+          "world227-sk-task08-b138d09f",
+          "world227-sk-task06-ad8e3628",
+          "world227-tg-08-58b05f68",
+          "world227-tg-07-c2f84823",
+          "world227-sk-task07-d2f6c00c"
+        ]
+      },
+      "world_02ce2dd092de4afb9342b753b5f9026d": {
+        "slug": "management-consulting-world-133-benchmark--(world_02ce2dd092de4afb9342b753b5f9026d)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:ea918fdc2bf44a5f974e286853e429b774960ba3085c7013f3a4311a3aa443be"
+        ],
+        "tasks": [
+          "world133-ln-04-009ff905",
+          "world-133-el-task-03-4657445f",
+          "task-3uy1546e-ac21a454",
+          "world133-ln-05-b989446d",
+          "task-unc2be9c-em-ef98d006",
+          "world-133-nk-task-1-f0bbc839"
+        ]
+      },
+      "world_dab2734c80974d28ae9e2729488ddd40": {
+        "slug": "investment-banking-world-219-benchmark--(world_dab2734c80974d28ae9e2729488ddd40)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:bac5432ba9590c3796116b3c414243266c07f7ce44c226c85af0c50f9c49700c"
+        ],
+        "tasks": [
+          "world219-tg-01-8c93245b",
+          "world-219-ae-task-4-af0bc0f9",
+          "world219-tg-04-d08a16f0",
+          "world219-tg-06-45c556b3",
+          "world219-seed-task-04-559be363",
+          "world219-seed-task-06-334dea71",
+          "world219-seed-task-09-ff-9da08494",
+          "world219-ff-task2-8e52be5a",
+          "world219-tg-05-9854aa2d",
+          "world219-oa-task1-318342af"
+        ]
+      },
+      "world_a52c1271b072453383ffe7e216e33d0c": {
+        "slug": "law-world-425-benchmark--(world_a52c1271b072453383ffe7e216e33d0c)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:bab7bd77a3f27a77001bc9aa3d366970fb896b61d4cb07190eaae242da69fe8f"
+        ],
+        "tasks": [
+          "world425-jcf-03-09bdbd1a",
+          "world425-tas-01-82e745dd",
+          "world425-jcf-02-9f502d4d",
+          "world425-tas-02-ac7e521e",
+          "world425-tas-05-2c185600",
+          "world425-jcf-01-e1dfe9ed"
+        ]
+      },
+      "world_c33159dadd454abebd86ba1088e679cf": {
+        "slug": "law-world-420-benchmark--(world_c33159dadd454abebd86ba1088e679cf)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:48813c0371963fc363f714aa8a3c7ef5636373b6f61d568958beccf14d5573df"
+        ],
+        "tasks": [
+          "world420-ro-01-49039ba3",
+          "world-420-lb-03-6e37bd28",
+          "world-420-lb-02-d6b33bef",
+          "world420-sf-02-a71743f3",
+          "world-420-zt-02-e3d12861",
+          "world420-am-02-0e29a58c",
+          "world-420-lb-06-4c9d88b3"
+        ]
+      },
+      "world_ca56e174a3c54a108d3cd73e92beeb0e": {
+        "slug": "law-world-418-benchmark--(world_ca56e174a3c54a108d3cd73e92beeb0e)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:a7e9fd5a0afb7db4d5f8a4051d76eedcd3f609ac501954ab8d974b63037f2fb9"
+        ],
+        "tasks": [
+          "analyze-effect-of-anti-slapp-suit-against-bluelng-on-pre-sui-4b81f3b2",
+          "world418-tk-02-8ca3247c",
+          "world418-tk-03-c03b8f6a",
+          "world418-ah-01-88f58446",
+          "world-418-apa-01-a9e837e3",
+          "world418-tk-01-50b3b6a8",
+          "world418-ek-01-13050e0a"
+        ]
+      },
+      "world_6773bae985ac499d8269e5b2ac837f05": {
+        "slug": "investment-banking-world-226-benchmark--(world_6773bae985ac499d8269e5b2ac837f05)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:24ca41f65a8be5157620f4440610eb71a8c51a98f7b7e8fa230280b54c3d28e3"
+        ],
+        "tasks": [
+          "world226-sk-task03-a0be269a",
+          "world226-td-03-a329bd13",
+          "world226-ta-01-c945f64f",
+          "world226-td-01-eb948f85",
+          "world226-rm-04-8d085d2b",
+          "world226-td-02-02f66e09",
+          "world226-rm-06-17f6c991",
+          "world226-rm-02-08c62dec"
+        ]
+      },
+      "world_e3c8082e4c0b470da509eb339bb1538d": {
+        "slug": "law-world-434-benchmark--(world_e3c8082e4c0b470da509eb339bb1538d)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:065c26ea1126c11c5124308292119667cdb3be454557c3dddfc6e867720f7fe7"
+        ],
+        "tasks": [
+          "world434-dpm-01-69a99cb9",
+          "world434-js-01-aedf3ab0",
+          "world434-ah-01-f0eb6d9f",
+          "world434-js-03-306ae67e",
+          "world434-js-04-2212abef",
+          "world434-ah-05-0ad4be07"
+        ]
+      },
+      "world_ea7d8cd8fb8c4da2bc0fdbfe83984963": {
+        "slug": "management-consulting-world-135-benchmark--(world_ea7d8cd8fb8c4da2bc0fdbfe83984963)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:3eab4ff7e3ef3b4cdb8cc0c35cad7d98f751a7b1e9ca1af814a340b4b8fb6f63"
+        ],
+        "tasks": [
+          "world-135-cd-01-e5cc5e24",
+          "world135-sf-task03-5716be6e",
+          "task-w135-camille-moingeon-5-91534276",
+          "sp-task-07-world-135-0a861743",
+          "task-w135-camille-moingeon-4-1cf93f93",
+          "sp-task-03-world-135-8617355f",
+          "sp-task-01-world-135-840af889",
+          "task-w135-camille-moingeon-6-98904e4b",
+          "sp-task-02-wold-135-8429838a"
+        ]
+      },
+      "world_a922ae91ac0f4a1d8ecbb6e35c01e9e5": {
+        "slug": "law-world-415-benchmark--(world_a922ae91ac0f4a1d8ecbb6e35c01e9e5)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f1671d9cb86ea7a30f5a4a6971a6a4087c07d3a763f219d6f2b22f067649ff1f"
+        ],
+        "tasks": [
+          "task-yhzc9d1a-531a5446",
+          "world415-im-01-84006694",
+          "task-awys8050-cd3c370b",
+          "task-5vd1ebb0-c4e34a72",
+          "world415-dm-01-b7605edf",
+          "task-acg14a6c-c782f25e",
+          "world-415-cd-02-c04aeb09"
+        ]
+      },
+      "world_0ab16d4266bd4232b20d1d3004850644": {
+        "slug": "management-consulting-world-132-benchmark--(world_0ab16d4266bd4232b20d1d3004850644)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:35685f045d91ef7b580e2d589984ed10211821014fb91d533a6572e268f7c691"
+        ],
+        "tasks": [
+          "world132-da-task07-d7bf24d6",
+          "world132-pm-task04-7cc783d8",
+          "world132-sf-task03-d7ca6183",
+          "world132-pm-task03-e3766de4",
+          "world132-pm-task07-b206dfe1",
+          "world132-da-task03-3db0b339",
+          "world132-da-task08-15096439",
+          "world132-da-task05-a025ddde"
+        ]
+      },
+      "world_a957c01e08e340899f314d5235e559e2": {
+        "slug": "investment-banking-world-224-benchmark--(world_a957c01e08e340899f314d5235e559e2)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:417e7ea39d03dd6791c8cc9305243cd564fa0d6ec9ad6411022d1a14a41bb3d0"
+        ],
+        "tasks": [
+          "world224-jr-02-a4bb5a54",
+          "world224-hs-02-2ba35245",
+          "world224-hs-05-f8ba862f",
+          "world224-os-task02-a3a73f46",
+          "world224-hs-10-4f232c35",
+          "world224-os-task05-16446237",
+          "world224-sk-task01-f8b6f40d",
+          "world224-hs-11-7bf318b0",
+          "world224-os-task04-c5d0e9d7",
+          "world224-sk-task03-dfcbb713",
+          "world224-hs-09-56aefeb6"
+        ]
+      },
+      "world_87ba2a78e0ed40399f77d57db40ce7ff": {
+        "slug": "law-world-431-benchmark--(world_87ba2a78e0ed40399f77d57db40ce7ff)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:aaa2801a53f38c369dd6f0d147472473a5b19475ee74d009c16ec429dbe62b2e"
+        ],
+        "tasks": [
+          "world431task-el-01-6ec3da62",
+          "world431-jcf-01-3d85cec9",
+          "world431-amk-01-5840c72a",
+          "world431-amk-02-78a4d3ea",
+          "world431-dm-01-b4b1d7a0",
+          "world431-avk-01-4e761f5b"
+        ]
+      },
+      "world_bb003d66230d41f7a102d993c2646ba5": {
+        "slug": "management-consulting-world-128-benchmark--(world_bb003d66230d41f7a102d993c2646ba5)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:d65a9972f99b3c4f61a2aafe86120bf2800c6a027515911ebfc89a4fc38d66ad"
+        ],
+        "tasks": [
+          "128-jr-1-f7f95d92",
+          "world-128-sf-task-2-7bab9d72",
+          "task-128-pj-04-a1434323",
+          "world-128-nk-task-1-c49d8b70"
+        ]
+      },
+      "world_4cc0a2905f154dd59dcdd6aca95ff9d5": {
+        "slug": "investment-banking-world-228-benchmark--(world_4cc0a2905f154dd59dcdd6aca95ff9d5)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:ec49e2ac8c7a4443f4f76a832db2f49715fe9c06bfc419fb69f13a6d9c89ceab"
+        ],
+        "tasks": [
+          "world228-jp-02-141aa009",
+          "world228-jp-05-8f936239",
+          "world228-sm-task04-2add8328",
+          "world228-ia-02-eae0b563",
+          "world228-jk-01-08d7bf2c",
+          "world228-sm-task06-148a274e",
+          "world228-sm-task10-d0d1a118",
+          "world228-sm-task02-b0448b54",
+          "world228-sm-task08-11f60d76",
+          "world228-jk-02-78243c40",
+          "world228-jp-01-9700a477"
+        ]
+      },
+      "world_ddf7630e128b4a90b71e8d3a6c0d8713": {
+        "slug": "law-world-417-benchmark--(world_ddf7630e128b4a90b71e8d3a6c0d8713)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:212271d9fa3d5b0a77072d4574367d1e7feacc7aef8db2545668ea18e42795fa"
+        ],
+        "tasks": [
+          "lawworld417-ne-06-7d454c39",
+          "world417-tg-03-83b4a9e2",
+          "lawworld417-anb-04-06729721",
+          "lawworld417-ne-03-5f5862ef",
+          "lawworld417-as-02-b4b20204",
+          "lawworld417-as-03-343937d4",
+          "lawworld417-ab-01-c07832b1",
+          "world417-ts-04-ba4d7322"
+        ]
+      },
+      "world_9461094512de43bb9bd62db53b9d313f": {
+        "slug": "management-consulting-world-131-benchmark--(world_9461094512de43bb9bd62db53b9d313f)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:148d6a46c34b9f1b40266067dd22da5850145e1e8cfdf1b6531d8cbce5885b0f"
+        ],
+        "tasks": [
+          "world-131-mk-task-3-cbb8798f",
+          "world-131-jr-1-2930a41b",
+          "world-131-mk-task-1-421d35da",
+          "world131-dv-03-152afeb3",
+          "world131-ib-05-3c0a977d",
+          "world131-dv-05-591f7fcf",
+          "world131-md-01-28df6b25",
+          "world-131-mk-task-4-bd07e017"
+        ]
+      },
+      "world_cfb73f3e7c6c4f8a85b2749d0ecf6e85": {
+        "slug": "management-consulting-world-134-benchmark--(world_cfb73f3e7c6c4f8a85b2749d0ecf6e85)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:8b789e5f19c6c472d9f22df735faadbed82dd250a4e0131e1eba47e1c0173c9f"
+        ],
+        "tasks": [
+          "world-134-rg-03-92e95834",
+          "world-134-nancy-task-02-3f38c565",
+          "w134-nancy-task-09-98c5b529",
+          "world-134-rg-04-4498da8f",
+          "w134-nancy-task-07-5f476e2b",
+          "world-134-nancy-task-05-2aa85715",
+          "world-134-rg-05-0b032d90",
+          "cw134-aditi-01-6914a79e",
+          "cw134-aditi-03-64426b4e",
+          "w134-nancy-task-10-1bb0218b",
+          "world-134-nancy-task-04-7fbb9e35"
+        ]
+      },
+      "world_48bc027e1b2f47a9946b13fcd72df2a8": {
+        "slug": "law-world-433-benchmark--(world_48bc027e1b2f47a9946b13fcd72df2a8)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f7470483d7f002e3fa0860c7983d9c9e4bc26533b4d5fa13d835a42454dc1d83"
+        ],
+        "tasks": [
+          "law-433-ac-02-c26a646e",
+          "law433-mk-01-ec4c48f7",
+          "lawworld433-anb-01-5d12cf8d",
+          "world433-js-04-b2ea95d5",
+          "world433-js-05-bc0d94bf",
+          "world433-sg-01-a23ecfdf",
+          "lawworld433-naf-02-7cff5581",
+          "lawworld433-anb-05-16cf8300",
+          "lawworld433-naf-01-8a2d1647",
+          "lawworld433-anb-04-23234013"
+        ]
+      },
+      "world_cedf628f472d456ab52e5355941589e3": {
+        "slug": "management-consulting-world-113-1-benchmark--(world_cedf628f472d456ab52e5355941589e3)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:a03b9130fc965fbdd998f3ccfbc42d1f5887bc8b2ff434012ea7c5e779e2c8ac"
+        ],
+        "tasks": [
+          "world126-jd-04-dc4fd808",
+          "world126-efa-05-501b62f6",
+          "world126-tk-04-f9002145",
+          "world126-efa-04-bbf2e15f",
+          "task-ncwq9a4b-87065bf9",
+          "world126-efa-01-9bf2f9d9"
+        ]
+      },
+      "world_441a2d9762bb414698e0b18d292b87e0": {
+        "slug": "law-world-419-benchmark--(world_441a2d9762bb414698e0b18d292b87e0)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:05557b66c64966028f7e55f8e2aab46cf9091356f31fd918dc696173cf42bcc4"
+        ],
+        "tasks": [
+          "world419-ah-03-79e0977c",
+          "world419-um-04-d0f9f0ee",
+          "world419-ah-02-1a47e5fd",
+          "world-419-um-01-ddd3e22e"
+        ]
+      },
+      "world_d02cab1bcf2c428c9d45e6b1d5150b52": {
+        "slug": "management-consulting-world-112-1-benchmark--(world_d02cab1bcf2c428c9d45e6b1d5150b52)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:6726fce9fd21e5e29e31191529f6e602f3f5f9509b80139c019cec9c3e4a1e8b"
+        ],
+        "tasks": [
+          "world112-1-task05-na-cf44bbb8",
+          "world112-1-tk-04-b26de1cb"
+        ]
+      },
+      "world_73291ebd4b294cb699fd768aa86cbe36": {
+        "slug": "management-consulting-world-130-benchmark--(world_73291ebd4b294cb699fd768aa86cbe36)",
+        "images": [
+          "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:fd41af222cdc6428cb1aefc61dc6bc7b4d4a119b539c21d4afb3028c690245d5"
+        ],
+        "tasks": [
+          "world130-ho-08-991a7efc",
+          "task-world130-camillemoingeon-4-995235e6",
+          "world130-al-zhoheir-hajim-3-6f313e08",
+          "taskworld130-camillemoingeon-5-0d2a857d",
+          "world130-al-zhoheir-hajim-04-f7f9a788",
+          "task-world130-camillemoingeon-3-2f162fcc"
+        ]
+      }
+    },
+    "registry_checks": [
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:05557b66c64966028f7e55f8e2aab46cf9091356f31fd918dc696173cf42bcc4",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:05557b66c64966028f7e55f8e2aab46cf9091356f31fd918dc696173cf42bcc4",
+            "size": 7903,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "f7ae0bcdc2b8530daafd2957b1554b74356bade68471eb0246a0548cccb75dae",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/05557b66c64966028f7e55f8e2aab46cf9091356f31fd918dc696173cf42bcc4.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:065c26ea1126c11c5124308292119667cdb3be454557c3dddfc6e867720f7fe7",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:065c26ea1126c11c5124308292119667cdb3be454557c3dddfc6e867720f7fe7",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "748957601111b0fbe56e73899d8562edba742ba4c42a639111d5ed10e35d27fb",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/065c26ea1126c11c5124308292119667cdb3be454557c3dddfc6e867720f7fe7.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:148d6a46c34b9f1b40266067dd22da5850145e1e8cfdf1b6531d8cbce5885b0f",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:148d6a46c34b9f1b40266067dd22da5850145e1e8cfdf1b6531d8cbce5885b0f",
+            "size": 7903,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "1ed57789ef8f0666ede46f73310fa1bc2da3f219766241349f396fc9edc32cb1",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/148d6a46c34b9f1b40266067dd22da5850145e1e8cfdf1b6531d8cbce5885b0f.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:19f9601e17b39a6c8c20a86971c296a915600e3cdd127c35957704cdd80591b2",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:19f9601e17b39a6c8c20a86971c296a915600e3cdd127c35957704cdd80591b2",
+            "size": 2002,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "60a68f1f4c49f2ac3b9f521d3ad3b5915a57cb646493ba02d6c67d72464bb1a0",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/19f9601e17b39a6c8c20a86971c296a915600e3cdd127c35957704cdd80591b2.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:212271d9fa3d5b0a77072d4574367d1e7feacc7aef8db2545668ea18e42795fa",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:212271d9fa3d5b0a77072d4574367d1e7feacc7aef8db2545668ea18e42795fa",
+            "size": 7903,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "57aba560c4852ffb7b7b2fc6bbfa15ab7ab6ec15d1e63b55ef0a4285ac83e47d",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/212271d9fa3d5b0a77072d4574367d1e7feacc7aef8db2545668ea18e42795fa.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:24ca41f65a8be5157620f4440610eb71a8c51a98f7b7e8fa230280b54c3d28e3",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:24ca41f65a8be5157620f4440610eb71a8c51a98f7b7e8fa230280b54c3d28e3",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "31396329591e5ac3d458ecb4c538dfd34d8e64fe67322796d196f4c0c03d089d",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/24ca41f65a8be5157620f4440610eb71a8c51a98f7b7e8fa230280b54c3d28e3.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:35685f045d91ef7b580e2d589984ed10211821014fb91d533a6572e268f7c691",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:35685f045d91ef7b580e2d589984ed10211821014fb91d533a6572e268f7c691",
+            "size": 7903,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "8773e75c4128d26a67c7dba7b66740796aaa61166c9106b9e8fcdcdd126f6c17",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/35685f045d91ef7b580e2d589984ed10211821014fb91d533a6572e268f7c691.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:39ab57f8871ddc9277528912092fa60b794fa371347660057f152f89cc302b92",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:39ab57f8871ddc9277528912092fa60b794fa371347660057f152f89cc302b92",
+            "size": 7903,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "5be4d2c1635424473c10300f2cd9dddae7250223a897dd217f6f6c375a71e723",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/39ab57f8871ddc9277528912092fa60b794fa371347660057f152f89cc302b92.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:3eab4ff7e3ef3b4cdb8cc0c35cad7d98f751a7b1e9ca1af814a340b4b8fb6f63",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:3eab4ff7e3ef3b4cdb8cc0c35cad7d98f751a7b1e9ca1af814a340b4b8fb6f63",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "0c2785a4e6ea6de7dd3dfd51dedc06c74781732e838e5a235dd71130f08102c6",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/3eab4ff7e3ef3b4cdb8cc0c35cad7d98f751a7b1e9ca1af814a340b4b8fb6f63.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:417e7ea39d03dd6791c8cc9305243cd564fa0d6ec9ad6411022d1a14a41bb3d0",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:417e7ea39d03dd6791c8cc9305243cd564fa0d6ec9ad6411022d1a14a41bb3d0",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "879b367a2adaf2fddabccc5f0edf19ecc39d1bb8ea0e013858638ab0d0cecd86",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/417e7ea39d03dd6791c8cc9305243cd564fa0d6ec9ad6411022d1a14a41bb3d0.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:48813c0371963fc363f714aa8a3c7ef5636373b6f61d568958beccf14d5573df",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:48813c0371963fc363f714aa8a3c7ef5636373b6f61d568958beccf14d5573df",
+            "size": 7903,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "f59f515c602be33388d76614eeb40eb7379b9ca93739013acc94e55a2732b3df",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/48813c0371963fc363f714aa8a3c7ef5636373b6f61d568958beccf14d5573df.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:4a71f0a2ba8cdf8898bf34b8d934d7147206cedc09ed6d36f6169f0620cac8f6",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:4a71f0a2ba8cdf8898bf34b8d934d7147206cedc09ed6d36f6169f0620cac8f6",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "760b70106f64a62c18020271e57546ad9d131339505d14631986ec53d80a3d5d",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/4a71f0a2ba8cdf8898bf34b8d934d7147206cedc09ed6d36f6169f0620cac8f6.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:6726fce9fd21e5e29e31191529f6e602f3f5f9509b80139c019cec9c3e4a1e8b",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:6726fce9fd21e5e29e31191529f6e602f3f5f9509b80139c019cec9c3e4a1e8b",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "1b472ff5dba26c09901dd5a10fe5615f96f727e82d18e48e76c1af031b0a72b4",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/6726fce9fd21e5e29e31191529f6e602f3f5f9509b80139c019cec9c3e4a1e8b.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:6ea1eba4213bbb2e13a295915106819688e8eb3e04a834e46e8012a7820c2762",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:6ea1eba4213bbb2e13a295915106819688e8eb3e04a834e46e8012a7820c2762",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "d3016addcd27eacdfd6c8ae014d589bec462569e7c3ac392e5ad08c2c526ceab",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/6ea1eba4213bbb2e13a295915106819688e8eb3e04a834e46e8012a7820c2762.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:6f701086a272048ec054fe803dbf258297df47e3ee62191349f58c31cd6970e5",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:6f701086a272048ec054fe803dbf258297df47e3ee62191349f58c31cd6970e5",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "eadbdf99779a53096c2b9d902fa519710569ed6ee01286e223bececeb4c2c1a3",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/6f701086a272048ec054fe803dbf258297df47e3ee62191349f58c31cd6970e5.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:8b789e5f19c6c472d9f22df735faadbed82dd250a4e0131e1eba47e1c0173c9f",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:8b789e5f19c6c472d9f22df735faadbed82dd250a4e0131e1eba47e1c0173c9f",
+            "size": 7903,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "3d4697378b6f9023853986dc08b39ca3695fa5b8df90644e50019f5813eef0ad",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/8b789e5f19c6c472d9f22df735faadbed82dd250a4e0131e1eba47e1c0173c9f.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:9be28bae20bc6027715df7f81e1d725d5c85dd3edd6669f8736a6a575a0bbcc2",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:9be28bae20bc6027715df7f81e1d725d5c85dd3edd6669f8736a6a575a0bbcc2",
+            "size": 1367,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "e68dc30d9a895a31a0dbb2bc5b16d532be1989ae1b95e84b0d7832f74400b4d8",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/9be28bae20bc6027715df7f81e1d725d5c85dd3edd6669f8736a6a575a0bbcc2.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:a03b9130fc965fbdd998f3ccfbc42d1f5887bc8b2ff434012ea7c5e779e2c8ac",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:a03b9130fc965fbdd998f3ccfbc42d1f5887bc8b2ff434012ea7c5e779e2c8ac",
+            "size": 7905,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "052c7d6cebb209f50fbacad7c9674efe5c429ff74b395930382493dcbab40ecf",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/a03b9130fc965fbdd998f3ccfbc42d1f5887bc8b2ff434012ea7c5e779e2c8ac.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:a7e9fd5a0afb7db4d5f8a4051d76eedcd3f609ac501954ab8d974b63037f2fb9",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:a7e9fd5a0afb7db4d5f8a4051d76eedcd3f609ac501954ab8d974b63037f2fb9",
+            "size": 7903,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "f76e65b851ef38307897c8d3485a7fb7b29f3694d30c40446a703a19ee705ceb",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/a7e9fd5a0afb7db4d5f8a4051d76eedcd3f609ac501954ab8d974b63037f2fb9.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:aaa2801a53f38c369dd6f0d147472473a5b19475ee74d009c16ec429dbe62b2e",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:aaa2801a53f38c369dd6f0d147472473a5b19475ee74d009c16ec429dbe62b2e",
+            "size": 7903,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "6760ea955e11dd3f9a5174b09493c59e02aaff0881be6ba4163f8f858688e0d3",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/aaa2801a53f38c369dd6f0d147472473a5b19475ee74d009c16ec429dbe62b2e.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:bab7bd77a3f27a77001bc9aa3d366970fb896b61d4cb07190eaae242da69fe8f",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:bab7bd77a3f27a77001bc9aa3d366970fb896b61d4cb07190eaae242da69fe8f",
+            "size": 7903,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "6f61d15f85e54a126cad575fd26bb9af2a933f0fc124f87020ed4b5496e3ba0d",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/bab7bd77a3f27a77001bc9aa3d366970fb896b61d4cb07190eaae242da69fe8f.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:bac5432ba9590c3796116b3c414243266c07f7ce44c226c85af0c50f9c49700c",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:bac5432ba9590c3796116b3c414243266c07f7ce44c226c85af0c50f9c49700c",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "d36f64737300b929fed1671e839b62e58ba2af4231f7b4fe7bfd9b86a5afdbba",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/bac5432ba9590c3796116b3c414243266c07f7ce44c226c85af0c50f9c49700c.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:d65a9972f99b3c4f61a2aafe86120bf2800c6a027515911ebfc89a4fc38d66ad",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:d65a9972f99b3c4f61a2aafe86120bf2800c6a027515911ebfc89a4fc38d66ad",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "bc35f4b92780e55613ba724e99b393dcd8667b9e9f38ae1cfa8bd940ac193842",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/d65a9972f99b3c4f61a2aafe86120bf2800c6a027515911ebfc89a4fc38d66ad.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:e2b62976202f9a3484fc898efb2a1047134dd77cde472658be5fdd92feaabcad",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:e2b62976202f9a3484fc898efb2a1047134dd77cde472658be5fdd92feaabcad",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "045c0bb35d39cec63ccf24f1f581b4a60d70a122e9c7a9d2e5de8b92d1136519",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/e2b62976202f9a3484fc898efb2a1047134dd77cde472658be5fdd92feaabcad.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:e2c69b1e5686572341a96deed6251767bbd5785c40f2e56104a97fb7fd20c119",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:e2c69b1e5686572341a96deed6251767bbd5785c40f2e56104a97fb7fd20c119",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "15f48e99c2ff96572719896d6dbfbf3ea09e80f315ed2b0e20da77cab6ecc81f",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/e2c69b1e5686572341a96deed6251767bbd5785c40f2e56104a97fb7fd20c119.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:ea918fdc2bf44a5f974e286853e429b774960ba3085c7013f3a4311a3aa443be",
+        "available": true,
+        "initial_failure": "5 116 34 58 32 34 115 104 97 50 53 54 58 51 101 53 51 51 57 97 49 51 50 50 97 100 48 52 49 99 99 56 48 101 101 57 49 57 48 56 97 56 56 54 50 101 52 55 54 54 51 56 102 100 100 55 54 100 54 100 49 48 54 99 57 49 50 50 52 101 98 48 51 50 51 52 98 34 10 32 32 32 32 32 32 125 44 10 32 32 32 32 32 32 123 10 32 32 32 32 32 32 32 32 32 34 109 101 100 105 97 84 121 112 101 34 58 32 34 97 112 112 108 105 99 97 116 105 111 110 47 118 110 100 46 100 111 99 107 101 114 46 105 109 97 103 101 46 114 111 111 116 102 115 46 100 105 102 102 46 116 97 114 46 103 122 105 112 34 44 10 32 32 32 32 32 32 32 32 32 34 115 105 122 101 34 58 32 49 55 55 49 50 48 49 49 55 44 10 32 32 32 32 32 32 32 32 32 34 100 105 103 101 115 116 34 58 32 34 115 104 97 50 53 54 58 97 50 52 50 101 97 54 97 52 54 52 50 55 48 53 50 98 101 49 50 49 49 51 49 52 56 54 55 54 57 49 54 54 48 56 56 98 100 53 52 102 54 102 101 53 50 50 57 98 97 52 102 56 100 98 56 51 57 55 48 52 97 98 56 34 10 32 32 32 32 32 32 125 10 32 32 32 93 10 125]}\n",
+        "retry_exit_code": 0,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:ea918fdc2bf44a5f974e286853e429b774960ba3085c7013f3a4311a3aa443be",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "49a9f9157979793e75d919335711a71d56cc40b5be2ad235a9e732f9ba96c767",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/ea918fdc2bf44a5f974e286853e429b774960ba3085c7013f3a4311a3aa443be.retry.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:eb9df82aede2360cfd9bed1daedb994c06e19d5953c6556a44d1d5e351b3f904",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:eb9df82aede2360cfd9bed1daedb994c06e19d5953c6556a44d1d5e351b3f904",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "543b35de3ed90c10e35bb43807bc0eea4a7349fa3bdf865f17274121c1c7a5ce",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/eb9df82aede2360cfd9bed1daedb994c06e19d5953c6556a44d1d5e351b3f904.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:ec49e2ac8c7a4443f4f76a832db2f49715fe9c06bfc419fb69f13a6d9c89ceab",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:ec49e2ac8c7a4443f4f76a832db2f49715fe9c06bfc419fb69f13a6d9c89ceab",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "08238dbee746490b22c18f124c22aca92dd898f5c811352ad2a3757ede89aef8",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/ec49e2ac8c7a4443f4f76a832db2f49715fe9c06bfc419fb69f13a6d9c89ceab.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f1671d9cb86ea7a30f5a4a6971a6a4087c07d3a763f219d6f2b22f067649ff1f",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:f1671d9cb86ea7a30f5a4a6971a6a4087c07d3a763f219d6f2b22f067649ff1f",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "a2e9987519eafc3498e6b0b1db828c52543f44694548c1bbce054d48efdcdbf4",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/f1671d9cb86ea7a30f5a4a6971a6a4087c07d3a763f219d6f2b22f067649ff1f.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f1cf84aff4a083e3c00e20a45fdc781fb6a24a7afb3283cb80b867ebd2fd77bf",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:f1cf84aff4a083e3c00e20a45fdc781fb6a24a7afb3283cb80b867ebd2fd77bf",
+            "size": 7903,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "ebcb6f9a1a7b1500f46baa2a2dc0cafe2f35c18da701a0a6ea0154c6a03f783e",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/f1cf84aff4a083e3c00e20a45fdc781fb6a24a7afb3283cb80b867ebd2fd77bf.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f2c18cb49bc56c9b7b9482001cbc57f773278a39e824620dca4138b23b7df4de",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:f2c18cb49bc56c9b7b9482001cbc57f773278a39e824620dca4138b23b7df4de",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "1bf8778cd90630d8a1f69149cc236cb141b339f04f6cd11b04fe8d27e4e272b0",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/f2c18cb49bc56c9b7b9482001cbc57f773278a39e824620dca4138b23b7df4de.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:f7470483d7f002e3fa0860c7983d9c9e4bc26533b4d5fa13d835a42454dc1d83",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:f7470483d7f002e3fa0860c7983d9c9e4bc26533b4d5fa13d835a42454dc1d83",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "358ac7bcdacd55d139f7e8fabda128f27ccbeddbf0f3795ebe74c292ea8249d0",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/f7470483d7f002e3fa0860c7983d9c9e4bc26533b4d5fa13d835a42454dc1d83.json"
+      },
+      {
+        "image": "public.ecr.aws/k4t1e3r5/harbor-hub@sha256:fd41af222cdc6428cb1aefc61dc6bc7b4d4a119b539c21d4afb3028c690245d5",
+        "available": true,
+        "descriptors": [
+          {
+            "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+            "digest": "sha256:fd41af222cdc6428cb1aefc61dc6bc7b4d4a119b539c21d4afb3028c690245d5",
+            "size": 7904,
+            "platform": {
+              "architecture": "amd64",
+              "os": "linux"
+            }
+          }
+        ],
+        "manifest_sha256": "507e2f8dae9b2dc8a55f08cc5ce703a1cf9608b6e066c9a9478afc48c265092b",
+        "evidence_path": ".runtime/workspace-expansion/apex-image-manifests/fd41af222cdc6428cb1aefc61dc6bc7b4d4a119b539c21d4afb3028c690245d5.json"
+      }
+    ],
+    "notes": [
+      "One first registry inspection failed transiently; its immediate retry succeeded. Both outcomes are recorded.",
+      "This checks package world mappings and public immutable registry manifests. It does not pull all31worldlayers or inspecteveryworldfilesystem.",
+      "The cache-permission runtime repair is validated separately by the parent runtime audit."
+    ]
+  },
+  "cache_transport_repair_audit": {
+    "task_count": 240,
+    "service_configurations": 1920,
+    "unchanged_fields": [
+      "task.toml",
+      "server commands and arguments",
+      "service users and groups",
+      "all original environment values",
+      "permissions and capability restrictions"
+    ],
+    "only_added_values": {
+      "UV_NO_CACHE": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "recorded_source_and_runtime_hashes_match": true,
+    "materialized_evidence": ".runtime/apex-full-materialized-v2"
+  }
+}

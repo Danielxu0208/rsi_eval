@@ -1,0 +1,1050 @@
+{
+  "dataset_revision": "d43a66575635da0d3f6cb9a20976dc1a60f3ffc9",
+  "evaluator_commit": "660b33a86ed032559df0b2fdc1ad38cf7ceb83f3",
+  "task_count": 128,
+  "raw_file_count": 878,
+  "raw_bytes": 279496802,
+  "all_source_files_verified": true,
+  "all_tasks_materialized": true,
+  "model_calls": 0,
+  "judge_api_calls": 0,
+  "judge_api_key_present": false,
+  "elapsed_seconds": 14.156044082948938,
+  "validation_scope": "Original verifier + original judge, complete 128 empty submissions. This validates rubric loading and the original empty-output zero rule, not API grading or solution quality.",
+  "judge_validation_blocker": "JUDGE_API_KEY is not configured; original xAI grok-4.3 scoring requires separate API access.",
+  "tasks": [
+    {
+      "id": "easy--biostatisticians--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "fd98aa66bf459630ad669c0759aec7cbdc739d031b37265f01b3b7032317c434"
+    },
+    {
+      "id": "easy--biostatisticians--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 17,
+      "details_sha256": "4a6ad0a47a3ffc44d4d4eeda864e5193f5f314859fffcf757e4fed9947d1555d"
+    },
+    {
+      "id": "easy--bookkeeping_accounting_and_auditing_clerks--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "94ac4a438f627e8a4f990b0cece3a7a63fe576722244c436a39eac1bef7e9212"
+    },
+    {
+      "id": "easy--civil_engineers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "55d0f8855de70e03b3abf29e2c8188674ca83f01595d6710320024dc98bd0b41"
+    },
+    {
+      "id": "easy--computer_and_information_research_scientists--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "d6565c164abb876039b3203821274f228568a33705bf8e38be6ee2ca15921c50"
+    },
+    {
+      "id": "easy--computer_and_information_systems_managers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "90b5d6b19eb44d987a2c38d7f8f045bca92a926092e0789c2e356bed16c033c8"
+    },
+    {
+      "id": "easy--computer_and_information_systems_managers--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 18,
+      "details_sha256": "c98977f8ef526fcc840fdf1a692f4abd86867722263b0cca8aae36e25cb0b585"
+    },
+    {
+      "id": "easy--computer_user_support_specialists--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "9b569d6a6bcdca8e320f15d847f4af414be64bca6bcb4485b35515b091d9ddcc"
+    },
+    {
+      "id": "easy--computer_user_support_specialists--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "96249d015fd98c49367a9590eb19c5d9da24e19ffc88c6cb092707f7c2f6142d"
+    },
+    {
+      "id": "easy--court_clerks--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 17,
+      "details_sha256": "1012ce65eaca0cbd02c1fa3f0f4017639fb0026e2d4275eb6d70f2ac5777f481"
+    },
+    {
+      "id": "easy--court_clerks--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 19,
+      "details_sha256": "9a5e4cfa8f64d50eacb33f3d46948701830578589b48e74091bf4150a37c5283"
+    },
+    {
+      "id": "easy--customer_service_representatives--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "6ac1c6bad516588c812470948e093dc628a58fd9e5160e73aba7e00ac9c8110f"
+    },
+    {
+      "id": "easy--customer_service_representatives--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "8239d8b1aa8421a5c315d9536d362700cdd0c8bea47ec2fb97e95fbd4bb99e95"
+    },
+    {
+      "id": "easy--data_entry_keyers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 11,
+      "details_sha256": "3f0c13c837c01c06a82fec3712c8813027d4b4fca2cde8b3e4c9847cc5f80d77"
+    },
+    {
+      "id": "easy--data_entry_keyers--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 21,
+      "details_sha256": "962a30b39e0cd209132a69b93af9874205c9e89ac1101c88774f61d48013991c"
+    },
+    {
+      "id": "easy--financial_managers_branch_or_department--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "e34cdba36ce9d39f509435e348b49598a15ac856f64d0a07f1ad8719eb711a35"
+    },
+    {
+      "id": "easy--human_resources_specialists--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "fd198b6e82fb45647bb147ab46f52a221d44bd9842e22ee612519ff75c150f64"
+    },
+    {
+      "id": "easy--human_resources_specialists--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "44b92255b3c0dea4f79700b862ab384b469f2ee26f59dca15eaa03e48acbf973"
+    },
+    {
+      "id": "easy--lawyers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 18,
+      "details_sha256": "0dda2d73393b70c2ca81fca14056b88b40789aa20bb2303db14c4cee2768d66e"
+    },
+    {
+      "id": "easy--lawyers--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 18,
+      "details_sha256": "cf8b0cfe42adb180f06cf7f15cd5973b8b9522b79174f1a417b43633c220c69a"
+    },
+    {
+      "id": "easy--licensing_examiners_and_inspectors--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 11,
+      "details_sha256": "122344a125513f1423db8b8f844b0e9fb4c81a7756cd33c93b266e70f49872b6"
+    },
+    {
+      "id": "easy--licensing_examiners_and_inspectors--task3",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "b30bcb63f93844c70b38464c5906886ff432dc0c2f72e334913d990d7190a307"
+    },
+    {
+      "id": "easy--management_analysts--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "44f64c6d0984e039e8f072233aa7a9e973882790cf5bd8a1221f8e9597184a52"
+    },
+    {
+      "id": "easy--management_analysts--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "0071bc8106ddacc72318297b8f2325bf8db5545cb3680ae26d2e879b30a587b3"
+    },
+    {
+      "id": "easy--mechanical_engineering_technicians--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "0aa080e92b3990d366526b6e2dcfcbd62111ee056f40060025c8bc69bba3c380"
+    },
+    {
+      "id": "easy--mechanical_engineers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "f679b8713e2b00fbea2d07b384f309ca5056e234662f0ab4cc30bb974c548a17"
+    },
+    {
+      "id": "easy--mechanical_engineers--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "cf1b7c041ddcf0ae083b2679e546a1e1862bf20919faeeb8feb546ede00914c1"
+    },
+    {
+      "id": "easy--mechanical_engineers--task3",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "14d2c1b147f2c531d46dbcf3aeff9cb5046b902d4249999a658038218773476b"
+    },
+    {
+      "id": "easy--medical_and_health_services_managers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 18,
+      "details_sha256": "be1cce2f4d3847041f46c41c55179931a0584d78a8cc140c83ec82e3a9ff90d3"
+    },
+    {
+      "id": "easy--medical_secretaries--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 11,
+      "details_sha256": "58e057be0ab5a975f368ece5c4ccf13b156d3779968885ce8238d9a2561a9979"
+    },
+    {
+      "id": "easy--online_merchants--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "cd533fcd8aca724f52cfcfd074e3e8186601c25245364cab43595c72e22b9eb6"
+    },
+    {
+      "id": "easy--online_merchants--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 21,
+      "details_sha256": "925827519af29fe2b51df0b5d280941be09c0781fd695ee2c322f9b4a2e0811e"
+    },
+    {
+      "id": "easy--online_merchants--task3",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 21,
+      "details_sha256": "9ab3a2ccc14570c0bec770d59a0feabf6b09f9abf21a6707e6ca4f309780d7e2"
+    },
+    {
+      "id": "easy--personal_financial_advisors--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "cc61793ec9bfb5f5cb3e8bbed09f76c126a7ffcd27734e57aa423e33e371313f"
+    },
+    {
+      "id": "easy--personal_financial_advisors--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "d90f782b73c4eac4748d9b3c67383e040446e22920be2775b94f0c155e6127ca"
+    },
+    {
+      "id": "easy--petroleum_engineers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "0eee8727fb466c07a9f1db57a8c758360283b7f21d633053def80f01aeef1d27"
+    },
+    {
+      "id": "easy--petroleum_engineers--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "72c0abccad08c3d52a2c747549c5ba511701c391eae8578a5993ba15514f0d41"
+    },
+    {
+      "id": "easy--police_fire_and_ambulance_dispatchers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "7ed4171283b57dcda9f297f804bbfebe124505bf3a8f7bc249c7f46ff767ad2c"
+    },
+    {
+      "id": "easy--police_fire_and_ambulance_dispatchers--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 16,
+      "details_sha256": "f1497785eb032bc85f50ccb95f454b68934f310d46a172d305e7d44363e7de1d"
+    },
+    {
+      "id": "easy--police_fire_and_ambulance_dispatchers--task3",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "051131582d05d162c4f95bbec78893093cbddda5879f11399b750a495dd069b8"
+    },
+    {
+      "id": "easy--producers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "c75102317da11ea491d4ee19e8710b6a913af856b2dc01d8bc76b2ef4054ac42"
+    },
+    {
+      "id": "easy--producers--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "3bfd3701e3637741badd3013ef42bf75a63aecb4599a692fd0e7fc120b8d60f0"
+    },
+    {
+      "id": "easy--purchasing_agents_except_wholesale_retail_and_farm_products--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "bd579ece661ece48f62e2b02aecffb2b31e7915bb1f7c4f89f0979e088658a51"
+    },
+    {
+      "id": "easy--purchasing_agents_except_wholesale_retail_and_farm_products--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "cb49117aab24624af0f6492f2114778640ceb56e71fa8dbcb80d43e05ab614b3"
+    },
+    {
+      "id": "easy--reporters_and_correspondents--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "b9f4c435c704063eccdfb7183b3a1c8bd33f3724e1a200815b39fc85e3eafcd2"
+    },
+    {
+      "id": "easy--reporters_and_correspondents--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "3d6102f72bed765433882df2159ed4b2559d119fceec0e17b31aa1b15d49df92"
+    },
+    {
+      "id": "easy--reporters_and_correspondents--task3",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 11,
+      "details_sha256": "6dece6a1640908622556a7be9523b2bc83ce013c96df5c8f2b6985eba116a033"
+    },
+    {
+      "id": "easy--sales_agents_securities_and_commodities--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "f5e057451280e868196f8aecba14846671e95911e11a7bdc28840693294a039e"
+    },
+    {
+      "id": "easy--sales_agents_securities_and_commodities--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "eb1d3e1fed1d8365edc966d3094306ce891c961a86158e41683548367b2a84a2"
+    },
+    {
+      "id": "easy--sales_representatives_wholesale_and_manufacturing_technical_and_scientific_products--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "5db0d06d0c81ca3c5a11b1464a5d787f0521128c06a98a1b9573332da4b01039"
+    },
+    {
+      "id": "easy--sales_representatives_wholesale_and_manufacturing_technical_and_scientific_products--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "bc6b488c0efeda4c55a6cd17173f775626498cadcf37da0f261993ee7c0697f0"
+    },
+    {
+      "id": "easy--secretaries_and_administrative_assistants_except_legal_medical_and_executive--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "8c8d511f968c93659fcc1491e9ef7ba5bc3900762f96ca4535dd5b6d53dc6dfb"
+    },
+    {
+      "id": "easy--secretaries_and_administrative_assistants_except_legal_medical_and_executive--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "35d6f40c490c36e30605b00ca8b7d3b35f41887f4e27915b97db53526191ef29"
+    },
+    {
+      "id": "easy--social_science_research_assistants--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 11,
+      "details_sha256": "9f5deed1644f11d2138f968f0cfc0d9cd8e520c485975c86ffcf4fd020c47721"
+    },
+    {
+      "id": "easy--sociology_teachers_postsecondary--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "e2593986645098dc837ac60b50bec462620f15b462b9a5165aaeb8b372072347"
+    },
+    {
+      "id": "easy--statisticians--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "032a835f1e1e1bf5b00d200516a82d8d1ab37aef5c413dc26993c0719beba24c"
+    },
+    {
+      "id": "easy--statisticians--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "52c539cb5b6c01e8f7832130d43cd499df6c022608d34569844429a2bed7b68d"
+    },
+    {
+      "id": "easy--supply_chain_managers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 11,
+      "details_sha256": "92e937b5348d1cfbc21ee24a7cb2d5ea5e11bfdeefd9d321b49d67a0232e036b"
+    },
+    {
+      "id": "easy--technical_writers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "2d9524b3bf876c5e659dc26ef193574c7fc5d15a0ff1159309d097e18b80f013"
+    },
+    {
+      "id": "easy--training_and_development_specialists--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "fe7bbc87f3141150d9cab48a4a12882e7d8c53bd47be217f05f187eecdb8739d"
+    },
+    {
+      "id": "easy--training_and_development_specialists--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "00ced5abd782d4a455a1a4c3e4a63fd3eb2ce082ed384352cc0ce9ca49909c47"
+    },
+    {
+      "id": "easy--web_administrators--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 19,
+      "details_sha256": "3b76ab80d54fdfaafb11b1ae33248872604b1312b1e56be05aabdf9bafc65b27"
+    },
+    {
+      "id": "easy--web_administrators--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 11,
+      "details_sha256": "ad3ed670127c1071e554aaa7d1a2a40f32472bb27e39873d01f9cab44cbd51c9"
+    },
+    {
+      "id": "main--biostatisticians--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "d25176d7974bf61f0701b4db0d492dfec91f2c8e76bf92ab8f5cc52f8107d07b"
+    },
+    {
+      "id": "main--biostatisticians--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 7,
+      "details_sha256": "20c7d60a30981f66e4868336c87f42a6148921a771c6a2a1abbdf5f7e1a716d5"
+    },
+    {
+      "id": "main--bookkeeping_accounting_and_auditing_clerks--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "c768e83ae6556cf7a04e42d1a9a0497c1d6e515acd1f0ae1a8751540e7125048"
+    },
+    {
+      "id": "main--bookkeeping_accounting_and_auditing_clerks--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "5b0b8a8235c5f76b6a93a63dbc21e97d55be5e6e0e30cb03df1c4e810c996a1c"
+    },
+    {
+      "id": "main--civil_engineers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 7,
+      "details_sha256": "6f0bf6fee4d90d295416186750903c1383fc78016f7895cadf158d8e5dbe9230"
+    },
+    {
+      "id": "main--civil_engineers--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "300f35370b33c73ce85608f06cacd63fc0035e4a0e0ed821ed156180e6faed67"
+    },
+    {
+      "id": "main--civil_engineers--task3",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "16dec2213af15818e2f101552224be2bdb6311b703f0dc15e73a3ee0e4fb3406"
+    },
+    {
+      "id": "main--computer_and_information_research_scientists--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "9e82d7a0ece2fee53b70b057748bc1da27e76ea537e2756b8f0c7bf78b01fea9"
+    },
+    {
+      "id": "main--computer_and_information_research_scientists--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "31a51c85fc85935096f1bdbedbd5f4578275d518774478614fc909327205c022"
+    },
+    {
+      "id": "main--computer_and_information_systems_managers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "34804721dbe2c99342eeba3f6f728ce099b92cabf3927027bf5502b3dfb57d5a"
+    },
+    {
+      "id": "main--computer_and_information_systems_managers--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 7,
+      "details_sha256": "a2328efebd67357c5c4bcea5aea88f5b006f66469494f936f8437f1fe75fdee9"
+    },
+    {
+      "id": "main--computer_user_support_specialists--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "4ab71439e5a28781fa60436dc23c2ab21a24f06be03b6e68b4dfe4e4119bdab6"
+    },
+    {
+      "id": "main--computer_user_support_specialists--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "d074939c3f05a19873c80fd73ac37b0134820d30d2ccb95fca18759f050b3406"
+    },
+    {
+      "id": "main--court_clerks--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "2432d3fd6a2209e30baab022276d2503f8974151542e29d826084f6d2219c264"
+    },
+    {
+      "id": "main--customer_service_representatives--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "2603a4215f40bf7a999d6a234af30759b12caf3b233dae27d82f055cfbb6eaa5"
+    },
+    {
+      "id": "main--data_entry_keyers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 12,
+      "details_sha256": "2f4018d3d0508f86bd5be6a4ca4b9df4d6e0b379d49580dbbbb22ec1d1c6ad6f"
+    },
+    {
+      "id": "main--data_entry_keyers--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "49dc1f8453ad14c9f12880f2e7ea4dc0d5d458f4981e486e0b1df04f5b6ef42a"
+    },
+    {
+      "id": "main--financial_managers_branch_or_department--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 11,
+      "details_sha256": "b7827f323433a5c0ec52db541b2c510618cd0793acf536f430b04b00ad0b96df"
+    },
+    {
+      "id": "main--financial_managers_branch_or_department--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "5fd992d9d9b35d3077a08e579c1e00077132774138115a12158910079258e829"
+    },
+    {
+      "id": "main--human_resources_specialists--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "92466e71c1df4e4b45457082926d114fa22c55647c7071027c4a0af0d908076f"
+    },
+    {
+      "id": "main--lawyers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "b93ddb83f5b0004c4b7503cc606b385dc38c892487246647b49c4ac9598eb47c"
+    },
+    {
+      "id": "main--licensing_examiners_and_inspectors--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "93ce153bd844de967776a152a6a95a6b1adc828ee4caf92f1c5642c86fad6b81"
+    },
+    {
+      "id": "main--management_analysts--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "44426298a5fd65a1469961ccbe973e850d128d6eef363ecdf6c29aaaf9c06e99"
+    },
+    {
+      "id": "main--management_analysts--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "87a897fefa1f577864c5e9c3007ad92fe09defe15c30fdbc23f2b3e659f2283e"
+    },
+    {
+      "id": "main--management_analysts--task3",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "63f7a99a46e84ff65e34c917bb79fabe295a80edb40cd82d00e7a506dbaf09d1"
+    },
+    {
+      "id": "main--mechanical_engineering_technicians--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "036a85a23974da0938221a2eb61587c7b98592aea7ba7ce67d665a2060a2e3f9"
+    },
+    {
+      "id": "main--mechanical_engineering_technicians--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "4e0c05e871b166a9bba6cbd382034f30015aed153efc42fc6e9a3e874703fd16"
+    },
+    {
+      "id": "main--mechanical_engineering_technicians--task3",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "d8e59dd0af70adaa05057c9cf01f5ae528688bdbdb9a931cf176f22285a0e222"
+    },
+    {
+      "id": "main--mechanical_engineers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "6e61e0c9265e34caa9a6bfdc82cb099af9391c811d8a98eef5a15cb44803356b"
+    },
+    {
+      "id": "main--medical_and_health_services_managers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "01a74767c2b294d41df2e006de95b55b573b7e32c63e7b3a131ef28bcabc9de5"
+    },
+    {
+      "id": "main--medical_and_health_services_managers--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "012b17db61970ca00b4b80895c6ebd721cbc07ce80ba7d85a0707de4ad5f15d3"
+    },
+    {
+      "id": "main--medical_secretaries--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "14d06ec3faf3024b36154cf6b4dd00dff93f62b1bc6d592f66d2df7e577e8633"
+    },
+    {
+      "id": "main--online_merchants--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "58925d2bc9a83678c34c79960ca601066ff4858e52fdd65e76e2adcee47c975d"
+    },
+    {
+      "id": "main--online_merchants--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 7,
+      "details_sha256": "1c2c25d14eb6ded6c29e58e0e097800ca6d0e14bec314abaf679f38f21ddde6b"
+    },
+    {
+      "id": "main--personal_financial_advisors--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "cb383fe945f974e8ed3365f2edf83afba98dc580f126099444b20380d74e401e"
+    },
+    {
+      "id": "main--petroleum_engineers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 6,
+      "details_sha256": "9bf084c1c459065019559a9439b467b68f7120485883961b98a0c866a3d23542"
+    },
+    {
+      "id": "main--police_fire_and_ambulance_dispatchers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "ddb12c1f055f4c87b7b3723594963b84549f08689ccd838b3c8398fc6a5d4abb"
+    },
+    {
+      "id": "main--producers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "e31bdc88da89aac9edc71f6eed2f70a2248c536db2326f0090efb8ae1a137bdd"
+    },
+    {
+      "id": "main--purchasing_agents_except_wholesale_retail_and_farm_products--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "6d7ee09f77872ae55b1b9909af94a3c9c3844d782cca4ddbf50762d802891628"
+    },
+    {
+      "id": "main--purchasing_agents_except_wholesale_retail_and_farm_products--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "002159647fb5534ffd39a5737f7f57846d8c2ae425993dcc0588124f61d022f7"
+    },
+    {
+      "id": "main--purchasing_agents_except_wholesale_retail_and_farm_products--task3",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 11,
+      "details_sha256": "9dc48679ac6ea69d41fed35035659fbfebae1a5c1e5ba4f0dc2effaca81316fa"
+    },
+    {
+      "id": "main--reporters_and_correspondents--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "3364d0fdce7fbf0bd932ac3604d546ed5150386d5a48116d2f1b0da33c608205"
+    },
+    {
+      "id": "main--sales_agents_securities_and_commodities--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "fcfb0c0ce42736d6422b65bdca3fd177d641e707d5416aa02dbba114f22f2acd"
+    },
+    {
+      "id": "main--sales_representatives_wholesale_and_manufacturing_technical_and_scientific_products--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 11,
+      "details_sha256": "d7145819cdc70cf7613debbfe504df8dd70916a628d5c59c76951b0d823be1a5"
+    },
+    {
+      "id": "main--sales_representatives_wholesale_and_manufacturing_technical_and_scientific_products--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "90aecceda3195fc1b8f43886bc43a5cb15464871bfa73d1ec40ab02f7fd4f9d8"
+    },
+    {
+      "id": "main--secretaries_and_administrative_assistants_except_legal_medical_and_executive--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 7,
+      "details_sha256": "5504d7f07e68303fe4bae2b8927f0e8153ead1f0b2889f4f5422720e6792c7e4"
+    },
+    {
+      "id": "main--secretaries_and_administrative_assistants_except_legal_medical_and_executive--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 6,
+      "details_sha256": "39d53e950796f7b771eb9a01525e202bddc8db15f0f1286a79ed216203cb2f66"
+    },
+    {
+      "id": "main--social_science_research_assistants--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "b7eb593273c2ce477741ccd538497f5cb488df59170090ae37979d752451f7fd"
+    },
+    {
+      "id": "main--social_science_research_assistants--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "5e127c598b31f6d003090f174f80ed9f0fd376e1a5ffe94ba7926695d37e576f"
+    },
+    {
+      "id": "main--social_science_research_assistants--task3",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 6,
+      "details_sha256": "2fa803a977db7ff7aa83a8e6e1fa613d1b9e90f5c912f05fefc48bc55db7e1e8"
+    },
+    {
+      "id": "main--sociology_teachers_postsecondary--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "cb47b8d6cb068a441443d55294405fc211ffec4f372890f18cf59ab9b96290d0"
+    },
+    {
+      "id": "main--sociology_teachers_postsecondary--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "8db060da67d09296cc8aec71417e69cd8823b8f35d87aaac513ce237e22331cd"
+    },
+    {
+      "id": "main--sociology_teachers_postsecondary--task3",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "8a86629c7a9d81d1798c78b737eb97418c69933cfc78e5098bd2eb264f689a74"
+    },
+    {
+      "id": "main--statisticians--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 12,
+      "details_sha256": "fc5d988f7ec727b004a8374fe84a50f66fa7b0acda1fec9bff3643cef859653f"
+    },
+    {
+      "id": "main--statisticians--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "f709ad8ba20b468ef4944eb7b48e1da88c7c7c06fd8e7d2280ff13aae11052a5"
+    },
+    {
+      "id": "main--statisticians--task3",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "84fe08a4d7a73520865d6864933b8891a33da1f6e4718913a4567002658c210a"
+    },
+    {
+      "id": "main--supply_chain_managers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "1f953510829ca3bce99bdce0c5f067a96acfef4c079175ee868a2e438ce9b413"
+    },
+    {
+      "id": "main--supply_chain_managers--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 6,
+      "details_sha256": "356f69c7bcc6292fcac30213d2ad11c0a327eda018f520b702ca4139d0723305"
+    },
+    {
+      "id": "main--technical_writers--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 10,
+      "details_sha256": "e1c429596c4f8ce4a8a45daa7ecb1d18331b0eb2047c662388f0ba3b9dc91d51"
+    },
+    {
+      "id": "main--technical_writers--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "ef47791a99f25c9b55fb7b009ec5f77188dabf06e387e3f8eb4e904dc4287da0"
+    },
+    {
+      "id": "main--technical_writers--task3",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 12,
+      "details_sha256": "777575a0b958295d5d7218b95c0ad771556acaa553d5bcc77fd74fc3c5c35eac"
+    },
+    {
+      "id": "main--training_and_development_specialists--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 9,
+      "details_sha256": "dcca6315093cb6dc9ec40e8c3ea0598bca2e9a05f0353baf78f9f31286031f83"
+    },
+    {
+      "id": "main--training_and_development_specialists--task2",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 6,
+      "details_sha256": "6a8f661f1e6b87c6ad6c9b31988cdecd36e002aa91648700f614192332d1408f"
+    },
+    {
+      "id": "main--training_and_development_specialists--task3",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 7,
+      "details_sha256": "601d5329475a5a03fcd9a308827d701d7d02ef61ac533b1f691ce78c1f28ff7a"
+    },
+    {
+      "id": "main--web_administrators--task1",
+      "status": "native_empty_submission_validated",
+      "reward": 0.0,
+      "rubric_count": 8,
+      "details_sha256": "4a8aad45cf6d5e2372661a8d0e6ab34c1599a64f9c13cf554376dea632813e83"
+    }
+  ],
+  "status": "complete_public_integration_api_scoring_blocked",
+  "offline_tests": {
+    "passed": 15,
+    "command": ".venv/bin/python -m pytest -q tests/test_jobbench.py"
+  },
+  "native_verifier_container": {
+    "status": "passed",
+    "image_id": "sha256:e94bd82723c7108f653fe0d2f5775697e18ee4960afb52feff7f15829f01421f",
+    "architecture": "arm64",
+    "os": "linux",
+    "image_bytes": 290077840,
+    "dockerfile": "byte-identical upstream generated verifier Dockerfile",
+    "runtime_marker": "libreoffice-24.2.7.2-ubuntu24.04.6-snapshot20260911",
+    "network": "none",
+    "checks": {
+      "native_empty_verifier": "passed",
+      "text_notebook_pptx_sqlite_extraction": "passed",
+      "excel_formula_extraction": "passed: SUM(A1:A2) recalculated as 30.0",
+      "api_calls": 0,
+      "runtime_marker": "libreoffice-24.2.7.2-ubuntu24.04.6-snapshot20260911"
+    },
+    "extraction_report_sha256": "bbca0d0938014f6643c97d6a856333b7ec360d362bf8e9f49af0371a1f860925",
+    "pip_freeze_sha256": "4b498f650d504377342b83ae47fc5fba135485bdb4803a8f110ae81b76a444bf"
+  },
+  "sdk_missing_credential": {
+    "status": "verified",
+    "selected_task_count": 128,
+    "infra_error_trial_count": 128,
+    "score": null,
+    "model_calls": 0,
+    "artifact": ".runtime/jobbench-audit/missing-key-sdk/result.json"
+  },
+  "candidate_agent_image": {
+    "status": "built_and_native_sandbox_probed",
+    "image_id": "sha256:84ab8b945e1e6465d257c8e6128f9e92ed1ac4b19fa33fbebfdbd4b9362d95ff",
+    "architecture": "arm64",
+    "os": "linux",
+    "image_bytes": 808300091,
+    "dockerfile": "byte-identical upstream generated agent Dockerfile",
+    "task_id": "main--online_merchants--task1",
+    "network": "none",
+    "probe": {
+      "status": "passed",
+      "network": "none",
+      "model_calls": 0,
+      "judge_calls": 0,
+      "workdir": "/workspace",
+      "uid": 0,
+      "input_sha256": {
+        "task_folder/TASK_INSTRUCTIONS.txt": "c5804a82e324e8d7e95077d46ea8f1328ab652cfcb1ad2d3669d3cd45726ede2",
+        "task_folder/customer_inquiries.csv": "5b9af28d6590f3fef31898aea8d80d758dfb84cd2e4fe0b1f445b64f76439913",
+        "task_folder/product_performance_Q4.csv": "d2ae76d335f1165b14e06bb100927ec5a5c70d7a66d5e882676bb20d41a2226c"
+      },
+      "private_rubric_absent": true,
+      "output_writable": true,
+      "tool_versions": {
+        "libreoffice": "LibreOffice 7.4.7.2 40(Build:2)",
+        "pdftotext": "pdftotext version 22.12.0",
+        "tesseract": "tesseract 5.3.0",
+        "gdalinfo": "GDAL 3.6.2, released 2023/01/02",
+        "sqlite3": "3.40.1 2022-12-28 14:03:47 df5c253c0b3dd24916e4ec7cf77d3db5294cc9fd45ae7b9c5e82ad8197f3alt1",
+        "pandoc": "pandoc 2.17.1.1"
+      },
+      "python_imports": [
+        "bs4",
+        "duckdb",
+        "esda",
+        "geopandas",
+        "jupyter",
+        "libpysal",
+        "lxml",
+        "mammoth",
+        "matplotlib",
+        "nbclient",
+        "nbformat",
+        "numpy",
+        "openpyxl",
+        "pandas",
+        "pdfplumber",
+        "PIL",
+        "pyarrow",
+        "pymupdf",
+        "docx",
+        "pptx",
+        "requests",
+        "sklearn",
+        "scipy",
+        "seaborn",
+        "shapely",
+        "statsmodels",
+        "trimesh",
+        "xlrd"
+      ],
+      "artifact_creation": [
+        "xlsx",
+        "docx",
+        "pptx",
+        "sqlite",
+        "pdf"
+      ],
+      "libreoffice_docx_to_pdf": "passed"
+    },
+    "pip_freeze_sha256": "f3beb83dc876d61fb5e15ce795926cb2deb198c38bba662da6419c3c4fd598a9",
+    "probe_report_sha256": "0bc929d098655ab77134ebbf9b6cd986dbdc34b1f9a6e9425b2e2319183ddc4f",
+    "model_calls": 0,
+    "judge_api_calls": 0,
+    "limitation": "This validates the native sandbox and agent-facing inputs, not model task completion or live search."
+  },
+  "real_nonempty_judge_scoring": {
+    "status": "blocked",
+    "reason": "JUDGE_API_KEY unavailable; Codex subscription does not provide xAI grok-4.3 judge access.",
+    "judge_model": "grok-4.3",
+    "api_base": "https://api.x.ai/v1",
+    "model_calls": 0
+  },
+  "code_sha256": {
+    "src/rsi_eval/materializers/jobbench.py": "d5a9b22a580faeba1328124da1c7b32d3e254dbcc3fd3a6e0aad4e037bf81486",
+    "src/rsi_eval/data/catalog_jobbench.json": "ba65002922105765a75ddfb7e385e5d722ccd216c686f177d6c53306a34f8a60"
+  },
+  "artifacts": {
+    "native_empty_logs": ".runtime/jobbench-audit/empty-results",
+    "container_logs": ".runtime/jobbench-audit/container-results-02",
+    "build_log": ".runtime/jobbench-audit/verifier-build.log",
+    "agent_build_log": ".runtime/jobbench-audit/agent-build.log",
+    "agent_probe_report": ".runtime/jobbench-audit/agent-probe-report.json"
+  },
+  "api_failure_classification": {
+    "status": "offline_verified",
+    "trusted_report": "verifier/verification.json",
+    "missing_reward_only": true,
+    "statuses": [
+      "auth_error",
+      "quota_exceeded",
+      "infra_error"
+    ],
+    "agent_logs_read": false
+  }
+}

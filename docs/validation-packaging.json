@@ -1,0 +1,71 @@
+{
+  "validated_at": "2026-10-09T14:34:45.828318+00:00",
+  "stage": "final release build after live method acceptance and documentation updates",
+  "built_offline": true,
+  "wheel_built_from_sdist": true,
+  "wheel": {
+    "path": ".runtime/package-audit/release-dist/rsi_eval-0.1.0-py3-none-any.whl",
+    "sha256": "138bf65abe884b521cbad4fe0c4afa771249b28686db117c47c591846694d8d1",
+    "bytes": 70726,
+    "files": 18,
+    "scope": "core SDK, CLI, catalog and third-party notices/licenses",
+    "all_package_files_match_final_source": true
+  },
+  "sdist": {
+    "path": ".runtime/package-audit/release-dist/rsi_eval-0.1.0.tar.gz",
+    "sha256": "e676af3535f77e815177225c4a978a2d828b88e2f82abeac5dcc76e575146445",
+    "bytes": 143714,
+    "files": 64,
+    "includes_source_examples_templates_integrations": true,
+    "includes_rrsi_failure_stop_module": "integrations/rrsi/failures.py",
+    "excludes_private_runtime_auth_and_reference_clones": true,
+    "all_selected_source_and_documentation_files_match_at_build": true,
+    "readme_sha256": "859ee8852f895dff933af5d6c00c2cdc919283d1be94756363f17cb1c13a1a11"
+  },
+  "metadata": [
+    "Requires-Python: >=3.12",
+    "License-File: LICENSES/Apache-2.0.txt",
+    "License-File: THIRD_PARTY_NOTICES.md",
+    "Provides-Extra: harbor",
+    "Requires-Dist: harbor==0.18.0; extra == \"harbor\"",
+    "Provides-Extra: test",
+    "Requires-Dist: pytest>=8; extra == \"test\""
+  ],
+  "core_only_quickstart": {
+    "fresh_environment": ".runtime/package-audit/release-env",
+    "noneditable_wheel_import_from_site_packages": true,
+    "harbor_installed": false,
+    "installed_packages": [
+      "rsi-eval"
+    ],
+    "catalog": [
+      {
+        "name": "terminal-bench@2.0",
+        "tasks": 89
+      },
+      {
+        "name": "terminal-bench@2.1",
+        "tasks": 89
+      },
+      {
+        "name": "swe-bench-verified@1",
+        "tasks": 500
+      }
+    ],
+    "preview_resolves_extracted_source_candidate": true,
+    "offline_demo": {
+      "mode": "offline_fixture",
+      "status": "completed",
+      "reward": 0.0,
+      "model_calls": 0
+    },
+    "source_tree_output_directory_created": false
+  },
+  "notes": [
+    "The wheel intentionally contains the core only. Examples, templates and method integrations are distributed in the source archive.",
+    "Archive contents exclude authentication files, runtime outputs, virtual environments and separately obtained reference clones. Private authentication was not accessed during this audit.",
+    "All final examples, templates, integration modules (including integrations/rrsi/failures.py), and documentation matched the source tree at build time. This packaging report is updated after artifact creation to record their hashes.",
+    "Verification used a new environment under .runtime/package-audit/release-env. The live Harbor environments .venv and .venv-harbor were not modified.",
+    "All build, install and quickstart commands were offline and made zero model calls. Earlier audit artifacts remain preserved in their original directories."
+  ]
+}

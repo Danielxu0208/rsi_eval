@@ -1,0 +1,38 @@
+## Task Description
+
+You are an expert Python programmer specializing in Computer Vision using the OpenCV library. Your task is to implement the **Watershed algorithm** (`cv2.watershed`) for image segmentation specifically for the image located at 'images/8_of_hearts.png'.
+
+The goal is to segment the foreground objects (the red heart pips and '8' numerals) from the white background in this specific image.
+
+**Constraint: You MUST use the OpenCV Watershed algorithm (`cv2.watershed`) for the core segmentation step. Using any other segmentation method (e.g., color thresholding alone, contour finding alone, GrabCut, etc.) will result in a failed evaluation.**
+
+## Implementation Steps
+
+The implementation should follow this specific logic:
+1. Loading the image directly from the path 'images/8_of_hearts.png' and converting it to grayscale.
+2. Thresholding the grayscale image (using THRESH_BINARY_INV | THRESH_OTSU).
+3. Morphological opening to remove noise (kernel = np.ones((3,3), np.uint8), iterations = 2).
+4. Finding sure background via dilation (kernel = np.ones((3,3), np.uint8), iterations=3).
+5. Finding sure foreground via distance transform (cv2.DIST_L2, mask size 5) and thresholding. Use a threshold based on the distance transform's maximum value (e.g., 0.7 * dist_transform.max()) to determine the sure foreground region.
+6. Identifying the unknown region by subtracting sure foreground from sure background.
+7. Labeling components using `cv2.connectedComponents` on the sure foreground.
+8. Preparing markers for watershed (incrementing labels, setting unknown region to 0).
+9. Applying `cv2.watershed` using the original color image loaded from 'images/8_of_hearts.png'. **This step is mandatory.**
+10. Generating a final binary mask from the watershed markers.
+
+## Input Specification
+
+The solution code's main function should *not* take an image path as an argument. It must internally use the hardcoded path 'images/8_of_hearts.png' for all image loading and processing operations.
+
+## Output Specification
+
+Your response must be structured according to the CodeSolutionOutput Pydantic model, containing the following fields:
+
+1. reasoning: Provide a clear, step-by-step explanation of how the code implements the Watershed segmentation process for the specified image ('images/8_of_hearts.png') according to the requirements. Explain each major step.
+2. solution_code: Provide the complete Python code.
+   * The code must include necessary imports (numpy, cv2).
+   * The core logic should be encapsulated within a function named `segment_image` that takes **no arguments**.
+   * This function must load the image using the hardcoded path `'images/8_of_hearts.png'`.
+   * This function must **return** the final binary segmentation mask as a NumPy array (dtype=uint8), where foreground pixels (segmented objects) are 255 and background/boundaries are 0.
+   * The code should **not** include any code for displaying images or saving files directly. It should only perform the calculation and return the mask array.
+   * Include basic error handling for image loading (return None if the image cannot be loaded from the hardcoded path).

@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "checks": [
+    "core-only wheel lists all 9 configurations without Harbor, NumPy or Pydantic",
+    "all 6 example configurations preview from extracted source archive without model or network calls",
+    "README offline demo passed using installed wheel"
+  ],
+  "artifacts": {
+    "rsi_eval-0.1.0-py3-none-any.whl": "a0b97bd07d6260c1fb1150fc6f1a4098f07fbe67b1069a0bc2bec7cb1befec5f",
+    "rsi_eval-0.1.0.tar.gz": "f46b0347d1b845d62fbd9e207d11077a208211093faadd437312f5a956070208"
+  },
+  "fixtures_in_source_archive": true,
+  "fixture_file_count": 14,
+  "core_runtime_dependencies": [],
+  "previewed_examples": [
+    "engdesign.json",
+    "livecodebench.json",
+    "mgsm.json",
+    "multilingual.json",
+    "polyglot.json",
+    "pro.json"
+  ],
+  "offline_demo": {
+    "mode": "offline_fixture",
+    "status": "completed",
+    "reward": 0.0,
+    "model_calls": 0
+  }
+}

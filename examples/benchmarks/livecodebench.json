@@ -1,0 +1,27 @@
+{
+  "target": {
+    "artifact_dir": "../../templates/codex_agent",
+    "entrypoint": "rsi_eval.harbor_codex:Agent",
+    "model": "gpt-6-astra",
+    "config": {
+      "codex_auth_dir": "~/.codex-rsi-eval",
+      "codex_version": "0.162.0-alpha.2",
+      "reasoning_effort": "medium"
+    }
+  },
+  "benchmark": {
+    "name": "livecodebench",
+    "version": "release_v1",
+    "task_ids": [
+      "lcb-codeforces-1873_a",
+      "lcb-leetcode-2727"
+    ]
+  },
+  "options": {
+    "harbor_executable": "../../.venv-harbor/bin/harbor",
+    "repetitions": 1,
+    "concurrency": 1,
+    "timeout": 1800
+  },
+  "output_dir": "../../runs/livecodebench-example"
+}

@@ -1,0 +1,14 @@
+{
+  "codex": {
+    "model": "gpt-6-astra",
+    "auth_dir": "~/.codex-rsi-eval",
+    "expected_version": "0.162.0-alpha.2",
+    "reasoning_effort": "medium",
+    "timeout_seconds": 600
+  },
+  "iterations": 2,
+  "environment": "docker",
+  "evaluation_timeout": 1800,
+  "evolve": {"name": "swe-bench-verified", "version": "1", "task_ids": ["astropy__astropy-12907"]},
+  "test": {"name": "terminal-bench", "version": "2.0", "task_ids": ["regex-log"]}
+}

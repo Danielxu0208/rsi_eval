@@ -1,0 +1,10 @@
+# Optional public evolution runtime. UI, gateway and weight-training dependencies
+# are intentionally excluded; none are required by the preserved MetaAgent loop.
+harbor==0.18.0
+hydra-core==1.3.2
+omegaconf==2.3.1
+structlog==26.1.0
+loguru==0.7.3
+mcp==1.30.0
+html2text==2025.4.15
+jsonschema==4.26.0

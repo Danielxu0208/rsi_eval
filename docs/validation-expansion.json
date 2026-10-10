@@ -1,0 +1,1136 @@
+{
+  "status": "completed_small_subset_acceptance",
+  "scope": "Small integration checks only; no full-dataset scores or paper reproduction",
+  "host": {
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "backend": "Harbor 0.18.0",
+  "model_access": "dedicated Codex subscription; no API judge",
+  "runs": [
+    {
+      "run": "expansion-engdesign-codex-01",
+      "report": "runs/expansion-engdesign-codex-01/result.json",
+      "report_sha256": "c2d9871265f5c34276d995369956bc6d81fd7e55218b8fca6e64ddf4bc29ab94",
+      "status": "completed",
+      "benchmark": "engdesign-open",
+      "version": "open-subset-c8ec338-v1",
+      "selection": "subset",
+      "task_ids": [
+        "AB_01",
+        "XY_01"
+      ],
+      "target_entrypoint": "rsi_eval.harbor_codex:Agent",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": "gpt-6-astra",
+      "cli_version": "0.162.0-alpha.2",
+      "execution_tasks": [
+        {
+          "id": "AB_01",
+          "sha256": "e3614416fb6b0baf67da0bc2d34f68116fa225caef9ce21e2d2ac8f6ae4f7a73"
+        },
+        {
+          "id": "XY_01",
+          "sha256": "460b6ac262805be41e65386f3c5ae656b40f8992d1e20ca8a7270784b3f3bdf8"
+        }
+      ],
+      "usage": {
+        "elapsed_seconds": 142.92831079207826,
+        "cost_usd": null,
+        "cost_basis": "subscription_unknown",
+        "input_tokens": 90055,
+        "observed_input_tokens": 90055,
+        "output_tokens": 1789,
+        "observed_output_tokens": 1789,
+        "cached_input_tokens": 78592,
+        "observed_cached_input_tokens": 78592
+      },
+      "trials": [
+        {
+          "task_id": "AB_01",
+          "status": "completed",
+          "reward": 0.0,
+          "metrics": {
+            "reward": 0.0,
+            "native_score": 40,
+            "confidence": 100
+          },
+          "input_tokens": 47850,
+          "output_tokens": 1051,
+          "trajectory_sha256": "5e2d8855567ac12035c7b207bce212d3e0988a119cba56fbb517e30fdbadedb0",
+          "error": null
+        },
+        {
+          "task_id": "XY_01",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0,
+            "native_score": 100,
+            "confidence": 100
+          },
+          "input_tokens": 42205,
+          "output_tokens": 738,
+          "trajectory_sha256": "2beea2dfd0b99f42c387ec48060cc92e45a87a1f4511f4abc5a38f21bc13c05c",
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-engdesign-oracle-01",
+      "report": "runs/expansion-engdesign-oracle-01/result.json",
+      "report_sha256": "28abfad3a1dd2e331b97eb2482ef2b74c8f4f65a945b0735ef7fba9b90d20fc5",
+      "status": "completed",
+      "benchmark": "engdesign-open",
+      "version": "open-subset-c8ec338-v1",
+      "selection": "subset",
+      "task_ids": [
+        "AB_01",
+        "XY_01"
+      ],
+      "target_entrypoint": "oracle",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": null,
+      "cli_version": null,
+      "execution_tasks": [
+        {
+          "id": "AB_01",
+          "sha256": "e3614416fb6b0baf67da0bc2d34f68116fa225caef9ce21e2d2ac8f6ae4f7a73"
+        },
+        {
+          "id": "XY_01",
+          "sha256": "460b6ac262805be41e65386f3c5ae656b40f8992d1e20ca8a7270784b3f3bdf8"
+        }
+      ],
+      "usage": {
+        "elapsed_seconds": 101.98888854100369,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "AB_01",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0,
+            "native_score": 100,
+            "confidence": 100
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        },
+        {
+          "task_id": "XY_01",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0,
+            "native_score": 100,
+            "confidence": 100
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-livecodebench-codex-01",
+      "report": "runs/expansion-livecodebench-codex-01/result.json",
+      "report_sha256": "97677a99fc02220e105c2ed51e808da332450b75f05a4136354c725432f0646f",
+      "status": "completed",
+      "benchmark": "livecodebench",
+      "version": "release_v1",
+      "selection": "subset",
+      "task_ids": [
+        "lcb-codeforces-1873_a",
+        "lcb-leetcode-2727"
+      ],
+      "target_entrypoint": "rsi_eval.harbor_codex:Agent",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": "gpt-6-astra",
+      "cli_version": "0.162.0-alpha.2",
+      "execution_tasks": [
+        {
+          "id": "lcb-codeforces-1873_a",
+          "sha256": "ad0203023e1e58a97a776c8e190637212e330b7d783f0889eef0aaf65a02255e"
+        },
+        {
+          "id": "lcb-leetcode-2727",
+          "sha256": "886b3a40abed5b1fd5d6d67d0ebd3a22c45a1e812e21b63464070be00139303f"
+        }
+      ],
+      "usage": {
+        "elapsed_seconds": 120.94600879191421,
+        "cost_usd": null,
+        "cost_basis": "subscription_unknown",
+        "input_tokens": 90280,
+        "observed_input_tokens": 90280,
+        "output_tokens": 1110,
+        "observed_output_tokens": 1110,
+        "cached_input_tokens": 83456,
+        "observed_cached_input_tokens": 83456
+      },
+      "trials": [
+        {
+          "task_id": "lcb-codeforces-1873_a",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": 45426,
+          "output_tokens": 680,
+          "trajectory_sha256": "6ec3283aa89eac3aa2e4e64114da33f5f716eff0ba58259a2814ea574d6a3a97",
+          "error": null
+        },
+        {
+          "task_id": "lcb-leetcode-2727",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": 44854,
+          "output_tokens": 430,
+          "trajectory_sha256": "4992599b608d8f87efa97cc3df4dba62a928506642643eb740624b67e1a1af91",
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-livecodebench-reference-01",
+      "report": "runs/expansion-livecodebench-reference-01/result.json",
+      "report_sha256": "6c7a7deb4f480dad4ded6304b737e113ae48a1efd13729a536f2f4f729f43f11",
+      "status": "completed",
+      "benchmark": "livecodebench",
+      "version": "release_v1",
+      "selection": "subset",
+      "task_ids": [
+        "lcb-codeforces-1873_a",
+        "lcb-leetcode-2727"
+      ],
+      "target_entrypoint": "oracle",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": null,
+      "cli_version": null,
+      "execution_tasks": [
+        {
+          "id": "lcb-codeforces-1873_a",
+          "sha256": "ff72f9fbb75fda06b6b5fc26073fcf101c81d49b39a474dbf129bc5aa891e649"
+        },
+        {
+          "id": "lcb-leetcode-2727",
+          "sha256": "d258c207831d16af7e469726d3794525a92208e75de3a8283cd07bfa8e888f44"
+        }
+      ],
+      "usage": {
+        "elapsed_seconds": 80.26031137502287,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "lcb-codeforces-1873_a",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        },
+        {
+          "task_id": "lcb-leetcode-2727",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-livecodebench-reference-02",
+      "report": "runs/expansion-livecodebench-reference-02/result.json",
+      "report_sha256": "0ee6678f77a84bbdd15b561ab12f968b41a8601fcb1e1e1aa2ae2a7be8f79090",
+      "status": "completed",
+      "benchmark": "livecodebench",
+      "version": "release_v1",
+      "selection": "subset",
+      "task_ids": [
+        "lcb-codeforces-1873_a",
+        "lcb-leetcode-2727"
+      ],
+      "target_entrypoint": "oracle",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": null,
+      "cli_version": null,
+      "execution_tasks": [
+        {
+          "id": "lcb-codeforces-1873_a",
+          "sha256": "ad0203023e1e58a97a776c8e190637212e330b7d783f0889eef0aaf65a02255e"
+        },
+        {
+          "id": "lcb-leetcode-2727",
+          "sha256": "886b3a40abed5b1fd5d6d67d0ebd3a22c45a1e812e21b63464070be00139303f"
+        }
+      ],
+      "usage": {
+        "elapsed_seconds": 29.083919291035272,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "lcb-codeforces-1873_a",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        },
+        {
+          "task_id": "lcb-leetcode-2727",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-mgsm-codex-01",
+      "report": "runs/expansion-mgsm-codex-01/result.json",
+      "report_sha256": "56bd6e5f576e9bb0182a082f1b58ffdb8bda3765631ae732426e8b1e3af2ab00",
+      "status": "completed",
+      "benchmark": "mgsm",
+      "version": "1.0-agent",
+      "selection": "subset",
+      "task_ids": [
+        "en-001",
+        "zh-002"
+      ],
+      "target_entrypoint": "rsi_eval.harbor_codex:Agent",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": "gpt-6-astra",
+      "cli_version": "0.162.0-alpha.2",
+      "execution_tasks": [
+        {
+          "id": "en-001",
+          "sha256": "aaa57f28d537eb0549101048328fa70b0368310c9c1a3be6f287fdf645081106"
+        },
+        {
+          "id": "zh-002",
+          "sha256": "86698647678f368b257f0742c4b44befefea15d7541de9ad8f07f98b4389b1f4"
+        }
+      ],
+      "usage": {
+        "elapsed_seconds": 99.06890937499702,
+        "cost_usd": null,
+        "cost_basis": "subscription_unknown",
+        "input_tokens": 53081,
+        "observed_input_tokens": 53081,
+        "output_tokens": 224,
+        "observed_output_tokens": 224,
+        "cached_input_tokens": 47232,
+        "observed_cached_input_tokens": 47232
+      },
+      "trials": [
+        {
+          "task_id": "en-001",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1,
+            "exact_match": 1
+          },
+          "input_tokens": 21176,
+          "output_tokens": 71,
+          "trajectory_sha256": "3049ae8f54f675b2a1197d9678769dea05bb5f5d5604baa466a30d2bb4616e28",
+          "error": null
+        },
+        {
+          "task_id": "zh-002",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1,
+            "exact_match": 1
+          },
+          "input_tokens": 31905,
+          "output_tokens": 153,
+          "trajectory_sha256": "e638a09c76f1c4520620c4429841db34ae53b93f774059cf1bfb1849e09c5785",
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-mgsm-oracle-01",
+      "report": "runs/expansion-mgsm-oracle-01/result.json",
+      "report_sha256": "efceb45804934044002c22711813a66c02280b04b83f97a54957fcda86201e9d",
+      "status": "completed",
+      "benchmark": "mgsm",
+      "version": "1.0-agent",
+      "selection": "subset",
+      "task_ids": [
+        "en-001",
+        "zh-002"
+      ],
+      "target_entrypoint": "oracle",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": null,
+      "cli_version": null,
+      "execution_tasks": [
+        {
+          "id": "en-001",
+          "sha256": "aaa57f28d537eb0549101048328fa70b0368310c9c1a3be6f287fdf645081106"
+        },
+        {
+          "id": "zh-002",
+          "sha256": "86698647678f368b257f0742c4b44befefea15d7541de9ad8f07f98b4389b1f4"
+        }
+      ],
+      "usage": {
+        "elapsed_seconds": 33.90218854194973,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "en-001",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1,
+            "exact_match": 1
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        },
+        {
+          "task_id": "zh-002",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1,
+            "exact_match": 1
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-multilingual-codex-01",
+      "report": "runs/expansion-multilingual-codex-01/result.json",
+      "report_sha256": "9058288d8c8baa6bd7902962a4df05d1ec8c6a7bebdb687a71222651040c711d",
+      "status": "completed",
+      "benchmark": "swe-bench-multilingual",
+      "version": "1.0-harbor",
+      "selection": "subset",
+      "task_ids": [
+        "preactjs__preact-3345"
+      ],
+      "target_entrypoint": "rsi_eval.harbor_codex:Agent",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": "gpt-6-astra",
+      "cli_version": "0.162.0-alpha.2",
+      "execution_tasks": [],
+      "usage": {
+        "elapsed_seconds": 118.69532508403063,
+        "cost_usd": null,
+        "cost_basis": "subscription_unknown",
+        "input_tokens": 205349,
+        "observed_input_tokens": 205349,
+        "output_tokens": 1661,
+        "observed_output_tokens": 1661,
+        "cached_input_tokens": 174720,
+        "observed_cached_input_tokens": 174720
+      },
+      "trials": [
+        {
+          "task_id": "preactjs__preact-3345",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": 205349,
+          "output_tokens": 1661,
+          "trajectory_sha256": "1d545d764fc94d5d7b77f3eb979dac3a1b7d9c97d829bc7f428055db8c4b9a6e",
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-multilingual-oracle-01",
+      "report": "runs/expansion-multilingual-oracle-01/result.json",
+      "report_sha256": "fc69c331ee07f3f8325c25052592c047c2d9a68b2331fdd69942ca6163a90b93",
+      "status": "completed",
+      "benchmark": "swe-bench-multilingual",
+      "version": "1.0-harbor",
+      "selection": "subset",
+      "task_ids": [
+        "preactjs__preact-3345"
+      ],
+      "target_entrypoint": "oracle",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": null,
+      "cli_version": null,
+      "execution_tasks": [],
+      "usage": {
+        "elapsed_seconds": 86.35326533403713,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "preactjs__preact-3345",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-polyglot-codex-01",
+      "report": "runs/expansion-polyglot-codex-01/result.json",
+      "report_sha256": "6f815f67ee898aa008e5556f0a7c694a0f43cd1047d8e3ee866d2a29e1eb5a98",
+      "status": "completed",
+      "benchmark": "aider-polyglot",
+      "version": "1.0-harbor",
+      "selection": "subset",
+      "task_ids": [
+        "polyglot_python_dot-dsl"
+      ],
+      "target_entrypoint": "rsi_eval.harbor_codex:Agent",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": "gpt-6-astra",
+      "cli_version": "0.162.0-alpha.2",
+      "execution_tasks": [],
+      "usage": {
+        "elapsed_seconds": 123.59289466601331,
+        "cost_usd": null,
+        "cost_basis": "subscription_unknown",
+        "input_tokens": 73415,
+        "observed_input_tokens": 73415,
+        "output_tokens": 2096,
+        "observed_output_tokens": 2096,
+        "cached_input_tokens": 67328,
+        "observed_cached_input_tokens": 67328
+      },
+      "trials": [
+        {
+          "task_id": "polyglot_python_dot-dsl",
+          "status": "completed",
+          "reward": 0.0,
+          "metrics": {
+            "reward": 0.0
+          },
+          "input_tokens": 73415,
+          "output_tokens": 2096,
+          "trajectory_sha256": "c650a2e03f6f682325e61750d727d4153eb98d86538d9904db5a9c9fb3c09493",
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-polyglot-go-oracle-02",
+      "report": "runs/expansion-polyglot-go-oracle-02/result.json",
+      "report_sha256": "ba16ec7ff65d96ddeb95b264b5097d1a9c3d94ca165407cc295622927549fc63",
+      "status": "completed",
+      "benchmark": "aider-polyglot",
+      "version": "1.0-harbor",
+      "selection": "subset",
+      "task_ids": [
+        "polyglot_go_error-handling"
+      ],
+      "target_entrypoint": "oracle",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": null,
+      "cli_version": null,
+      "execution_tasks": [],
+      "usage": {
+        "elapsed_seconds": 50.14722604199778,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "polyglot_go_error-handling",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-polyglot-oracle-01",
+      "report": "runs/expansion-polyglot-oracle-01/result.json",
+      "report_sha256": "b1ab3c909d29f0c51f262a3b37f35308eae535d04ddd6e916aabbb7fa095def4",
+      "status": "completed",
+      "benchmark": "aider-polyglot",
+      "version": "1.0-harbor",
+      "selection": "subset",
+      "task_ids": [
+        "polyglot_python_dot-dsl",
+        "polyglot_go_error-handling"
+      ],
+      "target_entrypoint": "oracle",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": null,
+      "cli_version": null,
+      "execution_tasks": [],
+      "usage": {
+        "elapsed_seconds": 190.41300141706597,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "polyglot_python_dot-dsl",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        },
+        {
+          "task_id": "polyglot_go_error-handling",
+          "status": "completed",
+          "reward": 0.0,
+          "metrics": {
+            "reward": 0.0
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-polyglot-pair-codex-02",
+      "report": "runs/expansion-polyglot-pair-codex-02/result.json",
+      "report_sha256": "1791d87cf5a32c1d192633589c8a14a3cb99875526d6d655d5fe605977782878",
+      "status": "completed",
+      "benchmark": "aider-polyglot",
+      "version": "1.0-harbor",
+      "selection": "subset",
+      "task_ids": [
+        "polyglot_python_dot-dsl",
+        "polyglot_go_error-handling"
+      ],
+      "target_entrypoint": "rsi_eval.harbor_codex:Agent",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": "gpt-6-astra",
+      "cli_version": "0.162.0-alpha.2",
+      "execution_tasks": [],
+      "usage": {
+        "elapsed_seconds": 270.08981870801654,
+        "cost_usd": null,
+        "cost_basis": "subscription_unknown",
+        "input_tokens": 251338,
+        "observed_input_tokens": 251338,
+        "output_tokens": 4114,
+        "observed_output_tokens": 4114,
+        "cached_input_tokens": 224256,
+        "observed_cached_input_tokens": 224256
+      },
+      "trials": [
+        {
+          "task_id": "polyglot_python_dot-dsl",
+          "status": "completed",
+          "reward": 0.0,
+          "metrics": {
+            "reward": 0.0
+          },
+          "input_tokens": 73490,
+          "output_tokens": 2219,
+          "trajectory_sha256": "2b43177f9a60bd53c35ccb791ed6f82e4eb610fcb0c41934bb83484dda0f9c78",
+          "error": null
+        },
+        {
+          "task_id": "polyglot_go_error-handling",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": 177848,
+          "output_tokens": 1895,
+          "trajectory_sha256": "86eb993ff4ff05f21feace8655635812470b858ba7cf57093fcf263e45790163",
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-polyglot-pair-oracle-03",
+      "report": "runs/expansion-polyglot-pair-oracle-03/result.json",
+      "report_sha256": "9bca2aa3e8989e114a7ff21e5c37ce5d3dc7bcdd6fb9b2fb2f73b0e4e07a17e6",
+      "status": "completed",
+      "benchmark": "aider-polyglot",
+      "version": "1.0-harbor",
+      "selection": "subset",
+      "task_ids": [
+        "polyglot_python_dot-dsl",
+        "polyglot_go_error-handling"
+      ],
+      "target_entrypoint": "oracle",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": null,
+      "cli_version": null,
+      "execution_tasks": [],
+      "usage": {
+        "elapsed_seconds": 67.96751700004097,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "polyglot_python_dot-dsl",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        },
+        {
+          "task_id": "polyglot_go_error-handling",
+          "status": "completed",
+          "reward": 0.0,
+          "metrics": {
+            "reward": 0.0
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-polyglot-pair-oracle-04",
+      "report": "runs/expansion-polyglot-pair-oracle-04/result.json",
+      "report_sha256": "a58504a533c35715207483e71891fed016f18b08ce4503dac95b998f032daf9b",
+      "status": "completed",
+      "benchmark": "aider-polyglot",
+      "version": "1.0-harbor",
+      "selection": "subset",
+      "task_ids": [
+        "polyglot_python_dot-dsl",
+        "polyglot_go_error-handling"
+      ],
+      "target_entrypoint": "oracle",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": null,
+      "cli_version": null,
+      "execution_tasks": [],
+      "usage": {
+        "elapsed_seconds": 71.57141550001688,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "polyglot_python_dot-dsl",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        },
+        {
+          "task_id": "polyglot_go_error-handling",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-pro-oracle-01",
+      "report": "runs/expansion-pro-oracle-01/result.json",
+      "report_sha256": "4049538ff57a8da0a16c8cbe47c1953680bc72e826c94a377b761527a4c2d793",
+      "status": "completed",
+      "benchmark": "swe-bench-pro",
+      "version": "1.0-harbor",
+      "selection": "subset",
+      "task_ids": [
+        "instance_flipt-io__flipt-a0cbc0cb65ae601270bdbe3f5313e2dfd49c80e4"
+      ],
+      "target_entrypoint": "oracle",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": null,
+      "cli_version": null,
+      "execution_tasks": [],
+      "usage": {
+        "elapsed_seconds": 1275.578885957948,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "instance_flipt-io__flipt-a0cbc0cb65ae601270bdbe3f5313e2dfd49c80e4",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-pro-python-codex-01",
+      "report": "runs/expansion-pro-python-codex-01/result.json",
+      "report_sha256": "37aecbb02153f90be8cc0b10ce49efcd7e9095d15c56cc539817faa06e6dd055",
+      "status": "completed",
+      "benchmark": "swe-bench-pro",
+      "version": "1.0-harbor",
+      "selection": "subset",
+      "task_ids": [
+        "instance_internetarchive__openlibrary-00bec1e7c8f3272c469a58e1377df03f955ed478-v13642507b4fc1f8d234172bf8129942da2c2ca26"
+      ],
+      "target_entrypoint": "rsi_eval.harbor_codex:Agent",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": "gpt-6-astra",
+      "cli_version": "0.162.0-alpha.2",
+      "execution_tasks": [],
+      "usage": {
+        "elapsed_seconds": 103.39541729190387,
+        "cost_usd": null,
+        "cost_basis": "subscription_unknown",
+        "input_tokens": 112033,
+        "observed_input_tokens": 112033,
+        "output_tokens": 2099,
+        "observed_output_tokens": 2099,
+        "cached_input_tokens": 99072,
+        "observed_cached_input_tokens": 99072
+      },
+      "trials": [
+        {
+          "task_id": "instance_internetarchive__openlibrary-00bec1e7c8f3272c469a58e1377df03f955ed478-v13642507b4fc1f8d234172bf8129942da2c2ca26",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": 112033,
+          "output_tokens": 2099,
+          "trajectory_sha256": "ef086480d7029619dc96fb7eefb30bec6c4ab164577b8fa769703d27cc3264b7",
+          "error": null
+        }
+      ],
+      "error": null
+    },
+    {
+      "run": "expansion-pro-python-oracle-01",
+      "report": "runs/expansion-pro-python-oracle-01/result.json",
+      "report_sha256": "6cb6c7990fd80e8a14379bf0e0fbe4746df789b6f7e1dd4c553819003bc34979",
+      "status": "completed",
+      "benchmark": "swe-bench-pro",
+      "version": "1.0-harbor",
+      "selection": "subset",
+      "task_ids": [
+        "instance_internetarchive__openlibrary-00bec1e7c8f3272c469a58e1377df03f955ed478-v13642507b4fc1f8d234172bf8129942da2c2ca26"
+      ],
+      "target_entrypoint": "oracle",
+      "candidate_sha256": "6cd3fb909df196acfd1e74ec149a19b5b08fdd41ee485347732ce3d0d7cb7a0a",
+      "model": null,
+      "cli_version": null,
+      "execution_tasks": [],
+      "usage": {
+        "elapsed_seconds": 60.92065729096066,
+        "cost_usd": null,
+        "cost_basis": "not_aggregated",
+        "input_tokens": null,
+        "observed_input_tokens": 0,
+        "output_tokens": null,
+        "observed_output_tokens": 0,
+        "cached_input_tokens": null,
+        "observed_cached_input_tokens": 0
+      },
+      "trials": [
+        {
+          "task_id": "instance_internetarchive__openlibrary-00bec1e7c8f3272c469a58e1377df03f955ed478-v13642507b4fc1f8d234172bf8129942da2c2ca26",
+          "status": "completed",
+          "reward": 1.0,
+          "metrics": {
+            "reward": 1.0
+          },
+          "input_tokens": null,
+          "output_tokens": null,
+          "trajectory_sha256": null,
+          "error": null
+        }
+      ],
+      "error": null
+    }
+  ],
+  "validation_date": "2026-10-10",
+  "full_dataset_scores_verified": false,
+  "paper_reproduction_attempted": false,
+  "method_loops_rerun_for_expansion": false,
+  "accepted_checks": [
+    {
+      "benchmark": "aider-polyglot",
+      "reference_run": "expansion-polyglot-pair-oracle-04",
+      "candidate_run": "expansion-polyglot-pair-codex-02",
+      "task_ids": [
+        "polyglot_python_dot-dsl",
+        "polyglot_go_error-handling"
+      ],
+      "reference_rewards": [
+        1.0,
+        1.0
+      ],
+      "candidate_rewards": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "benchmark": "livecodebench",
+      "reference_run": "expansion-livecodebench-reference-02",
+      "candidate_run": "expansion-livecodebench-codex-01",
+      "task_ids": [
+        "lcb-codeforces-1873_a",
+        "lcb-leetcode-2727"
+      ],
+      "reference_rewards": [
+        1.0,
+        1.0
+      ],
+      "candidate_rewards": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "benchmark": "mgsm",
+      "reference_run": "expansion-mgsm-oracle-01",
+      "candidate_run": "expansion-mgsm-codex-01",
+      "task_ids": [
+        "en-001",
+        "zh-002"
+      ],
+      "reference_rewards": [
+        1.0,
+        1.0
+      ],
+      "candidate_rewards": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "benchmark": "engdesign-open",
+      "reference_run": "expansion-engdesign-oracle-01",
+      "candidate_run": "expansion-engdesign-codex-01",
+      "task_ids": [
+        "AB_01",
+        "XY_01"
+      ],
+      "reference_rewards": [
+        1.0,
+        1.0
+      ],
+      "candidate_rewards": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "benchmark": "swe-bench-multilingual",
+      "reference_run": "expansion-multilingual-oracle-01",
+      "candidate_run": "expansion-multilingual-codex-01",
+      "task_ids": [
+        "preactjs__preact-3345"
+      ],
+      "reference_rewards": [
+        1.0
+      ],
+      "candidate_rewards": [
+        1.0
+      ]
+    },
+    {
+      "benchmark": "swe-bench-pro",
+      "reference_run": "expansion-pro-python-oracle-01",
+      "candidate_run": "expansion-pro-python-codex-01",
+      "task_ids": [
+        "instance_internetarchive__openlibrary-00bec1e7c8f3272c469a58e1377df03f955ed478-v13642507b4fc1f8d234172bf8129942da2c2ca26"
+      ],
+      "reference_rewards": [
+        1.0
+      ],
+      "candidate_rewards": [
+        1.0
+      ]
+    }
+  ],
+  "offline_validation": {
+    "passed": 206,
+    "subtests_passed": 4,
+    "skipped": 1,
+    "skip_reason": "EngDesign AB_01 scientific dependencies absent in the main test environment",
+    "separate_check": "The skipped native-grader test passed in .runtime/engdesign-verify; both real task graders also executed inside Docker."
+  },
+  "packaging_evidence": "validation-expansion-packaging.json",
+  "diagnostic_attempts": [
+    {
+      "runs": [
+        "expansion-polyglot-oracle-01",
+        "expansion-polyglot-pair-oracle-03"
+      ],
+      "finding": "Go oracle received the Python solution through stale BuildKit local context content. Content-specific context isolation fixed the paired run.",
+      "documentation": "harbor-context-isolation.md"
+    },
+    {
+      "runs": [
+        "expansion-livecodebench-reference-01"
+      ],
+      "finding": "Earlier reference check before verifier worker IPC hardening; replaced in acceptance by reference-02 and matching candidate generated-task hashes."
+    },
+    {
+      "runs": [
+        "expansion-pro-oracle-01"
+      ],
+      "finding": "Additional Go oracle passed; final candidate acceptance uses the explicit OpenLibrary Python task."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "checkout": "../../.runtime/method-sources/harnessx",
+  "output_dir": "../../runs/harnessx-two-task-acceptance",
+  "codex": {
+    "model": "gpt-6-astra",
+    "auth_dir": "~/.codex-rsi-eval",
+    "expected_version": "0.162.0-alpha.2",
+    "reasoning_effort": "medium",
+    "timeout_seconds": 600
+  },
+  "rounds": 2,
+  "method": {"max_steps": 40, "timeout_seconds": 1800, "smoke_timeout_seconds": 300},
+  "target": {"max_steps": 60, "task_timeout": 900},
+  "evolve": {"name": "terminal-bench", "version": "2.0", "task_ids": ["extract-elf", "log-summary-date-ranges"]},
+  "test": [{"name": "terminal-bench", "version": "2.1", "task_ids": ["extract-elf"]}],
+  "run_options": {
+    "concurrency": 1,
+    "repetitions": 1,
+    "harbor_executable": "../../.runtime/harnessx-venv/bin/harbor",
+    "environment": "docker"
+  }
+}

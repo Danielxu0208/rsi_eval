@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-10T08:34:16.942756+00:00",
+  "model_calls": 0,
+  "oracle_runs": 10,
+  "all_completed": true,
+  "harbor_version": "0.18.0",
+  "host": "macOS arm64 with Colima Linux Docker",
+  "command_template": ".venv/bin/python -m rsi_eval.cli run --config .runtime/reasoning-smokes/<name>-<version>.json --oracle",
+  "setup": [
+    "source scripts/mac-env.sh",
+    "unset DOCKER_DEFAULT_PLATFORM",
+    "export RSI_EVAL_SOURCE_CACHE=\"$PWD/.runtime/source-cache\""
+  ],
+  "scope": "one task per profile through real Harbor Docker; not full model scores",
+  "profiles": [
+    {
+      "name": "mce-finer",
+      "version": "meta-harness-8123cca-v1",
+      "task_id": "test-0001",
+      "status": "completed",
+      "reward": 1.0,
+      "native_metrics": {
+        "reward": 1,
+        "exact_match": 1
+      },
+      "run_dir": "runs/reasoning-oracle-mce-finer-meta-harness-8123cca-v1",
+      "result_sha256": "e10c9042bb37f60b70d5893c8865a680558f1a0ce30a0f774f992fe63dc7fb58",
+      "grading_sha256": "671159ac50c42e259175bc44d480f0d6bd0399625827ce821778bc82b5e9136f",
+      "source_task_sha256": "af2da29b4ef00195eb77ae44b2f711d4caef4a10558459424b1bdfc441b9141c",
+      "elapsed_seconds": 17.898546583019197
+    },
+    {
+      "name": "mce-uspto",
+      "version": "meta-harness-8123cca-v1",
+      "task_id": "test-0001",
+      "status": "completed",
+      "reward": 1.0,
+      "native_metrics": {
+        "reward": 1,
+        "exact_match": 1,
+        "jaccard_similarity": 1.0
+      },
+      "run_dir": "runs/reasoning-oracle-mce-uspto-meta-harness-8123cca-v1",
+      "result_sha256": "2bed72ae775ea302245e4e94322f91f4fe4545931659977ce5510a16f53362af",
+      "grading_sha256": "0b4a3ca1d4f836841ffccf155ddaa7054bb663a1599565fa90bf53aa510a54b0",
+      "source_task_sha256": "880094474439c9823f64ca0318e305996c60bcffa1cdf94a0575d8c0674fee72",
+      "elapsed_seconds": 13.338757500052452
+    },
+    {
+      "name": "mce-symptom2disease",
+      "version": "meta-harness-8123cca-v1",
+      "task_id": "test-0001",
+      "status": "completed",
+      "reward": 1.0,
+      "native_metrics": {
+        "reward": 1,
+        "exact_match": 1
+      },
+      "run_dir": "runs/reasoning-oracle-mce-symptom2disease-meta-harness-8123cca-v1",
+      "result_sha256": "5b4fe5d2e53f35109481c1a2e701558146a57043cb6d86e2607093045109de6f",
+      "grading_sha256": "20254a5f1ab52aa5c92b03a5fe50545565b890a23ebbdce43639694a589d7a27",
+      "source_task_sha256": "221626be21b9263fb885ed99b91f0f2c545b2cf10a2542040d56f43ba188a1ae",
+      "elapsed_seconds": 13.358762416057289
+    },
+    {
+      "name": "mce-lawbench",
+      "version": "meta-harness-8123cca-v1",
+      "task_id": "test-0001",
+      "status": "completed",
+      "reward": 1.0,
+      "native_metrics": {
+        "reward": 1,
+        "exact_match": 1,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "run_dir": "runs/reasoning-oracle-mce-lawbench-meta-harness-8123cca-v1",
+      "result_sha256": "89b6a022a13b41c6ac6fde6a45a748862c1c25c0fa9c42f4f240d667191f69cf",
+      "grading_sha256": "b3a7742c74d19c675a459700bec3f57a9bd9fb568bb8c37e367d8cf0ac5d9b50",
+      "source_task_sha256": "df1cecbe2251cdb1963e47264fc63f0fc61c05b9e52941dfff316cb2697863aa",
+      "elapsed_seconds": 13.41475920798257
+    },
+    {
+      "name": "mce-aegis",
+      "version": "meta-harness-8123cca-v1",
+      "task_id": "test-0001",
+      "status": "completed",
+      "reward": 1.0,
+      "native_metrics": {
+        "reward": 1,
+        "exact_match": 1
+      },
+      "run_dir": "runs/reasoning-oracle-mce-aegis-meta-harness-8123cca-v1",
+      "result_sha256": "704f824b74be19cfae7b254efa2ed6de3e5ca7a02dc5cb9003c455db22a80f84",
+      "grading_sha256": "e4b544f45cbbb13dbba6d99147db0e38873c8fca3332b7f9c603587f5c1b6ce6",
+      "source_task_sha256": "70c10e64823947c6a6767f4edeb4220183b36e1c750b4531001433889dcbc3ec",
+      "elapsed_seconds": 13.338791916845366
+    },
+    {
+      "name": "mmlu",
+      "version": "original-all-splits-v1",
+      "task_id": "test-abstract_algebra-00001",
+      "status": "completed",
+      "reward": 1.0,
+      "native_metrics": {
+        "reward": 1,
+        "exact_match": 1
+      },
+      "run_dir": "runs/reasoning-oracle-mmlu-original-all-splits-v1",
+      "result_sha256": "31f1b259b647c531b3427a9664761b24222c9ce3aadb94852acc61e7a8f699f2",
+      "grading_sha256": "4924418318b66808dcc8885543f105b799c68ff249348cafbb903a4586283eac",
+      "source_task_sha256": "c373ded07f34a93c432934dad8d0976e7c6da5b98862f37afdfebf7fea6dd9f6",
+      "elapsed_seconds": 13.37006595893763
+    },
+    {
+      "name": "gpqa",
+      "version": "main-56686c0-v1",
+      "task_id": "main-0001",
+      "status": "completed",
+      "reward": 1.0,
+      "native_metrics": {
+        "reward": 1,
+        "exact_match": 1
+      },
+      "run_dir": "runs/reasoning-oracle-gpqa-main-56686c0-v1",
+      "result_sha256": "b920fd2452f3ed2413f53deb8bdc9d8ad59d5eefd69a57f167ef3df0a990af45",
+      "grading_sha256": "b8497e15474911340a78f3c220cc62e1a1edc087a1fe3413655d10381c647e3e",
+      "source_task_sha256": "a690315d223116d80531db01333ec0f387603d59e22005537b92718d89c1bb44",
+      "elapsed_seconds": 13.373562416061759
+    },
+    {
+      "name": "gpqa",
+      "version": "diamond-56686c0-v1",
+      "task_id": "diamond-0001",
+      "status": "completed",
+      "reward": 1.0,
+      "native_metrics": {
+        "reward": 1,
+        "exact_match": 1
+      },
+      "run_dir": "runs/reasoning-oracle-gpqa-diamond-56686c0-v1",
+      "result_sha256": "cf9bc7ebecd2be8137bf15b13017405a606f8892e446790d3e9777e93738e39f",
+      "grading_sha256": "84fd37c266b12f5f4d22eb887543be8b63449c200f34bd1736a0b7e38cf45296",
+      "source_task_sha256": "39ec43f7b7ab34d49088bfb803cc049d1ea098c03801a72328033c5b3a0ea3c3",
+      "elapsed_seconds": 13.32587879197672
+    },
+    {
+      "name": "gpqa",
+      "version": "extended-56686c0-v1",
+      "task_id": "extended-0001",
+      "status": "completed",
+      "reward": 1.0,
+      "native_metrics": {
+        "reward": 1,
+        "exact_match": 1
+      },
+      "run_dir": "runs/reasoning-oracle-gpqa-extended-56686c0-v1",
+      "result_sha256": "298898efbf5f60bed72467dc16d6449a8ba98354b29aae63d9fa3934b49e95cf",
+      "grading_sha256": "9f11de9b70b7704170babfcf89103664c932185cb1aa496d4fd95152c074315a",
+      "source_task_sha256": "74b23a5c91a24acd52d28010b834e7d75113f5845e6795dadda2ff36baf0123c",
+      "elapsed_seconds": 13.351259917020798
+    },
+    {
+      "name": "arc-agi",
+      "version": "1-public-3990304-v1",
+      "task_id": "evaluation-00576224",
+      "status": "completed",
+      "reward": 1.0,
+      "native_metrics": {
+        "reward": 1,
+        "exact_match": 1
+      },
+      "run_dir": "runs/reasoning-oracle-arc-agi-1-public-3990304-v1",
+      "result_sha256": "f1357584c8333a8f5ac2f193355697cb12d6d0ffc2970e674fd352fafc479151",
+      "grading_sha256": "399a0060bc8be7e905e58e9e1cf4e0450ba76a750ce88c033da6491e84810b44",
+      "source_task_sha256": "6dc2018669161f9aaafe55a0fe69f33dbe0b0b5489fb01cefa1ae2eaf87b3196",
+      "elapsed_seconds": 13.977696083020419
+    }
+  ]
+}

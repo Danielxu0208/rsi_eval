@@ -1,0 +1,2701 @@
+{
+  "benchmark": "engdesign-open",
+  "version": "open-c8ec338-v1",
+  "source_commit": "c8ec338cc5f846d792d93728b00c9448111139e5",
+  "source_archive_sha256": "d189b14b18c26c65fe5cd796a27ed10e1bc76143b3df4ee78a5007b85735542b",
+  "audit_kind": "published-response replay; no model generation",
+  "model_calls": 0,
+  "runtime_sha256": "2d1fe87ca8c37f677b512ce62c192a6baf2be985229c4131ea01d4278aa039c9",
+  "runtime_images": [
+    {
+      "tags": [
+        "rsi-engdesign-native:full-v1"
+      ],
+      "id": "sha256:c211c1ac2887783f3617e9ea5d6c55b6c0642acd71e8910263695bb68429217f",
+      "architecture": "arm64",
+      "os": "linux"
+    },
+    {
+      "tags": [
+        "rsi-engdesign-webots:full-v1"
+      ],
+      "id": "sha256:0d62c330e1ee3a7e503e200b177561c84300b651691566e184f9d077b9946788",
+      "architecture": "amd64",
+      "os": "linux"
+    }
+  ],
+  "container_limits": {
+    "cpus": 2,
+    "memory_gib": 4,
+    "pids": 256,
+    "network": "none"
+  },
+  "task_timeout_sec": 90,
+  "completed_native_graders": 67,
+  "tasks": [
+    {
+      "id": "AB_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "AB_01",
+        "upstream_log": "EngDesign-Open/AB_01/logs/AB_01_log_4o_0.jsonl",
+        "log_sha256": "681168cf5465861fa9869899ae48007914e062a46a9105ce82821c414b1a7e8a",
+        "submission_sha256": "36b8b37091687e2f87fa1217974ccc69dac07765dccb0648688c2d02cacab84f",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 20.0,
+        "confidence": 100.0,
+        "details_sha256": "c191880f815e523cdf437d9bf63750455462ed8d3c9180a48549cdfb68b9910e"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 20.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.602,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "b1ece53086d97cfd8b1c1ba7de51f5168a756c769be7e993edd1b5d06ef6ca7c",
+      "native_return_sha256": "7ed73c5db4818ba48d8f1ea18907a2aa5eb3726f500f9e15a3df69e77dd0d574",
+      "full_verdict_sha256": "488126c3e8d345289823c91bd8c97fb991689e8118f08e8e771241d94bf9830a",
+      "local_verdict": ".runtime/engdesign-full/results-final/AB_01.json"
+    },
+    {
+      "id": "AB_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "AB_02",
+        "upstream_log": "EngDesign-Open/AB_02/logs/AB_02_log_claude3_7_0.jsonl",
+        "log_sha256": "ae0c66fa0d0de0aaacc48e07d6aa3938a0a6b437cae1bb702ebcf75115537b25",
+        "submission_sha256": "ed413cd719bff0eaf3043c52b2c4d5f08900b5d5435792e61a91acfb56782c6a",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 83.36422896720309,
+        "confidence": 100.0,
+        "details_sha256": "e1894365844c778d8eb6781b5bcc29c913d452795ac936b532e9b03563397f6b"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 83.36422896720309,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.293,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "f8c089567b290338e47de5f9db800144a70eee82bebd2eec76006afeab0d80dd",
+      "native_return_sha256": "49e20657738dd86c9b4f626f5d4b51f8fe77629c8e991ab62e57101dcdd384ef",
+      "full_verdict_sha256": "635b1efc11b4bf0cda6f69049b80f659e3d091fceb041a65903491dcbd8bcacf",
+      "local_verdict": ".runtime/engdesign-full/results-final/AB_02.json"
+    },
+    {
+      "id": "AB_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "AB_03",
+        "upstream_log": "EngDesign-Open/AB_03/logs/AB_03_log_4o_0.jsonl",
+        "log_sha256": "11c54af1170f7f66b6dfba5782b08d6ba4b83c1772e4774834a694d1883d6323",
+        "submission_sha256": "6c32b81a12865307aa23050753374d7d08bb8188f27ac938845071f98f46e43d",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "1f9a695d87eeea9110095bf4ef79a07f4ee4c1c0646a2b815d4701c96cc2eb9d"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.3,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "5172d071ed8ef7c6f0220137d4fcc0abf47c08f7b5d6f3e86ac97110f446fbab",
+      "native_return_sha256": "2074e29794f483cedc60ca63c03fd07979cff7fcae4b937f00483e3304d497b2",
+      "full_verdict_sha256": "c704b7f704b8e85cdbf44581da674ac536e277765fb5cbcb82ccc5c18607ee83",
+      "local_verdict": ".runtime/engdesign-full/results-final/AB_03.json"
+    },
+    {
+      "id": "AM_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "AM_02",
+        "upstream_log": "EngDesign-Open/AM_02/logs/AM_02_log_gemini_pro_0.jsonl",
+        "log_sha256": "f93ba4bddd62860290aa59e205d9377827bb4186f92eebbff424fc9c0b3c4124",
+        "submission_sha256": "9a49a2ff99adc08f8126f77ececaa8ff38c8839d9348279b93859f48779c0d3f",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "4683dba62a5489305cbb85fb684f15ac34e1cb378f73bf5cb56dc02e5c613c01"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 1.241,
+      "subprocess_executables": [
+        "ffmpeg"
+      ],
+      "subprocess_evidence_sha256": "7a89485588009d5d30b85947a166bdd85f085112e354529b89f1a0fe58a24eaf",
+      "source_files_sha256": "0c1943169334cdd9bbe48153ee15f019d3b5b2646539221e4ea43f8351eec105",
+      "native_return_sha256": "52af68dbcbfae9cd95cc5c122f664a3122f1a8028dd8d058323192fd432953e6",
+      "full_verdict_sha256": "40e0d36e60b736c567cc9fc63d6c76e03189a8ee501ec9b1d09023e3ff582fc2",
+      "local_verdict": ".runtime/engdesign-full/results-final/AM_02.json"
+    },
+    {
+      "id": "AM_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "AM_03",
+        "upstream_log": "EngDesign-Open/AM_03/logs/AM_03_log_gemini_pro_0.jsonl",
+        "log_sha256": "fbf4e6f924ea69a3d436a48c3ac7447e8170cc9a4dec9c1b5c7483f6ff37df7c",
+        "submission_sha256": "9f5f11aae5145c17cca8c9f4fd8819ec2ba2c554d5419e87c525849b48ae3ded",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "931144026fafc810524b635f5822c3b07ff2992121ed5789bac17d808e34d355"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 1.49,
+      "subprocess_executables": [
+        "ffmpeg"
+      ],
+      "subprocess_evidence_sha256": "7a89485588009d5d30b85947a166bdd85f085112e354529b89f1a0fe58a24eaf",
+      "source_files_sha256": "094b313fefa3fcc7b370929884b09d9dcf782799a9aa28724a816b3990fcf6ac",
+      "native_return_sha256": "8a5c0b7f19dc0fa7aee7d0a435dfe0442e01f06f5686a807c8370da4981d24bf",
+      "full_verdict_sha256": "5c3d2a8d385cade2bfba96705771b97f79f697f7baec6ef2994acf3bad8e4e6c",
+      "local_verdict": ".runtime/engdesign-full/results-final/AM_03.json"
+    },
+    {
+      "id": "AV_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "AV_02",
+        "upstream_log": "EngDesign-Open/AV_02/logs/AV_02_log_o3_0.jsonl",
+        "log_sha256": "bb2b6346f6445524c5753ea5e5af91567d6b4a74c6df211871601f00cea56a70",
+        "submission_sha256": "b1837f10864b329c293b485c36db9e54ce5b55d100b85b03b95651c0a8be957c",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "f7a1281b458b948fc4ded47fc7c9c51fcf21e1d60bf86c1ebf40d6c6af1874ba"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.989,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "6d44d92a45156b12811f2f2ebc605fc3b6b61b6fca96545822d97eb79b571699",
+      "native_return_sha256": "1682932bee3ae2b3121126b57e961607a63d1490fe77c6622d07ff96a54ba98e",
+      "full_verdict_sha256": "d65a846418ef6b2ed6c98e1b30a018f44419bb33498e525de8996f2853d7eb01",
+      "local_verdict": ".runtime/engdesign-full/results-final/AV_02.json"
+    },
+    {
+      "id": "AV_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "AV_03",
+        "upstream_log": "EngDesign-Open/AV_03/logs/AV_03_log_4o_0.jsonl",
+        "log_sha256": "c830820604359cfb4ec673d7b082f2d9395fb4e6da45412988648bbd3429319f",
+        "submission_sha256": "f3a1169d8b221bf305964ed972aaf2e38e8b5ea4968ed56d4533ac0caa01adbc",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 60.0,
+        "confidence": 100.0,
+        "details_sha256": "2d96693f403fc494d4b2877be893a04bcefb48b2349a67d2ad9225e120fdabfc"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 60.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.927,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "7a8ab31c9d50d35c2947c7f9b2a736099746a9b4f573bb750290a872f77d9bfa",
+      "native_return_sha256": "be4fa17366c1b99d059aba069b552d0e75f6a495842411e96b51a1f284a61055",
+      "full_verdict_sha256": "334ddb42074296eeaaf6f6060c13d208ea783dd8835b259706c1f865982ccbee",
+      "local_verdict": ".runtime/engdesign-full/results-final/AV_03.json"
+    },
+    {
+      "id": "CY_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "CY_03",
+        "upstream_log": "EngDesign-Open/CY_03/logs/CY_03_log_4o_0.jsonl",
+        "log_sha256": "bec287b001fcee79091736d475da175af657998153bc162992bb1767aeccb504",
+        "submission_sha256": "22270e88519669bb3791133ef370dd303249a1f225a90ecfb74b9de0b1d694f5",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 1.0,
+        "confidence": 100.0,
+        "details_sha256": "f2d692362e071bb37bf309a5e78535f5442f45f76d7739aa1b1a6b56f25f73c7"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 1.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.251,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "33c12843a4632135322e99f66885ec282b3ce7e5aa755d9d3dcfa087962d2749",
+      "native_return_sha256": "dc6918ab3dc776239aed4b26cf5917f46ea7b16c07b751c432a50be7dc8e31dc",
+      "full_verdict_sha256": "18303d22966cc3220f4b6fcd68f7fc196794b596d883b6542f573e9291ee781b",
+      "local_verdict": ".runtime/engdesign-full/results-final/CY_03.json"
+    },
+    {
+      "id": "DL_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "DL_01",
+        "upstream_log": "EngDesign-Open/DL_01/logs/DL_01_log_4o_0.jsonl",
+        "log_sha256": "94cee37df8e34fb08db485669813b7b9697aa5961876b6ea62379fb7394b60dc",
+        "submission_sha256": "56f829f85ee2f7084e29189fa02a4ddadeb94aa828d4f730bfae05ede0c0d913",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 38.57142857142857,
+        "confidence": 100.0,
+        "details_sha256": "aa48cb4ef0bcb966cdf2bf2590e07cc23a2ef4b523d72faa87082837ae495646"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 38.57142857142857,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.683,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "9c3c5c71f3f8aa788b14beacfcb7961e30cf8c5d3d44ac765b44307baa0a9e0a",
+      "native_return_sha256": "5c48438aeb143b5be4d4123b4e55fd82ca53cae81ceaa49ca159cd62d997be48",
+      "full_verdict_sha256": "206c47a2e46554815842986122ceb9c554eea0414bd55438b81780b65ad041a2",
+      "local_verdict": ".runtime/engdesign-full/results-final/DL_01.json"
+    },
+    {
+      "id": "DL_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "DL_02",
+        "upstream_log": "EngDesign-Open/DL_02/logs/DL_02_log_o4_mini_high_2.jsonl",
+        "log_sha256": "04eabd2a2e9f2d5378385aab56cc5800327f7fa23344c08c968aa7e5f152497e",
+        "submission_sha256": "36762a3a2b0cab6bfec4080d48c68d6617c40fd6b19f8e7e2e0d39af6592e927",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "2333a2e3fb3822fdf24ab27325799cb82526a71cdda52763c3703774db30bef6"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.591,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "6a9042062b55747c6b39e369d48fdc2b9e3d326e03ec445196492e36d3381ab8",
+      "native_return_sha256": "987a4e6c4ae417b79276f637cfae411f7827a7d3a004c647395259fb2e094194",
+      "full_verdict_sha256": "ff4c1c9dc2d2d1eab4980e08a0a59af4858c52829f9d33a5fc76fa151417bccd",
+      "local_verdict": ".runtime/engdesign-full/results-final/DL_02.json"
+    },
+    {
+      "id": "HC_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "HC_03",
+        "upstream_log": "EngDesign-Open/HC_03/logs/HC_03_log_claude3_7_1.jsonl",
+        "log_sha256": "7fb0c1056e8f71cfc845da2807d3192b3c46eafb1872f6193654e02b706b6a1d",
+        "submission_sha256": "a9289215daf894e7a49708b4e14281c8c9307eb81e6f2b66f5929a40eafd4ec9",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "e326c01ccf08dcffb2ecdcf0c977615d15859e8d704213773ebc84230eaaa9e0"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.634,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "fe93e04950ef743f4bd5d494108861ced7c89f5c23cdecc983a171f4aa2f18dd",
+      "native_return_sha256": "6b3a7687e654d51c2c2ebef55dbe6be0ef92966b2f561f5ee929e0d8fddb3285",
+      "full_verdict_sha256": "82ec5817aca2568f3c4eec0ae159c88658033daa94ca0b48ac8e092d7141bedf",
+      "local_verdict": ".runtime/engdesign-full/results-final/HC_03.json"
+    },
+    {
+      "id": "HJ_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "HJ_01",
+        "upstream_log": "EngDesign-Open/HJ_01/logs/HJ_01_log_4o_0.jsonl",
+        "log_sha256": "28c1c68057bad88d9d7b58226fd163c653bfe2569b4cc5e6bfa06ad5ecef8e27",
+        "submission_sha256": "5ee4fc34ac9e935115f0deb77299fa8479b32e4e54a40cb50cb2cae4c23be2d4",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 0.0,
+        "confidence": 100.0,
+        "details_sha256": "46a98b1f04f8f448143dbc88fa1fd995796595a18db8647019a0d240c180cde3"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 0.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 26.885,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "559674f98682001342e6447eba4df5ffabc75d8dc2fd6c954617ca77a8078520",
+      "native_return_sha256": "eb039b543112fdf1111a1fc6a6289b0f5c0e1f2307abcf27e5df66e3e65482c1",
+      "full_verdict_sha256": "3681fb1c680c7d25c31208bb4fde484a600861fb0b596f96f11a37341c95604d",
+      "local_verdict": ".runtime/engdesign-full/results-final/HJ_01.json"
+    },
+    {
+      "id": "JY_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "JY_01",
+        "upstream_log": "EngDesign-Open/JY_01/logs/JY_01_log_4o_0.jsonl",
+        "log_sha256": "16655967fb3bb056041ec2976a956f48a3d0796894c98bbb9520b14e7303dc60",
+        "submission_sha256": "d953344f957a01353232f6f64656d11299d5b2f057f9c3e207157e02dd559c47",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 40.0,
+        "confidence": 100.0,
+        "details_sha256": "f158644cf9c54dc4dfbe94bc4972b7cb7f3057886e57077dfd501ef9aa61bdd8"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 40.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.258,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "c2a4cdc5a910c649e2bdd1a4efa0f5ff576e860293a2e4f1c8931c76b2708dcd",
+      "native_return_sha256": "946da55451476b45ff28b2509bd011fca5490f54502942be0d07270f584e9f68",
+      "full_verdict_sha256": "04926f29828982d53ee285d77b28d603a3c57309ebc2e1fcd8e77c609d9d7a2b",
+      "local_verdict": ".runtime/engdesign-full/results-final/JY_01.json"
+    },
+    {
+      "id": "JY_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "JY_02",
+        "upstream_log": "EngDesign-Open/JY_02/logs/JY_02_log_gemini_flash_1.jsonl",
+        "log_sha256": "7b78a0e5ae9b0787e38aa541b99c57522c1c99e5d6a5f563b952c9e5f9037774",
+        "submission_sha256": "595497e9c514d50722bd143dbf6ab0b7e986beb739738331bb17397fc52f25b5",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 56.939495017284656,
+        "confidence": 100.0,
+        "details_sha256": "3fc236c4621352a4ae7b84a0875b28bb4acdd16cb16ef6a05c2d2e793b74cbe0"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 56.939495017284656,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.567,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "49d60f44b320b55945b2f0b3ab27dfb8d157a9fb01f22b3d7127537490fab4f0",
+      "native_return_sha256": "04be3f88ee75d651cfb340a0d4c4e7a5e01eef05e7a9d75a973d8c4153e94cd2",
+      "full_verdict_sha256": "8bb6961f3b46b119194aae1f03560c2be958a216fb6ad1770c941b581f4157dd",
+      "local_verdict": ".runtime/engdesign-full/results-final/JY_02.json"
+    },
+    {
+      "id": "JY_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "JY_03",
+        "upstream_log": "EngDesign-Open/JY_03/logs/JY_03_log_4o_0.jsonl",
+        "log_sha256": "c3e3211b28305239b351a4c614a9bb2ed30683f2af80da2244c5307ea8cdcd15",
+        "submission_sha256": "abee79d7f0ed184116ade7c7c929b0297ae57d78ccd7a71b6fae7519d1fde771",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 88.44660432115312,
+        "confidence": 100.0,
+        "details_sha256": "04757ffe3bf46d612fead9e562f91aac48141a3fc1af0db9f2aab811f84bac9e"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 88.44660432115312,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.598,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "5c716392f241afa66a1178f2b087bc193f77fdf977a40aaac91b52356f0a1250",
+      "native_return_sha256": "5557616036797311918fdeaae84c58bf31c9398ac1946a5369ab94e62ddd1926",
+      "full_verdict_sha256": "465c3b88e123a3cbb551dd52801c0417060b2422f61e19af5f349a6d1baea3c3",
+      "local_verdict": ".runtime/engdesign-full/results-final/JY_03.json"
+    },
+    {
+      "id": "KV_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "KV_02",
+        "upstream_log": "EngDesign-Open/KV_02/logs/KV_02_log_4o_0.jsonl",
+        "log_sha256": "071f67a0ba7a8d47334de2301eca284d0892d7d742472a0bbe03a2ee95befbb2",
+        "submission_sha256": "72d452b759a3eee37044da8377f235a195134ba8743d8455aac07a7ec6b27b3d",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 80.0,
+        "confidence": 100.0,
+        "details_sha256": "a8cea87417fe433b1bcaf913e68d6ec8d1a815e164d0c178dc842fa68ae714f5"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 80.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.68,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "0848eab6608ce164fdc672bf2e004bb56ae5ff9083d41ae0bbddfb6af8423f76",
+      "native_return_sha256": "3f132cb5e1387ca1bace1f183417329eb2a6dcd5328b8e202e9b85447d2999dd",
+      "full_verdict_sha256": "56ffb6acba319789f58755cb42cd64b38846fc80d5a2b22113ed38ea7b32c228",
+      "local_verdict": ".runtime/engdesign-full/results-final/KV_02.json"
+    },
+    {
+      "id": "KV_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "KV_03",
+        "upstream_log": "EngDesign-Open/KV_03/logs/KV_03_log_claude3_7_1.jsonl",
+        "log_sha256": "5f6617e96afc1fe5882c6d9e5d3b9bef59b479f93b8686f1be63209498caa0e7",
+        "submission_sha256": "f9808883264cfba150cfa97647c784e1dc7d1c22008b77ede72924aff9951423",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 80.0,
+        "confidence": 80.0,
+        "details_sha256": "bff99a820b131b3cd48e7e089f3b507f89c68b44bbac9ce081aa1ac9cdbb6def"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 80.0,
+        "confidence": 80.0
+      },
+      "elapsed_sec": 0.69,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "b9c00e4ca9eafc7a5dc543318cb016f1ec96f3aa6eba4b7670ea8bb4a8d50c34",
+      "native_return_sha256": "fa11c411d41108d0f237e45288822f8759fcf140d0d6dc140d17aac0035cf9ac",
+      "full_verdict_sha256": "761b75426992a8626e81c40fa5030905831f681f6832fcc0135ebc24d40cb5c6",
+      "local_verdict": ".runtime/engdesign-full/results-final/KV_03.json"
+    },
+    {
+      "id": "LX_02",
+      "runtime_family": "octave",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "LX_02",
+        "upstream_log": "EngDesign-Open/LX_02/logs/LX_02_log_4o_0.jsonl",
+        "log_sha256": "6b6c2130011e996a4018e509bdafe06fd7d31dfc78f7079378393f635c9a3a1b",
+        "submission_sha256": "01763d77c043e151fd16c5a4a824190fddc57ea1bc69c83acb67844385e39f0b",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 32.0,
+        "confidence": 100.0,
+        "details_sha256": "bccdc97e3e224c263e6bbbc431ce247672159d2376898fb06725c976e4afbfd8"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 32.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 1.752,
+      "subprocess_executables": [
+        "octave"
+      ],
+      "subprocess_evidence_sha256": "b04126abb2ba19bed8d6ea001538346173e5168fd88352cc70a728c86ffee00c",
+      "source_files_sha256": "de8124e07d3e658cae0613297a225af29695990007538ba29dffb4a6e829700b",
+      "native_return_sha256": "0511f5c3ebf5d6526bfdec4e00eee514b81dfa3c7a220bc47620e3e0ed3cc529",
+      "full_verdict_sha256": "13212e797079e004e3712a60841b11c4a9cc45c923a648e5f0df281effc1789d",
+      "local_verdict": ".runtime/engdesign-full/results-final/LX_02.json"
+    },
+    {
+      "id": "NS_PA_SS_02",
+      "runtime_family": "iverilog",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "code",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "NS_PA_SS_02",
+        "upstream_log": "EngDesign-Open/NS_PA_SS_02/logs/NS_PA_SS_02_log_claude3_7_0.jsonl",
+        "log_sha256": "6831b7b598b1add9cb3ae39e95bbd34755ddfce1d8be588533057d4afb09059e",
+        "submission_sha256": "b6e12a723df51a1594dfec91282f7b16a08ef4b0f6ba3252d40089dde3f9edb6",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "5163b287834e7529dc5bfa3e41191d1420b0e2154a017abe286044e8582963d6"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.196,
+      "subprocess_executables": [
+        "iverilog",
+        "vvp"
+      ],
+      "subprocess_evidence_sha256": "0acccd58bec5dd5cacde7579c12d6c6934a50bc0dab5bbded235e59bdbe55689",
+      "source_files_sha256": "8bacdeeb8c956e26ca8836cee5ffdc608fe5bf18ab0ce51877bae3aa9a20c14d",
+      "native_return_sha256": "9199eaf9a09f185dc9cdef45081c14ca659a95665b8b05ca6944e6c025f0cecf",
+      "full_verdict_sha256": "0e27b7ecc641cba1159e2da411011a0a79bf274841024ec898fe367884ea50a9",
+      "local_verdict": ".runtime/engdesign-full/results-final/NS_PA_SS_02.json"
+    },
+    {
+      "id": "NS_PA_SS_03",
+      "runtime_family": "iverilog",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "code",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "NS_PA_SS_03",
+        "upstream_log": "EngDesign-Open/NS_PA_SS_03/logs/NS_PA_SS_03_log_4o_0.jsonl",
+        "log_sha256": "ff56cb535e77dffbefe2905ffcf495015afc979ad05e41ddf278442f6dc49539",
+        "submission_sha256": "fd283bab0ec0db2e5131361bcc4c90831c5652614bf2a942305696c7845e8868",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 35.0,
+        "confidence": 100.0,
+        "details_sha256": "9903f835bdb56cf96c0cb69a01d25c10dbb67f61639b1dabe2ebec26d357ea52"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 35.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.194,
+      "subprocess_executables": [
+        "iverilog",
+        "vvp"
+      ],
+      "subprocess_evidence_sha256": "cc24d4197aacc3474a9f5f51a2f4e50fc06ad50b603ba22ec39d812b1369aa9f",
+      "source_files_sha256": "edb2e52870de9b37c00ff2290715767d8e59b8d54155118da1899c23541f0a0c",
+      "native_return_sha256": "763964e161aac78c58be3c5dd2deb5b907dd20e68f7b4be503dfe3d1eb3f466e",
+      "full_verdict_sha256": "4443fe862cc9f9ae0a1a93a45ebc3641af4780d12c3707babc5a3ed21141b83a",
+      "local_verdict": ".runtime/engdesign-full/results-final/NS_PA_SS_03.json"
+    },
+    {
+      "id": "NS_PA_SS_04",
+      "runtime_family": "iverilog",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "code",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "NS_PA_SS_04",
+        "upstream_log": "EngDesign-Open/NS_PA_SS_04/logs/NS_PA_SS_04_log_deepseek_r1_1.jsonl",
+        "log_sha256": "0e541376bf2b6a1dcaad1f6ef094d58562dea1c1985d8727aa257f9b2a4273d8",
+        "submission_sha256": "a4fba9f623dc107215437650bb282bc974bfa64ad0339139ca610a0b92706afb",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "5163b287834e7529dc5bfa3e41191d1420b0e2154a017abe286044e8582963d6"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.147,
+      "subprocess_executables": [
+        "iverilog",
+        "vvp"
+      ],
+      "subprocess_evidence_sha256": "0acccd58bec5dd5cacde7579c12d6c6934a50bc0dab5bbded235e59bdbe55689",
+      "source_files_sha256": "ed19864fec6aed94f137e546e1a4cc91002a3a633a6f361d54b540ae0b6841c8",
+      "native_return_sha256": "9199eaf9a09f185dc9cdef45081c14ca659a95665b8b05ca6944e6c025f0cecf",
+      "full_verdict_sha256": "bd0c8f60a1c6ec79526c67fea9a6a9f41c30971c32948f15173fea37504591ba",
+      "local_verdict": ".runtime/engdesign-full/results-final/NS_PA_SS_04.json"
+    },
+    {
+      "id": "NS_PA_SS_05",
+      "runtime_family": "iverilog",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "code",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "NS_PA_SS_05",
+        "upstream_log": "EngDesign-Open/NS_PA_SS_05/logs/NS_PA_SS_05_log_4o_0.jsonl",
+        "log_sha256": "288de0a9b7e6b2c07c0bb22bc0e51ff7dc34bbf97e10ca847dff8ac45ead9b2a",
+        "submission_sha256": "a9147b1a4f0af38809b8e073dbe8e611034e6a0912e7c014197fe3c944c36128",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "5163b287834e7529dc5bfa3e41191d1420b0e2154a017abe286044e8582963d6"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.191,
+      "subprocess_executables": [
+        "iverilog",
+        "vvp"
+      ],
+      "subprocess_evidence_sha256": "0acccd58bec5dd5cacde7579c12d6c6934a50bc0dab5bbded235e59bdbe55689",
+      "source_files_sha256": "1ee99c809c7cd3f6c5eb6dfe913e12f7b4f21673c8fd6783f7b8a2e329b6ab06",
+      "native_return_sha256": "9199eaf9a09f185dc9cdef45081c14ca659a95665b8b05ca6944e6c025f0cecf",
+      "full_verdict_sha256": "c45edfb44da5ca5e244644f69382fcba91d06197e9f56188b1a0d7a729282dae",
+      "local_verdict": ".runtime/engdesign-full/results-final/NS_PA_SS_05.json"
+    },
+    {
+      "id": "NS_PA_SS_06",
+      "runtime_family": "iverilog",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "code",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "NS_PA_SS_06",
+        "upstream_log": "EngDesign-Open/NS_PA_SS_06/logs/NS_PA_SS_06_log_gemini_flash_0.jsonl",
+        "log_sha256": "70643021f4b6bcc815fba54ffc12897b3991fd6825e570fec2e5ec12e4e6ab8b",
+        "submission_sha256": "7ffced46970f4c6128091a572a681d4b9379c16ec1952803d8c8d0137ba53443",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "5163b287834e7529dc5bfa3e41191d1420b0e2154a017abe286044e8582963d6"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.26,
+      "subprocess_executables": [
+        "iverilog",
+        "vvp"
+      ],
+      "subprocess_evidence_sha256": "0acccd58bec5dd5cacde7579c12d6c6934a50bc0dab5bbded235e59bdbe55689",
+      "source_files_sha256": "5377cab8b24317ed99fbcbfd076725a8260136002f6c9c677d80dcc8b9974de3",
+      "native_return_sha256": "9199eaf9a09f185dc9cdef45081c14ca659a95665b8b05ca6944e6c025f0cecf",
+      "full_verdict_sha256": "e4dd1a22b974913b0b732dd5d664189bb43a60fc69f8f714a2bbec1143d4a03a",
+      "local_verdict": ".runtime/engdesign-full/results-final/NS_PA_SS_06.json"
+    },
+    {
+      "id": "NS_PA_SS_07",
+      "runtime_family": "iverilog",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "code",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "NS_PA_SS_07",
+        "upstream_log": "EngDesign-Open/NS_PA_SS_07/logs/NS_PA_SS_07_log_4o_0.jsonl",
+        "log_sha256": "09631c4272744e8babd78e5a39718ab4da24172fbb090add81184e51c69a0f5e",
+        "submission_sha256": "088361ee9c9cb295dca4927458a6cf639380f90ae6f2f7c4c591aca75b41d495",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "5163b287834e7529dc5bfa3e41191d1420b0e2154a017abe286044e8582963d6"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.204,
+      "subprocess_executables": [
+        "iverilog",
+        "vvp"
+      ],
+      "subprocess_evidence_sha256": "0acccd58bec5dd5cacde7579c12d6c6934a50bc0dab5bbded235e59bdbe55689",
+      "source_files_sha256": "e708c381d5371bd5b65bcaf9d9fabdaf68488fdd46653bb374e4c4a47013a1d8",
+      "native_return_sha256": "9199eaf9a09f185dc9cdef45081c14ca659a95665b8b05ca6944e6c025f0cecf",
+      "full_verdict_sha256": "963c2d88b123506b6342f1d5957e4eb7798bc2464cbfa044a99c021670c7a591",
+      "local_verdict": ".runtime/engdesign-full/results-final/NS_PA_SS_07.json"
+    },
+    {
+      "id": "NS_PA_SS_08",
+      "runtime_family": "iverilog",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "code",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "NS_PA_SS_08",
+        "upstream_log": "EngDesign-Open/NS_PA_SS_08/logs/NS_PA_SS_08_log_deepseek_r1_0.jsonl",
+        "log_sha256": "aed7fd92e2db103c62d099b77cc15d0fe75fe4b9e40e7a627b198e3d8050659e",
+        "submission_sha256": "56a43c71545c2c0cc6de24b5d55ebbfff83fbf838adb08e87102b14b321432ba",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "5163b287834e7529dc5bfa3e41191d1420b0e2154a017abe286044e8582963d6"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.255,
+      "subprocess_executables": [
+        "iverilog",
+        "vvp"
+      ],
+      "subprocess_evidence_sha256": "0acccd58bec5dd5cacde7579c12d6c6934a50bc0dab5bbded235e59bdbe55689",
+      "source_files_sha256": "cc3c6d6f08ec7f2f5f13a7140f097d325c5cc354d0dcdcdd4808a7ab4eca51b2",
+      "native_return_sha256": "9199eaf9a09f185dc9cdef45081c14ca659a95665b8b05ca6944e6c025f0cecf",
+      "full_verdict_sha256": "9caedbce24202bb1d7fd4490f84fe559a3e43f2d181083191d811af2a61ba47f",
+      "local_verdict": ".runtime/engdesign-full/results-final/NS_PA_SS_08.json"
+    },
+    {
+      "id": "NS_PA_SS_09",
+      "runtime_family": "iverilog",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "code",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "NS_PA_SS_09",
+        "upstream_log": "EngDesign-Open/NS_PA_SS_09/logs/NS_PA_SS_09_log_claude3_7_thinking_2.jsonl",
+        "log_sha256": "1ecf73c9f1a952aaaf47d1e3ffbb1ca98dc72f1c39ef49467f6666e5055e87b5",
+        "submission_sha256": "e35e1c05081fde0875f10f13483ee06bddeb9d207e7991661892ea640190969c",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "5163b287834e7529dc5bfa3e41191d1420b0e2154a017abe286044e8582963d6"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.2,
+      "subprocess_executables": [
+        "iverilog",
+        "vvp"
+      ],
+      "subprocess_evidence_sha256": "0acccd58bec5dd5cacde7579c12d6c6934a50bc0dab5bbded235e59bdbe55689",
+      "source_files_sha256": "80ff1f4a49b68700658f877583ff5e6ffd6bce4fd113ca89d078b60647b1b8a4",
+      "native_return_sha256": "9199eaf9a09f185dc9cdef45081c14ca659a95665b8b05ca6944e6c025f0cecf",
+      "full_verdict_sha256": "a1eb0526d43eb00660b272ccf676d864478ee2dc14544db34f37a7405242fade",
+      "local_verdict": ".runtime/engdesign-full/results-final/NS_PA_SS_09.json"
+    },
+    {
+      "id": "NS_PA_SS_10",
+      "runtime_family": "iverilog",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "code",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "NS_PA_SS_10",
+        "upstream_log": "EngDesign-Open/NS_PA_SS_10/logs/NS_PA_SS_10_log_claude3_7_2.jsonl",
+        "log_sha256": "8186a6b53db958a545a48460d980599d2c9b84979c4d226f9ff8d37a51e28f95",
+        "submission_sha256": "87e2befbf4df13dfd81aa02cbb2612ceb79c3307aaf9392210703376a1ea6d26",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "5163b287834e7529dc5bfa3e41191d1420b0e2154a017abe286044e8582963d6"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.2,
+      "subprocess_executables": [
+        "iverilog",
+        "vvp"
+      ],
+      "subprocess_evidence_sha256": "0acccd58bec5dd5cacde7579c12d6c6934a50bc0dab5bbded235e59bdbe55689",
+      "source_files_sha256": "f1dde22ca12aa07bebd6c2426d82e9c2dc9233282c6e7973992c1f7364dd1ebb",
+      "native_return_sha256": "9199eaf9a09f185dc9cdef45081c14ca659a95665b8b05ca6944e6c025f0cecf",
+      "full_verdict_sha256": "6ca3b248674645699b22963c21d21c42d4ccb7dc70b9665d916b193178a252dd",
+      "local_verdict": ".runtime/engdesign-full/results-final/NS_PA_SS_10.json"
+    },
+    {
+      "id": "RK_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "RK_01",
+        "upstream_log": "EngDesign-Open/RK_01/logs/RK_01_log_o4_mini_0.jsonl",
+        "log_sha256": "e7d8a483f8b9123a59ca93358f71a9f90bff9a3576e5b9fd37ae7b815d3a24d1",
+        "submission_sha256": "9477e4a8d261e329fdee3a2be53d03553c365f49c5696034e5e3a84d4b4778e8",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 80.0,
+        "confidence": 100.0,
+        "details_sha256": "14bea604ccbb61a28d34fef06a29f97f371e7665f671b8f1542dda5d6b079c6c"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 80.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.254,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "e9e64d4f84092ef48b4c52c500bcf12faa3f00772321a1cde94e9eed62d0f2a5",
+      "native_return_sha256": "b2bbc018910f544c550c91552ed9f38ea41e194be9d58ad6af652c974e003cdd",
+      "full_verdict_sha256": "d9e0fe15084758df6d7607c44a71f7c2d3a653f5a8373b141b665d18ab0d0d63",
+      "local_verdict": ".runtime/engdesign-full/results-final/RK_01.json"
+    },
+    {
+      "id": "RK_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "RK_02",
+        "upstream_log": "EngDesign-Open/RK_02/logs/RK_02_log_o3_high_2.jsonl",
+        "log_sha256": "48a0444d4fca29911eb89c8396e2948c6a99a1548cd8bb17422e67b033721bc0",
+        "submission_sha256": "4921dc1b313917d946a147574203e083c425b339d45b73efc12321968ba4b435",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 80.0,
+        "confidence": 100.0,
+        "details_sha256": "7cb2b86d2457949716266a370f36115a652ce5c56173bca1f77fbf067e7c637e"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 80.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.255,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "d34e0f31d79a27b6edc619c4b57d935e584228ed86951b2fb19e7d997197cb97",
+      "native_return_sha256": "8ec572402908377187c9104c13c3920d27af0f7e6d25e1031b39bec03804930f",
+      "full_verdict_sha256": "d4f0f339a025b297be0f470c9c91af8ae079449dfe46cad9c579ce25f9de24b8",
+      "local_verdict": ".runtime/engdesign-full/results-final/RK_02.json"
+    },
+    {
+      "id": "RK_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "RK_03",
+        "upstream_log": "EngDesign-Open/RK_03/logs/RK_03_log_4o_0.jsonl",
+        "log_sha256": "3196a4d6af9a1c8c599170c1dcc37fc61f04767a0954dcc4c963b49930c1283e",
+        "submission_sha256": "5f3daf67726fc081530157f5b9b0c22e1ead39b212a1f944182d6d2e50ad922a",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 50.0,
+        "confidence": 100.0,
+        "details_sha256": "85997e9e0fbcb1f3736244a91d0126fd8aaf94f18f40e7b5f82a664cbccf4298"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 50.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.255,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "32486a998888298bab2cc87f752f8af3addbb5b736e59f9b8285c3287749debc",
+      "native_return_sha256": "926217e7791b5289d20ae265ac40eb308496b775a0b356748ad3677ba1448f03",
+      "full_verdict_sha256": "99b58276fc81d483f3a0527659a9f2fca0372048de32e829fb1e8a232b38e9cb",
+      "local_verdict": ".runtime/engdesign-full/results-final/RK_03.json"
+    },
+    {
+      "id": "RK_04",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "RK_04",
+        "upstream_log": "EngDesign-Open/RK_04/logs/RK_04_log_deepseek_chat_0.jsonl",
+        "log_sha256": "b1f96d640131468d8c65605cc0d407e33eed052ce096e69404c658b12798226f",
+        "submission_sha256": "7818d882a2c000ea3da48c45bc4f6802880440efaee9b87e0e044fe76823a5fd",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "cc3f2d12b90e534603810b1afffdc6bc0f64a80f5d17c9c95f5ca4e12f6c7725"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.253,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "1a7c040f0ef320d75d10b3c8f0c146bc730325eea11e3ddd79c172292a4e549e",
+      "native_return_sha256": "dc12957c5c31b97e6bb7f2e6d27fdb67269ed9ecc528b4509a00c54803837b84",
+      "full_verdict_sha256": "a0b1c88e703e7c89fd69ecfb9df7a287f66308fad3bbd4675010343a91d173b0",
+      "local_verdict": ".runtime/engdesign-full/results-final/RK_04.json"
+    },
+    {
+      "id": "RS_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "RS_01",
+        "upstream_log": "EngDesign-Open/RS_01/logs/RS_01_log_4o_0.jsonl",
+        "log_sha256": "e262d5a99e3d5a561b86af8aac062e9738aaf83a68f3bc06860f83fe183e829e",
+        "submission_sha256": "b07eac9bb64c6a6d61a379701a82db9e2567474cbf94f9590c53bcbb5c8bd340",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 0.0,
+        "confidence": 100.0,
+        "details_sha256": "d58173040b9d69f173308f022972fca4933536a676b34e42f7e0b4c5d622d2e0"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 0.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 2.867,
+      "subprocess_executables": [
+        "fc-list",
+        "fc-list",
+        "lscpu"
+      ],
+      "subprocess_evidence_sha256": "6c50d43c23e3ad0f497f29d121290d2fe0de6a20dc59f3381a57fdd691cb21b2",
+      "source_files_sha256": "21f1e6bd9df6da29751debd8bc1bf66eaf4866aa4386049fb380deb54d1fbc0d",
+      "native_return_sha256": "1a1a775ed7fbeea5e025cf649d3ee3714fc5376ff039a1b471a95e8af9397abd",
+      "full_verdict_sha256": "8f8f094eb7622fa06f20d6fc33425e981b1d1769bffa945a23ae6b623619e1f3",
+      "local_verdict": ".runtime/engdesign-full/results-final/RS_01.json"
+    },
+    {
+      "id": "RS_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "RS_02",
+        "upstream_log": "EngDesign-Open/RS_02/logs/RS_02_log_4o_0.jsonl",
+        "log_sha256": "aa32076e600f0a71fda3f0a3af224175676af3affcd8d493fadbab14039b0f00",
+        "submission_sha256": "c1f7d0d26574587d935bc170c2bd92231498d485c119a94e8614b07b8252238a",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 0.0,
+        "confidence": 100.0,
+        "details_sha256": "6391f0d2a95acafd602810c32552a2dd02a8379f063ce2a9c3b1f81a5bb7770a"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 0.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.266,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "4912f4238066997e5cb2b318d43a81b8e007fc649f934339c0ad497feb2048cf",
+      "native_return_sha256": "6df20fc3f3304fe55f637d51cdeab3bb148835217bf4bd67d055ce8832773e64",
+      "full_verdict_sha256": "68bde2aee4fe48772148b4bdf4eb2caee4c4b30ac773f552a853a0bd338a17a9",
+      "local_verdict": ".runtime/engdesign-full/results-final/RS_02.json"
+    },
+    {
+      "id": "RS_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "RS_03",
+        "upstream_log": "EngDesign-Open/RS_03/logs/RS_03_log_4o_0.jsonl",
+        "log_sha256": "364fa0b55715ad6cec1fc6bb6a3cdf10cb7b493d79f620fe6cbf431bf5730358",
+        "submission_sha256": "39d2027c094b0dcdd61ed6a76dbda8f648ac15ac4b44d87d8b4c7eeedeecd7bb",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 0.0,
+        "confidence": 100.0,
+        "details_sha256": "57744773c0e74dcbb14d9e75dea28eccc937018e99579edf8c5c2e9cb8db228f"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 0.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.254,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "4f8ee94404a85fdf02cc7fd04ee31de35a44f68f7ee746e6b3f9bae5ed8a7139",
+      "native_return_sha256": "fb3bf07fbc7d01b57a35338f456e478ee52c10fb7403ced072534b9ed783e0cf",
+      "full_verdict_sha256": "d61c22f6bdb0bee2189b7e426192fa670a322a57c61eb813b22f0832b1ec1b77",
+      "local_verdict": ".runtime/engdesign-full/results-final/RS_03.json"
+    },
+    {
+      "id": "WJ_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "WJ_01",
+        "upstream_log": "EngDesign-Open/WJ_01/logs/WJ_01_log_claude3_7_0.jsonl",
+        "log_sha256": "9b90802b1b3653a52b6e728eff5bd424844c60293eb90c5541e0e113daa24901",
+        "submission_sha256": "82d4ef09d4b709616d5d96ce4ec6379c26de643c2b276c401f1aedb8107a0fde",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 52.18474346916197,
+        "confidence": 100.0,
+        "details_sha256": "56b189fb19c8b8054ee3d0c37d31ce40e29083cec97df591468dc19967c1c553"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 52.18474346916197,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 1.119,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "9d65c884564c89ef05dd5370d54fc78e37f6dcc13c24c082e8b11f28a032ca5b",
+      "native_return_sha256": "a958450de480c7410f3532e4e305f6dc54dc045b3069a018c3e4149f1292a0bf",
+      "full_verdict_sha256": "cbca569788b05dc207210d1e8d70564a1d4315eb5be93898caee68fe9fc79a0e",
+      "local_verdict": ".runtime/engdesign-full/results-final/WJ_01.json"
+    },
+    {
+      "id": "XG_08",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "XG_08",
+        "upstream_log": "EngDesign-Open/XG_08/logs/XG_08_log_4o_0.jsonl",
+        "log_sha256": "e777acda124dbc97118a260f88dfb5471563a350206d09240536f6c1831428e7",
+        "submission_sha256": "1c6b3d64137c2b22c4e1d154976a95b266fcafe813f8c3b38dd4f2b8699847e7",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 54.0,
+        "confidence": 100.0,
+        "details_sha256": "3d0f34f66214f16bdbdb7c45c3a4edf7846bda0a01ed24ce4f95615c69b35606"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 54.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.696,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "83c1a176a48bce5c06d480a0bc2178c1acdfbeda9b13bb318f5422405f0b1183",
+      "native_return_sha256": "0ba3934ab4838356692bb639fa25bc2cb2d95bbfc7d03502d93e0be62d867d93",
+      "full_verdict_sha256": "4a9a33cd166310d55145cd53f1e7a3d1c01b386baf579e79a22e05a888f0c95e",
+      "local_verdict": ".runtime/engdesign-full/results-final/XG_08.json"
+    },
+    {
+      "id": "XG_13",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "XG_13",
+        "upstream_log": "EngDesign-Open/XG_13/logs/XG_13_log_4o_0.jsonl",
+        "log_sha256": "7c2cf9e25809681be7eb08af6d107430d0b1b972368d760bc668e63f86e1b720",
+        "submission_sha256": "4cfe0e3f8c81b5bebf5d2a356b78e9c8ed63e0f011c9babc3cbb795db7bff686",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "372e5eed1ce14722d8ea99b2bd69fb8c59be8e337ce05cc632d79c024f6f219b"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 1.386,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "11f0424c3c51df18e9188f1980ae60cc39cbfd374b80971bb5a7f2ba3d4e0c13",
+      "native_return_sha256": "a954c8bf707d5f202991867894a2c8db471ab1333dd5fc9f92c4df8a5668e2b4",
+      "full_verdict_sha256": "727815e62a075b812df759575951e515eaae25a394fda4829e3715e57bfc332e",
+      "local_verdict": ".runtime/engdesign-full/results-final/XG_13.json"
+    },
+    {
+      "id": "XW_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "XW_01",
+        "upstream_log": "EngDesign-Open/XW_01/logs/XW_01_log_4o_0.jsonl",
+        "log_sha256": "be0000744f72da7e225f2164117b6ec8136a7d847403a2864da0eaf09c1b8c37",
+        "submission_sha256": "1ccedff99d139889da6b8029b33dfc3e2a650e07949f06c11571563e4fa99cfe",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "1fed643f8ba6374803783698b50b2fb8512814b42e2092041aefde329be4f3d1"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.258,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "ff05615678a9472dca67473b11cd1a2d874254d7312ab9a6b33a4d94c81ee987",
+      "native_return_sha256": "fe51abc34380475c6ddc5b7fb2eb823d593d30dfb4dd07aa03c79717deb2cecd",
+      "full_verdict_sha256": "f3a0f5b3fcf16f23dbf300f14fafb9e33983b35911c99cf803db83a8e8cbb754",
+      "local_verdict": ".runtime/engdesign-full/results-final/XW_01.json"
+    },
+    {
+      "id": "XW_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "XW_02",
+        "upstream_log": "EngDesign-Open/XW_02/logs/XW_02_log_4o_0.jsonl",
+        "log_sha256": "d36565b26242d930fec35ebf29233d99533c89fe1a89ea62183ee2b56a68dd3e",
+        "submission_sha256": "407f7ebcdd3fe8f462474c085322ed89cf3665667449588d0af6878641fd9c8c",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 20.0,
+        "confidence": 100.0,
+        "details_sha256": "4ad1e7f68192009f82ed2efeb47c18a98bf87c77c05966fd3a606e7041dedabf"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 20.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.26,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "5db609ee69c4da89573365915b3aac804923e06dfaa9fd15d81d86dc545f8019",
+      "native_return_sha256": "092642a756ab705787b0e57c6d88330e90bdd669be1566837c65434d7b011c9e",
+      "full_verdict_sha256": "c723303538234c1b3b0333a1fd7c88d85c28ee56ddb990a31dd60d7ee827136d",
+      "local_verdict": ".runtime/engdesign-full/results-final/XW_02.json"
+    },
+    {
+      "id": "XW_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "XW_03",
+        "upstream_log": "EngDesign-Open/XW_03/logs/XW_03_log_4o_0.jsonl",
+        "log_sha256": "1da6f12a0b1be66545432b518304cb1c3d6f8d573da7e0a4c7b0756a812f3db2",
+        "submission_sha256": "15e145b43ff82f268265ebf42265ec3e81372bb942bec18f7d22b1d4314c8e6b",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "183bd0831d9cfec7167da698ff19aaceb4b95fec5da7057783a69a7150698944"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.264,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "8fa89cee55ecc10167ca6942d448a98a45bc80037f9e0b1daba884b06d7c5460",
+      "native_return_sha256": "53a76369d886d71521afab4faf5ce866efd6b56cc3d0bf795ff7f9cd414753ab",
+      "full_verdict_sha256": "ef40fe0f31f128f55c6ed8e9866559776052825dff9aef143e6a220e6cf25858",
+      "local_verdict": ".runtime/engdesign-full/results-final/XW_03.json"
+    },
+    {
+      "id": "XW_04",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "XW_04",
+        "upstream_log": "EngDesign-Open/XW_04/logs/XW_04_log_o1_0.jsonl",
+        "log_sha256": "1192c916f8347e785396f29e3bf937d88841fe2ac634ae658b56463a693cf0c5",
+        "submission_sha256": "3439fe8e70b4a573f35c855e44b40400b7038c8ffce21caf42e2b71b1468754b",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "67c84620b149c3e7e25a90e12c58853f3b30132baf36d5914df6209a038e9a07"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.257,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "ffd7e1e82c4237abfe1ced99686995efee725cd6f8defe1ff9d144b8928487e6",
+      "native_return_sha256": "9bed66e79b77be7f0bd49a549ac2ae79a920b440848eedb3fc3e61d2382f9aec",
+      "full_verdict_sha256": "67f7b4c91117311c3e2121ddcb3988c3a11193ef93f97bb784fd2438ce659db9",
+      "local_verdict": ".runtime/engdesign-full/results-final/XW_04.json"
+    },
+    {
+      "id": "XY_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning",
+        "tetromino_pattern",
+        "transformed_pattern",
+        "verification_result"
+      ],
+      "published_input": {
+        "task_id": "XY_01",
+        "upstream_log": "EngDesign-Open/XY_01/logs/XY_01_log_4o_1.jsonl",
+        "log_sha256": "ce8f6ffa2bfdce293de0068aab499e79a5f9570c6203e0503ccd29c702869b33",
+        "submission_sha256": "09a0aa2e27b9a0f80dfba8aa7a93136cdaf7d36eac1bd65a5c7dfd68e6e83096",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "43b630bfd69e9fe3d53c7fe3dfc654b99d529aa545e76b0146fb215ddc1a6400"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.202,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "e03d8060ab532467016a8841cb1b9c4fa6733225681241a647947c3222b19f32",
+      "native_return_sha256": "2980217ab3c505bd3ebc8b270225bb572a536625153384dd6ae76e3245a1e9f0",
+      "full_verdict_sha256": "c080f979b343a21472fb842d23c66e730b985cdbc4bacbb98d7a1e9fcc8cac91",
+      "local_verdict": ".runtime/engdesign-full/results-final/XY_01.json"
+    },
+    {
+      "id": "XY_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "XY_03",
+        "upstream_log": "EngDesign-Open/XY_03/logs/XY_03_log_4o_0.jsonl",
+        "log_sha256": "2c6bf8d7ba19ac0802a55346ef88252db853f35d0ad00dde6f3a3ca8737f1733",
+        "submission_sha256": "081b8d38033f2ce584f72417fe1cf412a2a454e3fb4e30edd69737f29eef631d",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 80.0,
+        "confidence": 100.0,
+        "details_sha256": "b489eb7bfdbf434b139e6327d395cb721955b2a7631906d1ac6070c08c35ca28"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 80.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.263,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "b9bc3f86bf7b52e87e28822a241f6617626fadd9ed30635887425d6b0d12d85e",
+      "native_return_sha256": "dc2579faefad0f9a03b2223f0ff53f32ad26bb47bcb666dd364ea2c7742cad0b",
+      "full_verdict_sha256": "f2784e4e80fc887c8c15f66f6ad46ea35cff129534b978a6600bc614f030c74c",
+      "local_verdict": ".runtime/engdesign-full/results-final/XY_03.json"
+    },
+    {
+      "id": "XY_04",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "XY_04",
+        "upstream_log": "EngDesign-Open/XY_04/logs/XY_04_log_4o_0.jsonl",
+        "log_sha256": "40117a4d59a008b5cad16fff4e26d7c3c88190822e0b4231545b424ce18ab43e",
+        "submission_sha256": "3a10bf1d20e287be37e8dfbf597618418fd9a5880fcd359f4636e4eab8106231",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 58.0,
+        "confidence": 100.0,
+        "details_sha256": "8702cfeb04665b999ba99f9fcc6af6a4f672a97678beabc7228adc8ff3781da8"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 58.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.259,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "616ea3e72ac4cd18d712ad2cc421dbecf489e6a4f3d5d53e3f82a3e3c5997353",
+      "native_return_sha256": "5447d423412937baeec60dceece14084d774f970534bb13045f577bcc2106ffd",
+      "full_verdict_sha256": "a11d54520f21dfe6cc4528bfa46452f30c861abb1b76ad3848f11055844a2a8c",
+      "local_verdict": ".runtime/engdesign-full/results-final/XY_04.json"
+    },
+    {
+      "id": "XY_05",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "XY_05",
+        "upstream_log": "EngDesign-Open/XY_05/logs/XY_05_log_claude3_7_0.jsonl",
+        "log_sha256": "b19542ff78152860805928d67ca2c3129016edfd1fb34b6d47967d9e71e8ad51",
+        "submission_sha256": "1ca4e1bbd8940d94743e78ebe1122c90ece40c99a8dbe14f26b4f100f42469c8",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 87.0,
+        "confidence": 87.95833333333334,
+        "details_sha256": "92c9c8af9c655921ab3f0edd8fb24f8793af13aa57806084e06a6d5673702bfb"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 87.0,
+        "confidence": 87.95833333333334
+      },
+      "elapsed_sec": 0.258,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "034210405d0dbac77be8af3865c107d05e782532708f2bea685e4e3b925a0c66",
+      "native_return_sha256": "f18288fd9e586be7f63aeec12ad3548eb86a2e27ff1c7c2a5405a959de53a127",
+      "full_verdict_sha256": "c6a3b875662921843e4ee7b28be54f839054acdef6b7723bdeee4d8358754716",
+      "local_verdict": ".runtime/engdesign-full/results-final/XY_05.json"
+    },
+    {
+      "id": "XZ_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "XZ_01",
+        "upstream_log": "EngDesign-Open/XZ_01/logs/XZ_01_log_4o_1.jsonl",
+        "log_sha256": "c320a8d43eb0d7b106ef89bf4a529ad43faac9ee1f5b05fdc888f6bcf0085703",
+        "submission_sha256": "6d1aaec4127b7d2cb3ba525de45cd744afded672b7c8d84d32a68768b9d001ca",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 80.0,
+        "confidence": 100.0,
+        "details_sha256": "68bd51f30630bffd7b476de641a7fcc6168837207996fdd01f9ff67f235ed757"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 80.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.257,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "cccac41bc5de0a72954186efbcebba57c09b54fc203312241f51f907b051888d",
+      "native_return_sha256": "757bf393e6446cf35ff26d09916318636712698c85d816cd233c26df3a2fcf87",
+      "full_verdict_sha256": "6a734ee4b7f88a8ab270989d55c2b4bdd350a21ba4b03d974bcba66eddd5ef02",
+      "local_verdict": ".runtime/engdesign-full/results-final/XZ_01.json"
+    },
+    {
+      "id": "XZ_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "XZ_02",
+        "upstream_log": "EngDesign-Open/XZ_02/logs/XZ_02_log_4o_0.jsonl",
+        "log_sha256": "93b3d1ce267f5c2684ecb19a5f25168b92d73d8d48a559982997237e3ee87f6b",
+        "submission_sha256": "f5866d51c17f991f5115dd60d7a1a74bac3ae2c021147b976c29cc127e0de16f",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "9401156832f330b33c1a0654c07aedb224673632acb9bc52ae538c093e1d8b8c"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.695,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "53fba2d8fb7497361418f159be981f59acb28d6b0bad88a879a6307c28c528ea",
+      "native_return_sha256": "38f683a7a11e008fa7561e73e687e61d073f3624f3a0dbe823d447e0f76a72d9",
+      "full_verdict_sha256": "abd9ec681de480d9afd258787d2172e7bcd1ad8e3451e2bb73de1f7678e1bac2",
+      "local_verdict": ".runtime/engdesign-full/results-final/XZ_02.json"
+    },
+    {
+      "id": "XZ_03",
+      "runtime_family": "webots",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "XZ_03",
+        "upstream_log": "EngDesign-Open/XZ_03/logs/XZ_03_log_claude3_7_0.jsonl",
+        "log_sha256": "e1d504702c89f7170fdea843db383bf5bab76888dea65f7e0e056cf29d910608",
+        "submission_sha256": "5c0bde7f81de12d357c5d5265845b58255173c3c1ca612b5f7f1b5753d9987ad",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 98.0,
+        "confidence": 100.0,
+        "details_sha256": "aa9adcaba06fbb9bf2e483dc93cbad1557261f8dc0e3eb6aa4ad0f627fb7a28f"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 98.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 20.454,
+      "subprocess_executables": [
+        "webots"
+      ],
+      "subprocess_evidence_sha256": "0fc9c9b3c96e22e0eb05b72dda72eb910ed6e2886c4f132689660fd9ac75c55e",
+      "source_files_sha256": "3e11901d7472a0be68d544ffe64542bf31ebb4e098adbe602b65bc1e6e38c6af",
+      "native_return_sha256": "b84b5a5be190511bbef933aa0d2b2beeb58ed9a763825565a525280947a04512",
+      "full_verdict_sha256": "61ca364546ee85a7df314d18e6d3cb5db9a67d8b9389432c7707551a546ea1e4",
+      "local_verdict": ".runtime/engdesign-full/results-webots-final/XZ_03.json",
+      "simulator_trace": {
+        "controller_started": true,
+        "no_resource_load_errors": true,
+        "diagnostic_flags": [
+          "--stdout",
+          "--stderr"
+        ],
+        "full_trace_sha256": "e2a22fa9e995646dfac8ed96e3ae047bceb7d13c0aa2dc4a0c9c7bd1a030ead0"
+      },
+      "compatibility_patches": [
+        {
+          "path": "worlds/construction_site.wbt",
+          "kind": "offline_resource_uri",
+          "reason": "Resolve exact R2025a PROTO assets locally in the network-isolated verifier",
+          "original_sha256": "516ca1ef7214cdb9be0e7c2f5d0625a22710c30d59dff880cbf211e7bc3bdeb1",
+          "runtime_sha256": "47bdd965513fd7f929780c98ca3f8b6b6846a412d84df90599f050457af372c7"
+        }
+      ]
+    },
+    {
+      "id": "XZ_04",
+      "runtime_family": "webots",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "XZ_04",
+        "upstream_log": "EngDesign-Open/XZ_04/logs/XZ_04_log_4o_0.jsonl",
+        "log_sha256": "5d5af6c833f6f82a91f22b7326106b3dac00199c5adf0f7e64e6368a6b96ad8c",
+        "submission_sha256": "4caa841e4e140bc385bf58ae02744b364b8903c1f9e2ee5522c04513317c4e64",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 80.0,
+        "confidence": 100.0,
+        "details_sha256": "caf0460614fa6ace7ce2030fd11375c4fff60585fddd68195023b00ed093fa04"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 80.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 19.407,
+      "subprocess_executables": [
+        "webots"
+      ],
+      "subprocess_evidence_sha256": "7a8ee3ad9dfd30fe8139ce1cc995a0b0b8c7659033d25dd8416c7cdf5aef2ed1",
+      "source_files_sha256": "244a2a295692bb1096e35bd657e971f87fc695ead96bc4c62a6402beb8e1a7c0",
+      "native_return_sha256": "31b2dccbc803b881bceda3ab762cb726ac5ab4fb1d3e38e8b2e660d401b87320",
+      "full_verdict_sha256": "5cec7d52cac6c7d1601515f1770358fab5d29274f3c6a91b92ad80b366cdd6bc",
+      "local_verdict": ".runtime/engdesign-full/results-webots-final/XZ_04.json",
+      "simulator_trace": {
+        "controller_started": true,
+        "no_resource_load_errors": true,
+        "diagnostic_flags": [
+          "--stdout",
+          "--stderr"
+        ],
+        "full_trace_sha256": "6cb25026734a745b34273f6188ca5b4914d2e97bf6b4ba309b934c1a75325242"
+      },
+      "compatibility_patches": [
+        {
+          "path": "worlds/construction_site.wbt",
+          "kind": "offline_resource_uri",
+          "reason": "Resolve exact R2025a PROTO assets locally in the network-isolated verifier",
+          "original_sha256": "400bc355156641283eefaf0025a09382fd539b28861fb789e02dc518538df29f",
+          "runtime_sha256": "ebfe249de9040c386feea4602ec194a21dbf222089073c4324be72baa4cbb700"
+        }
+      ]
+    },
+    {
+      "id": "YJ_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "YJ_01",
+        "upstream_log": "EngDesign-Open/YJ_01/logs/YJ_01_log_4o_0.jsonl",
+        "log_sha256": "06b9a7a74b033cbe88ecdd6151c6968c1375429bd92cbb85aaffcfb4a2277050",
+        "submission_sha256": "485a088ef21b8fac81d05f3d1601f0010929f92d7d8700ad4772579aeb02e0aa",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 30.0,
+        "confidence": 100.0,
+        "details_sha256": "bd3c8f6c4384254c221d6573a2df55e300d6e802bdc9e99599750a0ded1cb3b8"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 30.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.7,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "1420d27c2b2e01df051036503819d653ce9f7ac377ecfceb53e4cd69e17cf7c0",
+      "native_return_sha256": "efd7f032cbcb213ac355b66d2c4c6ea432ec091c893e078c4df6627224ab507a",
+      "full_verdict_sha256": "d77175837214ba81c1c4519b406f22aff8e2fc1570422758bc1b83831b5f3645",
+      "local_verdict": ".runtime/engdesign-full/results-final/YJ_01.json"
+    },
+    {
+      "id": "YJ_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "YJ_02",
+        "upstream_log": "EngDesign-Open/YJ_02/logs/YJ_02_log_o3_high_1.jsonl",
+        "log_sha256": "e5fa22fb5dbcf30fb2982ee4a3f249acafbe0eaadf136a1cb6f4bbd5ceb800c6",
+        "submission_sha256": "0adedfdbb674918d91a94c46a48774526e63868f4ff36f19edb653c94dab7910",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 80.0,
+        "confidence": 100.0,
+        "details_sha256": "519f62bc787e376583d4991dd5db28b703663c8d16ad719ca768d9027a0d8d36"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 80.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 1.178,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "eb851f8578259ff83ff8741c0a61a86189ee44e12f8b16b9c8a9fb222465c5d2",
+      "native_return_sha256": "87bcbee4b78cdc47d5dc92c68c0f41850840cca2fa92fd18965d1f95d6c8cef9",
+      "full_verdict_sha256": "8063375c19418741bafb2e672be4519073ff3729c6df2bd38eff385d4e13f998",
+      "local_verdict": ".runtime/engdesign-full/results-final/YJ_02.json"
+    },
+    {
+      "id": "YJ_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "YJ_03",
+        "upstream_log": "EngDesign-Open/YJ_03/logs/YJ_03_log_o3_1.jsonl",
+        "log_sha256": "0cfdfefc2096528bb0b34d40035d18becc489df857dd6491e12543cfa3552e62",
+        "submission_sha256": "78d617d26792c41137b2ffb24d82058ad328f265a7dc7e336debe07c0aa3c902",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 80.0,
+        "confidence": 100.0,
+        "details_sha256": "a0a83695cdc966965e3d06c7d0f8615fb4225966fba717bba7bf8d150b79df65"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 80.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 4.667,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "f793b3fdd5e434eec0f94b5397d31f0c88055047e223bbd1f6db90eb20883eac",
+      "native_return_sha256": "8af33300d01b9c12b09749063204928aa561e8a6a037fe21615596b22f9a4af6",
+      "full_verdict_sha256": "9b282f2fa0a928bf21f5f16597ee5b3e39246e7a7349082e1fa2e80502a257cb",
+      "local_verdict": ".runtime/engdesign-full/results-final/YJ_03.json"
+    },
+    {
+      "id": "YX_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "YX_01",
+        "upstream_log": "EngDesign-Open/YX_01/logs/YX_01_log_4o_0.jsonl",
+        "log_sha256": "d3a2dafbe3a22b7a3c1ef727a5cc6d033f5f040b4963f5c781eea3a2b934d18e",
+        "submission_sha256": "266cc81f197f711c825f35566da94def9cc82d4dd4f477d14935c3a6c384e632",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 20.0,
+        "confidence": 100.0,
+        "details_sha256": "6ff9c64c885bb6ab98805e757a959a4fd8d36741423fb0d86fa65b20f2251b06"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 20.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.695,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "fc5de62c721b311374c691b36652e860c69681d10be37a76a3901fadc3d63e1e",
+      "native_return_sha256": "8e2d90f5cdb4ccac34c8b282e53814b8e352c16a277ce2825741ea02bb85c57f",
+      "full_verdict_sha256": "f21a3024746099b3d807cabea5f707f8d9dcffb1f14c1374522115e671e63f28",
+      "local_verdict": ".runtime/engdesign-full/results-final/YX_01.json"
+    },
+    {
+      "id": "YX_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "YX_02",
+        "upstream_log": "EngDesign-Open/YX_02/logs/YX_02_log_o3_1.jsonl",
+        "log_sha256": "dd3d03d78ebbaa80fdd8cfbee66262a3551bc1424419fd1a546650367d2e7324",
+        "submission_sha256": "90ece22aacd5a9b8114913eb78708a8c0c6b24b03eece9a09cdedc01c2549c9d",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "34e6a008b0743ade8d40a25f28aa2fd81609a773570271342d80f3e073a8d2f3"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.763,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "7807a82887ad98674aeb02b2a90570b98adf35fa1865788b45a7bacd5dfa225f",
+      "native_return_sha256": "d691f39904b39066cc6264d378e3dd1a7f5943badb30d5aff0b9b37c3e2d6200",
+      "full_verdict_sha256": "cd612a945e067f8fdc6765ae58c1aa2f2be098195a631d5f6eb9337be163dbab",
+      "local_verdict": ".runtime/engdesign-full/results-final/YX_02.json"
+    },
+    {
+      "id": "YX_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "YX_03",
+        "upstream_log": "EngDesign-Open/YX_03/logs/YX_03_log_4o_0.jsonl",
+        "log_sha256": "e44dee78412f39049d21d249cbcb6f65aec6e80559f2abe9b5f68c1ab2797795",
+        "submission_sha256": "e40275d234ac6213df13a7be56c8d3717c16b177c3ba23128a9ed12ac028dbe7",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 20.0,
+        "confidence": 100.0,
+        "details_sha256": "d06b6013194fa5d93f1faf95ab7ce47a8145014b78e9a419fe143d9722e7b753"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 20.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.644,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "331752f2c81b8f644ffa5021d69fde33ee66217019d6b05db9357a6edaefbf17",
+      "native_return_sha256": "8b535d06fffc9bb7073f59cad4ba67d54530ab375bac7a59d54cb51bcdc2abc7",
+      "full_verdict_sha256": "f779bea9fcf1351d783f682731e3b01a031f35bf35d6c02fc0ea2db744bc40d7",
+      "local_verdict": ".runtime/engdesign-full/results-final/YX_03.json"
+    },
+    {
+      "id": "Yiqi_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "Yiqi_01",
+        "upstream_log": "EngDesign-Open/Yiqi_01/logs/Yiqi_01_log_4o_0.jsonl",
+        "log_sha256": "6ea1ffbe6cc475a92a662d74d63190ea3c72f8788d43413dbdf8708b168000d0",
+        "submission_sha256": "2af93f68d12e9b8a63e3bee01c8b2ddff9e6ead317c8002e07c93051e3ffc1ed",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 20.0,
+        "confidence": 100.0,
+        "details_sha256": "7c568786dc2f6c6969c03be8062173bb6411adf8b584862c5c29e2eee5fbd743"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 20.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.27,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "1b6d54645fb7e21a61cbd76c93da6458b2c2802ef566c6f548c5d654935e782b",
+      "native_return_sha256": "e421abfe816866afda1848ea4b11043e759ce37fe15862044a43be3ad673c231",
+      "full_verdict_sha256": "a92bda41301b564857470904d8414bd08615571eca84245b81232c32ecf34b92",
+      "local_verdict": ".runtime/engdesign-full/results-final/Yiqi_01.json"
+    },
+    {
+      "id": "Yiqi_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "Yiqi_02",
+        "upstream_log": "EngDesign-Open/Yiqi_02/logs/Yiqi_02_log_claude3_7_0.jsonl",
+        "log_sha256": "b7384824c25ac455e0a86da501a55c49e91b3b19033ed843fc058b1ecb18cee5",
+        "submission_sha256": "03a0f8f057543d5dd9c2a2403250e46f95d89ff483e1497cb367e050438701c6",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 57.621239304480405,
+        "confidence": 100.0,
+        "details_sha256": "7c195d769dfd7c7ca691812b039556dae2547ac772206a547c4a2cef1c798b39"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 57.621239304480405,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.266,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "67c9db7c1f04677d36d55f86c94ab2c006497f134418b45e35a3739116df6f45",
+      "native_return_sha256": "dc3be4017c1e97b993dd8dd9a00095aab12be9ea676aa6c0ab3a904263cb78b1",
+      "full_verdict_sha256": "414fb1257ebb98e676445bbc6dfb6c7798f606324e2e5e07f9bbe6f523ea538a",
+      "local_verdict": ".runtime/engdesign-full/results-final/Yiqi_02.json"
+    },
+    {
+      "id": "Yuqi_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "Yuqi_01",
+        "upstream_log": "EngDesign-Open/Yuqi_01/logs/Yuqi_01_log_4o_0.jsonl",
+        "log_sha256": "c05f1221ee68b08782da8c965856b9a1c0bba9770c7d39f7969ac10808de5fe4",
+        "submission_sha256": "39b234282c5b3fe4588a5708e0d0c53702297d3070f9c3c9a4025f3eb26020b8",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 0.0,
+        "confidence": 100.0,
+        "details_sha256": "488c58d59f051b2e0144199060a1c79ebd717de96a8263a56157b867aa5bc451"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 0.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.145,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "2570b0363df32ea6bfb2cb4b05bfeb061161cb5bd3dcf8caa1a5b897e84df985",
+      "native_return_sha256": "c87c8fa477ce82ce3b5da800abbd3eaa11e059c70359653c70aa181a16f88b7f",
+      "full_verdict_sha256": "3df94d9dd8924de873d381d4b6e4609106ab8ffe9570ce1f472e6e3a3f51ef51",
+      "local_verdict": ".runtime/engdesign-full/results-final/Yuqi_01.json"
+    },
+    {
+      "id": "ZC_02",
+      "runtime_family": "octave",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "ZC_02",
+        "upstream_log": "EngDesign-Open/ZC_02/logs/ZC_02_log_claude3_7_2.jsonl",
+        "log_sha256": "03284aee32f20e96cac09021b91fc68a19be843c46b7d694ac5ec57eeab3cade",
+        "submission_sha256": "66768b7b5f106d314e56eddffd4ed48fca837d45713f1eca2569baeb7c4469cb",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 95.0,
+        "confidence": 100.0,
+        "details_sha256": "70cad4e13baa9768ecfdc9c7db9f5783c0749cd91512d5561a8a727db1996838"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 95.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 1.722,
+      "subprocess_executables": [
+        "octave"
+      ],
+      "subprocess_evidence_sha256": "b04126abb2ba19bed8d6ea001538346173e5168fd88352cc70a728c86ffee00c",
+      "source_files_sha256": "8082e0bb5bea4e5d25d0aa5f58f7470dffd2cc2377018f0e2a524718700cff31",
+      "native_return_sha256": "06bde3aee6c479669825835cbf8ff5228be3395a416f4860afca8b9d1d191c3d",
+      "full_verdict_sha256": "15df2889a4d95e2469a1104e2e5d3b1cb26b4e25cea81e6ccc7e2fbd84a325c3",
+      "local_verdict": ".runtime/engdesign-full/results-final/ZC_02.json"
+    },
+    {
+      "id": "ZC_03",
+      "runtime_family": "octave",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "ZC_03",
+        "upstream_log": "EngDesign-Open/ZC_03/logs/ZC_03_log_o4_mini_0.jsonl",
+        "log_sha256": "7d1d3e0083ed21d38ae7199dbeeb4c5816cd2ac1639f1c8a0cfffbc7f033c0be",
+        "submission_sha256": "484035550fdf96841759c9b27abc7c94cdc5e355affd82ecb2503d4dcf41aeda",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "7d58bfb9c28c43c463ce9740c2530a357f7ddbe45f6e37c33b20b6807d549f55"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 1.69,
+      "subprocess_executables": [
+        "octave"
+      ],
+      "subprocess_evidence_sha256": "b04126abb2ba19bed8d6ea001538346173e5168fd88352cc70a728c86ffee00c",
+      "source_files_sha256": "1ab8ce7a42aa78b52c5816b0d6a33145569cc595934025c9e9937c24e29cfa23",
+      "native_return_sha256": "4ed9d256f06d191e064dc9f99b143d1e83f80e2c7dcb04b02cee9557136975f4",
+      "full_verdict_sha256": "4311a75699472c06cc9a0a2661a5976923e00e779590e95c97f68737b20e295a",
+      "local_verdict": ".runtime/engdesign-full/results-final/ZC_03.json"
+    },
+    {
+      "id": "ZH_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "ZH_02",
+        "upstream_log": "EngDesign-Open/ZH_02/logs/ZH_02_log_4o_0.jsonl",
+        "log_sha256": "e13c282f021c1312eb534c409b1d6e24da23db973c31ee2248d34f4ce6532218",
+        "submission_sha256": "c3e5b7795f1f42f853078357ff2848f432dce8d22bc3d9ad1f2d5b14a038d809",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 70.0,
+        "confidence": 100.0,
+        "details_sha256": "257006c6ad981610d30d647c6913efb0198ef5878a0d89015476a3970349ea62"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 70.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.668,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "e5c6b17d48791d4eb4605b6de0c736b19e315ab75a855fb621bf99ad51720f75",
+      "native_return_sha256": "d60a6380fcd1032d79130af8e6ab0318f8a044001138cecff9839111666eaf2e",
+      "full_verdict_sha256": "08c7479c90112032aaa6e2c28ed0cebbd00fdc04a239bbe335f33921dc1b7a01",
+      "local_verdict": ".runtime/engdesign-full/results-final/ZH_02.json"
+    },
+    {
+      "id": "ZH_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "ZH_03",
+        "upstream_log": "EngDesign-Open/ZH_03/logs/ZH_03_log_4o_2.jsonl",
+        "log_sha256": "3873e27dfc8f0494c41ab356aebf50d4aaa7ada3948db46d5412b6982cf08492",
+        "submission_sha256": "ea8c8b5538a7e48f35cec93f08daef2c7e0cdd27489b074b257ca5d375d7f566",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "79f9ba4eecfcc77cb8db2619772a3e40487190af24d35e4a131a2f4c0fa7318b"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.688,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "97831d89784647ee71bf7f699df2885daa332faf15ddd43bd0e3818924e6f386",
+      "native_return_sha256": "4aa554e15d0542ed93dd384f1818934dbaf0cb2470b51f813f9939453698b867",
+      "full_verdict_sha256": "49d2640fbfba45a93e4bfb0012bbd27f3dc58819ab775aaa94ce10cee89c11cb",
+      "local_verdict": ".runtime/engdesign-full/results-final/ZH_03.json"
+    },
+    {
+      "id": "ZH_04",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "ZH_04",
+        "upstream_log": "EngDesign-Open/ZH_04/logs/ZH_04_log_claude3_7_0.jsonl",
+        "log_sha256": "f68e480b1833d140d941eacfbda2d97fd51b09b46ffb7eb3aa368224a92a0d6b",
+        "submission_sha256": "e6315fc45208207380a7209a4030a59716d700a53f715bf90de46e25981308ae",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "3b95b404cc721c708e5d80c4c03adab78b5dfaf09bd9a434f75cbaf609657526"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.693,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "d790880a5c3622b1ee5af1287cf87a46ba10c0daa0c66f7e89d01c9323f2be87",
+      "native_return_sha256": "d538e3ac44ed182f91d6573f96798b1113d058a2cf2eb47b49664ccd1205a706",
+      "full_verdict_sha256": "ff6115ffd1cb186d358e6867ebb14474537a7090d9fd6f521fc829657b81ae9b",
+      "local_verdict": ".runtime/engdesign-full/results-final/ZH_04.json"
+    },
+    {
+      "id": "Ziheng_02",
+      "runtime_family": "octave",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "Ziheng_02",
+        "upstream_log": "EngDesign-Open/Ziheng_02/logs/Ziheng_02_log_4o_0.jsonl",
+        "log_sha256": "e9a812244364771a6c594c7a4a10748a9bfa8a602a8a95f24036f37f831feb17",
+        "submission_sha256": "3ab101f5f230e4a38a30d6fa523975581bee10d94359ecac1258716f8a9bd599",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 0.0,
+        "confidence": 100.0,
+        "details_sha256": "a1ecb3a2a7652360b1a41ef907e8f0d051e2b71a33956acec1cb2c184966ea39"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 0.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 1.704,
+      "subprocess_executables": [
+        "octave"
+      ],
+      "subprocess_evidence_sha256": "b04126abb2ba19bed8d6ea001538346173e5168fd88352cc70a728c86ffee00c",
+      "source_files_sha256": "9e1027af974141325faeaa3bfddd2cb0425b2330f55c9d3e2f784b94b9ead06d",
+      "native_return_sha256": "9d51aac8032cf4f91e60489cc499c15a964ce7544bbe467de448556cc60600cf",
+      "full_verdict_sha256": "57f394500298769b333764379be3830017793e6c79b00e7c99fa49f7c1dc6ac7",
+      "local_verdict": ".runtime/engdesign-full/results-final/Ziheng_02.json"
+    },
+    {
+      "id": "libin2_01",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "libin2_01",
+        "upstream_log": "EngDesign-Open/libin2_01/logs/libin2_01_log_4o_0.jsonl",
+        "log_sha256": "158062c052cee8081f74e893bb9f9048786dfc2dd25361ed32481178a26efcfc",
+        "submission_sha256": "89e08097a7eaf4a6f860f1c227c69ebced55ba7780342cbe0451dee8a4655d93",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 45.0,
+        "confidence": 100.0,
+        "details_sha256": "6cd491743b6aff792528bade2e1b5d891f36c8b1d3619277c68a7037344a2e5a"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 45.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.315,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "28abd4606ed3b79fec1875298675865c3e4bd76ad0e153525fd6ec27a396740e",
+      "native_return_sha256": "5f3d26730bdac8243982d34366b9cf54fdc3e1c85a5c8ba2e98fc8b0c6f1d597",
+      "full_verdict_sha256": "9814ef18aea6e70d8d8c3bd921e1cc362e22d65872c5ac6ae4ceacc6263058a9",
+      "local_verdict": ".runtime/engdesign-full/results-final/libin2_01.json"
+    },
+    {
+      "id": "libin2_02",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "libin2_02",
+        "upstream_log": "EngDesign-Open/libin2_02/logs/libin2_02_log_deepseek_r1_1.jsonl",
+        "log_sha256": "86d013f9abf939307dec0fda40c86e3bb4d42b8a46c9240c242bb15a4a6c7aee",
+        "submission_sha256": "da504b745a5769ddc5eb176a7e693062d9f22f28d98ec84d192987bdb1bc240f",
+        "published_passed": true
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": true,
+        "native_score": 100.0,
+        "confidence": 100.0,
+        "details_sha256": "1697afc8f228f38a9d07036ef98670e08b22977e8c537c7095c8d32747cf3a52"
+      },
+      "rewards": {
+        "reward": 1.0,
+        "native_score": 100.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.261,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "d078c387ccc00ae6e3ca336a395f7e6d0450f3ec99062eef915e8ed57f308a3b",
+      "native_return_sha256": "dfbebe8ad8bc9f5b132cb2b568b268fa086dbbbe91cabe226cfd414462b767a8",
+      "full_verdict_sha256": "6cfc12bede81ccd8f6146647b715788d5a1461ff39e2cc5f850d559b7773f474",
+      "local_verdict": ".runtime/engdesign-full/results-final/libin2_02.json"
+    },
+    {
+      "id": "libin2_03",
+      "runtime_family": "python",
+      "input_schema": "upstream output_structure.Response_structure",
+      "input_fields": [
+        "config",
+        "reasoning"
+      ],
+      "published_input": {
+        "task_id": "libin2_03",
+        "upstream_log": "EngDesign-Open/libin2_03/logs/libin2_03_log_4o_0.jsonl",
+        "log_sha256": "de24c1b0708845552efb6a2a67ca1e4a1d13915a9ad38614e3d03a64ba2b92ea",
+        "submission_sha256": "3950ed046974de33a1698882b318024a81870f84d11ace6330d9a4425d19cb29",
+        "published_passed": false
+      },
+      "startup_probe": "ready",
+      "schema_validated": true,
+      "native_called": true,
+      "native_completed": true,
+      "native_output": {
+        "passed": false,
+        "native_score": 40.0,
+        "confidence": 100.0,
+        "details_sha256": "3455be2f6369262efd03a0afbb320e6e7eeaf0530f5b3aae501a6906f62280e8"
+      },
+      "rewards": {
+        "reward": 0.0,
+        "native_score": 40.0,
+        "confidence": 100.0
+      },
+      "elapsed_sec": 0.254,
+      "subprocess_executables": [],
+      "subprocess_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_files_sha256": "5ad5e8b543ff996cc1ee6ce202846890115a5a89759e437d8f299d07135b7b06",
+      "native_return_sha256": "d437c18f10ae33fec04212f8015068567c18cda58f93b816575ea156b280c18e",
+      "full_verdict_sha256": "4781732d538337f9d9f1d5da009e48c1236e1f1bac90ba11f818c166cdb7a31d",
+      "local_verdict": ".runtime/engdesign-full/results-final/libin2_03.json"
+    }
+  ],
+  "offline_tests": {
+    "isolated_scientific_environment": {
+      "passed": 32,
+      "skipped": 1,
+      "skip_reason": "Harbor SDK is not installed in the independent scientific validation environment"
+    },
+    "scope": "tests/test_engdesign.py and tests/test_engdesign_full.py"
+  },
+  "harbor_acceptance": {
+    "oracle": {
+      "task_ids": [
+        "AB_01",
+        "XY_01"
+      ],
+      "rewards": [
+        1,
+        1
+      ],
+      "run_path": "runs/full-coverage-engdesign-oracle-01"
+    },
+    "codex": {
+      "task_ids": [
+        "XY_01"
+      ],
+      "rewards": [
+        1
+      ],
+      "run_path": "runs/full-coverage-engdesign-codex-01",
+      "startup_probe": true,
+      "native_completed": true
+    }
+  }
+}

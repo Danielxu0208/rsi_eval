@@ -1,0 +1,11 @@
+You are supporting Flower Rose's April 2012 month-end close. Reconcile the operating bank account as of April 30, 2012 using the bank export and cash ledger provided.
+
+Match cleared activity, isolate timing differences, and identify book-side items that need correction. Apply normal bookkeeping judgment, but do not force a fix where the records do not support one; keep those items open and explain why.
+
+Provide a bank reconciliation schedule as of April 30, 2012 that lists the reconciling items, classifies each one as a timing difference, missing bank charge or adjustment, missing or incorrect book entry, duplicate posting, or unresolved exception, and shows the ending bank balance, ending book balance, and adjusted balances.
+
+Also provide a brief memo to the controller summarizing the entries to post now, using the ledger account names where they fit, the main causes of the mismatch, and any items that should remain open for follow-up.
+
+Local Reference Files:
+- bank-flower-rose.csv
+- ledger-flower-rose.csv

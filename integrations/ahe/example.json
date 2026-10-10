@@ -1,0 +1,21 @@
+{
+  "codex": {
+    "model": "gpt-6-astra",
+    "auth_dir": "~/.codex-rsi-eval",
+    "expected_version": "0.162.0-alpha.2",
+    "reasoning_effort": "medium",
+    "timeout_seconds": 600
+  },
+  "rounds": 2,
+  "target_pass_rate": null,
+  "seed": "../../templates/codex_agent",
+  "run_options": {
+    "repetitions": 1,
+    "concurrency": 1,
+    "environment": "docker",
+    "timeout": 1800,
+    "harbor_executable": "../../.venv-harbor/bin/harbor"
+  },
+  "evolve": {"name": "terminal-bench", "version": "2.0", "task_ids": ["extract-elf"]},
+  "test": [{"name": "terminal-bench", "version": "2.1", "task_ids": ["extract-elf"]}]
+}
