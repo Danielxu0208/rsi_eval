@@ -92,7 +92,7 @@
         "libin2_02",
         "libin2_03"
       ],
-      "unsupported_reason": "Not yet adapted: task assets, dependencies and evaluator isolation require individual review."
+      "unsupported_reason": "This legacy profile selects only AB_01, XY_01. Use engdesign-open@open-c8ec338-v1 for the complete Open profile."
     },
     "protocol": {
       "name": "engdesign-native-verifier",

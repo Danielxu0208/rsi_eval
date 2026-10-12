@@ -146,27 +146,3 @@ configuration. Older runs without the required execution identity cannot use
 this recovery path. Preserve those records and start a separate evaluation of
 the unfinished task IDs. See [the shared recovery guide](methods.md#recover-work)
 for SDK calls and managed method experiments.
-
-## Validation status
-
-The complete input inventory was downloaded and verified against pinned Hugging
-Face blob metadata and the catalog. All 128 packages were generated and their
-native rubrics exercised with empty submissions. Fifteen offline regression
-checks cover source identity, private rubric separation, weighted scoring, task
-configuration, credential handling, and invalid-judgment rejection.
-
-Both original images built successfully on Mac with Linux ARM Docker. A
-network-disabled verifier run validated text, saved notebook output, PPTX tables,
-SQLite records, and actual LibreOffice formula recalculation. The agent sandbox
-passed input hash checks, output permission checks, 28 Python module imports,
-and native Office/PDF/OCR/GDAL tool probes. It created DOCX, PPTX, XLSX, SQLite,
-and PDF deliverables and passed a LibreOffice DOCX-to-PDF conversion followed by
-text extraction. These checks made no model or judge calls. An SDK call without
-judge credentials retained all 128 selected tasks as infrastructure failures
-and reported no score.
-
-The remaining scoring blocker is **missing judge API access**. No nonempty
-submission has been scored with the real `grok-4.3` judge. This integration does
-not claim a complete scored run, a solved-task oracle, or paper reproduction.
-See [the machine-readable validation report](validation-jobbench.json) for exact
-checks and the separate native verifier image validation status.

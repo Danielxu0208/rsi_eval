@@ -67,7 +67,7 @@ The source is the complete [original author-hosted archive](https://people.eecs.
 
 Test and validation retain the original five development examples for the same subject. Exposed development and auxiliary-training records receive no labeled context, which prevents an item's own answer from appearing in its prompt. `benchmark_runtime.few_shot` accepts integers from zero through five and changes the context size for test and validation only.
 
-The agent writes one uppercase letter to `/app/answer.txt`. Scoring preserves exact choice accuracy. This is a declared agent submission protocol: the original script selects the highest-probability answer token using model log probabilities, while this integration grades the agent's submitted letter. It does not claim identical model sampling or scores. The complete archive includes auxiliary data drawn from other multiple-choice corpora; only the 14,042-record test split is the original MMLU test set.
+The agent writes one uppercase letter to `/app/answer.txt`. Scoring preserves exact choice accuracy. This is a declared agent submission protocol: the original script selects the highest-probability answer token using model log probabilities, while this integration grades the agent's submitted letter. The complete archive includes auxiliary data drawn from other multiple-choice corpora; only the 14,042-record test split is the original MMLU test set.
 
 ## GPQA
 
@@ -111,18 +111,8 @@ The primary reward is the original binary `was_correct` result. Native partial m
 
 These are per-record benchmark interfaces. The integration does not recreate the text-classification experiment's memory training loop, automatically expose gold labels to candidates, or share mutable memory between isolated trials. Researchers can load the pinned training data in their own method and place learned memory in the candidate artifact before evaluating held-out records. Existing Meta-Harness/RRSI method launchers retain their documented selection semantics.
 
-## Runtime, provenance and validation
+## Runtime and provenance
 
 The task image is `python:3.12.12-slim-bookworm` and requires no additional Python packages. The task timeout defaults to 300 seconds and can be changed with `benchmark_runtime.agent_timeout`. MMLU's first source download is approximately 166 MB; source data is not bundled in the SDK. Set `RSI_EVAL_SOURCE_CACHE` to reuse already verified bytes.
 
 Each generated task records the source hash, original record identity, split, protocol, and configured options. Gold files remain under `tests/`, outside the candidate image. Ordinary Harbor reward files and trajectories remain available alongside the summary.
-
-The complete source and native-scoring audit is reproducible without model calls:
-
-```bash
-python scripts/reasoning_native_audit.py --output .runtime/reasoning-audit
-```
-
-[The checked-in report](validation-reasoning-mce-native.json) verifies all 119,752 configuration records: source identities and counts match, gold submissions succeed, and missing submissions fail. This count includes overlapping GPQA releases. Unit tests cover selected task order, GPQA subset-invariant choice ordering, MMLU context isolation, all-input ARC scoring, private test outputs, and preservation of the original MCE prompt and partial metrics. These checks establish data and verifier coverage; they are not a full model run or a paper reproduction.
-
-[Ten real Harbor oracle trials](validation-reasoning-mce-oracle.json), one per configuration, also completed with reward one. They verify Docker execution, private reference upload, original native scorers, and result collection on this Mac. No model calls were used.

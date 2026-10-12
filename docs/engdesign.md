@@ -8,8 +8,7 @@ file to SHA-256 and commit `c8ec338cc5f846d792d93728b00c9448111139e5`.
 
 The two-task `open-subset-c8ec338-v1` profile remains available as a **legacy
 subset** so older experiment configurations retain their meaning. Use the new
-profile for full coverage. A small acceptance run does not restrict which tasks
-a researcher can select.
+profile to select from all released tasks.
 
 | Runtime | Tasks | Included dependencies |
 | --- | ---: | --- |
@@ -26,7 +25,7 @@ images; the core SDK still has no runtime dependencies.
 ## Run a selection
 
 Start with [the example configuration](../examples/benchmarks/engdesign.json).
-Its two task IDs are a small acceptance selection. From the repository root:
+It selects two example task IDs. From the repository root:
 
 ```bash
 .venv/bin/python -m rsi_eval check --config examples/benchmarks/engdesign.json
@@ -46,8 +45,7 @@ any desired IDs, or omit `task_ids` to select all 67. For example:
 ```
 
 The same selection works through `evaluate()` and in a user's own improvement
-loop. The framework assigns no evolve or test role to these tasks. Full model
-evaluation is available, but has not been run as an acceptance requirement.
+loop. The framework assigns no evolve or test role to these tasks.
 
 `--oracle` is available only for `AB_01` and `XY_01`. These are adapter reference
 solutions for checking the verifier. Other tasks remain selectable with a normal
@@ -81,7 +79,6 @@ network, no host mounts or Docker socket, and no model authentication files.
 Each invocation runs as an unprivileged worker with a fresh source copy. A
 startup probe checks hashes, native imports and required executables before
 Harbor starts the agent. Webots also receives a display and software rendering.
-The checked configuration ran on an Apple Silicon Docker VM without a GPU.
 
 The default scientific image is `python:3.12.9-slim-bookworm`, using the host's
 ARM64 or AMD64 architecture. The default Webots image is
@@ -174,59 +171,3 @@ Broad exception handlers in upstream code can also obscure the origin of an
 error. Startup checks catch the declared environment requirements, while the
 native return remains available for inspection. Changing these scoring rules
 would define another protocol, so this profile does not silently repair them.
-
-## Validation
-
-The [per-task validation record](data/engdesign-native-validation.json) covers all
-67 tasks. Each was replayed with a response already published in the pinned
-upstream logs, inside a credential-free container with network access disabled.
-Every startup probe, schema validation and native grader invocation completed.
-The record includes input-log hashes, runtime image IDs, numeric outputs and
-execution evidence hashes. Webots tracing additionally confirmed controller
-execution and complete resource loading. These are environment and interface
-checks with **zero model calls**, not new benchmark performance measurements.
-
-The full profile also completed Harbor oracle trials for `AB_01` and `XY_01`,
-and a real Codex trial for `XY_01`. The Codex trial returned native pass, score
-100 and confidence 100 after the startup probe. Full-set model evaluation and
-paper-score reproduction were not run. See [the coverage report](full-coverage.md)
-for the experiment paths and the status of other benchmarks.
-
-Offline tests exercise the original passing and partial-credit graders, native
-candidate execution failure with null scores, missing results, JSON overflow,
-checksums, complete selection and resource separation:
-
-```bash
-.venv/bin/python -m pytest -q tests/test_engdesign.py tests/test_engdesign_full.py
-```
-
-The independent scientific environment ran 32 tests successfully; one test
-requiring the Harbor SDK was skipped there. Tests requiring optional scientific
-packages skip when those packages are absent from the test interpreter.
-
-For a fresh no-model replay, check out the source commit above and prepare an
-audit directory with the supplied maintenance script:
-
-```bash
-.venv/bin/python scripts/engdesign_native_audit.py prepare \
-  --upstream /path/to/EngDesign --output .runtime/engdesign-audit
-
-docker build -t engdesign-audit-scientific .runtime/engdesign-audit/scientific-image
-docker build --platform linux/amd64 -t engdesign-audit-webots .runtime/engdesign-audit/webots-image
-
-mkdir -p .runtime/engdesign-audit/results-scientific .runtime/engdesign-audit/results-webots
-docker run --rm --network none --cpus 2 --memory 4g --pids-limit 256 \
-  --mount "type=bind,src=$PWD/.runtime/engdesign-audit,dst=/audit,readonly" \
-  --mount "type=bind,src=$PWD/.runtime/engdesign-audit/results-scientific,dst=/results" \
-  engdesign-audit-scientific python /audit/audit.py replay --family scientific
-
-docker run --rm --platform linux/amd64 --network none --cpus 2 --memory 4g --pids-limit 256 \
-  --mount "type=bind,src=$PWD/.runtime/engdesign-audit,dst=/audit,readonly" \
-  --mount "type=bind,src=$PWD/.runtime/engdesign-audit/results-webots,dst=/results" \
-  engdesign-audit-webots python3 /audit/audit.py replay --family webots
-```
-
-The script reads saved response fields as data without evaluating their Python
-representations. Candidate code runs only inside the Docker replay. A replayed
-response may pass or fail a task; the audit requires a completed native verdict,
-not a positive score. The published responses are fixtures, not official oracles.

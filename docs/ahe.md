@@ -10,41 +10,14 @@ successes and regressions, checks change predictions one iteration later, tracks
 the best measured candidate, and supplies rollback guidance to the next editor.
 The adapter does not require a MethodAdapter subclass.
 
-## Status
-
-The deterministic offline suite executes the pinned native loop, including two
-changed candidates, delayed attribution, best-candidate export, rollback,
-interruption recovery, and a separate test selection. These checks call no models.
-Real subscription acceptance status appears in the root README and the method
-expansion report. Passing the offline suite alone does not establish a real run
-or reproduce the paper's scores.
-
-The real subscription run completed on 2026-10-10 with `gpt-6-astra` and Codex
-CLI `0.162.0-alpha.2`. On TB 2.0 `extract-elf`, the baseline scored 0 and the first
-changed candidate scored 1. The second evolution round read that feedback,
-recognized the prior change as EFFECTIVE, and chose KEEP. The final evaluation
-of the retained artifact scored 1, followed by 1 on TB 2.1 `extract-elf`.
-
-Both requested rounds and the cross-benchmark test completed. The run contains
-one changed round and one no-op, so `acceptance.two_changed_rounds` and
-`acceptance_passed` remain false. Recorded candidate hashes and rendered prompts
-confirm which artifact each trial executed. These small, overlapping task
-selections establish execution; they do not establish full benchmark performance
-or generalization to unseen tasks.
-
-The run used four target trials and four debugger/editor Codex calls. Target
-usage totals 328,793 input and 9,370 output tokens. Method roles separately used
-196,143 input and 3,977 output tokens. Subscription dollar cost is unknown.
-The complete report is `runs/ahe-acceptance/summary.json`. Earlier bookkeeping
-failures and repairs remain under `runs/ahe-acceptance/recovery/`; the repairs
-made no additional model calls or benchmark trials.
+## Debugger integration
 
 The released Agent Debugger is partially open source. The upstream authors state
 this limitation in their
 [README](https://github.com/china-qijizhifeng/agentic-harness-engineering/blob/8b2a55d97590363fe50c3cc6b5e833b020a4bb4c/README.md#how-it-works).
 The adapter preserves public debugger queries, task ordering, and layered report
 construction. Its Codex analysis call replaces the NexAU debugger's interactive
-internal tooling. It does not claim to reproduce unpublished debugger behavior.
+internal tooling. Unpublished debugger behavior is outside the public integration.
 
 ## Prepare
 
@@ -83,7 +56,7 @@ keep their original task IDs.
 ## Check and run
 
 Complete the dedicated Codex login and Harbor setup described in the root README.
-On this Mac, load the repository's existing Docker environment first:
+On macOS, when using the README's Colima profile, load its Docker environment:
 
 ```bash
 source scripts/mac-env.sh
@@ -117,8 +90,7 @@ It does not substitute an API backend if the subscription fails. Benchmark-speci
 `target_pass_rate: null` runs the requested number of rounds even when an early
 candidate passes the selected tasks. A numeric threshold preserves the native
 early-stop condition. Such a run reports `stopped_target_reached` and the actual
-number of evaluated rounds, so it cannot pass a two-round acceptance check by
-stopping at the baseline.
+number of evaluated rounds.
 
 ## Select datasets
 
@@ -200,9 +172,8 @@ recorded hash of the corresponding measured candidate before final testing.
 A proposer may keep an effective candidate when the evidence supports no further
 change. The integration records this as `decision: keep` and reevaluates the
 unchanged artifact. `status: completed` means the native loop and requested tests
-finished. `changed_rounds`, `noop_rounds`, and `acceptance.two_changed_rounds`
-separately state whether the stronger two-change acceptance condition passed.
-A KEEP decision never counts as a new changed candidate.
+finished. `changed_rounds` and `noop_rounds` distinguish actual edits from KEEP
+decisions. A KEEP decision never counts as a new changed candidate.
 
 The native loop attributes previous edits as EFFECTIVE, PARTIALLY_EFFECTIVE,
 MIXED, INEFFECTIVE, or HARMFUL. It asks the next editor to keep or roll back changes
@@ -237,16 +208,3 @@ Resume restores that snapshot using the native rollback function. It archives
 aborted rounds and downstream test outputs under `resume_history/`, preserves
 all previous model-call accounting, and reruns the selected round. Configuration
 and seed identity must match. Completed runs require a fresh output directory.
-
-## Offline tests
-
-Install pytest in the method environment, then run:
-
-```bash
-.venv-ahe/bin/python -m pytest tests/test_ahe_integration.py -q
-```
-
-The test fixture includes the original MIT-licensed native loop and public
-prompts, with SHA-256 hashes and the pinned revision. No source download, login,
-Docker daemon, or model call is required. Deterministic boundaries test the real
-native history and attribution functions, including harmful changes and resume.

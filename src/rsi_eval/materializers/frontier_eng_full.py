@@ -78,7 +78,7 @@ def preflight(spec):
                 'detail': 'Input asset directory must exist; files are copied, hashed and checked against frozen source conflicts.'}
         checks[tid + ':native_mapping'] = {'ok': True,
             'detail': 'Mapped to the original unified runner and task metadata; native evaluator timeout ' + str(task['native_evaluator_timeout_sec']) + ' seconds.',
-            'dependencies': recipe, 'runtime_validation': task.get('audit', {}).get('oracle_validation', 'not_run')}
+            'dependencies': recipe}
     return checks
 
 

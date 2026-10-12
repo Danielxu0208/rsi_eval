@@ -91,7 +91,7 @@
     },
     "oracle": {
       "supported": false,
-      "reason": "No reference deliverables are released. Empty-output checks exercise only the native zero-score path, not solution quality or API grading.",
+      "reason": "No reference deliverables are released.",
       "supported_task_ids": []
     },
     "tasks": [

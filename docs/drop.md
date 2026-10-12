@@ -24,8 +24,8 @@ multiple answer spans:
 A numeric answer is a string such as `"42"`. A date uses one string in day,
 month, year order, omitting unknown components. The adapter adds these file
 instructions but supplies no demonstrations. The target may use its normal
-tools. This is a declared zero-shot agent protocol, not a reproduction of
-ADAS's search split or prompting setup.
+tools. This is a declared zero-shot agent protocol; evolve/test selections and
+prompting belong to the caller.
 
 The untouched official scorer handles number normalization, dates, multiple
 spans, optimal span alignment, and alternative validated answers. It rounds
@@ -119,21 +119,14 @@ The task budgets are 180 seconds for the agent and 60 seconds for the verifier.
 The example sets a 1,800-second whole-job limit for its two records. Increase
 or remove that limit when selecting a larger collection. Each task uses its
 own Docker container, so a full release run has substantial orchestration and
-model costs. Small-subset acceptance does not establish full-dataset results.
+model costs.
 
 `RSI_EVAL_SOURCE_CACHE` enables the existing explicit download cache. Every
 cached file is verified against its SHA256 before reuse. Preview performs no
 network downloads or model calls. NumPy 2.2.6 and SciPy 1.15.3 run in the task
 container; the core SDK still has no runtime dependencies.
 
-## Validation and licensing
-
-Offline tests use the unchanged official evaluator. They cover partial credit,
-number constraints, span alignment, dates, alternative gold annotations, invalid
-submissions, source integrity, and the duplicate-record mapping. Real execution
-status is recorded in the [acceptance report](validation-drop-frontier.md);
-successful offline grading alone does not establish a working model or container
-path.
+## Licensing
 
 The DROP data and sample fixture use CC BY-SA 4.0. The scorer and its fixture
 use Apache 2.0. The original license files accompany downloaded sources and

@@ -182,25 +182,19 @@ are preserved. HarnessX attaches static PNG, JPEG and WebP images to Codex while
 retaining their original message and tool-call positions. Raw media and oversized
 responses remain in task-readable files. Native context limits still apply;
 audio, video and animated images are unsupported. See the
-[HarnessX media guide](harnessx.md#task-tools) for formats and validation scope.
+[HarnessX media guide](harnessx.md#task-tools) for supported formats and limits.
 
-These adapters remove the former blanket MCP exclusion and expose explicit
-objective adaptation. They do not establish that every method/benchmark pair
-has been run. Native judge credentials, hardware, task services and the chosen
-agent's capabilities still determine whether a particular experiment can run.
-APEX's real tool connection has been checked; full rubric grading still needs
-its native judge credentials. Keep publisher usage terms in force when choosing
-evolve data.
+The methods support task-provided MCP tools and explicit objective adaptation.
+Native judge credentials, hardware, task services and the chosen agent's
+capabilities determine the requirements of an experiment. Keep publisher usage
+terms in force when choosing evolve data.
 
 ## Recover work
 
 `completed` means the requested native method workflow settled and its required
 measurements are present. A rejected candidate or a valid KEEP can end a round
-normally. Meta-Harness and RRSI record stricter changed-candidate integration
-acceptance separately; failing that audit does not turn a valid native search
-into an execution failure. Authentication, infrastructure and missing-result
-failures still stop execution. Native audit commands remain available for
-checking changed-branch coverage without additional model calls.
+normally. Authentication, infrastructure and missing-result failures stop
+execution.
 
 Resolve the recorded authentication, quota or environment problem, then run:
 
@@ -329,11 +323,9 @@ existing launchers remain available for advanced controls:
 - [AHE](ahe.md)
 - [HarnessX](harnessx.md)
 
-RRSI's managed `run` invokes its native evolution and records its separate audit;
+RRSI's managed `run` invokes its native evolution;
 independent final tests use the shared `method test` command.
 The other bundled launchers execute their configured final tests as part of
 their run. This command layer preserves that distinction.
 
-GDPval and TTHE are no longer active integrations. The
-[previous method expansion record](method-expansion.md) and workspace expansion
-records are retained as historical observations, not current support lists.
+GDPval and TTHE are no longer active integrations.

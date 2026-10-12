@@ -1,8 +1,9 @@
-# 项目约定
+# Project conventions
 
-- RSI Eval 是面向研究者使用的轻量框架。优先改善安装、方法接入、benchmark 选择、运行、结果理解和中断恢复。
-- 用户明确要求：开源内容围绕框架怎么用，不围绕仓库拥有者的个人操作历史、开发过程或历史验收经过。
-- 不把共享、导出或公开维护者历史验证日志列为产品需求、待完善事项或完成条件。
-- 用户文档说明当前能力、配置方法、必要依赖和已知限制。避免用开发过程叙述或私人实验记录代替使用说明，也不能扩大支持范围的表述。
-- 用户自己运行产生的结果、日志、轨迹、版本记录和恢复数据，以及 RSI 算法本身的历史与反馈，仍属于必要功能，应继续保留。
-- 已有内部开发记录不能据此自动销毁；整理公开内容时保留有用的技术结论，不要求使用者阅读个人操作历史。
+- RSI Eval is a lightweight framework for researchers. Prioritize installation, method integration, benchmark selection, execution, interpreting results, and resuming interrupted runs.
+- Write framework documentation, comments, and user-facing messages in English. Preserve original benchmark content and protocol markers, including upstream test fixtures, in their native language.
+- The user explicitly requires open-source content to explain how to use the framework, rather than the repository owner's personal activity, development process, or past acceptance checks.
+- Do not treat sharing, exporting, or publishing maintainers' historical validation logs as a product requirement, an outstanding feature, or a completion criterion.
+- User documentation must describe current capabilities, configuration, required dependencies, and known limitations. Do not replace usage instructions with development narratives or private experiment records, and do not overstate the scope of support.
+- Results, logs, trajectories, version records, and recovery data produced by users, along with RSI algorithms' own history and feedback, remain necessary features and must be preserved.
+- These conventions do not automatically authorize deleting existing internal development records. When organizing public content, preserve useful technical conclusions without requiring users to read personal activity histories.

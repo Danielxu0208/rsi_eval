@@ -99,7 +99,7 @@
         "KernelEngineering/TriMul",
         "KernelEngineering/FlashAttention"
       ],
-      "unsupported_reason": "Task runtime, source assets and candidate isolation not yet reviewed for this adapter."
+      "unsupported_reason": "This legacy profile selects only InventoryOptimization/disruption_eoqd, Robotics/PIDTuning. Use frontier-eng@v1-bafa7d5 for the complete profile."
     },
     "protocol": {
       "name": "frontier-native-feedback",
@@ -1637,7 +1637,7 @@
         "benchmarks/KernelEngineering/TriMul/README_zh-CN.md": "23fc76a236886f7c943f7be5cde4d8ba9dce84128db4eefb43fd755390dd63c3",
         "benchmarks/KernelEngineering/TriMul/Task.md": "fd5e4751a864f205038fa6fcb2ccb56a59f237b038649c5eba5223717b28c7c6",
         "benchmarks/KernelEngineering/TriMul/Task_zh-CN.md": "f0a18832c2e5358186b355f0d25ff508088cc7da540e9954cf81fae3a7d45b55",
-        "benchmarks/KernelEngineering/TriMul/assets/Screenshot 2025-02-25 at 11.15.42\u202fPM.png": "1065689a39e022deac123d036d0c8f7117e97c5716efcff41887ed617dafcef8",
+        "benchmarks/KernelEngineering/TriMul/assets/Screenshot 2025-02-25 at 11.15.42 PM.png": "1065689a39e022deac123d036d0c8f7117e97c5716efcff41887ed617dafcef8",
         "benchmarks/KernelEngineering/TriMul/assets/image.png": "4d036b9e8f4c10f2385e5234b678db7055fbd00ca750a343e783d4cf355e8292",
         "benchmarks/KernelEngineering/TriMul/baseline/reference.py": "02f432600f38d34a6a045ae728ece7c05e75e7d274d9bd90dee63e9283136785",
         "benchmarks/KernelEngineering/TriMul/baseline/solution.py": "4de35c36d216008357163b97be851449b6fe1bf705f872fa5ce96e58dfa83443",
@@ -2841,7 +2841,7 @@
         "EngDesign"
       ],
       "unsupported_task_ids": [],
-      "note": "All 47 released v1 tasks plus the separately labeled additional EngDesign aggregate. Runtime prerequisites and validation evidence are recorded per task."
+      "note": "All 47 released v1 tasks plus the separately labeled additional EngDesign aggregate. Runtime prerequisites are declared per task."
     },
     "protocol": {
       "name": "frontier-native-unified-feedback",
@@ -2959,13 +2959,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -3063,13 +3056,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -3187,23 +3173,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "run_meta.txt",
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "eval_report.json",
-              "metrics.json",
-              "artifacts.json",
-              "runs/unified_eval"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -3321,23 +3290,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "run_meta.txt",
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "eval_report.json",
-              "metrics.json",
-              "artifacts.json",
-              "runs/unified_eval"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed_with_invalid_seed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -3455,23 +3407,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "run_meta.txt",
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "eval_report.json",
-              "metrics.json",
-              "artifacts.json",
-              "runs/unified_eval"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -3556,13 +3491,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -3647,13 +3575,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -3738,13 +3659,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -3840,18 +3754,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "metrics.json",
-              "artifacts.json"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -3947,18 +3849,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "metrics.json",
-              "artifacts.json"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -4075,36 +3965,6 @@
           "native_architectures": [
             "linux/amd64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "copy_files": [
-              "sustaindc/sustaindc_env.py",
-              "sustaindc/requirements.txt",
-              "sustaindc/data",
-              "sustaindc/envs",
-              "sustaindc/utils"
-            ],
-            "readonly_files": [
-              "sustaindc/sustaindc_env.py",
-              "sustaindc/requirements.txt",
-              "sustaindc/data",
-              "sustaindc/envs",
-              "sustaindc/utils"
-            ],
-            "artifact_files": [
-              "metrics.json",
-              "artifacts.json",
-              "verification/last_eval.json"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "compatibility_adaptations": [
-            "The unchanged SustainDC requirements pin ray==2.24.0, which has no Linux ARM64 wheel. Use a Linux amd64 container runtime, including an emulated amd64 runtime on an ARM host when nested namespaces are supported."
-          ],
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -4193,13 +4053,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -4288,13 +4141,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -4383,13 +4229,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -4509,25 +4348,6 @@
               "index_url": "https://download.pytorch.org/whl/cpu"
             }
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "verification/outputs/*.json",
-              "verification/outputs/*.png",
-              "verification/artifacts/*.json",
-              "verification/artifacts/*.png"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -4647,25 +4467,6 @@
               "index_url": "https://download.pytorch.org/whl/cpu"
             }
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "verification/outputs/*.json",
-              "verification/outputs/*.png",
-              "verification/artifacts/*.json",
-              "verification/artifacts/*.png"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -4800,25 +4601,6 @@
               "index_url": "https://download.pytorch.org/whl/cpu"
             }
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "verification/outputs/*.json",
-              "verification/outputs/*.png",
-              "verification/artifacts/*.json",
-              "verification/artifacts/*.png"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -4953,25 +4735,6 @@
               "index_url": "https://download.pytorch.org/whl/cpu"
             }
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "verification/outputs/*.json",
-              "verification/outputs/*.png",
-              "verification/artifacts/*.json",
-              "verification/artifacts/*.png"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -5091,25 +4854,6 @@
               "index_url": "https://download.pytorch.org/whl/cpu"
             }
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "verification/outputs/*.json",
-              "verification/outputs/*.png",
-              "verification/artifacts/*.json",
-              "verification/artifacts/*.png"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -5229,25 +4973,6 @@
               "index_url": "https://download.pytorch.org/whl/cpu"
             }
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "verification/outputs/*.json",
-              "verification/outputs/*.png",
-              "verification/artifacts/*.json",
-              "verification/artifacts/*.png"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -5367,25 +5092,6 @@
               "index_url": "https://download.pytorch.org/whl/cpu"
             }
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "verification/outputs/*.json",
-              "verification/outputs/*.png",
-              "verification/artifacts/*.json",
-              "verification/artifacts/*.png"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -5519,25 +5225,6 @@
               "index_url": "https://download.pytorch.org/whl/cpu"
             }
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "verification/outputs/*.json",
-              "verification/outputs/*.png",
-              "verification/artifacts/*.json",
-              "verification/artifacts/*.png"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -5671,25 +5358,6 @@
               "index_url": "https://download.pytorch.org/whl/cpu"
             }
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "verification/outputs/*.json",
-              "verification/outputs/*.png",
-              "verification/artifacts/*.json",
-              "verification/artifacts/*.png"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -5801,17 +5469,6 @@
           "native_architectures": [
             "linux/amd64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "malloc_details.json"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -5907,22 +5564,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "output/*.json"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -6018,22 +5659,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "output/*.json"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -6129,22 +5754,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "output/*.json"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -6240,22 +5849,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "output/*.json"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -6351,22 +5944,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "output/*.json"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -6465,18 +6042,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "metrics.json",
-              "artifacts.json"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -6569,20 +6134,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "metrics.json",
-              "artifacts.json",
-              "eval.stdout.txt",
-              "eval.stderr.txt"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -6675,20 +6226,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "metrics.json",
-              "artifacts.json",
-              "eval.stdout.txt",
-              "eval.stderr.txt"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -6781,20 +6318,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "metrics.json",
-              "artifacts.json",
-              "eval.stdout.txt",
-              "eval.stderr.txt"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -6880,13 +6403,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -6972,13 +6488,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -7064,13 +6573,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -7162,26 +6664,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "run_meta.txt",
-              "metrics.json",
-              "artifacts.json",
-              "temp/submission.json"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "compatibility_adaptations": [
-            "Fresh writable temp mount at the native scorer path; all source remains read-only.",
-            "Direct native candidate subprocess drops capabilities; original scorer and arguments remain unchanged."
-          ],
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -7268,13 +6750,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -7360,13 +6835,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -7453,13 +6921,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -7548,17 +7009,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "readonly_files": [
-              "eval"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -7646,13 +7096,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -7740,13 +7183,6 @@
             "linux/amd64",
             "linux/arm64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -7843,13 +7279,6 @@
           "native_architectures": [
             "linux/amd64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "hardware_prerequisite_unavailable",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -7949,17 +7378,6 @@
           "native_architectures": [
             "linux/amd64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "readonly_files": [
-              "references"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "hardware_prerequisite_unavailable",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -8059,13 +7477,6 @@
           "native_architectures": [
             "linux/amd64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "hardware_prerequisite_unavailable",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -8164,13 +7575,6 @@
           "native_architectures": [
             "linux/amd64"
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {},
-          "state": "mapped-native-runner",
-          "oracle_validation": "hardware_prerequisite_unavailable",
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       },
       {
@@ -8431,26 +7835,6 @@
               "size_bytes": 1081
             }
           ]
-        },
-        "audit": {
-          "initial_program_exists": true,
-          "missing_metadata_paths": {
-            "artifact_files": [
-              "run_meta.txt",
-              "eval.stdout.txt",
-              "eval.stderr.txt",
-              "metrics.json",
-              "artifacts.json"
-            ]
-          },
-          "state": "mapped-native-runner",
-          "oracle_validation": "native_completed",
-          "compatibility_adaptations": [
-            "Read-only alias to native shared helper under the unified temporary root.",
-            "Native local mode executes inside the existing grader container.",
-            "Restore missing YJ_03 stiffness matrices from official EngDesign c8ec338, with individual checksums and its MIT license; native loads.py matches byte-for-byte."
-          ],
-          "validation_report": "docs/frontier-full-coverage.json"
         }
       }
     ]

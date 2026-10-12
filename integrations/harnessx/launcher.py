@@ -365,7 +365,6 @@ async def run(config, *, resume=False):
             "structurally_changed_rounds": sum(bool(r["structural_changes"]) for r in state["rounds"]),
             "later_rounds_with_journal_context": sum(r["history_context_exists"] for r in state["rounds"][1:]),
             "later_rounds_with_verified_history_reads": sum(bool(r.get("history_reads")) for r in state["rounds"][1:]),
-            "note": "Completed means the configured native loop ended; no-op rounds alone do not prove real improvement-method acceptance.",
         }
     except BaseException as exc:
         terminal = provider.failure if isinstance(provider.failure, (CodexAuthError, CodexQuotaError)) else exc

@@ -1,5 +1,12 @@
 # Third-party code
 
+RSI Eval's original framework code is licensed under [Apache-2.0](LICENSE).
+Third-party components, test fixtures, and benchmark assets retain the licenses
+and usage terms described below.
+
+Offline test fixtures are retained in the source repository and preserve their
+upstream notices. They are not included in Python wheels or source distributions.
+
 `src/rsi_eval/harbor_codex.py` adapts the run lifecycle from the Codex agent in
 [Harbor v0.18.0](https://github.com/harbor-framework/harbor/tree/v0.18.0),
 licensed under Apache-2.0. The changes load candidate artifacts, serialize
@@ -21,11 +28,9 @@ The method integrations execute separately obtained upstream checkouts:
   The adapter targets the published harness-evolution implementation.
 
 Managed checkouts retain the upstream license files. The adapters document
-their changes and do not claim to reproduce the upstream paper scores.
-Pinned source fixtures under `tests/fixtures/ahe_native/` and
-`tests/fixtures/harnessx_native/` retain their
-upstream notices. They support offline checks of the original control flow;
-fixture responses do not constitute live method validation.
+their changes. Pinned source fixtures under `tests/fixtures/ahe_native/` and
+`tests/fixtures/harnessx_native/` retain their upstream notices and support
+offline checks of the original control flow.
 
 The MGSM adapter downloads the upstream TSVs and their CC BY 4.0 license from
 [google-research/url-nlp](https://github.com/google-research/url-nlp/tree/452a21ad3dae5668c06ceeac21ff073e1e40f9be/mgsm).
@@ -95,7 +100,3 @@ Harbor downloads. The adapter uses Harbor's publicly distributed application
 key for anonymous public reads; it is not a user credential. APEX data is
 published for evaluation only, not training, fine-tuning or parameter fitting.
 The package does not redistribute APEX prompts, gold answers or task documents.
-
-GDPval and TTHE have been removed from the active package. Historical validation
-reports retain their original names, source revisions and attribution; their
-adapters and fixtures are no longer distributed.

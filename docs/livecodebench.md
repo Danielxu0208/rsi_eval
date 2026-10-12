@@ -2,7 +2,7 @@
 
 `livecodebench@release_v1` adds all 400 tasks from the official `code_generation_lite` release. The bundled catalog contains every task ID, so `list` and `preview` work offline. The adapter covers 219 standard-input problems and 181 function problems. It evaluates one final Python program per trial.
 
-SICA used LiveCodeBench to evaluate self-improving coding agents. This integration retains the public dataset and official answer comparison code. It uses the caller's agent and records its execution budget; it does not reproduce SICA's model, search loop, or reported score. See the [SICA paper](https://arxiv.org/html/2504.15228v2) and [official LiveCodeBench repository](https://github.com/LiveCodeBench/LiveCodeBench).
+SICA used LiveCodeBench to evaluate self-improving coding agents. This integration retains the public dataset and official answer comparison code. It uses the caller's agent and records its execution budget; the caller owns the search loop. See the [SICA paper](https://arxiv.org/html/2504.15228v2) and [official LiveCodeBench repository](https://github.com/LiveCodeBench/LiveCodeBench).
 
 ## Pinned inputs
 
@@ -60,23 +60,14 @@ Single-trial reward and pass@k are separate. The bundled aggregation requests pa
 
 ## Integration references
 
-The source dataset contains no canonical solution field. This adapter provides two reviewed general solutions solely to validate the integration:
+The source dataset contains no canonical solution field. Two reference programs are available for `--oracle`:
 
 - `lcb-codeforces-1873_a`: decide whether a three-letter permutation can become `abc` with at most one swap.
 - `lcb-leetcode-2727`: count passenger ages strictly greater than 60.
 
 These are **integration references, not official canonical solutions**. They solve the tasks from their statements and do not read test files or embed test answers. `--oracle` supports only these two IDs; normal agent evaluation supports all 400 tasks.
 
-## Offline checks
-
-```sh
-python -m pip install -e '.[test]'
-python -m pytest -q tests/test_livecodebench.py
-```
-
-The suite uses synthetic problem records and an unchanged copy of the pinned official grader. It checks both submission interfaces, hidden-test failures, malformed private-test payloads, timeout behavior, source hashes, and the distinction between an incorrect program and a broken grader. Reference tests cover all six three-letter permutations and age boundaries. NumPy comes from the test extra. No model call or Docker trial runs in this suite.
-
-The upstream grader fixture and its MIT license live under `tests/fixtures/livecodebench/`. Runtime preparation independently downloads and verifies that same source and license.
+## Execution boundary
 
 The submission and the official grader share a worker interpreter. The wrapper
 returns results through a pipe after grading, without exposing result-file paths

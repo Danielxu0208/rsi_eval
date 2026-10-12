@@ -27,8 +27,7 @@ filename-matching fallback calls Claude even with another scoring model.
 Additional judge calls for this fallback are part of upstream behavior.
 
 The official release provides no gold deliverable files. `oracle` mode is
-therefore unavailable for this profile. A synthetic scoring fixture validates
-transport and arithmetic without claiming a benchmark result.
+therefore unavailable for this profile.
 
 ## Run
 
@@ -85,8 +84,8 @@ It writes final files to `/workspace/output`. The original sandbox Dockerfile
 supplies document tools. The selected Harbor target controls its tool loop;
 the upstream reference agent's 200-turn default and network isolation are not
 imposed on an arbitrary target. Record its configuration when comparing runs.
-This is the native data and grading protocol with a Harbor target interface,
-not a reproduction of the upstream reference agent.
+The adapter exposes the native data and grading protocol through a Harbor
+target interface.
 
 Harbor transfers output artifacts into a separate verifier container.
 Rubrics and judge credentials are inaccessible to the target. The verifier
@@ -124,33 +123,3 @@ configuration. Older runs without the required execution identity cannot use
 this recovery path. Preserve those records and start a separate evaluation of
 the unfinished task IDs. See [the shared recovery guide](methods.md#recover-work)
 for SDK calls and managed method experiments.
-
-## Validation
-
-[The machine-readable audit](validation-harvey-lab.json) records the full task
-inventory, native loader checks, document hashes, and a deterministic native
-scorer fixture. The focused regression suite also checks shared-corpus reuse,
-private rubric placement, secret-free task files, invalid grading results,
-and Harbor's separate-verifier schema.
-
-To repeat the source and scorer audit after cloning the pinned checkout:
-
-```sh
-UV_PROJECT_ENVIRONMENT="$PWD/.runtime/harvey-verify" \
-  uv sync --project .runtime/harvey-labs --frozen --no-dev --python python3.12
-PYTHONPATH=src .runtime/harvey-verify/bin/python scripts/harvey_lab_native_audit.py \
-  --source .runtime/harvey-labs --output .runtime/harvey-audit.json
-```
-
-This command makes no model calls. All 2,010 tasks materialize and their
-generated Harbor configurations validate. Both the original agent sandbox
-and the generated verifier image build on Linux ARM64. A native Harbor
-environment probe checks document hashes, read-only inputs, writable output,
-document parsing, the three native skill manuals, Pandoc, LibreOffice, and
-the Node document libraries. The verifier's dual scorer executes with a
-deterministic fixture. Both probes run with networking disabled and make no
-model calls.
-
-Actual provider grading remains unverified without the required API
-credentials. Full-set interface coverage does not claim full-set model
-evaluation or reproduction of published scores.

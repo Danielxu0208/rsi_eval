@@ -11,8 +11,7 @@ from rsi_eval.evaluation import _job_config
 
 
 ROOT = Path(__file__).resolve().parents[1]
-AUDIT = json.loads((ROOT / "docs/coverage-audit-other.json").read_text())
-PROFILES = AUDIT["profiles"]
+PROFILES = json.loads((ROOT / "tests/fixtures/catalog_manifests.json").read_text())["profiles"]
 
 
 @pytest.fixture

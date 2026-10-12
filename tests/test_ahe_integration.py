@@ -119,7 +119,7 @@ def test_slash_task_ids_keep_native_history_debugger_and_attribution(checkout, c
     from integrations.ahe import launcher
     # Include names that lossy slugging would conflate, plus path traversal and
     # Unicode; all stay semantic IDs and none become filesystem paths.
-    ids = ["engineering/case", "engineering-case", "../case", "研究/任务"]
+    ids = ["engineering/case", "engineering-case", "../case", "research/task–one"]
     config["evolve"]["task_ids"] = ids
     config["run_options"]["repetitions"] = 2
     config["test"] = []

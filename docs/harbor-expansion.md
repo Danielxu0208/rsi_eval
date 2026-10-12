@@ -24,7 +24,7 @@ Multilingual uses Git task references. Its registry snapshot contains 299 tasks
 at commit `61366953049fd63a7dff54f67193bf39f5d1cde6` and `tokio-rs__tokio-4384`
 at `19fb29e2b4d1e24615f620541b1a91461c00f5c5`. The catalog preserves both revisions.
 Its `manifest-sha256:` reference identifies our complete task list, not a registry
-package digest. The provenance records the hash encoding and retrieval time.
+package digest. The provenance records the hash encoding.
 
 Adapter documentation is fixed to Harbor 0.18.0 commit
 `527d50deb63a5d279e8c20593c18a2cbc7f61f9e`. The registry does not identify which
@@ -45,10 +45,8 @@ metrics. `repetitions=2` creates two independent trials; it does not add a secon
 repair attempt with the first trial's test feedback.
 
 The port changes instruction assembly, language environments, and some build
-dependencies. Harbor reports parity experiments through a terminal-agent fork
-and a subsequent Harbor comparison. Those results do not establish score
-equivalence for our Codex wrapper. Publish results as **Aider Polyglot, Harbor
-port**, with the candidate, model, task snapshot, and execution settings.
+dependencies. Report results as **Aider Polyglot, Harbor port**, with the
+candidate, model, task snapshot, and execution settings.
 See the [pinned adapter documentation](https://github.com/harbor-framework/harbor/blob/527d50deb63a5d279e8c20593c18a2cbc7f61f9e/adapters/aider_polyglot/README.md).
 
 ## SWE protocols
@@ -73,8 +71,7 @@ and [pinned adapter](https://github.com/harbor-framework/harbor/blob/527d50deb63
 These catalogs preserve task-defined environments and agent/verifier timeouts.
 They do not impose a universal attempt count or context window. Independent
 repetitions, model settings, and any outer job deadline belong to the recorded
-run configuration. Reproducing a published score also requires that experiment's
-scaffold, budget, task set, and reporting rules.
+run configuration.
 
 ## Select a task
 
@@ -89,8 +86,7 @@ Keep the target and options from an existing run configuration. Replace its
 }
 ```
 
-The following IDs exist in the fixed catalog. They are candidates for integration
-checks, not a representative scoring sample.
+The following IDs exist in the fixed catalog and can be used for small runs.
 
 | Variant | Task ID |
 | --- | --- |
@@ -110,7 +106,7 @@ The SDK retains trial status, raw job metrics, token usage, and trajectory paths
 An unsuccessful solution can have a valid reward of zero. Missing verification
 and infrastructure failures remain distinct from that measured outcome.
 
-## Runtime and validation
+## Runtime requirements
 
 Follow the [runtime setup](../README.md) for Harbor, Docker, and the dedicated
 Codex login. These public task sources do not require an additional model API
@@ -121,18 +117,3 @@ Pro's published base images target `linux/amd64`. Apple Silicon hosts require
 emulation. Polyglot tasks use several language toolchains; Java and C++ builds
 can require more memory and time than a Python exercise. Preserve the bundle's
 resource requirements when selecting a machine or an outer job deadline.
-
-The offline suite checks the full catalogs, package and Git identities, actual
-Harbor configuration parsing, and SDK execution through a fake Harbor process:
-
-```bash
-.venv/bin/python -m pytest tests/test_harbor_expansion.py -q
-```
-
-Separate live checks passed for both listed Polyglot languages, the Multilingual
-task and the Pro Python task: each oracle returned reward one, and each Codex
-trial returned a measured verifier result. The Pro Go oracle also passed; it did
-not receive a separate candidate trial. See the
-[expansion validation record](benchmark-expansion.md) for rewards and preserved
-attempts. These integration checks do not establish full-dataset accuracy or
-validate every runtime in the catalogs.

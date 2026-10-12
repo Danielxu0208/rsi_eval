@@ -19,7 +19,7 @@ jobs:
           git -C rrsi checkout be50316e1db05914068a973f322770ef08ed7ba1
       - run: python -m pytest -q
       - run: python scripts/update_support_status.py --check
-      - run: python examples/offline_demo.py
+      - run: python tests/helpers/installed_sdk_smoke.py
   wheel:
     name: Installed core and packaged resources
     runs-on: ubuntu-latest
@@ -49,7 +49,7 @@ jobs:
           for spec in METHODS.values():
               assert integration_resource(spec["module"], spec["example"]).is_file()
           PY
-          "$RUNNER_TEMP/rsi-core/bin/python" "$GITHUB_WORKSPACE/examples/offline_demo.py"
+          "$RUNNER_TEMP/rsi-core/bin/python" "$GITHUB_WORKSPACE/tests/helpers/installed_sdk_smoke.py"
   harnessx-native:
     name: Optional HarnessX runtime
     runs-on: ubuntu-latest

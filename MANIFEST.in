@@ -2,15 +2,14 @@ recursive-include examples *.py *.json
 recursive-include templates *.py *.md *.json *.sh
 recursive-include integrations *.py *.md *.json *.yaml *.yml *.txt *.toml *.sh
 recursive-include docs *.md *.json
-recursive-include scripts *.sh *.py
-recursive-include tests *.py *.json *.txt *.sv *.png *.wbt LICENSE
-recursive-include tests/fixtures/jobbench *
-recursive-include tests/fixtures/ahe_native *
-recursive-include tests/fixtures/harnessx_native *
+include scripts/mac-env.sh
+include scripts/setup-nvidia-docker.sh
+include LICENSE
 recursive-include LICENSES *.txt
 include THIRD_PARTY_NOTICES.md
-include handsoff.md
-include AGENTS.md
+exclude AGENTS.md
+prune tests
+prune .github
 prune .tools
 prune .runtime
 prune .managed

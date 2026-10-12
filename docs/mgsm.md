@@ -12,8 +12,8 @@ multiple translations, so different languages do not establish disjoint data.
 The target receives the original question and writes a numeric answer to
 `/app/answer.txt`. It can use its normal tools. The adapter supplies no solved
 demonstrations or default train/test split. This is a zero-shot, tool-assisted
-agent protocol, not the original paper's few-shot language-model experiment
-or ADAS's shuffled development split.
+agent protocol. Configure labeled context or a shuffled development selection
+in the calling method when your experiment needs them.
 
 The verifier trims file whitespace, removes decimal trailing zeros and commas,
 then compares the resulting numeric string with the gold answer. The comparison
