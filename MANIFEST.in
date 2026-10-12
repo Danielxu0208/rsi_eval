@@ -2,6 +2,7 @@ recursive-include examples *.py *.json
 recursive-include templates *.py *.md *.json *.sh
 recursive-include integrations *.py *.md *.json *.yaml *.yml *.txt *.toml *.sh
 recursive-include docs *.md *.json
+include docs/assets/readme-banner.png
 include scripts/mac-env.sh
 include scripts/setup-nvidia-docker.sh
 include LICENSE
