@@ -47,13 +47,12 @@ Then run:
 
 ```bash
 .venv-harbor/bin/python -m integrations.meta_harness.launcher \
-  --config integrations/meta_harness/configs/acceptance.json \
-  --output-dir runs/meta-acceptance
+  --config integrations/meta_harness/example.json \
+  --output-dir runs/meta-example
 ```
 
-The acceptance configuration evolves on TB2.0 `extract-elf`, then evaluates the
+The example configuration evolves on TB2.0 `extract-elf`, then evaluates the
 winner on SWE Verified `astropy__astropy-12907` and TB2.1 `extract-elf`.
-The latter checks version compatibility; it is not an unseen-task transfer test.
 The declared model is `gpt-6-astra`, CLI version is `0.162.0-alpha.2`, and reasoning
 effort is `medium`. These settings are editable and recorded for each run.
 
@@ -101,8 +100,8 @@ can map their measured results to binary outcomes for the native counter:
 }
 ```
 
-This example defines a method objective. It does not replace the benchmark's
-raw reward or claim to be the paper's original method. Threshold mappings accept
+This example defines a method objective and preserves the benchmark's raw
+reward. Threshold mappings accept
 `direction: "maximize"` or `"minimize"`. For task-specific objectives, use
 `{"kind": "python", "path": "objective.py", "function": "score"}`. That
 function receives `{"trial": ..., "benchmark": ...}` and must return `0` or `1`.
@@ -123,26 +122,25 @@ records mapped scores and selections separately. Smoke and final test scores
 remain raw and never update the search objective.
 
 Defaults are two rounds, one candidate per round, one trial per task, and
-concurrency one. Strict changed-branch acceptance requires a changed artifact
-and a complete candidate evaluation in each round. Ordinary completion follows
-native search decisions, including rejected proposals that retain a measured
-incumbent. A valid score of zero is allowed; the baseline can remain the winner.
+concurrency one. Completion follows native search decisions, including rejected
+proposals that retain a measured incumbent. A valid score of zero is allowed;
+the baseline can remain the winner.
 
 Smoke tests run each evolve selection's first task as a separate trial. When
 using a manifest or full dataset, provide an explicit `smoke` selection. Set
-`skip_smoke: true` to disable this stage explicitly. The default acceptance run
+`skip_smoke: true` to disable this stage explicitly. The default example
 uses seven solver trials and two proposer sessions. Smoke results are never
 reused as scored evaluations. Subscription use has no inferred dollar cost.
 
-## Evidence
+## Outputs and recovery
 
 Use an empty output directory for a new experiment. To continue an interrupted
 experiment, supply its unchanged configuration and output directory:
 
 ```bash
 .venv-harbor/bin/python -m integrations.meta_harness.launcher \
-  --config integrations/meta_harness/configs/acceptance.json \
-  --output-dir runs/meta-acceptance --resume
+  --config integrations/meta_harness/example.json \
+  --output-dir runs/meta-example --resume
 ```
 
 Resume validates the model, CLI settings, template, integration and SDK source,
@@ -182,21 +180,10 @@ Final test scores are recorded after search and never update the frontier.
 Proposer prompts contain only evolve selections. This data-flow convention is
 not a security boundary against a malicious improvement method.
 
-Native completion and changed-branch acceptance are recorded separately. A valid
-search can reject every proposal and test its measured incumbent. Its report
-then has `status: completed`, while `acceptance_passed` states whether every
-requested round exercised the stronger changed-candidate path. Use `--audit`
-with the recorded output directory and configuration to check that strict
-acceptance without model calls. Measured timeouts and agent errors retain their original score
-and trial status during evolve/test. Smoke checks still require normal completion.
-Authentication, quota, container, and missing-verifier failures produce a failure
-report and nonzero exit. Authentication or quota failures stop the search before
-another proposer or solver call; completed evaluation records remain available.
-The adapter never manufactures a zero score.
-Offline tests exercise the controller with fake external execution;
-they do not establish that the real Codex and container chain has passed.
-
-```bash
-.venv-harbor/bin/python -m pip install -e '.[test,harbor]'
-.venv-harbor/bin/python -m pytest tests/test_meta_integration.py -q
-```
+A valid search can reject every proposal and test its measured incumbent,
+returning `status: completed`. Measured timeouts and agent errors retain their
+original score and trial status during evolve/test. Smoke checks require normal
+completion. Authentication, quota, container, and missing-verifier failures
+produce a failure report and nonzero exit. Authentication or quota failures stop
+the search before another proposer or solver call; completed evaluation records
+remain available. The adapter never manufactures a zero score.

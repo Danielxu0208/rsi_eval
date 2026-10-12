@@ -20,7 +20,7 @@ from .resume import evaluation_lock
 
 METHODS = {
     "meta-harness": {"module": "meta_harness", "url": "https://github.com/stanford-iris-lab/meta-harness.git",
-                     "commit": "8123ccabe2b19fa1123090b2e5f1bacc20963ce8", "example": "configs/acceptance.json"},
+                     "commit": "8123ccabe2b19fa1123090b2e5f1bacc20963ce8", "example": "example.json"},
     "rrsi": {"module": "rrsi", "url": "https://github.com/google-research/rrsi.git",
              "commit": "be50316e1db05914068a973f322770ef08ed7ba1", "example": "example.json"},
     "ahe": {"module": "ahe", "url": "https://github.com/china-qijizhifeng/agentic-harness-engineering.git",

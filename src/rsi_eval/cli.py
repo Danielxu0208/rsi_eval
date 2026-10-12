@@ -16,7 +16,7 @@ def main(argv: list[str] | None = None) -> int:
     commands = parser.add_subparsers(dest="command", required=True)
     listing = commands.add_parser("list", help="List bundled, pinned benchmark configurations")
     listing.add_argument("--json", action="store_true")
-    status = commands.add_parser("status", help="Show recorded compatibility and scoped validation evidence")
+    status = commands.add_parser("status", help="Show benchmark compatibility, runtime prerequisites and objective requirements")
     status.add_argument("--json", action="store_true")
     status.add_argument("--benchmark", help="Benchmark family or exact name@version")
     status.add_argument("--method", help="Managed method name")
@@ -63,8 +63,7 @@ def main(argv: list[str] | None = None) -> int:
                 print(json.dumps(rows, indent=2))
             else:
                 for row in rows:
-                    lifecycle = {"legacy-subset": " [legacy subset]",
-                                 "grading-blocked": " [grading blocked]"}.get(row.get("lifecycle"), "")
+                    lifecycle = " [legacy subset]" if row.get("lifecycle") == "legacy-subset" else ""
                     print(f"{row['name']}@{row['version']}\t{row['task_count']} tasks{lifecycle}\t{row['dataset_ref']}")
             return 0
         target, benchmark, options, output = load_config(args.config)

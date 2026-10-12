@@ -9,7 +9,8 @@ description = "A small benchmark evaluation interface for agent self-improvement
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
-license-files = ["LICENSES/*.txt", "THIRD_PARTY_NOTICES.md"]
+license = "Apache-2.0"
+license-files = ["LICENSE", "LICENSES/*.txt", "THIRD_PARTY_NOTICES.md"]
 
 [project.optional-dependencies]
 harbor = ["harbor==0.18.0"]

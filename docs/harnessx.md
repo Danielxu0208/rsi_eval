@@ -8,7 +8,7 @@ Codex supplies structured model responses. Native tools with fixed named argumen
 
 ## Scope and selection
 
-The pinned public TB2 recipe promotes the configuration that passes its post-flight gates. It does not compare candidate scores before promotion. This integration keeps that default and records the next benchmark score in the journal. An explicit method policy can add score mapping and candidate selection after those checks. The adapter does not substitute the GAIA recipe's regression gate or claim the paper's full AEGIS selection procedure.
+The pinned public TB2 recipe promotes the configuration that passes its post-flight gates. It does not compare candidate scores before promotion. This integration keeps that default and records the next benchmark score in the journal. An explicit method policy can add score mapping and candidate selection after those checks. The GAIA recipe's regression gate is not part of this public TB2 workflow.
 
 This release covers harness evolution. It excludes model-weight training, reinforcement learning recipes, the gateway, and the browser UI.
 
@@ -50,12 +50,6 @@ attachments; this integration does not add an audio API or transcription
 fallback. A successful tool connection or image input still needs the original
 benchmark verifier and any judge credentials to produce a score.
 
-The [image validation record](validation/harnessx-images-20261011.json) covers a
-small live subscription check: a native HarnessX tool returned two figures and
-Codex identified both colors in order. It used two CLI calls, no benchmark and
-no judge. Offline checks separately exercise image-bearing MCP results,
-attachment order, retries, invalid media and the unchanged tool execution loop.
-
 ## Explicit method policies
 
 HarnessX accepts finite measured rewards without requiring binary outcomes. Its default promotion does not rank those values. To add a ranking rule, place `method_policy` in the experiment configuration:
@@ -91,7 +85,7 @@ Shared mappings support `threshold`, bounded `linear` scaling and a Python `scor
 
 Run these commands from the RSI Eval repository root. The optional environment uses Python 3.12 and leaves the core SDK dependency-free.
 Installed users can use `rsi-eval method prepare`, `check`, `run` and `resume` through the [shared method commands](../README.md). The commands below expose the same integration directly for source-based workflows.
-The commands below require `uv` on `PATH`. In this development workspace, use `.tools/bin/uv --cache-dir .tools/cache` in its place. A standard-library alternative is `python3.12 -m venv .runtime/harnessx-venv`, followed by `.runtime/harnessx-venv/bin/python -m pip install -r integrations/harnessx/requirements.txt`.
+The commands below require `uv` on `PATH`. A standard-library alternative is `python3.12 -m venv .runtime/harnessx-venv`, followed by `.runtime/harnessx-venv/bin/python -m pip install -r integrations/harnessx/requirements.txt`.
 
 ```bash
 uv venv --python 3.12 .runtime/harnessx-venv
@@ -119,7 +113,7 @@ PYTHONPATH=src .runtime/harnessx-venv/bin/python -m integrations.harnessx run in
 
 `check` makes no model call and starts no container. It checks the source pin, installed dependencies, Codex login shape and CLI version, Harbor, Docker, Compose, and benchmark prerequisites. A successful check cannot guarantee remaining subscription quota.
 
-The example runs a baseline and two evolution rounds on TB 2.0 `extract-elf` and `log-summary-date-ranges`, then evaluates the promoted candidate on `extract-elf` in TB 2.1. It writes `runs/harnessx-two-task-acceptance`. Native analysis requires evidence from at least two distinct tasks before proposing a systemic change. Two tasks satisfy that minimum coverage but do not guarantee actionable evidence or a changed candidate: a native no-op remains valid. This is a functional acceptance configuration. The two benchmark versions overlap and do not demonstrate generalization to unseen tasks.
+The example runs a baseline and two evolution rounds on TB 2.0 `extract-elf` and `log-summary-date-ranges`, then evaluates the promoted candidate on `extract-elf` in TB 2.1. It writes `runs/harnessx-example`. Native analysis requires evidence from at least two distinct tasks before proposing a systemic change. A native no-op remains valid when the available feedback does not support a change.
 
 Change `evolve` and `test` freely. `test` is a list of benchmark selections. A selection accepts `name`, `version`, `task_ids` or `manifest`, and optional `benchmark_runtime`. Omit both task selectors to use the whole fixed configuration. Per-selection runtime settings replace the default `run_options.benchmark_runtime`.
 
@@ -156,31 +150,3 @@ PYTHONPATH=src .runtime/harnessx-venv/bin/python -m integrations.harnessx run in
 Completed rounds and final evaluations are reused only from this run's recorded state. An unfinished round starts a new attempt with its own directory. Failed calls retain their accounting. The launcher rejects a changed configuration during resume. A rejected native gate stops the run and preserves the findings; it does not silently replace the candidate or select another algorithm.
 
 Authentication and quota failures stop subsequent model calls. If a wall-clock cancellation arrives during a Codex call, the provider waits for that bounded CLI invocation to settle before writing final accounting. Shutdown can therefore extend to the configured model timeout. Round reports distinguish a generated context file from an approved native Read or Bash call that returned its history. Bash evidence requires matching actual history content; merely echoing a path does not count.
-
-## Verification
-
-The default offline suite uses pinned upstream source fixtures to verify evidence rejection, journal backfill, next-round context, missing-output failure, candidate bundling, subscription accounting, and feedback transport:
-
-```bash
-uv pip install --python .runtime/harnessx-venv/bin/python pytest
-PYTHONPATH=src .runtime/harnessx-venv/bin/python -m pytest -q tests/test_harnessx.py
-```
-
-Run the full native runtime tests after setup:
-
-```bash
-RSI_HARNESSX_CHECKOUT=.runtime/method-sources/harnessx PYTHONPATH=src \
-  .runtime/harnessx-venv/bin/python -m pytest -q tests/test_harnessx.py tests/test_harnessx_native.py tests/test_harnessx_mcp.py
-```
-
-These tests replace model responses with deterministic outputs. They exercise two native evolution rounds, real Write/Read tools, post-flight validation, synthetic smoke, journal history, and actual processor loading from a relocated candidate snapshot. MCP tests start local fixture servers, exercise persistent SDK sessions through the native run loop, and verify error handling, readable spill files and teardown. They need local Unix sockets and consume no subscription quota. The focused native suite passed 55 tests on 2026-10-10.
-
-The original live method validation on 2026-10-10 completed both native rounds, real history reads in round 2, synthetic smoke, and all configured benchmark evaluations. The proposer chose two explicit no-ops because the available trajectories did not support a recurring change. The native policy phase for novelty and evidence was therefore skipped, as upstream requires for empty changesets. A model-generated changed candidate remains unobserved in that run.
-
-On this small run, baseline and both rounds scored 0 on TB 2.0 `extract-elf` and 1 on `log-summary-date-ranges`; the final TB 2.1 `extract-elf` trial scored 0. All seven trials completed, loaded the recorded candidate hash, and left that candidate unchanged. These results establish the execution and feedback loop, not an improvement or paper-score reproduction. Earlier failed transport attempts and their usage remain in the private experiment record.
-
-A separate, hand-authored functional check added a generic acceptance-check reminder. Its rationale cites the saved task trajectories and makes no claim about the cause of a failed score. The first attempt violated the native hook contract and stopped before any model call. After correcting that hook, the candidate passed canonicalization, contract, synthetic replay, novelty, evidence and literal checks. A fresh TB 2.0 `log-summary-date-ranges` trial scored 1. The modified reminder appeared in the actual model request, and the native execution hash matched the frozen artifact. This consumed two smoke calls and five target calls, with 81,763 input tokens and 1,503 output tokens. Subscription dollar cost is unknown.
-
-The MCP bridge also connected to one real APEX world, called its read-only filesystem listing and closed the sessions without a model or judge call. Its first connection found 48 tools while the world was starting; a later connection found 74. Normal Harbor trials wait for the task's native readiness healthcheck. This probe establishes one real tool route, not complete APEX grading.
-
-The [functional evidence record](validation/harnessx-functional-20261010.json) includes hashes, gate outcomes, usage, repository-relative artifact paths and source-change provenance. It separates the hand-authored candidate check from the original proposer's no-op observations.

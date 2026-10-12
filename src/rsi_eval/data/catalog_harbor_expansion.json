@@ -21,10 +21,8 @@
       "task_manifest_sha256": "725e8a5e09e4546989e0c655790329f8652338aaf66a3981dfe9af9f6f2938fc",
       "task_manifest_hash_encoding": "UTF-8 json.dumps(tasks, sort_keys=True, separators=(comma, colon)), with no trailing newline",
       "registry_client_version": "0.18.0",
-      "retrieved_at": "2026-10-09T16:21:34.919068+00:00",
       "adapter_documentation_commit": "527d50deb63a5d279e8c20593c18a2cbc7f61f9e",
-      "adapter_documentation_url": "https://github.com/harbor-framework/harbor/blob/527d50deb63a5d279e8c20593c18a2cbc7f61f9e/adapters/aider_polyglot/README.md",
-      "adapter_generation_version": "not recorded by registry; executed task bundles are pinned below"
+      "adapter_documentation_url": "https://github.com/harbor-framework/harbor/blob/527d50deb63a5d279e8c20593c18a2cbc7f61f9e/adapters/aider_polyglot/README.md"
     },
     "tasks": [
       {
@@ -1401,10 +1399,8 @@
       "task_manifest_sha256": "3f6a80369441bf976d4467c6f371d1e75836795ed5d15a41f4a4473eb0e9ed23",
       "task_manifest_hash_encoding": "UTF-8 json.dumps(tasks, sort_keys=True, separators=(comma, colon)), with no trailing newline",
       "registry_client_version": "0.18.0",
-      "retrieved_at": "2026-10-09T16:21:34.919068+00:00",
       "adapter_documentation_commit": "527d50deb63a5d279e8c20593c18a2cbc7f61f9e",
       "adapter_documentation_url": "https://github.com/harbor-framework/harbor/blob/527d50deb63a5d279e8c20593c18a2cbc7f61f9e/adapters/swebench_multilingual/README.md",
-      "adapter_generation_version": "not recorded by registry; executed task bundles are pinned below",
       "task_git_commit_counts": {
         "19fb29e2b4d1e24615f620541b1a91461c00f5c5": 1,
         "61366953049fd63a7dff54f67193bf39f5d1cde6": 299
@@ -3537,10 +3533,8 @@
       "task_manifest_sha256": "a4a9ab518ed4db4845add2c2cf9f3fb3b8b498e8dafc2de8ec11ab2f0d351d34",
       "task_manifest_hash_encoding": "UTF-8 json.dumps(tasks, sort_keys=True, separators=(comma, colon)), with no trailing newline",
       "registry_client_version": "0.18.0",
-      "retrieved_at": "2026-10-09T16:21:34.919068+00:00",
       "adapter_documentation_commit": "527d50deb63a5d279e8c20593c18a2cbc7f61f9e",
-      "adapter_documentation_url": "https://github.com/harbor-framework/harbor/blob/527d50deb63a5d279e8c20593c18a2cbc7f61f9e/adapters/swebenchpro/README.md",
-      "adapter_generation_version": "not recorded by registry; executed task bundles are pinned below"
+      "adapter_documentation_url": "https://github.com/harbor-framework/harbor/blob/527d50deb63a5d279e8c20593c18a2cbc7f61f9e/adapters/swebenchpro/README.md"
     },
     "tasks": [
       {

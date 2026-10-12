@@ -1,0 +1,85 @@
+{
+  "profiles": [
+    {
+      "profile": "terminal-bench@2.0",
+      "name": "terminal-bench",
+      "version": "2.0",
+      "catalog_task_count": 89,
+      "dataset_ref": "sha256:c6fc2e2382c1dbae99b2d5ecd2f4f4a60c3c01e0d84642d69b4afd92e99d078b",
+      "task_manifest_sha256": "058aa36ad0888df04f68780f44dc8a3d7e9743d79f1c760b5654cf7a666609f2",
+      "candidate_route": "native_harbor_explicit_tasks"
+    },
+    {
+      "profile": "terminal-bench@2.1",
+      "name": "terminal-bench",
+      "version": "2.1",
+      "catalog_task_count": 89,
+      "dataset_ref": "sha256:7d7bdc1cbedad549fc1140404bd4dc45e5fd0ea7c4186773687d177ad3a0699a",
+      "task_manifest_sha256": "f0d963c128a2b16e0ed308e407662eae034e313aafff4cc7bbf78b1fb1230f93",
+      "candidate_route": "native_harbor_explicit_tasks"
+    },
+    {
+      "profile": "swe-bench-verified@1",
+      "name": "swe-bench-verified",
+      "version": "1",
+      "catalog_task_count": 500,
+      "dataset_ref": "sha256:b934b0cc3dc800fe945eaf9f1623329db97ee3133c706d20644524c7759fb341",
+      "task_manifest_sha256": "3688cab1ab79a15c5c14bee3bad09112b2501792f1048fa153eab55beb0361f5",
+      "candidate_route": "native_harbor_explicit_tasks"
+    },
+    {
+      "profile": "drop@1.0-agent",
+      "name": "drop",
+      "version": "1.0-agent",
+      "catalog_task_count": 86945,
+      "dataset_ref": "allenai/drop@sha256:39d2278a29fd729de301b111a45f434c24834f40df8f4ff116d864589e3249d6",
+      "task_manifest_sha256": "cc73a851fbeb2b96b5b32e08418b6aa3d320bba3a8a54d28a0e15f62e11011a2",
+      "candidate_route": "materializer:drop"
+    },
+    {
+      "profile": "aider-polyglot@1.0-harbor",
+      "name": "aider-polyglot",
+      "version": "1.0-harbor",
+      "catalog_task_count": 225,
+      "dataset_ref": "sha256:01e28d85e46beae5b7e29a29f57cb49d882b5486583d52cec4ee5bf3540a1c84",
+      "task_manifest_sha256": "725e8a5e09e4546989e0c655790329f8652338aaf66a3981dfe9af9f6f2938fc",
+      "candidate_route": "native_harbor_explicit_tasks"
+    },
+    {
+      "profile": "swe-bench-multilingual@1.0-harbor",
+      "name": "swe-bench-multilingual",
+      "version": "1.0-harbor",
+      "catalog_task_count": 300,
+      "dataset_ref": "manifest-sha256:3f6a80369441bf976d4467c6f371d1e75836795ed5d15a41f4a4473eb0e9ed23",
+      "task_manifest_sha256": "3f6a80369441bf976d4467c6f371d1e75836795ed5d15a41f4a4473eb0e9ed23",
+      "candidate_route": "native_harbor_explicit_tasks"
+    },
+    {
+      "profile": "swe-bench-pro@1.0-harbor",
+      "name": "swe-bench-pro",
+      "version": "1.0-harbor",
+      "catalog_task_count": 731,
+      "dataset_ref": "sha256:88411d32ff27e53a4c1a7e29f0c2aeba180c8e5d60f221cab5ed56325f33549d",
+      "task_manifest_sha256": "a4a9ab518ed4db4845add2c2cf9f3fb3b8b498e8dafc2de8ec11ab2f0d351d34",
+      "candidate_route": "native_harbor_explicit_tasks"
+    },
+    {
+      "profile": "livecodebench@release_v1",
+      "name": "livecodebench",
+      "version": "release_v1",
+      "catalog_task_count": 400,
+      "dataset_ref": "hf:livecodebench/code_generation_lite@0fe84c3912ea0c4d4a78037083943e8f0c4dd505:release_v1",
+      "task_manifest_sha256": "ccc1d9b17e08010c034d5df6be500edffb522c14e98f76c6e7218642c9c1df7a",
+      "candidate_route": "materializer:livecodebench"
+    },
+    {
+      "profile": "mgsm@1.0-agent",
+      "name": "mgsm",
+      "version": "1.0-agent",
+      "catalog_task_count": 2750,
+      "dataset_ref": "google-research/url-nlp@452a21ad3dae5668c06ceeac21ff073e1e40f9be/mgsm",
+      "task_manifest_sha256": "03b3a7d8e5c5204f75dbcfd65438a738bde17bd78053f39aabe9dbce97afce0a",
+      "candidate_route": "materializer:mgsm"
+    }
+  ]
+}

@@ -30,7 +30,7 @@ rsi-eval run --config examples/benchmarks/frontier-eng.json --oracle --output ru
 rsi-eval run --config examples/benchmarks/frontier-eng.json --output runs/frontier-codex
 ```
 
-The baseline is an environment reference, not an optimal solution. A valid nonzero native result establishes that the source, simulation, isolation and metric transport work. It does not establish leaderboard performance.
+The baseline checks the source, simulation, isolation and metric transport. Its native score remains in the report.
 
 The example runs both tasks once, serially. Larger repetition counts remain a user choice. The example's 3,600-second outer job limit includes builds and both trials; increase it for larger runs.
 
@@ -65,14 +65,14 @@ The scorer runs each candidate through upstream bubblewrap with its own process 
 
 Nested bubblewrap requires the grader service to use `SYS_ADMIN`, `seccomp=unconfined`, `apparmor=unconfined` and `systempaths=unconfined`. These settings apply to the isolated grader service. The service does not use Docker privileged mode. A failed namespace preflight stops scoring and produces a verifier error.
 
-The grader defaults to the architecture of the machine running RSI Eval. On the current ARM Mac, it uses native `linux/arm64`. Clear a conflicting `DOCKER_DEFAULT_PLATFORM` before this run so Docker Compose builds the correct architecture. The coding agent can run natively on ARM as well. A remote Docker daemon with another architecture requires an explicit setting:
+The grader defaults to the architecture of the machine running RSI Eval. On ARM hosts, it uses native `linux/arm64`. Clear a conflicting `DOCKER_DEFAULT_PLATFORM` so Docker Compose builds the intended architecture. A remote Docker daemon with another architecture requires an explicit setting:
 
 ```sh
 unset DOCKER_DEFAULT_PLATFORM
 export RSI_EVAL_FRONTIER_PLATFORM=linux/amd64
 ```
 
-For the documented ARM Mac setup, use `unset DOCKER_DEFAULT_PLATFORM` and leave `RSI_EVAL_FRONTIER_PLATFORM` unset. The materializer rejects conflicting settings before downloading sources.
+For an ARM host with an ARM Docker daemon, use `unset DOCKER_DEFAULT_PLATFORM` and leave `RSI_EVAL_FRONTIER_PLATFORM` unset. The materializer rejects conflicting settings before downloading sources.
 
 The chosen platform appears in `task.toml` and `provenance.json`. Docker source contexts have unique content-derived names. Each materialization also creates a private verification token, so generated task hashes differ across runs. Compare `stable_source_sha256` and `protocol_sha256` when checking whether two runs used the same source and protocol.
 
@@ -82,8 +82,6 @@ The chosen platform appears in `task.toml` and `provenance.json`. Docker source 
 
 `/logs/verifier/frontier.json` contains the complete sequence, candidate sources, hashes, outputs, best index, actual calls and diagnostic rerun. Harbor's original trial files remain available alongside the unified report. Missing dependencies, broken namespaces, corrupted frozen files and unreadable native metrics receive no invented score.
 
-This is the explicitly named `harbor-feedback-100-v1` protocol. The native task definitions and numerical graders are preserved. Execution uses a Codex coding-agent session with a 600-second wall-clock cap rather than the upstream OpenEvolve proposer loop. That cap can stop a run before its 100-call allowance is exhausted. The separate feedback broker and stricter PID namespace are also adapter changes. Small-subset acceptance does not establish a full v1 or paper reproduction result.
+This is the explicitly named `harbor-feedback-100-v1` protocol. The native task definitions and numerical graders are preserved. Execution uses a Codex coding-agent session with a 600-second wall-clock cap rather than the upstream OpenEvolve proposer loop. That cap can stop a run before its 100-call allowance is exhausted. The separate feedback broker and stricter PID namespace are also adapter changes.
 
 The upstream tree has no root license file at this revision. RSI Eval does not redistribute those sources in its wheel or offline fixtures. Users obtain them directly from the pinned public repository and should consult its terms before redistributing benchmark artifacts.
-
-Offline tests cover quota enforcement, best-feasible selection, invalid sentinels, private feedback filtering, metric validation, source integrity, task identity and generated runtime configuration. Real runtime results appear in the [acceptance report](validation-drop-frontier.md).

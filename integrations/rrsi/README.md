@@ -4,7 +4,7 @@ This adapter runs upstream RRSI at `be50316e1db05914068a973f322770ef08ed7ba1` wi
 
 The shared evaluation service runs the selected tasks and returns rewards, token usage and native traces. The caller chooses evolve, smoke and test selections independently. A benchmark has no permanent role.
 
-The native selection and cost rules require comparable rewards in `[0, 1]`. DROP fits this scale: RRSI selects on mean F1, while the SDK also reports exact match. This combination has offline coverage only. Frontier-Eng requires an explicit `method_policy.score` mapping before evolution because its tasks use different native objectives. The callback receives the raw trial and benchmark selection and must return a finite score in `[0, 1]`. Smoke checks and final tests retain their native scores.
+The native selection and cost rules require comparable rewards in `[0, 1]`. DROP fits this scale: RRSI selects on mean F1, while the SDK also reports exact match. Frontier-Eng requires an explicit `method_policy.score` mapping before evolution because its tasks use different native objectives. The callback receives the raw trial and benchmark selection and must return a finite score in `[0, 1]`. Smoke checks and final tests retain their native scores.
 
 Evolve and smoke selections accept explicit `task_ids`, a JSON `manifest`, or neither to select the full pinned catalog. Preparation resolves the choice once and records ordered IDs, source identities and hashes in `selection_provenance`. Candidate worktrees inherit the frozen list. Later edits to a manifest do not change an experiment, and catalog content drift stops the run. If smoke is omitted, it uses the first frozen evolve task.
 
@@ -17,7 +17,7 @@ profile and experiment directory, then `method check` and `method run`.
 The [shared method guide](../../docs/methods.md) gives the complete commands.
 The native workflow below lets you manage the backend and source clone yourself.
 
-Use the Python 3.12 Harbor environment, working Docker installation and dedicated ChatGPT Codex login described in the [root setup instructions](../../README.md#prepare-real-execution). The core-only `.venv` does not install Harbor. These commands use `.venv-harbor` explicitly and run from the toolkit root. The example pins CLI `0.162.0-alpha.2` and model `gpt-6-astra`; change those explicit values if your installed version or subscription differs.
+Use Python 3.12, a working Docker installation and the dedicated ChatGPT Codex login described in the [root installation instructions](../../README.md#installation). The native commands below create a separate Harbor environment, `.venv-harbor`, and run from the toolkit root. The example pins CLI `0.162.0-alpha.2` and model `gpt-6-astra`; change those explicit values if your installed version or subscription differs.
 
 Install the backend and obtain the pinned upstream code:
 
@@ -39,7 +39,7 @@ export PATH="$PWD/.venv-harbor/bin:$PATH"
 harbor --version
 ```
 
-For the dedicated macOS Colima profile from the root instructions, use its Docker configuration and socket. The SWE acceptance task requires the AMD64 platform:
+For the dedicated macOS Colima profile from the root instructions, use its Docker configuration and socket. The example SWE task requires the AMD64 platform:
 
 ```sh
 source scripts/mac-env.sh
@@ -90,7 +90,7 @@ The example evolves on Terminal-Bench 2.1 `extract-elf` for two rounds, with one
 Its `manifest` and optional `benchmark_runtime` paths resolve against the
 selection file's directory, regardless of the shell's working directory.
 
-A clean successful example uses seven policy task trials: one baseline, two smoke trials, two scored candidate trials and two final tests. Analyst, digester, proposer and critic turns consume additional Codex usage. Manual smoke commands and retries add work. Acceptance and score increases are not required. One task and one repetition verify integration behavior; they do not estimate general improvement.
+A clean successful example uses seven policy task trials: one baseline, two smoke trials, two scored candidate trials and two final tests. Analyst, digester, proposer and critic turns consume additional Codex usage. Manual smoke commands and retries add work. A proposal may be rejected and leave the incumbent unchanged.
 
 ## Preparation and resume
 
@@ -113,17 +113,12 @@ The explicit `resume` command validates the fixed configuration, archives recogn
 
 ```sh
 .venv-harbor/bin/python -m integrations.rrsi status --checkout .managed/rrsi-codex --runs runs/rrsi-codex
-.venv-harbor/bin/python -m integrations.rrsi audit --checkout .managed/rrsi-codex --runs runs/rrsi-codex
 ```
 
-`run` records native completion separately from strict integration acceptance.
-A settled round can reject every proposal and keep its incumbent. That can
-complete normally; missing evaluation evidence, usage, authentication or
-infrastructure failures still fail the run. `acceptance_passed` and the explicit
-`audit` command check the stronger requirement: each requested round contains a
-changed candidate, an accepting critic, a successful real smoke run, complete
-scored usage and a native selection decision. A round containing only invalid
-proposals fails that strict audit. The audit never forces candidate selection.
+`run` completes when the requested rounds settle with the required measurements
+and selection decisions. A settled round can reject every proposal and keep its
+incumbent. Missing evaluation evidence, usage, authentication or infrastructure
+failures stop the run.
 
 Managed experiments also support `rsi-eval method test --experiment EXPERIMENT
 --output TEST_RUN`, with an optional `--selection selections.json`, using the
@@ -149,15 +144,4 @@ Results live under `runs/rrsi-codex/coding_codex`:
 
 Policy cost `C` is mean input plus output tokens per trial. Missing usage fails rather than becoming zero. A completed SDK job can contain measured task timeouts or agent errors; their real verifier rewards and token counts remain valid observations. Absent rewards count as missing. A partial or failed job invalidates all its trials, even if some succeeded, so the native loop retries infrastructure once before rejecting the candidate. Authentication or quota failures stop evaluation. Subscription dollar cost remains unknown. The native coding domain's score and cost parameters remain defaults, including `delta=0.017`; callers can override `rrsi` fields. These values are not calibrated for the small example.
 
-The transport uses tool-disabled Codex role calls and returns text to RRSI's existing JSON action executor. Its original JSON cleanup and malformed-action repair remain active. CLI transport failures surface immediately. The API's prefix caching and strict generation-token cap have no CLI equivalent: prefix text is retained, and a completed response exceeding the requested output budget is rejected. The model, backend and seed differ from the paper, so this is a functional integration rather than score reproduction.
-
-## Verify the adapter
-
-```sh
-.venv-harbor/bin/python -m pip install -e '.[test]'
-.venv-harbor/bin/python -m pytest -q tests/test_rrsi_integration.py
-```
-
-These tests execute pinned upstream control flow while replacing only external model responses and benchmark execution with deterministic fixtures. They cover native edits, raw-trace reading, critic screening, accepted and cost-rejected candidates, frozen-artifact testing, missing-token failure and backend loading in fresh subprocesses. They do not establish that real Codex authentication or benchmark containers work; the commands above provide that evidence.
-
-The recorded [live validation](../../docs/validation-rrsi.json) completed two native rounds and seven solver trials using the dedicated Codex subscription and Docker. The first candidate was rejected; the second was accepted. The final artifact scored 1 on the selected SWE task and 0 on the TB 2.0 task. Its new comparison tool executed naturally in both second-round trials and the final TB test. These single-task results validate the integration, not a general improvement claim.
+The transport uses tool-disabled Codex role calls and returns text to RRSI's existing JSON action executor. Its original JSON cleanup and malformed-action repair remain active. CLI transport failures surface immediately. The API's prefix caching and strict generation-token cap have no CLI equivalent: prefix text is retained, and a completed response exceeding the requested output budget is rejected.

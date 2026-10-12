@@ -24,9 +24,7 @@ rsi-eval method prepare --method ahe --profile profile.json \
 ```
 
 The bundled locks cover all four methods on macOS arm64 with Python 3.12.15.
-They were installed into new environments, checked with `pip check`, and replayed
-into another set of new environments. Native imports and prerequisite checks
-passed without model calls. Each method has its own lock. A lock for another
+Each method has its own lock. A lock for another
 platform or Python minor version is rejected. The normal preparation path can
 resolve dependencies on that host and record a new inventory.
 
@@ -118,21 +116,3 @@ behavior, credentials or later agent-installed packages. Harbor package and Git
 replay use the captured local task files, preserving their instructions and
 verifiers without downloading the original source again. An incompatible CPU or
 missing accelerator still fails explicitly.
-
-## Validation
-
-`scripts/validate_runtime_snapshot.py` runs a real Docker fixture through the SDK,
-captures and restores its image archive, removes its source assets, changes a
-build argument, and evaluates it again from the frozen runtime. Both verifiers
-must observe the original image and asset bytes. This is a synthetic integration
-check with zero model and judge calls, not a benchmark score.
-The [2026-10-11 record](validation/runtime-snapshot-20261011.json) contains
-the successful fixture results and implementation hashes.
-
-`scripts/validate_registry_snapshot.py` checks a real pinned Harbor package task.
-The TB 2.0 `log-summary-date-ranges` oracle passed before capture and after
-restoration, with the same image content ID and unchanged task files. The
-[registry record](validation/registry-snapshot-20261011.json) also retains the
-earlier parser failure that exposed the distinction between a native task name
-and its copied directory name. Package/Git offline tests additionally delete
-the original downloaded task cache before replaying.

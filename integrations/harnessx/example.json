@@ -1,6 +1,6 @@
 {
   "checkout": "../../.runtime/method-sources/harnessx",
-  "output_dir": "../../runs/harnessx-two-task-acceptance",
+  "output_dir": "../../runs/harnessx-example",
   "codex": {
     "model": "gpt-6-astra",
     "auth_dir": "~/.codex-rsi-eval",

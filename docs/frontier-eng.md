@@ -1,10 +1,10 @@
 # Frontier-Eng
 
-`frontier-eng@v1-bafa7d5` connects every task in the pinned Frontier v1 batch matrix to `evaluate()`. It contains the 47 released v1 tasks and the matrix's additional `EngDesign` entry. EngDesign is one native aggregate of seven engineering problems, identified separately from the 47-task suite. There is no adapter whitelist based on the development machine.
+`frontier-eng@v1-bafa7d5` connects every task in the pinned Frontier v1 batch matrix to `evaluate()`. It contains the 47 released v1 tasks and the matrix's additional `EngDesign` entry. EngDesign is one native aggregate of seven engineering problems, identified separately from the 47-task suite.
 
 The adapter calls the original unified task loader and evaluator from [Frontier-Engineering commit bafa7d5](https://github.com/Einsia/Frontier-Engineering/tree/bafa7d53162a3b1f128fec396bbde22fe972bf24). It reads each task's original initial program, prompt files, candidate destination, working directory, evaluation command, copied files, frozen files and artifacts. The downloaded source archive and all 2,665 source files have SHA-256 identities in the catalog. Upstream source is downloaded at runtime, not bundled into RSI Eval.
 
-Coverage and execution evidence are different. Every task has an executable native route and a declared runtime recipe. Some require NVIDIA GPUs, an amd64 container runtime or external assets. The [per-task coverage report](frontier-full-coverage.json) records actual validation, prerequisites and remaining failures. A mapped task is not automatically reported as tested. The old `cpu-subset-bafa7d5-v1` version remains a [legacy profile](frontier-eng-legacy.md) so earlier reports can still be inspected.
+Every task has an executable native route and a declared runtime recipe. Some require NVIDIA GPUs, an amd64 container runtime or external assets. The old `cpu-subset-bafa7d5-v1` version remains a [legacy profile](frontier-eng-legacy.md) so earlier reports can still be inspected.
 
 ## Select and run tasks
 
@@ -70,7 +70,7 @@ CPU task recipes use separate Python environments when their requirements confli
 
 SustainDC, CarAerodynamicsSensing and MallocLab use the upstream bootstrap scripts. SingleCellAnalysis downloads the same four public files used by its native scorer. Its held-out `test_mod2.h5ad` is stored in the scorer-private `resources_truth` directory, separate from the three candidate inputs. Asset downloads occur during image preparation, before model execution. A failed download is an environment failure.
 
-MallocLab requires `platform: "linux/amd64"`. Its original toolchain and native evaluator passed a Harbor oracle run on the development Mac through the amd64 Docker runtime. An ARM host therefore does not exclude this task; the container platform must be configured correctly.
+MallocLab requires `platform: "linux/amd64"`. Configure the container platform explicitly on ARM hosts.
 
 SustainDC also needs `platform: "linux/amd64"` with the supplied recipe: its original `ray==2.24.0` pin has no Linux ARM64 distribution. The adapter retains that dependency pin instead of deleting parts of the upstream environment.
 
@@ -78,7 +78,43 @@ The Optics ARM recipe installs Qt development tools and builds PyQt5 with an exp
 
 The pinned Frontier EngDesign directory omits nine files required by its YJ_03 stiffness calculation. The bootstrap restores the exact original directory from [EngDesign commit c8ec338](https://github.com/AGI4Engineering/EngDesign/tree/c8ec338cc5f846d792d93728b00c9448111139e5/EngDesign-Open/YJ_03), with individual SHA-256 checks and the upstream MIT license. This restores missing inputs without changing the evaluator or candidate. All seven subgraders must execute; a missing asset cannot become a low but valid aggregate score.
 
-The image writes `/opt/frontier/build-manifest.json` with Python identity, resolved packages and hashes of required external assets. This manifest is retained in `frontier.json.runtime_evidence`. External files whose upstream URL is mutable are identified by the bytes actually downloaded. They are not represented as immutable solely because the main source commit is pinned. The coverage report includes known asset sizes and source URLs.
+The image writes `/opt/frontier/build-manifest.json` with Python identity, resolved packages and hashes of required external assets. This manifest is retained in `frontier.json.runtime_evidence`. External files whose upstream URL is mutable are identified by the bytes actually downloaded. They are not represented as immutable solely because the main source commit is pinned.
+
+## NVIDIA GPU setup
+
+GPU tasks require native Linux amd64, Docker Engine with Buildx and Compose
+2.30.0 or newer, a working NVIDIA host driver, and NVIDIA Container Toolkit
+configured for Docker. The task images install their own Python, PyTorch and
+Triton dependencies; a host-installed PyTorch is not used by the grader.
+
+Follow the [Docker installation guide](https://docs.docker.com/engine/install/)
+and [NVIDIA Container Toolkit guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
+On an Ubuntu amd64 host with an existing NVIDIA driver, the optional setup tool
+can inspect prerequisites and install missing components:
+
+```sh
+bash scripts/setup-nvidia-docker.sh
+sudo bash scripts/setup-nvidia-docker.sh --install
+```
+
+The first command only checks the environment. Installation requires an
+administrator session on the host system and restarts Docker, which can
+interrupt existing containers. If Docker and GPU support already work, reuse
+that installation. The tool does not configure experiment-account permissions;
+the account running RSI Eval must be able to access Docker.
+
+Check GPU access from the experiment account before selecting GPU tasks:
+
+```sh
+docker info
+docker compose version
+docker run --rm --runtime=nvidia --gpus all ubuntu:24.04 nvidia-smi
+```
+
+Select the desired task IDs and set `options.benchmark_runtime.gpu` to `true`.
+The generated grader service configures the required nested bubblewrap
+isolation. Namespace and CUDA startup checks must pass inside that service;
+GPU visibility on the host alone does not establish grader readiness.
 
 ## Feedback, budget and selection
 
@@ -111,16 +147,12 @@ Compatibility handling is explicit:
 - The outer namespace exposes a read-only `/sys` and gives graders a fresh temporary `HOME` and Matplotlib configuration directory. Startup imports run with the same environment used for grading.
 - Native interpreter paths resolve to the per-task Docker environment. Scoring formulas, task data and evaluator time budgets remain native.
 
-This protocol is named `harbor-native-unified-100-v2`. It uses a Harbor coding-agent session and a feedback broker in place of the upstream OpenEvolve search loop. It is not a claim that the two search procedures or paper results are identical.
+This protocol is named `harbor-native-unified-100-v2`. It uses a Harbor coding-agent session and a feedback broker in place of the upstream OpenEvolve search loop.
 
-## Artifacts and validation
+## Results and artifacts
 
 Each trial preserves the native metrics, scorer artifacts, output and candidate history in `/logs/verifier/frontier.json`, alongside Harbor's original files and the unified report. Materialization records source hashes, copied asset hashes, task metadata, platform and runtime settings. Private verification nonces make execution-context hashes differ between runs; the pinned source and protocol identify the comparable experiment definition.
 
-Offline checks cover all 48 task mappings, frozen metadata, generated task packages, source integrity, quota and selection rules, private feedback, invalid-result handling and setup failure classification. Real validation is recorded task by task in the [coverage report](frontier-full-coverage.json). Small real runs establish execution paths; they do not establish full-suite scores or paper reproduction.
-
-All 44 CPU-capable entries completed their original native grader on the development Mac's Docker runtime: 43 returned `valid=1`. The published QuantumComputing task02 seed returned the native invalid sentinel because its simulated fidelities missed the original equivalence threshold; the adapter preserves that outcome. SustainDC and MallocLab ran in amd64 containers. Four CUDA tasks remain unexecuted because this Docker daemon has no NVIDIA device. Their [dependency audit](data/frontier-gpu-dependency-validation.json) is separate from runtime validation.
-
-These checks used several recorded driver and dependency snapshots while compatibility issues were fixed. Each result retains its actual packages and available image or driver hashes. The report does not claim that all 44 entries were rerun at the final source revision. Separate small Harbor oracle and Codex runs validate the complete feedback and result path.
+GPU execution requires native Linux amd64, an NVIDIA-enabled Docker daemon, and working nested bubblewrap namespaces. CUDA and namespace startup probes must pass before a grader runs; host GPU visibility alone does not establish grader readiness.
 
 The pinned upstream tree has no root license file. RSI Eval ships its own adapter and source manifest and fetches official source at runtime. Consult upstream terms before redistributing downloaded benchmark artifacts.

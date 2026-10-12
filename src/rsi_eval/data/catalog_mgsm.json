@@ -65,7 +65,7 @@
       "scorer": "ADAS numeric string comparison; trim output whitespace, decimal trailing zeros and commas",
       "scorer_reference": "https://github.com/ShengranHu/ADAS/blob/2702bee8fefda42255efc5be9f60e3bd3db96ae4/_mgsm/utils.py",
       "demonstrations": 0,
-      "tools": "chosen by target; tool-assisted agent results are not the original paper setting",
+      "tools": "chosen by target",
       "split": "full upstream TSVs; no ADAS-specific shuffled split"
     },
     "aggregation": {

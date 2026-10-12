@@ -8913,8 +8913,7 @@
       "rubric_criteria": 114437,
       "document_roots": 1761,
       "document_files": 60971,
-      "shared_document_references": 250,
-      "native_model_scoring_validated": false
+      "shared_document_references": 250
     },
     "tasks": [
       {

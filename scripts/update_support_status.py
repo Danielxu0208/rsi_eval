@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate the human view of the packaged support-status index."""
+"""Regenerate the guide to packaged compatibility and runtime requirements."""
 import argparse
 from pathlib import Path
 
