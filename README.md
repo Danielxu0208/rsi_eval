@@ -1,3 +1,5 @@
+![RSI Eval — iterative evaluation and feedback across agent benchmarks](docs/assets/readme-banner.png)
+
 # RSI Eval
 
 A lightweight Python SDK and CLI for evaluating recursive self-improvement (RSI)
