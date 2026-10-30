@@ -119,8 +119,34 @@ def test_native_harnessx_export_import_resume_and_independent_test(native_checko
         assert resumed["rounds"][1]["history_reads"]
         assert "Journal Context for R2" in "\n".join(prompts)
         assert evaluations[-1].startswith(str(destination))
+
+    # Keep host prerequisite probes deterministic, as with the evaluator above.
+    auth_checks, version_checks, environment_checks = [], [], []
+
+    def fake_validate_auth(auth_dir):
+        auth_checks.append(Path(auth_dir))
+        return Path(auth_dir) / "auth.json"
+
+    def fake_codex_version(settings):
+        version_checks.append((settings.auth_dir, settings.expected_version))
+        return "test"
+
+    def fake_check(**kwargs):
+        environment_checks.append(kwargs)
+        return {"ok": True, "checks": {"fixture": {"ok": True}}}
+
+    monkeypatch.setattr("rsi_eval.codex.validate_auth", fake_validate_auth)
+    monkeypatch.setattr("rsi_eval.codex.codex_version", fake_codex_version)
     method_record = json.loads((destination / "method.json").read_text())
     final = method_test.test_selected(method_record, tmp_path / "additional-test",
-        selections=[{"name": "terminal-bench", "version": "2.1", "task_ids": ["extract-elf"]}], evaluator=fake_evaluate)
-    assert final["status"] == "completed"
+        selections=[{"name": "terminal-bench", "version": "2.1", "task_ids": ["extract-elf"]}],
+        evaluator=fake_evaluate, checker=fake_check)
+    assert final["status"] == "completed", final.get("preflight")
+    assert auth_checks == [tmp_path / "new-auth"]
+    assert version_checks == [(tmp_path / "new-auth", "test")]
+    assert len(environment_checks) == 1
+    checked = environment_checks[0]
+    assert checked["target"].artifact_dir == tmp_path / "additional-test/candidate"
+    assert checked["target"].config["codex_auth_dir"] == str(tmp_path / "new-auth")
+    assert checked["benchmark"].version == "2.1"
     assert final["candidate_sha256"] == artifact_hash(Path(resumed["current_candidate"]))
